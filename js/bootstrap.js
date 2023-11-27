@@ -2450,7 +2450,7 @@ document.querySelector('.w3-address').children[2].children[1].innerHTML = `
 
 const menuShylock = document.querySelector('.menu--shylock');
 
-var filename = window.location.href.split('/').pop().split('#')[0].split('?')[0];
+var filename = window.location.href.split('/').pop().split('#')[0].split('?')[0].split('.'[0]).shift();
 
 let loct;
 switch (filename) {
@@ -2524,6 +2524,7 @@ menuShylock.innerHTML = `
 function addActiveClass() {
   menuShylock.children[0].children[loct].classList.add('active');
   menuShylock.children[0].children[loct].classList.add('menu__item--current');
+  console.log('asq ' + window.location.href.split('/').pop().split('#')[0].split('?')[0]);
 }
 
 addActiveClass();
