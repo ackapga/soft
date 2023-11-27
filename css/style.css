@@ -2854,9 +2854,13 @@ button.w3view-cart {
     text-transform: uppercase
 }
 
+.ll_h3 {
+    margin-top: 3em!important;
+}
+
 .ll h3:before {
     left: -10px;
-    margin-left: -30%
+    margin-left: -25%
 }
 
 .ll h3:after {
@@ -3611,7 +3615,6 @@ ul.multi-column-dropdown li a:hover {
 
 
 /*-- /about --*/
-
 .page-head_agile_info_w3l {
     background: url(../images/inner1.jpg) no-repeat center;
     background-size: cover;
@@ -3623,15 +3626,29 @@ ul.multi-column-dropdown li a:hover {
     padding-top: 100px;
 }
 
+.page-head_agile_info_w3l_about {
+    padding-top: 40px;
+}
+
 .page-head_agile_info_w3l h1 {
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 2.8em;
     font-weight: 700;
-    opacity: 0.7;
     letter-spacing: 2px;
+    padding: 10px 40px;
+    border-radius: 15px;
+    text-shadow: 1px 1px 2px #5a2e32, 0 0 0.6em #ffb90080;
 }
+
+.page-head_agile_info_w3l p {
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    text-shadow: 1px 1px 2px #594100, 0 0 0.6em #000000;
+}
+
 
 .page-head_agile_info_w3l h3 span {
     font-weight: 300;
