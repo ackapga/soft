@@ -4,7 +4,7 @@
 $time=time();
 if (session_id()=='') session_start();
 
-$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
+$db=mysqli_connect("localhost","root","","mysql") or die();
 $res=mysqli_query($db,"set names utf8");
 
 $mess_url=mysqli_real_escape_string($db,basename($_SERVER['SCRIPT_FILENAME']));
