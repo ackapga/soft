@@ -1,0 +1,82 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../css"
+		},
+		{
+			"path": "../fonts"
+		},
+		{
+			"path": "../images"
+		},
+		{
+			"path": "../janaozen"
+		},
+		{
+			"path": "../jezkazgan"
+		},
+		{
+			"path": "../js"
+		},
+		{
+			"path": "../karaganda"
+		},
+		{
+			"path": "../kokshetau"
+		},
+		{
+			"path": "../kostanai"
+		},
+		{
+			"path": "../kyzylorda"
+		},
+		{
+			"path": "../pavlodar"
+		},
+		{
+			"path": "../petropavlovsk"
+		},
+		{
+			"path": "../php"
+		},
+		{
+			"path": "../request"
+		},
+		{
+			"path": "../semei"
+		},
+		{
+			"path": "../shymkent"
+		},
+		{
+			"path": "../sql"
+		},
+		{
+			"path": "../taldykorgan"
+		},
+		{
+			"path": "../taraz"
+		},
+		{
+			"path": "../turkestan"
+		},
+		{
+			"path": "../uralsk"
+		},
+		{
+			"path": "../ust-kamenogorsk"
+		},
+		{
+			"path": "../aktobe"
+		},
+		{
+			"path": "../assets"
+		},
+		{
+			"path": "../astana"
+		}
+	]
+}

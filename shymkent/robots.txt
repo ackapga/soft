@@ -1,0 +1,3 @@
+User-agent: *
+Host: https://softgroup.kz/
+Sitemap: https://softgroup.kz/sitemap.xml
