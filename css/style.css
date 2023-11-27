@@ -8,7 +8,7 @@ html,
 body {
     margin: 0;
     font-size: 100%;
-    background: #fff;
+    background: #000000;
     font-family: Proxima Nova, sans-serif;
 }
 
@@ -2856,6 +2856,7 @@ button.w3view-cart {
 
 .ll_h3 {
     margin-top: 3em!important;
+    margin-bottom: 3em!important;
 }
 
 .ll h3:before {
