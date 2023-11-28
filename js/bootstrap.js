@@ -2524,7 +2524,6 @@ menuShylock.innerHTML = `
 function addActiveClass() {
   menuShylock.children[0].children[loct].classList.add('active');
   menuShylock.children[0].children[loct].classList.add('menu__item--current');
-  console.log('asq ' + window.location.href.split('/').pop().split('#')[0].split('?')[0]);
 }
 
 addActiveClass();
