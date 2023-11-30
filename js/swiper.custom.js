@@ -22,24 +22,30 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     }
 });
 
-const animationAuto = setInterval(function () {
-    document.querySelector('.swiper-button-next').click();
-}, 1000);
+// const animationAuto = setInterval(function () {
+//     document.querySelector('.swiper-button-next').click();
+// }, 1000);
+//
+// document.querySelector('.tranding-slider-control').addEventListener("click", function () {
+//     clearInterval(animationAuto);
+// });
 
-document.querySelector('.tranding-slider-control').addEventListener("click", function () {
-    clearInterval(animationAuto);
-});
+// Region Slider
 
 // Region Slider
 const images = [
+    'region-shimkent.png',
     'region-almaty.png',
     'region-astana.png',
-    'region-shimkent.png',
+];
+
+const nameCity = [
+    'ШЫМКЕНТ','АЛМАТЫ','АСТАНА',
 ];
 
 let activeImage = 0;
-const sliderPlace = document.querySelector('.custom_slider_line');
-const widthOffset = document.querySelector('.custom_slider').clientWidth;
+const sliderPlace = document.querySelector('.region-img');
+const widthOffset = document.querySelector('.region-slider').clientWidth;
 sliderPlace.style.width = 3 * widthOffset + "px";
 sliderPlace.style.height = widthOffset + "px";
 sliderPlace.style.left = '-' + widthOffset + "px";
@@ -49,29 +55,19 @@ let flag = true;
 const initSlider = () => {
     const img = document.createElement('img');
     img.alt = '';
-    img.src = '/test/images/' + images[activeImage];
+    img.src = '/images/about/' + images[activeImage];
     sliderPlace.append(img);
     nextImagesGeneration();
-    prevImagesGeneration();
 }
 
 const nextImagesGeneration = () => {
     let nextImages = activeImage + 1;
-    if (nextImages >= images.length) nextImages = 0;
+    if (nextImages >= images.length && nextImages >= nameCity.length) nextImages = 0;
     const img = document.createElement('img');
     img.alt = '';
-    img.src = '/test/images/' + images[nextImages];
+    img.src = '/images/about/' + images[nextImages];
+    document.querySelector('.region-name').innerHTML = nameCity[nextImages];
     sliderPlace.append(img);
-}
-
-const prevImagesGeneration = (w = false) => {
-    let nextImages = activeImage - 1;
-    if (nextImages < 0) nextImages = images.length - 1;
-    const img = document.createElement('img');
-    img.alt = '';
-    img.src = '/test/images/' + images[nextImages];
-    if (w) img.style.width = 0;
-    sliderPlace.prepend(img);
 }
 
 const nextSlide = () => {
@@ -79,43 +75,24 @@ const nextSlide = () => {
     flag = !flag;
     activeImage++;
     if (activeImage >= images.length) activeImage = 0;
-    //document.querySelector('.custom_slider_line img').remove();
     nextImagesGeneration();
     animate({
         duration: 1000,
         draw: function (progress) {
-            document.querySelector('.custom_slider_line img').style.width = (widthOffset * (1-progress)) + "px";
+            // document.querySelector('.region-img img').style.width = (widthOffset * (1 - progress)) + "px";
+             document.querySelector('.region-img img').style.width = (widthOffset * (1 - progress)) + "px";
         },
-        removeElement: document.querySelector('.custom_slider_line img')
-    });
-}
-
-const prevSlide = () => {
-    if (!flag) return;
-    flag = !flag;
-    activeImage--;
-    if (activeImage < 0) activeImage = images.length - 1;
-    //document.querySelector('.custom_slider_line img:last-child').remove();
-    prevImagesGeneration(true);
-    animate({
-        duration: 1000,
-        draw: function (progress) {
-            document.querySelector('.custom_slider img').style.width = (widthOffset * progress) + "px";
-        },
-        removeElement: document.querySelector('.custom_slider_line img:last-child')
+        removeElement: document.querySelector('.region-img img')
     });
 }
 
 initSlider();
 
-setInterval(function () {
-    document.querySelector('.custom_next_button').click()
-}, 5000);
 
-document.querySelector('.custom_next_button').addEventListener('click', nextSlide);
-document.querySelector('.custom_prev_button').addEventListener('click', prevSlide);
+document.querySelector('.region-right').addEventListener('click', nextSlide);
 
-const animate = ({duration, draw, removeElement }) => {
+
+const animate = ({duration, draw, removeElement}) => {
     const start = performance.now();
 
     requestAnimationFrame(function animate(time) {
@@ -130,8 +107,3 @@ const animate = ({duration, draw, removeElement }) => {
         }
     });
 }
-
-
-
-
-

@@ -15557,6 +15557,13 @@ margin-left: 20px; */
     justify-content: space-around;
 }
 
+.region-left {
+    transition: all 0.5s ease;
+}
+
+.region-left:hover {
+    transform: scale(1.05);
+}
 .region-left .region-title {
     display: flex
 }
@@ -15577,12 +15584,12 @@ margin-left: 20px; */
 
 .region-left .region-title .span-title h4 {
     font-size: 19px;
-    color: #000!important;
+    color: #000 !important;
 }
 
 .region-left .region-title .span-title h1 {
     font-size: 42px;
-    color: #000!important;
+    color: #000 !important;
 }
 
 .region-left .region-text {
@@ -15598,12 +15605,26 @@ margin-left: 20px; */
     position: relative;
 }
 
-.region-right img {
-    width: 586px;
+.region-slider {
+    overflow: hidden;
     filter: drop-shadow(1px 1px 26px #fbc6a5);
+    transition: all 0.5s ease;
 }
 
-.region-right a {
+.region-slider:hover {
+    transform: scale(1.05);
+}
+
+.region-img {
+    display: flex;
+    position: relative;
+    right: 0;
+    width: 586px!important;
+    height: auto !important;
+}
+
+.region-right button {
+    z-index: 2;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -15611,18 +15632,22 @@ margin-left: 20px; */
     right: 3rem;
     top: 3rem;
     transition: all 0.5s ease;
+    border: none;
+    outline: none;
+    background: transparent;
 }
 
-.region-right a:hover {
+.region-right button:hover {
     transform: scale(1.1);
 }
 
-.region-right a h4 {
+.region-right button h4 {
     font-size: 26px;
     width: 114px;
     color: #000!important;
 }
 
-.region-right a img {
+.region-right button img {
     width: 42px;
+    margin-left: 1rem;
 }
