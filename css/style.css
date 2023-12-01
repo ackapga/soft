@@ -15504,6 +15504,11 @@ margin-left: 20px; */
     align-items: center;
     position: relative;
     padding-bottom: 7rem;
+    transition: all 0.5s ease;
+}
+
+.automation-container:hover {
+    transform: scale(1.02);
 }
 
 .automation-images {
@@ -15564,11 +15569,12 @@ margin-left: 20px; */
 .region-left:hover {
     transform: scale(1.05);
 }
+
 .region-left .region-title {
     display: flex
 }
 
-.region-left .region-title img {
+.region-left .region-title .region-map-circle {
     margin-right: 20px;
     width: 73px;
 }
@@ -15579,7 +15585,36 @@ margin-left: 20px; */
     align-items: flex-end;
     flex-direction: column;
     text-transform: uppercase;
+}
 
+.region-left .region-title .span-title img {
+    position: absolute;
+    width: 0;
+    left: 78px;
+    transition: all 0.8s ease;
+}
+
+.region-left:hover .region-title .span-title img {
+    width: 300px;
+    right: 0;
+    opacity: 0.6;
+}
+
+.region-left:hover .region-map-circle {
+
+    animation: hoverAnimation 0.8s ease-in;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .region-left .region-title .span-title h4 {
@@ -15603,27 +15638,27 @@ margin-left: 20px; */
 .region-right {
     display: flex;
     position: relative;
+    transition: all 0.5s ease;
+}
+
+.region-right:hover {
+    transform: scale(1.05);
 }
 
 .region-slider {
     overflow: hidden;
     filter: drop-shadow(1px 1px 26px #fbc6a5);
-    transition: all 0.5s ease;
-}
-
-.region-slider:hover {
-    transform: scale(1.05);
 }
 
 .region-img {
     display: flex;
     position: relative;
     right: 0;
-    width: 586px!important;
+    width: 586px !important;
     height: auto !important;
 }
 
-.region-right button {
+.region-right a {
     z-index: 2;
     cursor: pointer;
     display: flex;
@@ -15631,23 +15666,22 @@ margin-left: 20px; */
     position: absolute;
     right: 3rem;
     top: 3rem;
-    transition: all 0.5s ease;
     border: none;
     outline: none;
     background: transparent;
+    transition: all 0.3s ease;
 }
 
-.region-right button:hover {
-    transform: scale(1.1);
+.region-right a:hover {
+    right: 2rem;
 }
 
-.region-right button h4 {
+.region-right a h4 {
     font-size: 26px;
-    width: 114px;
-    color: #000!important;
+    color: #000 !important;
 }
 
-.region-right button img {
+.region-right a img {
     width: 42px;
-    margin-left: 1rem;
+    padding-left: 1rem;
 }

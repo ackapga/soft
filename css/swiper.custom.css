@@ -12,17 +12,18 @@
     text-decoration: none;
 
     -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* Internet Explorer/Edge */
-    user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version */
 }
 
 .slider-swiper-second {
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
 }
+
 @media (min-width: 1440px) {
     .slider-swiper-second {
         zoom: 0.78;
@@ -59,8 +60,12 @@
 .slider-swiper-third {
     font-size: 1.6rem;
     background: #f5f5f5;
+    transition: all 0.5s ease;
 }
 
+.slider-swiper-third:hover {
+    transform: scale(1.02);
+}
 .container_for_slider {
     margin: 0 auto;
 }
@@ -78,7 +83,7 @@
     background-image: -o-linear-gradient(left, rgb(243, 243, 244) 0, rgba(0, 0, 0, .0001) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgb(243, 243, 244)), to(rgba(0, 0, 0, .0001)));
     background-image: linear-gradient(to right, rgb(243, 243, 244) 0, rgba(0, 0, 0, .0001) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
     background-repeat: repeat-x
 }
 
@@ -89,7 +94,7 @@
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgb(243, 243, 244) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgb(243, 243, 244)));
     background-image: linear-gradient(to right, rgb(255 255 255 / 0%) 0, rgb(243, 243, 244) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
     background-repeat: repeat-x
 }
 
@@ -108,7 +113,7 @@
     padding: 1rem 0;
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
     #tranding {
         padding: 7rem 0;
     }
@@ -121,7 +126,7 @@
 }
 
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
     #tranding .tranding-slider {
         height: 45rem;
     }
@@ -133,11 +138,12 @@
     position: relative;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
     .tranding-slide {
         width: 28rem !important;
         height: 36rem !important;
     }
+
     .tranding-slide .tranding-slide-img img {
         width: 10rem !important;
         height: 16rem !important;
@@ -200,28 +206,28 @@
     transform: translateX(-58%) !important;
 }
 
-@media (max-width:990px) {
+@media (max-width: 990px) {
     .tranding-slider-control .swiper-button-next {
         left: 70% !important;
         transform: translateX(-70%) !important;
     }
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
     .tranding-slider-control .swiper-button-next {
         left: 80% !important;
         transform: translateX(-80%) !important;
     }
 }
 
-@media (max-width:990px) {
+@media (max-width: 990px) {
     .tranding-slider-control .swiper-button-prev {
         left: 30% !important;
         transform: translateX(-30%) !important;
     }
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
     .tranding-slider-control .swiper-button-prev {
         left: 20% !important;
         transform: translateX(-20%) !important;
@@ -250,7 +256,7 @@
 .tranding-slider-control .swiper-pagination {
     position: relative;
     width: 15rem;
-    bottom: 1rem;
+    bottom: 0!important;
 }
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
