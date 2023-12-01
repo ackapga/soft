@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d63a49f-44fd-4a3f-9907-e041e8807583" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dir.SoftGroup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dir.SoftGroup.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/swiper.custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/swiper.custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/about/MAP 1.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/slider_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/slider_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/monoblocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/monoblocks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pos_1701.php" beforeDir="false" afterPath="$PROJECT_DIR$/pos_1701.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +63,22 @@
       <workItem from="1701247573141" duration="5558000" />
       <workItem from="1701314547053" duration="1321000" />
       <workItem from="1701328264682" duration="15000000" />
-      <workItem from="1701399628826" duration="7421000" />
+      <workItem from="1701399628826" duration="22990000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

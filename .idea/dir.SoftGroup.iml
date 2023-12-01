@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/aktau" />
+      <excludeFolder url="file://$MODULE_DIR$/aktobe" />
+      <excludeFolder url="file://$MODULE_DIR$/astana" />
+      <excludeFolder url="file://$MODULE_DIR$/atyrau" />
+      <excludeFolder url="file://$MODULE_DIR$/janaozen" />
+      <excludeFolder url="file://$MODULE_DIR$/jezkazgan" />
+      <excludeFolder url="file://$MODULE_DIR$/karaganda" />
+      <excludeFolder url="file://$MODULE_DIR$/kokshetau" />
+      <excludeFolder url="file://$MODULE_DIR$/kostanai" />
+      <excludeFolder url="file://$MODULE_DIR$/kyzylorda" />
+      <excludeFolder url="file://$MODULE_DIR$/pavlodar" />
+      <excludeFolder url="file://$MODULE_DIR$/petropavlovsk" />
+      <excludeFolder url="file://$MODULE_DIR$/semei" />
+      <excludeFolder url="file://$MODULE_DIR$/shymkent" />
+      <excludeFolder url="file://$MODULE_DIR$/taldykorgan" />
+      <excludeFolder url="file://$MODULE_DIR$/taraz" />
+      <excludeFolder url="file://$MODULE_DIR$/turkestan" />
+      <excludeFolder url="file://$MODULE_DIR$/uralsk" />
+      <excludeFolder url="file://$MODULE_DIR$/ust-kamenogorsk" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

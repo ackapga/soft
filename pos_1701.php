@@ -4,7 +4,7 @@
 $time=time();
 if (session_id()=='') session_start();
 
-$db=mysqli_connect("localhost","root","","mysql") or die();
+$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
 $res=mysqli_query($db,"set names utf8");
 
 $mess_url=mysqli_real_escape_string($db,basename($_SERVER['SCRIPT_FILENAME']));
@@ -22,7 +22,7 @@ if ($respponse->success){    //отправлен комментарий
     $mess_login=htmlspecialchars($_POST["mess_login"]);
     $user_text=htmlspecialchars($_POST["user_text"]);
     $rating=htmlspecialchars($_POST["rating"]);
-    
+
         if ($mess_login!='' and $user_text!=''){
         if (is_numeric($_POST["parent_id"]) and is_numeric($_POST["f_parent"]))
     $res=mysqli_query($db,"insert into pos3021
