@@ -53,21 +53,18 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <!--ackapga-->
-    <title>Умные весы с сенсорным экраном Aurora D2-AI(Android)</title>
+    <title>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="keywords"
-          content="сенсорный моноблок с дисплеем, для клиента, клиента, двойной экран, алматы, астана, казахстан, купить, цена, продажа."/>
+    <meta name="keywords" content="весы с дисплеем, двойной экран, алматы, астана, казахстан, купить, цена, продажа."/>
     <meta name="description"
-          content="Купить сенсорный моноблок с дисплеем покупателя по выгодной цене от компании Softgroup. Широкий ассортимент сенсорных моноблоков для автоматизации">
+          content="15,6-дюймовый сенсорный экран, дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.">
     <!--//tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
     <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- Look ackapga not nessesary-->
     <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/jqcart.css" rel="stylesheet" type="text/css" media="all"/>
@@ -196,11 +193,9 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 </div>
             </nav>
         </div>
-        <div class="top_nav_right"><span id="open" class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
-                        class="badge badge-notify my-cart-badge">
+        <div class="top_nav_right"><span id="open" class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge">
                         <div class="label-place"></div>
-                    </span></span>
-        </div>
+                    </span></span></div>
         <div class="clearfix"></div>
     </div>
 </div>
@@ -209,37 +204,37 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 <div class="banner-bootom-w3-agileits">
     <div class="container">
 
-        <!--ackapga hlebny croshki -->
+        <!-- Breadcrumbs -->
         <div class="services-breadcrumb">
             <div class="agile_inner_breadcrumb">
                 <ul class="w3_short">
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Умные весы с сенсорным экраном Aurora D2-AI (android)</li>
+                    <li>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</li>
                 </ul>
             </div>
         </div>
 
-        <!--ackapga slider main picture -->
+        <!-- Flexslider -->
         <div class="col-md-333 single-right-left ">
             <div class="grid images_3_of_2">
                 <div class="flexslider">
 
                     <ul class="slides">
-                        <li data-thumb="images/scale/aurora-d2-ai-main.jpg">
+                        <li data-thumb="images/scale/d2ai-1.jpg">
                             <div class="thumb-image">
-                                <img src="images/scale/aurora-d2-ai-main.jpg" id="target" class="img-responsive">
+                                <img src="images/scale/d2ai-1.jpg" id="target" class="img-responsive">
                             </div>
                         </li>
-                        <li data-thumb="images/scale/aurora-d2-ai-1.jpg">
+                        <li data-thumb="images/scale/d2ai-2.jpg">
                             <div class="thumb-image">
-                                <img src="images/scale/aurora-d2-ai-1.jpg" class="img-responsive">
+                                <img src="images/scale/d2ai-2.jpg" class="img-responsive">
                             </div>
                         </li>
-                        <li data-thumb="images/scale/aurora-d2-ai-2.jpg">
+                        <li data-thumb="images/scale/d2ai-3.jpg">
                             <div class="thumb-image">
-                                <img src="images/scale/aurora-d2-ai-2.jpg" class="img-responsive">
+                                <img src="images/scale/d2ai-3.jpg" class="img-responsive">
                             </div>
                         </li>
                     </ul>
@@ -249,11 +244,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             </div>
         </div>
 
-        <!--ackapga slider main picture -->
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h1>Умные весы с сенсорным экраном Aurora D2-AI (android)</h1>
+            <h1>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</h1>
             <hr>
-            <p class="code-products">Код товара: XXXX</p>
+            <!-- <p class="code-products">Код товара: XXXX</p>-->
             <p><span class="item-price-indicator">Цена: </span><span class="item_price">399 000 тг. </span></p>
             <div class="rating1">
                         <span class="starRating">
@@ -283,12 +277,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <p><i class="fa fa-check"></i> Двухлинейный жидкокристаллический дисплей высокой четкости FHD</p>
                 <p><i class="fa fa-check"></i> Безопасная Емкость: 120% Нормальный Диапазон взвешивания</p>
                 <p><i class="fa fa-check"></i> SSD-накопитель M.2 128 ГБ. Жесткий диск: iNAND 16 ГБ.</p>
+                <img src="images/scale/icon5.png" style="float:none">
                 <div>
-                    <button id="fly" class="add_item" data-id="5150"
-                            data-title="<a href='https://softgroup.kz/scale_aurora-d2.php'>Умные весы с сенсорным экраном Aurora D2-AI (android)</a>"
+                    <button id="fly" class="add_item" data-id="0001"
+                            data-title="<a href='https://softgroup.kz/scale_aurora-d2.php'>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</a>"
                             data-price="399000"
                             data-quantity="1"
-                            data-img="images/scale/aurora-d2-ai-main.jpg">
+                            data-img="images/scale/d2ai-1.jpg">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
                     </button>
                 </div>
@@ -298,7 +293,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
     </div>
 
-    <!-- ackapga Описание -->
+    <!-- Descripion -->
     <div class="responsive_tabs_agileits">
         <div class="bootstrap-tab-text-grids">
             <div class="bootstrap-tab-text-grid" style="padding-bottom:20px; background-color: #e5f6f8;">
@@ -308,42 +303,35 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                         <hr>
                     </div>
                     <div style="text-align:center; margin-top:0px">
-                        <img src="images/scale/aurora-d2-ai-1.jpg"
-                             style="text-align:center; margin-top:20px; width: 25%">
+                        <img src="images/scale/d2ai-desc-1.png" style="text-align:center; width: 40%">
                     </div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                        Title</p>
-                    <p style="line-height:normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet
-                        animi blanditiis consequatur cupiditate debitis deleniti dolore eum impedit incidunt itaque,
-                        maiores modi odio quas quod repellendus reprehenderit repudiandae, saepe tempore vero! Atque
-                        delectus deleniti hic in maxime perspiciatis voluptatibus! Dignissimos eveniet id nemo obcaecati
-                        quidem rem, vitae. Deleniti, laudantium!</p>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Диапазон взвешивания</p>
+                    <p style="line-height:normal">
+                        Главным преимуществом оборудования является высокая точность измерений.
+                        Максимальный предел взвешивания - 15 кг.
+                        Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата), на предприятиях общественного питания, в фармацевтических компаниях и т. д.
+                    </p>
                     <div class="clearfix"></div>
                 </div>
             </div>
             <div class="bootstrap-tab-text-grid" style="background-color: #fff; padding-bottom:20px">
                 <div class="container">
                     <div style="text-align:center;">
-                        <img src="images/scale/aurora-d2-ai-2.jpg" style="text-align:center; width: 30%;"></div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                        Title</p>
-                    <p style="line-height:normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
-                        at culpa deserunt eos, ex facilis fuga harum illum impedit inventore iusto nulla odio officia
-                        quae sint sit sunt, temporibus ullam.</p>
+                        <img src="images/scale/d2ai-desc-2.png" style="text-align:center; width: 30%;"></div>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Двойной дисплей</p>
+                    <p style="line-height:normal">Имеется два двухлинейных жидкокристаллический дисплея высокой четкости FHD, для продавца и покупателя.
+                        15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач панель, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
             <div class="bootstrap-tab-text-grid" style="padding-bottom:20px;background-color: #e5f6f8;">
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
-                        <img src="images/scale/aurora-d2-ai-main.jpg" style="text-align:center; width: 30%;"></div>
+                        <img src="images/scale/d2ai-desc-3.png" style="text-align:center; width: 30%;"></div>
                     <div class="wthree_text_info">
-                        <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                            title</p>
+                        <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Принтер для печати этикеток</p>
                     </div>
-                    <p style="line-height:normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto
-                        cum deserunt, dignissimos dolorem eius error eum incidunt inventore optio, perspiciatis
-                        praesentium, quasi reprehenderit vero voluptatum? Quas quisquam quod voluptas.</p>
+                    <p style="line-height:normal">Быстрая печать этикеток за счет интеграции взвешивания и печати, что экономит время и усилия. Интеллектуальное обучение, анализ и обработка данных. Чувствительный сенсор принтера, определяющий длину используемой этикетки, работает надежно, не теряя край этикетки. Распознавание AI, быстро идентифицировать товары и значительно повысить эффективность расчетов.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -353,15 +341,14 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 </div>
                 <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                     Подключение к сети</p>
-                <p style="line-height:normal; text-align: center;">Данный тип моноблока имеет свойство подключения к
-                    быстроскоростному и безпроводному интернету.</p>
+                <p style="line-height:normal; text-align: center;">Данный тип весов имеет свойство подключения к быстроскоростному и безпроводному интернету.</p>
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ackapga Характеристика -->
+<!-- Characteristic -->
 <div class="container">
     <div class="models" style="margin-top:70px">
         <p>Характеристика</p>
@@ -370,41 +357,91 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <table class="zui-table zui-table-zebra zui-table-horizontal">
         <tbody>
         <tr>
-
-            <td>Дисплей:</td>
-            <td>15-дюймовый сенсорный экран</td>
-        </tr>
-        <tr>
-
-            <td>Разрешение:</td>
-            <td>1680 x 1050</td>
-        </tr>
-        <tr>
-
             <td>Процессор:</td>
-            <td>Intel Celeron J1800 2,41 Ггц</td>
+            <td>Intel Elkhart Lake, J6412, 2,0 ГГц, четырехъядерный процессор RK3288, 1,8 ГГц.</td>
         </tr>
         <tr>
-
-            <td>Оперативная память:</td>
-            <td>2 ГБ</td>
-        </tr>
-        <tr>
-
-            <td>Жесткий диск:</td>
-            <td>SSD 32 ГБ.</td>
-        </tr>
-        <tr>
-
-            <td>Интерфейс:</td>
-            <td>6 USB <br> 1 SERIAL <br> 1 VGA <br> 1 LAN <br> 1 Audio <br> 1 Input <br> 1 Output <br> 1 DC in <br>
-                1 LPT <br> 2 PS/2
+            <td>Оперативная памиять:</td>
+            <td>Память: 4 ГБ DDR3
+                <br>
+                2 ГБ DDR3
             </td>
         </tr>
         <tr>
-
-            <td>Дисплей клиента:</td>
-            <td>Экранная панель на спине, VFD с 1 линия, 8 цифр</td>
+            <td>Жесткий диск:</td>
+            <td>SSD-накопитель M.2 128 ГБ
+                <br>
+                64 ГБ SSD
+            </td>
+        </tr>
+        <tr>
+            <td>Операционная система:</td>
+            <td>WIN10/WIN11 Android 7.1.2</td>
+        </tr>
+        <tr>
+            <td>Проводная сеть:</td>
+            <td>TCP/IP Ethernet (10M/100M/1000M)</td>
+        </tr>
+        <tr>
+            <td>Беспроводная связь:</td>
+            <td>802.11 ac/b/g/n </td>
+        </tr>
+        <tr>
+            <td>USB:</td>
+            <td>2*USB3.0+3*USB2.0 / 3*USB2.0</td>
+        </tr>
+        <tr>
+            <td>Внешний интерфейс:</td>
+            <td>Дисплей: 15,6(1366*768)+15,6(1366*768)
+                <br>
+                Касса: 1*RJ11
+                <br>
+                Аудио: динамик 1*3 Вт
+                <br>
+                Мощность: 12 В 5 А
+            </td>
+        </tr>
+        <tr>
+            <td>Аппаратное обеспечение весов</td>
+            <td>Максимальная грузоподъемность: 15 кг
+                <br>
+                Минимальная вместимость: 40 г
+                <br>
+                Интервал поверочной шкалы: 2/5 г (примечание: 6/15 кг)
+                <br>
+        </tr>
+        <tr>
+            <td>Аппаратное обеспечение принтера:</td>
+            <td>Способ печати:	Прямая термопечать
+                <br>
+                Ширина печати:	58мм
+                <br>
+                Разрешение:	203 точек на дюйм
+                <br>
+                Скорость печати:	70 мм/с
+                <br>
+                Вместимость отсека:	70мм
+                <br>
+                Штрих-код: UCP-A, EAN(JAN)13, EAN(JAN)8, CODE39,CODEBAR, CODE128
+            </td>
+        </tr>
+        <tr>
+            <td>Упаковка: </td>
+            <td>
+                Аксессуары: Шнур питания; Адаптер; Руководство по быстрой установке; Рулон бумаги
+                <br>
+                Упаковка: Коричневая коробка;
+                <br>
+                Размер коробки: 588*493*620 мм
+            </td>
+        </tr>
+        <tr>
+            <td>Окружающая среда энт: </td>
+            <td>
+                Температура хранения: -10℃—60℃; Рабочая: 0℃—40℃
+                <br>
+                Влажность Хранение: 10–90 % ; Рабочая: 5–85 %
+            </td>
         </tr>
 
         </tbody>
@@ -412,7 +449,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 </div>
 </div>
 
-<!-- ackapga Reklma -->
+<!-- Advertising -->
 <div class="container">
     <div class="models">
         <p>Автоматизация торговли:</p>
@@ -480,9 +517,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         </div>
     </div>
     <div class="video">
-        <iframe width="1000" height="563" src="https://www.youtube.com/embed/jpDM-Ybi5DE?rel=0&autoplay=0"
-                frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+        <iframe width="1000" height="563" src="https://www.youtube.com/embed/jpDM-Ybi5DE?rel=0&autoplay=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- Comments-->
     <?php
@@ -584,25 +619,25 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     echo '</form></div>';
     ?>
 </div>
+
+<!-- Clients -->
 <div class="ll">
     <p><span>Наши</span> клиенты</p>
 </div>
 <ul class="our-clients" id="flexiselDemo3">
 </ul>
-
-<!-- ackapga recommendation single_page-->
+<!-- Recommendation -->
 <div class="w3_agile_latest_arrivals" style="background-color: #f4f4f4;">
     <div class="con-wrapper">
         <div class="sm-things-title" style="padding-top: 20px;">
             <h1 style="color: teal;">Рекомендуемые товары</h1>
         </div>
-        <ul class="sm-cards " id="flexiselDemo1"></ul>
+        <ul class="sm-cards" id="flexiselDemo1"></ul>
     </div>
 </div>
 <script src="js/newProducts.js"></script>
-<!--//ackapga recommendation single_page -->
 
-<!--ackapga grids-->
+<!-- Grids -->
 <div class="coupons">
     <div class="coupons-grids text-center">
         <div class="w3layouts_mail_grid">
@@ -651,7 +686,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
     </div>
 </div>
-<!-- //ackapga grids -->
 
 <!-- footer -->
 <div class="footer">
@@ -727,14 +761,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                             <div class="clearfix"></div>
                         </div>
                         <div id="socialMedia" class="span3 pull-right">
-                            <a href="https://www.youtube.com/channel/UCNDMIviMuZOhhCP7xoxGYAA/videos"><img width="50"
-                                                                                                           height="50"
-                                                                                                           src="images/youtube.png"
-                                                                                                           title="youtube"
-                                                                                                           alt="youtube"/></a>
-                            <a href="https://www.instagram.com/idiamarket/"><img width="50" height="50"
-                                                                                 src="images/insta.png"
-                                                                                 title="instagram" alt="instagram"></a>
+                            <a href="https://www.youtube.com/channel/UCNDMIviMuZOhhCP7xoxGYAA/videos"><img width="50" height="50" src="images/youtube.png" title="youtube" alt="youtube"/></a>
+                            <a href="https://www.instagram.com/idiamarket/"><img width="50" height="50" src="images/insta.png" title="instagram" alt="instagram"></a>
                         </div>
                     </div>
                 </div>
@@ -744,19 +772,16 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         </div>
         <div class="clearfix"></div>
 
-        <p class="copy-right">&copy 2010-2021 SoftGroup</p>
+        <p class="copy-right">&copy 2010-2023 SoftGroup</p>
     </div>
 </div>
 <!-- //footer -->
 
-
-<!--Разобрать-->
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<!-- //js -->
 <script src="js/modernizr.custom.js"></script>
+<!-- //js -->
 
-<!-- Custom-JavaScript-File-Links -->
 <!-- cart-js -->
 <script type="text/javascript">
     $(document).ready(function () {
@@ -772,8 +797,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     opacity: 0.8,
                     marginLeft: 550,
                     marginTop: -900,
-                    /* Важно помнить, что названия СSS-свойств пишущихся
-                                                через дефис заменяются на аналогичные в стиле "camelCase" */
                     width: 100,
                     height: 100
                 }, 500, function () {
@@ -785,7 +808,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 <link href="css/jqcart.css" rel="stylesheet" type="text/css">
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/jqcart.min.js"></script>
-
 <script>
     $(function () {
         'use strict';
@@ -805,9 +827,11 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     });
 </script>
 <!-- //cart-js -->
+
 <!-- single -->
 <script src="js/imagezoom.js"></script>
 <!-- single -->
+
 <!-- script for responsive tabs -->
 <script src="js/easy-responsive-tabs.js"></script>
 <script>
@@ -851,7 +875,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 </script>
 <!-- //FlexSlider-->
 <!-- //script for responsive tabs -->
-<!-- start-smoth-scrolling -->
+
+<!-- smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <script type="text/javascript">
@@ -864,11 +889,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         });
     });
 </script>
+<!-- //smoth-scrolling  -->
 
-<!-- //here ends scrolling icon -->
-
-<!-- for bootstrap working -->
+<!-- bootstrap working -->
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- //bootstrap working -->
+
 <!-- WhatsHelp.io widget -->
 <script type="text/javascript">
     (function () {
@@ -925,7 +951,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 <!-- /WhatsHelp.io widget -->
 
 <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-
 <script type="text/javascript" src="js/jquery.flexisel1.js"></script>
 
 </body>

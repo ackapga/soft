@@ -113,15 +113,16 @@ const data = [{
     },
     {
         link: 'scale_aurora-d2.php',
-        title: 'Умные весы с сенсорным экраном Aurora D2-AI (android)',
+        title: 'Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)',
         desc: '15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.',
         price: '399000',
-        img: 'images/scale/aurora-d2-ai-main.jpg',
-        position: [],
-        weight: '',
-        interface: [],
+        img: 'images/scale/d2ai-1.jpg',
+        position: ['trade', 'table'],
+        weight: 30,
+        interface: ['usb', 'serial', 'lan'],
         integration: [],
-        series: '',
+        series: 'aurora',
+        code: '0001',
     },
 ]
 
@@ -324,6 +325,7 @@ const c4b1 = document.getElementById('c4b1');
 const c4b2 = document.getElementById('c4b2');
 const c4b3 = document.getElementById('c4b3');
 const c4b4 = document.getElementById('c4b4');
+const c4b5 = document.getElementById('c4b5');
 
 
 
@@ -396,6 +398,10 @@ function updateFilterParam() {
 
     if (c4b4.checked) {
         filterParam.series.push("4d");
+    }
+
+    if (c4b5.checked) {
+        filterParam.series.push("aurora");
     }
 
 
@@ -613,6 +619,19 @@ function c4b4Click() {
     updateFilterParam()
 }
 
+function c4b5Click() {
+    if (c4b5.checked == true) {
+        filterOptionArray.push('Весы Aurora')
+        clickArr.push(c4b5)
+        arrCounter = true;
+    } else {
+        spliceMethod(c4b5);
+        spliceMethodSecond('Весы Aurora')
+        arrCounter = false;
+    }
+    updateFilterParam()
+}
+
 
 
 c1b1.addEventListener('click', c1b1Click)
@@ -635,6 +654,7 @@ c4b1.addEventListener('click', c4b1Click)
 c4b2.addEventListener('click', c4b2Click)
 c4b3.addEventListener('click', c4b3Click)
 c4b4.addEventListener('click', c4b4Click)
+c4b5.addEventListener('click', c4b5Click)
 
 let checkBoxArr = []
     // settings関数で初期設定 全体に適応させたい場合
@@ -740,6 +760,7 @@ function countParam(array) {
     let series2 = 0;
     let series3 = 0;
     let series4 = 0;
+    let series5 = 0;
 
 
 
@@ -784,14 +805,16 @@ function countParam(array) {
             series3++;
         } else if (array[index].series == "4d") {
             series4++;
-        }
+        } else if (array[index].series == "aurora") {
+        series5++;
+    }
     }
 
     return [
         position1, position2, position3,
         interface1, interface2, interface3,
         weight1, weight2, weight3, weight4,
-        series1, series2, series3, series4
+        series1, series2, series3, series4, series5
     ]
 
 }
