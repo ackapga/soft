@@ -269,7 +269,15 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <p>5. Повышение эффективности, экономия времени и затрат на персонал</p>
                 <p><i class="fa fa-check"></i> Экономия времени и удобство</p>
                 <p><i class="fa fa-check"></i> 15,6-дюймовый основной сенсорный экран</p>
-                <p><i class="fa fa-check"></i> Технология идентификации, точное взвешивание</p>
+                <div style="margin-top:20px" class="znachok"><i class="fa fa-check"></i>
+                    <p>Есть в наличии</p>
+                </div>
+                <div class="znachok"><i class="fa fa-cogs" aria-hidden="true"></i>
+                    <p>Сервисное обслуживание</p>
+                </div>
+                <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
+                    <p>Бесплатная доставка</p>
+                </div>
                 <img src="images/scale/icon6.png" style="float:none">
                 <div>
                     <button id="fly" class="add_item" data-id="0002"

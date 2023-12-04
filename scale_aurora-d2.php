@@ -272,11 +272,15 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <p>3. Точное взвешивание, погрешность в пределах 2 г.</p>
                 <p>4. Быстрая печать этикеток за счет интеграции взвешивания и печати, что экономит время и усилия.</p>
                 <p>5. Интеллектуальное обучение, анализ и обработка данных.</p>
-                <br>
-                <h3><b>Основные характеристики</b></h3>
-                <p><i class="fa fa-check"></i> Двухлинейный жидкокристаллический дисплей высокой четкости FHD</p>
-                <p><i class="fa fa-check"></i> Безопасная Емкость: 120% Нормальный Диапазон взвешивания</p>
-                <p><i class="fa fa-check"></i> SSD-накопитель M.2 128 ГБ. Жесткий диск: iNAND 16 ГБ.</p>
+                <div style="margin-top:20px" class="znachok"><i class="fa fa-check"></i>
+                    <p>Есть в наличии</p>
+                </div>
+                <div class="znachok"><i class="fa fa-cogs" aria-hidden="true"></i>
+                    <p>Сервисное обслуживание</p>
+                </div>
+                <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
+                    <p>Бесплатная доставка</p>
+                </div>
                 <img src="images/scale/icon5.png" style="float:none">
                 <div>
                     <button id="fly" class="add_item" data-id="0001"
