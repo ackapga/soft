@@ -310,7 +310,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                         <img src="images/scale/d2ai-desc-1.png" style="text-align:center; width: 40%">
                     </div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Диапазон взвешивания</p>
-                    <p style="line-height:normal">
+                    <p style="line-height:normal; text-align: center">
                         Главным преимуществом оборудования является высокая точность измерений.
                         Максимальный предел взвешивания - 15 кг.
                         Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата), на предприятиях общественного питания, в фармацевтических компаниях и т. д.
@@ -323,7 +323,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <div style="text-align:center;">
                         <img src="images/scale/d2ai-desc-2.png" style="text-align:center; width: 30%;"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Двойной дисплей</p>
-                    <p style="line-height:normal">Имеется два двухлинейных жидкокристаллический дисплея высокой четкости FHD, для продавца и покупателя.
+                    <p style="line-height:normal; text-align: center">Имеется два двухлинейных жидкокристаллический дисплея высокой четкости FHD, для продавца и покупателя.
                         15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач панель, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления.</p>
                     <div class="clearfix"></div>
                 </div>
@@ -335,7 +335,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <div class="wthree_text_info">
                         <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Принтер для печати этикеток</p>
                     </div>
-                    <p style="line-height:normal">Быстрая печать этикеток за счет интеграции взвешивания и печати, что экономит время и усилия. Интеллектуальное обучение, анализ и обработка данных. Чувствительный сенсор принтера, определяющий длину используемой этикетки, работает надежно, не теряя край этикетки. Распознавание AI, быстро идентифицировать товары и значительно повысить эффективность расчетов.</p>
+                    <p style="line-height:normal; text-align: center">Быстрая печать этикеток за счет интеграции взвешивания и печати, что экономит время и усилия. Интеллектуальное обучение, анализ и обработка данных. Чувствительный сенсор принтера, определяющий длину используемой этикетки, работает надежно, не теряя край этикетки. Распознавание AI, быстро идентифицировать товары и значительно повысить эффективность расчетов.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -360,50 +360,55 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     </div>
     <table class="zui-table zui-table-zebra zui-table-horizontal">
         <tbody>
+        https://ru.rongtatech.com/aurora-d2-pc-scale_p91.html
+        <tr>
+            <td>Аппаратное обеспечение:</td>
+            <td style="display: flex;justify-content: space-around">
+                <span>Windows</span>
+                <span>Android</span>
+            </td>
+        </tr>
         <tr>
             <td>Процессор:</td>
-            <td>Intel Elkhart Lake, J6412, 2,0 ГГц, четырехъядерный процессор RK3288, 1,8 ГГц.</td>
-        </tr>
-        <tr>
-            <td>Оперативная памиять:</td>
-            <td>Память: 4 ГБ DDR3
-                <br>
-                2 ГБ DDR3
+            <td style="display: flex;justify-content: space-around">
+                <span>Процессор Intel® Core™ i3-3217U</span>
+                <span>Четырехъядерный процессор RK3288 с частотой 1,8 ГГц.</span>
             </td>
         </tr>
         <tr>
-            <td>Жесткий диск:</td>
-            <td>SSD-накопитель M.2 128 ГБ
-                <br>
-                64 ГБ SSD
+            <td>Хранилище:</td>
+            <td style="display: flex;justify-content: space-between">
+                <span>Память: 4 ГБ DDR3 L 1333 <br> Жесткий диск: 64 ГБ SSD </span>
+                <span>Память: 2 ГБ DDR3 <br> Жесткий диск: 16 ГБ iNAND </span>
             </td>
         </tr>
         <tr>
-            <td>Операционная система:</td>
-            <td>WIN10/WIN11 Android 7.1.2</td>
-        </tr>
-        <tr>
-            <td>Проводная сеть:</td>
-            <td>TCP/IP Ethernet (10M/100M/1000M)</td>
-        </tr>
-        <tr>
-            <td>Беспроводная связь:</td>
-            <td>802.11 ac/b/g/n </td>
-        </tr>
-        <tr>
-            <td>USB:</td>
-            <td>2*USB3.0+3*USB2.0 / 3*USB2.0</td>
+            <td>Сеть:</td>
+            <td style="display: flex;justify-content: space-between">
+                <span>Беспроводная связь: 802.11 ac/b/g/n </span>
+                <span>Беспроводная связь: 802.11 б/г/н </span>
+            </td>
         </tr>
         <tr>
             <td>Внешний интерфейс:</td>
-            <td>Дисплей: 15,6(1366*768)+15,6(1366*768)
-                <br>
+            <td>
                 Касса: 1*RJ11
+                <br>
+                Ethernet: 1*RJ45
+                <br>
+                <div style="display: flex;justify-content: space-between">
+                    <span>2*USB3.0+3*USB2.0</span>
+                    <span>3*USB2.0</span>
+                </div>
                 <br>
                 Аудио: динамик 1*3 Вт
                 <br>
                 Мощность: 12 В 5 А
             </td>
+        </tr>
+        <tr>
+            <td>Внешний интерфейс:</td>
+            <td>Дисплей: 15,6(1366*768)+15,6(1366*768)</td>
         </tr>
         <tr>
             <td>Аппаратное обеспечение весов</td>
