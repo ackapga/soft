@@ -124,6 +124,19 @@ const data = [{
         series: 'aurora',
         code: '0001',
     },
+    {
+        link: 'scale_aurora-y3l.php',
+        title: 'Умные весы с сенсорным экраном AURORA Y3L-AI',
+        desc: 'новые весы самообслуживания с передовыми технологиями, cенсорный экран, высокой точностью определяет продукты, экономия времени и затрат на персонал',
+        price: '421800',
+        img: 'images/scale/y3l-1.jpg',
+        position: ['trade', 'table'],
+        weight: 30,
+        interface: ['usb', 'serial', 'lan'],
+        integration: [],
+        series: 'aurora',
+        code: '0002',
+    },
 ]
 
 
