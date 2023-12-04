@@ -4,10 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9d63a49f-44fd-4a3f-9907-e041e8807583" name="Changes" comment="01.12 fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/products/scales_with.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/products/scales_with.js" afterDir="false" />
+=======
+    <list default="true" id="9d63a49f-44fd-4a3f-9907-e041e8807583" name="Changes" comment="new images">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/4d-u1-1000-a/4d-u1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/4d-u1-1000-a/4d-u1-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/4d-u1-1000-a/4d-u1-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/4d-u1-1000-a/4d-u1-desc-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/4d-u1-1000-a/4d-u1-desc-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/4d-u1-1000-a/4d-u1-desc-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora D2-AI android windows/aurora-d2-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora D2-AI android windows/aurora-d2-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora D2-AI android windows/aurora-d2-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora D2-AI android windows/aurora-d2ai-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora D2-AI android windows/aurora-d2ai-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora D2-AI android windows/aurora-d2ai-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora Y3L-AI PC Based Scale/aurora-y3l-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora Y3L-AI PC Based Scale/aurora-y3l-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora Y3L-AI PC Based Scale/aurora-y3l-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora Y3L-AI PC Based Scale/aurora-y3l-d1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora Y3L-AI PC Based Scale/aurora-y3l-d2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Aurora Y3L-AI PC Based Scale/aurora-y3l-d3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-S2L/mk-s2l-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-S2L/mk-s2l-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-S2L/mk-s2l-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-S2L/mk-s2l-desc-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-S2L/mk-s2l-desc-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-S2L/mk-s2l-desc-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-S2L/mk-s2l-desc-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-SL/mk-sl-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-SL/mk-sl-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-SL/mk-sl-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-SL/mk-sl-desc-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-SL/mk-sl-desc-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/MK-SL/mk-sl-desc-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/Red-Apple-PNG-Cutout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/fruit-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/fruit-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/fruit-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/ovoshi-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/ovoshi-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/ovoshi-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/png-transparent-apple-apple-fruit-apple-clipart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Новая папка/softgroup2.png" beforeDir="false" />
+>>>>>>> 4f9f72c2dd684e9a263a4b163a71df82a4dfd0df
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +65,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +96,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -63,7 +120,17 @@
       <workItem from="1701314547053" duration="1321000" />
       <workItem from="1701328264682" duration="15000000" />
       <workItem from="1701399628826" duration="22990000" />
+      <workItem from="1701615376947" duration="1101000" />
+      <workItem from="1701618369188" duration="129000" />
     </task>
+    <task id="LOCAL-00001" summary="new images">
+      <created>1701615418560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701615418560</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,5 +146,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new images" />
+    <option name="LAST_COMMIT_MESSAGE" value="new images" />
   </component>
 </project>
