@@ -3669,6 +3669,18 @@ const data5 = [
     series: '4d',
   },
   {
+    link: 'scale_aurora-d2.php',
+    title: 'Умные весы с сенсорным экраном Aurora D2-AI (android)',
+    desc: '15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.',
+    price: '399000',
+    img: 'images/scale/aurora-d2-ai-main.jpg',
+    position: [],
+    weight: '',
+    interface: [],
+    integration: [],
+    series: '',
+  },
+  {
     link: 'scanpal_eda_50.php',
     title: 'ТСД терминал Honeywell ScanPal EDA50',
     price: '231650',

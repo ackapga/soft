@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d63a49f-44fd-4a3f-9907-e041e8807583" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dir.SoftGroup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dir.SoftGroup.iml" afterDir="false" />
+    <list default="true" id="9d63a49f-44fd-4a3f-9907-e041e8807583" name="Changes" comment="01.12 fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/monoblocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/monoblocks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos_1701.php" beforeDir="false" afterPath="$PROJECT_DIR$/pos_1701.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/products/scales_with.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/products/scales_with.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
