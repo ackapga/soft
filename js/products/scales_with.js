@@ -137,6 +137,19 @@ const data = [{
         series: 'aurora',
         code: '0002',
     },
+    {
+        link: 'scale_mk-sl.php',
+        title: 'Весы с печатью этикеток MK_SL(12)',
+        desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания, а также при фасовке товаров',
+        price: '292500',
+        img: 'images/scale/mk-sl-1.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['usb', 'serial'],
+        integration: [],
+        series: 'mk',
+        code: '0003',
+    },
 ]
 
 
