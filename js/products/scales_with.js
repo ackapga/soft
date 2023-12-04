@@ -150,6 +150,19 @@ const data = [{
         series: 'mk',
         code: '0003',
     },
+    {
+        link: 'scale_mk-s2l.php',
+        title: 'Весы с печатью этикеток MK_S2L(12)',
+        desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания. Имеет два дисплея.',
+        price: '306000',
+        img: 'images/scale/mk-s2l-1.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['usb', 'serial'],
+        integration: [],
+        series: 'mk',
+        code: '0004',
+    },
 ]
 
 
