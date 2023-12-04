@@ -288,7 +288,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <p>Бесплатная доставка</p>
                 </div>
                 <div>
-                    <button id="fly" class="add_item" data-id="0002"
+                    <button id="fly" class="add_item" data-id="0003"
                             data-title="<a href='https://softgroup.kz/scale_mk-sl.php'>Весы с печатью этикеток MK_SL(12)</a>"
                             data-price="292500"
                             data-quantity="1"
