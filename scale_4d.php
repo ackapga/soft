@@ -49,7 +49,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы паллетные 4D-U-1_A(RUEW) купить в Алматы | Весы для груза от Softgroup</title>
+    <title>Весы паллетные электронные 4D-PM_1A(RUEW)  купить в Алматы | Весы для груза от Softgroup</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -194,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="index.html">Главная</a><i>/</i></li>
                         <li><a href="products.html">Оборудование</a><i>/</i></li>
                         <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                        <li>Весы электронные 4D-PM_1A(RUEW)</li>
+                        <li>Весы паллетные электронные 4D-PM_1A(RUEW)</li>
                     </ul>
                 </div>
             </div>
@@ -248,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                         <p>Бесплатная доставка</p>
                     </div>
-                    <button id="fly" class="add_item" data-id="22" data-title="<a href='https://softgroup.kz/scale_4d.php'>электронные 4D-PM_1A(RUEW)</a>" data-price="235672" data-quantity="1" data-img="https://softgroup.kz/images/scale/93.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                    <button id="fly" class="add_item" data-id="22" data-title="<a href='https://softgroup.kz/scale_4d.php'>Весы паллетные электронные 4D-PM_1A(RUEW)</a>" data-price="235672" data-quantity="1" data-img="https://softgroup.kz/images/scale/93.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
                 </div>
             </div>
         </div>

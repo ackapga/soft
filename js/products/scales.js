@@ -142,7 +142,20 @@ const data = [{
         interface: ["serial", "usb", "wifi", "lan"],
         integration: [],
         series: "4d",
-    }
+    },
+    {
+        link: 'scale_4d-u1.php',
+        title: 'Весы паллетные электронные 4D-U-1A(RUEW)',
+        desc: 'Весы для взвешивания груза, транспортируемого на поддонах. Весы состоят из модуля взвешивающего и терминала. П-образная грузоприемная платформа выполнена из конструкционной стали.',
+        price: '220000',
+        img: 'images/scale/4d-u1-1.jpg',
+        position: ['pallet'],
+        weight: 1000,
+        interface: ['serial', 'usb', 'wifi', 'lan'],
+        integration: [],
+        series: '4d',
+        code: '0005'
+    },
 ]
 
 
