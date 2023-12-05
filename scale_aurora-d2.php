@@ -53,7 +53,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</title>
+    <title>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -193,7 +193,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 </div>
             </nav>
         </div>
-        <div class="top_nav_right"><span id="open" class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge">
+        <div class="top_nav_right"><span id="open" class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge">
                         <div class="label-place"></div>
                     </span></span></div>
         <div class="clearfix"></div>
@@ -211,7 +212,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</li>
+                    <li>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</li>
                 </ul>
             </div>
         </div>
@@ -245,7 +246,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         </div>
 
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h1>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</h1>
+            <h1>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</h1>
             <hr>
             <!-- <p class="code-products">Код товара: XXXX</p>-->
             <p><span class="item-price-indicator">Цена: </span><span class="item_price">399 000 тг. </span></p>
@@ -264,7 +265,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     </span>
             </div>
             <div class="description">
-                <p>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</p>
+                <p>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</p>
                 <p>1. 15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками
                     или в перчатках. Водонепроницаемая панель управления.</p>
                 <p>2. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность
@@ -284,7 +285,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <img src="images/scale/icon5.png" style="float:none">
                 <div>
                     <button id="fly" class="add_item" data-id="0001"
-                            data-title="<a href='https://softgroup.kz/scale_aurora-d2.php'>Умные весы с сенсорным экраном Aurora D2-AI(Android, Windows)</a>"
+                            data-title="<a href='https://softgroup.kz/scale_aurora-d2.php'>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</a>"
                             data-price="399000"
                             data-quantity="1"
                             data-img="images/scale/d2ai-1.jpg">
@@ -300,42 +301,53 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <!-- Descripion -->
     <div class="responsive_tabs_agileits">
         <div class="bootstrap-tab-text-grids">
-            <div class="bootstrap-tab-text-grid" style="padding-bottom:20px; background-color: #e5f6f8;">
+            <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:20px;">
                 <div class="container">
                     <div class="models" style="margin-top:50px">
                         <p style="font-size:1.9em">Описание</p>
-                        <hr>
                     </div>
                     <div style="text-align:center; margin-top:0px">
                         <img src="images/scale/d2ai-desc-1.png" style="text-align:center; width: 40%">
                     </div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Диапазон взвешивания</p>
-                    <p style="line-height:normal; text-align: center">
-                        Главным преимуществом оборудования является высокая точность измерений.
-                        Максимальный предел взвешивания - 15 кг.
-                        Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата), на предприятиях общественного питания, в фармацевтических компаниях и т. д.
-                    </p>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                        Диапазон взвешивания</p>
+                    <p style="line-height:normal; text-align: center">Главным преимуществом оборудования является
+                        высокая точность измерений.
+                        Максимальный предел взвешивания - 15 кг. <br>
+                        Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата), в
+                        фармацевтических компаниях.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
             <div class="bootstrap-tab-text-grid" style="background-color: #fff; padding-bottom:20px">
                 <div class="container">
                     <div style="text-align:center;">
-                        <img src="images/scale/d2ai-desc-2.png" style="text-align:center; width: 30%;"></div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Двойной дисплей</p>
-                    <p style="line-height:normal; text-align: center">Имеется два двухлинейных жидкокристаллический дисплея высокой четкости FHD, для продавца и покупателя.
-                        15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач панель, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления.</p>
+                        <img src="images/scale/d2ai-desc-2.png" style="text-align:center; width: 30%;">
+                    </div>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                        Двойной дисплей</p>
+                    <p style="line-height:normal; text-align: center">Имеются два двухлинейных жидкокристаллических
+                        дисплея высокой четкости FHD,
+                        предназначенных для продавца и покупателя.
+                        15,6-дюймовый сенсорный экран обеспечивает высокую четкость изображения,
+                        мультитач-панель позволяет работать с устройством даже мокрыми руками или в перчатках.
+                        Также имеется водонепроницаемая панель управления.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="bootstrap-tab-text-grid" style="padding-bottom:20px;background-color: #e5f6f8;">
+            <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:20px;">
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
-                        <img src="images/scale/d2ai-desc-3.png" style="text-align:center; width: 30%;"></div>
-                    <div class="wthree_text_info">
-                        <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Принтер для печати этикеток</p>
+                        <img src="images/scale/d2ai-desc-3.png" style="text-align:center; width: 30%;">
                     </div>
-                    <p style="line-height:normal; text-align: center">Быстрая печать этикеток за счет интеграции взвешивания и печати, что экономит время и усилия. Интеллектуальное обучение, анализ и обработка данных. Чувствительный сенсор принтера, определяющий длину используемой этикетки, работает надежно, не теряя край этикетки. Распознавание AI, быстро идентифицировать товары и значительно повысить эффективность расчетов.</p>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                        Принтер для печати этикеток</p>
+                    <p style="line-height:normal; text-align: center">Быстрая печать этикеток достигается за счет
+                        интеграции взвешивания и печати, что экономит время и усилия. Интеллектуальное обучение, анализ
+                        и обработка данных также включены в процесс. Чувствительный сенсор принтера, определяющий длину
+                        используемой этикетки, работает надежно, не теряя край этикетки. Распознавание искусственного
+                        интеллекта (AI) позволяет быстро идентифицировать товары и существенно повышает эффективность
+                        расчетов.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -345,7 +357,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 </div>
                 <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                     Подключение к сети</p>
-                <p style="line-height:normal; text-align: center;">Данный тип весов имеет свойство подключения к быстроскоростному и безпроводному интернету.</p>
+                <p style="line-height:normal; text-align: center;">Данный тип весов имеет свойство подключения к
+                    быстроскоростному и безпроводному интернету.</p>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -360,82 +373,52 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     </div>
     <table class="zui-table zui-table-zebra zui-table-horizontal">
         <tbody>
-        https://ru.rongtatech.com/aurora-d2-pc-scale_p91.html
         <tr>
             <td>Аппаратное обеспечение:</td>
-            <td style="display: flex;justify-content: space-around">
-                <span>Windows</span>
-                <span>Android</span>
-            </td>
-        </tr>
-        <tr>
-            <td>Процессор:</td>
-            <td style="display: flex;justify-content: space-around">
-                <span>Процессор Intel® Core™ i3-3217U</span>
-                <span>Четырехъядерный процессор RK3288 с частотой 1,8 ГГц.</span>
-            </td>
-        </tr>
-        <tr>
-            <td>Хранилище:</td>
             <td style="display: flex;justify-content: space-between">
-                <span>Память: 4 ГБ DDR3 L 1333 <br> Жесткий диск: 64 ГБ SSD </span>
-                <span>Память: 2 ГБ DDR3 <br> Жесткий диск: 16 ГБ iNAND </span>
-            </td>
-        </tr>
-        <tr>
-            <td>Сеть:</td>
-            <td style="display: flex;justify-content: space-between">
-                <span>Беспроводная связь: 802.11 ac/b/g/n </span>
-                <span>Беспроводная связь: 802.11 б/г/н </span>
+                <span>Windows
+                    <br>Память: 4 ГБ DDR3 L 1333
+                    <br>Жесткий диск: 128 ГБ SSD
+                    <br>Беспроводная связь: 802,11 ac/B/G/N
+                </span>
+                <span>Android
+                    <br>Память: 2 ГБ DDR3
+                    <br>Жесткий диск: 16 ГБ iNAND
+                    <br>Беспроводная связь: 802,11 B/G/N
+                </span>
             </td>
         </tr>
         <tr>
             <td>Внешний интерфейс:</td>
             <td>
-                Касса: 1*RJ11
-                <br>
-                Ethernet: 1*RJ45
-                <br>
-                <div style="display: flex;justify-content: space-between">
-                    <span>2*USB3.0+3*USB2.0</span>
-                    <span>3*USB2.0</span>
-                </div>
-                <br>
-                Аудио: динамик 1*3 Вт
-                <br>
-                Мощность: 12 В 5 А
+                Дисплей: 15,6 (1366*768) + 15,6 (1366*768)
+                <br>Ethernet: 1 * RJ45
+                <br> * USB3.0 + 3 * USB2.0 / 3 * USB2.0
+                <br>Аудио: 1*3 Вт динамик
+                <br>Мощность: 12V 5A
             </td>
         </tr>
         <tr>
-            <td>Внешний интерфейс:</td>
-            <td>Дисплей: 15,6(1366*768)+15,6(1366*768)</td>
-        </tr>
-        <tr>
-            <td>Аппаратное обеспечение весов</td>
-            <td>Максимальная грузоподъемность: 15 кг
-                <br>
-                Минимальная вместимость: 40 г
-                <br>
-                Интервал поверочной шкалы: 2/5 г (примечание: 6/15 кг)
-                <br>
-        </tr>
-        <tr>
-            <td>Аппаратное обеспечение принтера:</td>
-            <td>Способ печати:	Прямая термопечать
-                <br>
-                Ширина печати:	58мм
-                <br>
-                Разрешение:	203 точек на дюйм
-                <br>
-                Скорость печати:	70 мм/с
-                <br>
-                Вместимость отсека:	70мм
-                <br>
-                Штрих-код: UCP-A, EAN(JAN)13, EAN(JAN)8, CODE39,CODEBAR, CODE128
+            <td>Диапазон взвешивания:</td>
+            <td>
+                Макс Емкость: 15 кг
+                <br>Интервал шкалы проверки: 2/5g (Замечание: 6/15 кг)
+                <br>Мин Емкость: 40g
             </td>
         </tr>
         <tr>
-            <td>Упаковка: </td>
+            <td>Аппаратные средства принтера:</td>
+            <td>
+                Метод печатания: Прямая термальная печать
+                <br>Ширина печатания: 58 мм
+                <br>Разрешение: 203DPI
+                <br>Скорость печатания: 70 мм/с
+                <br>Емкость отсека: 70 мм
+                <br>Штрих-код: UCP-A, EAN(JAN)13, EAN(JAN)8, CODE39, КОДЕБАР, CODE128
+            </td>
+        </tr>
+        <tr>
+            <td>Упаковка:</td>
             <td>
                 Аксессуары: Шнур питания; Адаптер; Руководство по быстрой установке; Рулон бумаги
                 <br>
@@ -445,7 +428,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             </td>
         </tr>
         <tr>
-            <td>Окружающая среда энт: </td>
+            <td>Окружающая среда энт:</td>
             <td>
                 Температура хранения: -10℃—60℃; Рабочая: 0℃—40℃
                 <br>
@@ -526,7 +509,9 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         </div>
     </div>
     <div class="video">
-        <iframe width="1000" height="563" src="https://www.youtube.com/embed/jpDM-Ybi5DE?rel=0&autoplay=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1000" height="563" src="https://www.youtube.com/embed/jpDM-Ybi5DE?rel=0&autoplay=0"
+                frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
     </div>
     <!-- Comments-->
     <?php
@@ -770,8 +755,14 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                             <div class="clearfix"></div>
                         </div>
                         <div id="socialMedia" class="span3 pull-right">
-                            <a href="https://www.youtube.com/channel/UCNDMIviMuZOhhCP7xoxGYAA/videos"><img width="50" height="50" src="images/youtube.png" title="youtube" alt="youtube"/></a>
-                            <a href="https://www.instagram.com/idiamarket/"><img width="50" height="50" src="images/insta.png" title="instagram" alt="instagram"></a>
+                            <a href="https://www.youtube.com/channel/UCNDMIviMuZOhhCP7xoxGYAA/videos"><img width="50"
+                                                                                                           height="50"
+                                                                                                           src="images/youtube.png"
+                                                                                                           title="youtube"
+                                                                                                           alt="youtube"/></a>
+                            <a href="https://www.instagram.com/idiamarket/"><img width="50" height="50"
+                                                                                 src="images/insta.png"
+                                                                                 title="instagram" alt="instagram"></a>
                         </div>
                     </div>
                 </div>

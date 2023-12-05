@@ -264,7 +264,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <p>Умные весы с сенсорным экраном AURORA Y3L-AI</p>
                 <p>1. Новые весы самообслуживания с передовыми технологиями.</p>
                 <p>2. Сенсорный экран высокого разрешения с распознаванием камеры AI</p>
-                <p>3. Автоматически мгновенно и с высокой точностью определяет продукты, помещенные на весы.</p>
+                <p>3. Высокая точность определения продукта, помещенные на весы.</p>
                 <p>4. Многоточечный емкостный сенсорный экран</p>
                 <p>5. Повышение эффективности, экономия времени и затрат на персонал</p>
                 <p><i class="fa fa-check"></i> Экономия времени и удобство</p>
@@ -307,9 +307,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                         <img src="images/scale/y3l-desc-1.png" style="text-align:center; width: 40%">
                     </div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0; text-align: center">Диапазон взвешивания</p>
-                    <p style="line-height:normal">
-                        Главным преимуществом оборудования является высокая точность измерений. Максимальный предел взвешивания - 15 кг.
-                        Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата) в фармацевтических компаниях и т. д.
+                    <p style="line-height:normal; text-align: center;">
+                        Главным преимуществом данного оборудования является высокая точность измерений. Максимальный предел взвешивания составляет 15 кг. Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата), в фармацевтических компаниях и т.д.
                     </p>
                     <div class="clearfix"></div>
                 </div>
@@ -317,22 +316,22 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div class="bootstrap-tab-text-grid" style="background-color: #fff; padding-bottom:20px">
                 <div class="container">
                     <div style="text-align:center;">
-                        <img src="images/scale/y3l-desc-2.png" style="text-align:center; width: 30%;"></div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Двойной дисплей</p>
-                    <p style="line-height:normal; text-align: center">Имеется два дисплея высокой четкости FHD. Самообслуживания с передовыми технологиями.
-                        <br>Мультитач панель 15,6-дюймовым сенсорным экраном с одной стороны, 10,1-дюймовыс с дргой.</p>
+                        <img src="images/scale/y3l-desc-2.png" style="text-align:center; width: 30%;">
+                    </div>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Принтер для печати этикеток</p>
+                    <p style="line-height:normal; text-align: center">Повышение эффективности достигается за счёт быстрой печати этикеток, интегрированной с функцией взвешивания, что приводит к экономии времени и снижению затрат на персонал. В процесс также включены интеллектуальное обучение, анализ и обработка данных. Чувствительный сенсор принтера, определяющий длину используемой этикетки, работает надежно, не теряя край этикетки.</p>
+
                     <div class="clearfix"></div>
                 </div>
             </div>
             <div class="bootstrap-tab-text-grid" style="padding-bottom:20px;background-color: #e5f6f8;">
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
-                        <img src="images/scale/y3l-desc-3.png" style="text-align:center; width: 30%;"></div>
-                    <div class="wthree_text_info">
-                        <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Принтер для печати этикеток</p>
+                        <img src="images/scale/y3l-desc-3.png" style="text-align:center; width: 30%;">
                     </div>
-                    <p style="line-height:normal; text-align: center">Повышение эффективности, быстрая печать этикеток за счет интеграции взвешивания, экономия времени и затрат на персонал. Интеллектуальное обучение, анализ и обработка данных.
-                        <br>Чувствительный сенсор принтера, определяющий длину используемой этикетки, работает надежно, не теряя край этикетки.</p>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Двойной дисплей</p>
+                    <p style="line-height:normal; text-align: center">Имеются два дисплея высокой четкости FHD для самообслуживания с передовыми технологиями.
+                        <br>Мультитач-панель с 15,6-дюймовым сенсорным экраном с одной стороны и 10,1-дюймовым с другой</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -358,7 +357,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <table class="zui-table zui-table-zebra zui-table-horizontal">
         <tbody>
         <tr>
-            <td>Аппаратное обеспечение ПК:</td>
+            <td>Аппаратное обеспечение:</td>
             <td>
                 Процессор: Четырехъядерный процессор RK3288 с частотой 1,8 ГГц.
                 <br>
@@ -379,7 +378,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 Напряжение: 110-240 В
             </td>
         <tr>
-            <td>Оборудование для весов:</td>
+            <td>Весы оборудования:</td>
             <td>
                 Диапазон взвешивания: Максимальная вместимость: 15 кг/30 кг
                 <br>
