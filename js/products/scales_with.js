@@ -1,178 +1,8 @@
-const data = [{
-        link: "scale_tm30.php",
-        title: "Весы электронные TM30A",
-        desc: "Электронные торговые весы со стойкой TM30A предназначены для взвешивания и расчёта стоимости товара по измеренному весу и указанной цене за килограмм. Весы отлично применяются в различных сферах обслуживания, розничной и оптовой торговле.",
-        price: "100800",
-        img: "images/scale/1.jpg",
-        position: ["trade"],
-        weight: 30,
-        interface: ["usb", "serial", "lan"],
-        integration: [],
-        series: "tm",
-    }, {
-        link: "scale_mk_rp_10.php",
-        title: "Весы торговые с печатью этикеток МК_RP10",
-        desc: "Весы предназначены для маркировки и учета весовых, штучных и счетных товаров. Память на 20 000 товаров. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (продажа, прием, отпуск, списание, инвентаризация). ",
-        price: "156166",
-        img: "images/scale/10.jpg",
-        position: ["trade", "table"],
-        weight: 32,
-        interface: ["serial"],
-        integration: [],
-        series: "mk",
-    }, {
-        link: "scale_mk_r2p_10.php",
-        title: "Весы электронные с печатью этикеток МК_R2P10-1",
-        desc: "Весы с устройством подмотки конца ленты предназначены для маркировки и учета весовых, штучных и счетных товаров за прилавком. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов.",
-        price: "178258",
-        img: "images/scale/20.jpg",
-        position: ["table"],
-        weight: 32,
-        interface: ["usb", "serial"],
-        integration: [],
-        series: "mk",
-    }, {
-        link: "scale_rl_10.php",
-        title: "Весы торговые с печатью этикеток МК_RL10-1",
-        desc: "Весы предназначены для маркировки и учета весовых, штучных и счетных товаров. Память на 20000 товаров. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация).",
-        price: "210011",
-        img: "images/scale/30.jpg",
-        position: ["table", "trade"],
-        weight: 32,
-        interface: ["usb", "serial"],
-        integration: [],
-        series: "mk",
-    }, {
-        link: "scale_tbs_rl.php",
-        title: "Весы торговые с печатью этикеток TB-S_RL1",
-        desc: "Весы состоят из модуля взвешивающего и терминала, которые соединены между собой кабелем. Грузоприемная платформа может быть размещена на полу или на столе. В комплект поставки входят два кронштейна, с помощью которых терминал можно прикрепить либо непосредственно к модулю ТВ-S, либо закрепить его на стене.",
-        price: "210915",
-        img: "images/scale/50.jpg",
-        position: ["floor", "trade"],
-        weight: 200,
-        interface: ["usb", "serial"],
-        integration: [],
-        series: "tb",
-    }, {
-        link: "scale_mk_r2l.php",
-        title: "Весы торговые с печатью этикеток МК_R2L10-1",
-        desc: "Весы предназначены для маркировки и учета весовых, штучных и счетных товаров за прилавком. Память на 20000 товаров. Печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация).",
-        price: "217243",
-        img: "images/scale/40.jpg",
-        position: ["table", "trade"],
-        weight: 32,
-        interface: ["usb", "serial", "lan"],
-        integration: [],
-        series: "mk",
-    }, {
-        link: "scale_tb_m.php",
-        title: "Весы ТВ-M_RP с принтером этикеток",
-        desc: "Напольные товарные весы с вертикальной стойкой. Жидкокристаллический индикатор с подсветкой. Встроенный аккумулятор обеспечивает автономную работу весов до 15 часов. Счетный режим.",
-        price: "218655",
-        img: "images/scale/92.jpg",
-        position: ["floor"],
-        weight: 500,
-        interface: ["usb", "serial", "lan"],
-        integration: [],
-        series: "tb",
-    },
-    // {
-    //     link: "scale_tbs_ra.php",
-    //     title: "Весы товарные ТВ-S_RA с регистрацией товароучетных операций",
-    //     desc: "Напольные товарные весы с вертикальной стойкой. Возможна работа в счетном режиме. Обеспечена возможность подключения к весам сканера штрихкодов и дозатора. Весы регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация). Легко интегрируются в системы учета, в том числе в режиме весового терминала сбора данных. ",
-    //     price: "96285",
-    //     img: "images/scale/91.jpg",
-    //     position: ["floor"],
-    //     weight: 200,
-    //     interface: ["serial", "usb"],
-    //     integration: [],
-    //     series: "tb",
-    // }, 
-    {
-        link: "scale_RLS1100.php",
-        title: "Весы Rongta RLS1100 с принтером этикеток",
-        desc: "Весы Rongta RLS1100 успешно могут использоваться в магазинах, в супермаркетах и на фасовке, они не только могут взвешивать товар, но и производить полную калькуляцию покупки. Вакуумно-флуоресцентный дисплей покупателя установлен на высокой и устойчивой стойке, и хорошо виден над витринами.",
-        price: "158921",
-        img: "images/rongta_rls/1rongta.jpg",
-        position: ["trade"],
-        weight: 32,
-        interface: ["serial", "lan"],
-        integration: [],
-        series: "4d",
-    }, {
-        link: "scale_RLS1100C.php",
-        title: "Весы Rongta RLS1100 C с принтером этикеток",
-        desc: "Весы Rongta RLS1100 C успешно могут использоваться в магазинах, в супермаркетах и на фасовке, они не только могут взвешивать товар, но и производить полную калькуляцию покупки.",
-        price: "158920",
-        img: "images/rongta_rlsc/rongta_2mfruits_wm.png",
-        position: ["trade"],
-        weight: 32,
-        interface: ["serial", "lan"],
-        integration: [],
-        series: "4d",
-    },
-    {
-        link: 'scale_aurora_d2.php',
-        title: 'Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)',
-        desc: '15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.',
-        price: '399000',
-        img: 'images/scale/d2ai-1.jpg',
-        position: ['trade', 'table'],
-        weight: 30,
-        interface: ['usb', 'serial', 'lan'],
-        integration: [],
-        series: 'aurora',
-        code: '0001',
-    },
-    {
-        link: 'scale_aurora_y3l.php',
-        title: 'Умные весы с сенсорным экраном AURORA Y3L-AI',
-        desc: 'новые весы самообслуживания с передовыми технологиями, cенсорный экран, высокой точностью определяет продукты, экономия времени и затрат на персонал',
-        price: '421800',
-        img: 'images/scale/y3l-1.jpg',
-        position: ['trade', 'table'],
-        weight: 30,
-        interface: ['usb', 'serial', 'lan'],
-        integration: [],
-        series: 'aurora',
-        code: '0002',
-    },
-    {
-        link: 'scale_mk_sl.php',
-        title: 'Весы с печатью этикеток MK_SL(12)',
-        desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания, а также при фасовке товаров',
-        price: '292500',
-        img: 'images/scale/mk-sl-1.jpg',
-        position: ['table'],
-        weight: 32,
-        interface: ['usb', 'serial'],
-        integration: [],
-        series: 'mk',
-        code: '0003',
-    },
-    {
-        link: 'scale_mk_s2l.php',
-        title: 'Весы с печатью этикеток MK_S2L(12)',
-        desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания. Имеет два дисплея.',
-        price: '306000',
-        img: 'images/scale/mk-s2l-1.jpg',
-        position: ['table'],
-        weight: 32,
-        interface: ['usb', 'serial'],
-        integration: [],
-        series: 'mk',
-        code: '0004',
-    },
-]
+import {getListByCategory} from '../modules/dataProducts.js';
 
-
-
-
-const scales = document.getElementById('scales');
-
+const data = getListByCategory();
+const scales = document.getElementById('scales_with');
 const priceSort = document.getElementById('priceSort');
-
-
 
 let priceSortedArray = data.sort(function(a, b) {
     let x = a.price;
@@ -181,7 +11,6 @@ let priceSortedArray = data.sort(function(a, b) {
     return x - y;
 });
 let initialArray = priceSortedArray;
-
 let initStage = true;
 
 priceSort.addEventListener("change", function() {
@@ -205,8 +34,6 @@ priceSort.addEventListener("change", function() {
     initialArray = priceSortedArray;
     filterArray();
 });
-
-
 
 function displayList(array) {
     scales.innerHTML = "";
@@ -261,7 +88,6 @@ function showInitialStage() {
     let params = countParam(initialArray);
     showParamCounters(params)
 }
-
 
 showInitialStage();
 
@@ -343,7 +169,6 @@ function filterArray() {
     }
 }
 
-
 let clickArr = []
 let filterOptionArray = []
 let btnArray = []
@@ -360,13 +185,12 @@ const c3b1 = document.getElementById('c3b1');
 const c3b2 = document.getElementById('c3b2');
 const c3b3 = document.getElementById('c3b3');
 const c3b4 = document.getElementById('c3b4');
+
 const c4b1 = document.getElementById('c4b1');
 const c4b2 = document.getElementById('c4b2');
 const c4b3 = document.getElementById('c4b3');
 const c4b4 = document.getElementById('c4b4');
 const c4b5 = document.getElementById('c4b5');
-
-
 
 
 function updateFilterParam() {
@@ -385,7 +209,6 @@ function updateFilterParam() {
     }
 
 
-
     filterParam.interface = [];
 
     if (c2b1.checked) {
@@ -399,8 +222,6 @@ function updateFilterParam() {
     if (c2b3.checked) {
         filterParam.interface.push("usb");
     }
-
-
 
 
     filterParam.weight = [];
@@ -420,6 +241,7 @@ function updateFilterParam() {
     if (c3b4.checked) {
         filterParam.weight.push(500);
     }
+
 
     filterParam.series = [];
 
@@ -443,7 +265,6 @@ function updateFilterParam() {
         filterParam.series.push("aurora");
     }
 
-
     filterArray()
 }
 
@@ -460,7 +281,6 @@ function spliceMethodSecond(value) {
         filterOptionArray.splice(idx, 1);
     }
 }
-
 
 function c1b1Click() {
     if (c1b1.checked == true) {
@@ -500,9 +320,6 @@ function c1b3Click() {
     }
     updateFilterParam()
 }
-
-
-
 
 
 function c2b1Click() {
@@ -545,8 +362,6 @@ function c2b3Click() {
 }
 
 
-
-
 function c3b1Click() {
     if (c3b1.checked == true) {
         filterOptionArray.push('до 30кг')
@@ -573,7 +388,6 @@ function c3b2Click() {
     updateFilterParam()
 }
 
-
 function c3b3Click() {
     if (c3b3.checked == true) {
         filterOptionArray.push('до 200кг')
@@ -586,7 +400,6 @@ function c3b3Click() {
     }
     updateFilterParam()
 }
-
 
 function c3b4Click() {
     if (c3b4.checked == true) {
@@ -602,7 +415,6 @@ function c3b4Click() {
 }
 
 
-
 function c4b1Click() {
     if (c4b1.checked == true) {
         filterOptionArray.push('Весы МК')
@@ -615,7 +427,6 @@ function c4b1Click() {
     }
     updateFilterParam()
 }
-
 
 function c4b2Click() {
     if (c4b2.checked == true) {
@@ -630,7 +441,6 @@ function c4b2Click() {
     updateFilterParam()
 }
 
-
 function c4b3Click() {
     if (c4b3.checked == true) {
         filterOptionArray.push('Весы TM')
@@ -643,7 +453,6 @@ function c4b3Click() {
     }
     updateFilterParam()
 }
-
 
 function c4b4Click() {
     if (c4b4.checked == true) {
@@ -672,7 +481,6 @@ function c4b5Click() {
 }
 
 
-
 c1b1.addEventListener('click', c1b1Click)
 c1b2.addEventListener('click', c1b2Click)
 c1b3.addEventListener('click', c1b3Click)
@@ -680,7 +488,6 @@ c1b3.addEventListener('click', c1b3Click)
 c2b1.addEventListener('click', c2b1Click)
 c2b2.addEventListener('click', c2b2Click)
 c2b3.addEventListener('click', c2b3Click)
-
 
 
 c3b1.addEventListener('click', c3b1Click)
@@ -712,12 +519,10 @@ iziToast.settings({
     }
 });
 
-
 // error
 function errorMsg() {
     iziToast.warning({ title: '', message: 'По таким параметрам продуктов не найдено' });
 }
-
 
 const filter = document.getElementById("filter");
 let arrCounter = true;
@@ -771,8 +576,6 @@ document.addEventListener(
     },
     false
 );
-
-
 
 function removeFilterElement(value) {
     filterOptionArray.splice(value, 1);
@@ -857,8 +660,6 @@ function countParam(array) {
     ]
 
 }
-
-
 
 function showParamCounters(array) {
     for (let i = 0; i < array.length; i++) {

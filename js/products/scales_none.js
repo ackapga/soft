@@ -1,183 +1,8 @@
-const data = [{
-        link: "scale_mk_a.php",
-        title: "Весы настольные электронные MK_A",
-        desc: "Весы предназначены для измерений массы различных грузов при торговых, учетных и технологических операциях. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Позволяют работать в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).",
-        price: "39550",
-        img: "images/scale/3.jpg",
-        position: ["table"],
-        weight: 32,
-        interface: ["serial", "usb", "none"],
-        integration: [],
-        series: "mk",
-    },
-    {
-        link: "scale_th_11.php",
-        title: "Весы товарные MK_TH11",
-        desc: "Весы предназначены для измерений массы товаров при торговых операциях. Поддерживается возможность суммирования стоимости покупки и расчета сдачи. Встроенный аккумулятор обеспечивает автономную работу весов до 115 часов. Двухсторонняя индикация на складной стойке.",
-        price: "58308",
-        img: "images/scale/7.jpg",
-        position: ["table"],
-        weight: 32,
-        interface: ["none"],
-        integration: [],
-        series: "th",
-    }, {
-        link: "scale_mk_th.php",
-        title: "Весы торговые MK_TH21(RU)",
-        desc: "Весы предназначены для измерений массы товаров при торговых операциях. Двухсторонняя светодиодная индикация. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Поддерживается возможности суммирования стоимости покупки и расчета сдачи. Встроенный аккумулятор обеспечивает автономную работу весов до 50 часов. Обмен информацией с внешними устройствами реализован по интерфейсам RS-232 и USB.",
-        price: "59325",
-        img: "images/scale/8.jpg",
-        position: ["floor"],
-        weight: 32,
-        interface: ["serial", "usb"],
-        integration: [],
-        series: "th",
-    }, {
-        link: "scale_tbs_a.php",
-        title: "Весы товарные ТВ-S_A01/TB3",
-        desc: "Весы состоят из модуля взвешивающего и терминала, которые соединены между собой кабелем. Грузоприемная платформа может быть размещена на полу или на столе. В комплект поставки входят два кронштейна, с помощью которых терминал можно прикрепить либо непосредственно к модулю ТВ-S, либо закрепить его на стене. Весы предназначены для маркировки и учета весовых, штучных и счетных товаров.",
-        price: "69156",
-        img: "images/scale/60.jpg",
-        position: ["floor"],
-        weight: 200,
-        interface: ["none"],
-        integration: [],
-        series: "tb",
-    }, {
-        link: "scale_mk_ab.php",
-        title: "Весы влагозащищенные MK_AB11",
-        desc: "Весы с улучшенной влагозащитой предназначены для измерений массы товаров при торговых, учетных и технологических операциях. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами.",
-        price: "66105",
-        img: "images/scale/4.jpg",
-        position: ["table"],
-        weight: 32,
-        interface: ["serial"],
-        integration: [],
-        series: "mk",
-    }, {
-        link: "scale_tbs_t3.php",
-        title: "Весы торговые TB-S_T3 (платформа + терминал)",
-        desc: "Напольные товарные весы с вертикальной стойкой. Поддерживаются возможности расчета стоимости штучных товаров, суммирования стоимости покупки и расчета сдачи. Память на 16 значений цены товара. Встроенный аккумулятор обеспечивает автономную работу весов до 115 часов.",
-        price: "78818",
-        img: "images/scale/9.jpg",
-        position: ["floor"],
-        weight: 32,
-        interface: ["serial", "usb"],
-        integration: [],
-        series: "tb",
-    }, {
-        link: "scale_mk_ra.php",
-        title: "Весы электронные со стойкой MK_RA11",
-        desc: "есы предназначены для измерений массы и количества различных грузов при торговых, учетных и технологических операциях. Возможна работа в счетном режиме. Обеспечена возможность подключения к весам сканера штрихкодов и дозатора.",
-        price: "103847",
-        img: "images/scale/5.jpg",
-        position: ["table"],
-        weight: 32,
-        interface: ["serial", "usb"],
-        integration: [],
-        series: "mk",
-    }, {
-        link: "scale_tbs_aruew.php",
-        title: "Весы товарные ТВ-S_A(RUEW)3",
-        desc: "Напольные товарные весы с вертикальной стойкой. Жидкокристаллический индикатор с подсветкой. Встроенный аккумулятор обеспечивает автономную работу весов до 15 часов. Счетный режим.",
-        price: "90080",
-        img: "images/scale/70.jpg",
-        position: ["floor", "trade"],
-        weight: 200,
-        interface: ["serial", "usb", "lan"],
-        integration: [],
-        series: "tb",
-    }, {
-        link: "scale_tbs_ra.php",
-        title: "Весы товарные ТВ-S_RA с регистрацией товароучетных операций",
-        desc: "Напольные товарные весы с вертикальной стойкой. Возможна работа в счетном режиме. Обеспечена возможность подключения к весам сканера штрихкодов и дозатора. Весы регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация). Легко интегрируются в системы учета, в том числе в режиме весового терминала сбора данных. ",
-        price: "96285",
-        img: "images/scale/91.jpg",
-        position: ["floor", "trade"],
-        weight: 200,
-        interface: ["serial", "usb"],
-        integration: [],
-        series: "tb",
-    }, {
-        link: "scale_mk_ab_ruew.php",
-        title: "Весы электронные влагозащищенные MK_AB2(RUEW)",
-        desc: "Весы с улучшенной влагозащитой предназначены для измерений массы товаров при торговых, учетных и технологических операциях. Терминал весов в корпусе из нержавеющей стали. Весы легко интегрируются с учетными системами, POS и смарт-терминалами.",
-        price: "103598",
-        img: "images/scale/6.jpg",
-        position: ["table"],
-        weight: 32,
-        interface: ["serial", "usb", "wifi", "lan"],
-        integration: [],
-        series: "mk",
-    }, {
-        link: "scale_tb_m_aruew_rs.php",
-        title: "Весы товарные ТВ-S_A RUEW с интерфейсами RS, USB, Ethernet, WiFi",
-        desc: "Весы состоят из двух частей: взвешивающего модуля и терминала, которые соединены между собой 5-метровым кабелем. Грузоприемная платформа может быть размещена на полу или на столе. ",
-        price: "116340",
-        img: "images/scale/80.jpg",
-        position: ["floor"],
-        weight: 200,
-        interface: ["serial", "usb", "lan"],
-        integration: [],
-        series: "tb",
-    }, {
-        link: "scale_tbs_ab.php",
-        title: "Весы товарные ТВ-S_AB с влагозащищенным терминалом",
-        desc: "Весы состоят из модуля взвешивающего и терминала, которые соединены между собой 5-метровым кабелем. Грузоприемная платформа может быть размещена на полу или на столе. Терминал может быть закреплен на стене.",
-        price: "116949",
-        img: "images/scale/90.jpg",
-        position: ["table"],
-        weight: 200,
-        interface: ["serial", "usb", "wifi", "lan"],
-        integration: [],
-        series: "tb",
-    }, {
-        link: "scale_4d.php",
-        title: "Весы паллетные электронные 4D-PM_1A(RUEW)",
-        desc: "Весы состоят из модуля взвешивающего и терминала. Моноблочная грузоприемная платформа выполнена из конструкционной стали. Терминал поддерживает счетный и дозаторный режимы работы. Режимы процентного взвешивания, контроля массы (компараторный) и взвешивания подвижных грузов.",
-        price: "235672",
-        img: "images/scale/93.jpg",
-        position: ["pallet"],
-        weight: 1000,
-        interface: ["serial", "usb", "wifi", "lan"],
-        integration: [],
-        series: "4d",
-    },
-    {
-        link: 'scale_4d_u1.php',
-        title: 'Весы паллетные электронные 4D-U-1A(RUEW)',
-        desc: 'Весы для взвешивания груза, транспортируемого на поддонах. Весы состоят из модуля взвешивающего и терминала. П-образная грузоприемная платформа выполнена из конструкционной стали.',
-        price: '220000',
-        img: 'images/scale/4d-u1-1.jpg',
-        position: ['pallet'],
-        weight: 1000,
-        interface: ['serial', 'usb', 'wifi', 'lan'],
-        integration: [],
-        series: '4d',
-        code: '0005'
-    },
-    {
-        link: 'scale_tb_m_a3.php',
-        title: 'Весы товарные TB-M_А3',
-        desc: 'Весы напольные  с вертикальной стойкой, легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).',
-        price: '164850',
-        img: 'images/scale/tb-m_a3-1.jpg',
-        position: ['floor', 'trade'],
-        weight: 200,
-        interface: ['serial'],
-        integration: [],
-        series: 'tb',
-        code: '0006'
-    },
-]
+import {getListByCategory} from '../modules/dataProducts.js';
 
-
-
-const scales = document.getElementById('scales');
-
+const data = getListByCategory();
+const scales_none = document.getElementById('scales_none');
 const priceSort = document.getElementById('priceSort');
-
-
 
 let priceSortedArray = data.sort(function(a, b) {
     let x = a.price;
@@ -186,7 +11,6 @@ let priceSortedArray = data.sort(function(a, b) {
     return x - y;
 });
 let initialArray = priceSortedArray;
-
 let initStage = true;
 
 priceSort.addEventListener("change", function() {
@@ -211,10 +35,8 @@ priceSort.addEventListener("change", function() {
     filterArray();
 });
 
-
-
 function displayList(array) {
-    scales.innerHTML = "";
+    scales_none.innerHTML = "";
     let video = document.createElement('div');
     // <p>Звоните прямо сейчас: <br><a href="tel:87273449900">8(727)<span> 344-99-00</span></a>; <a href="tel:+77012667700"><b>+7 701 266-77-00</b></a></p>
     video.innerHTML = `
@@ -255,7 +77,7 @@ function displayList(array) {
             </div>
         
     `;
-        scales.appendChild(item);
+        scales_none.appendChild(item);
 
     })
 }
@@ -265,7 +87,6 @@ function showInitialStage() {
     let params = countParam(initialArray);
     showParamCounters(params)
 }
-
 
 showInitialStage();
 
@@ -347,7 +168,6 @@ function filterArray() {
     }
 }
 
-
 let clickArr = []
 let filterOptionArray = []
 let btnArray = []
@@ -356,6 +176,7 @@ const c1b1 = document.getElementById('c1b1');
 const c1b2 = document.getElementById('c1b2');
 const c1b3 = document.getElementById('c1b3');
 const c1b4 = document.getElementById('c1b4');
+
 const c2b1 = document.getElementById('c2b1');
 const c2b2 = document.getElementById('c2b2');
 const c2b3 = document.getElementById('c2b3');
@@ -367,7 +188,6 @@ const c3b2 = document.getElementById('c3b2');
 const c3b3 = document.getElementById('c3b3');
 const c3b4 = document.getElementById('c3b4');
 const c3b5 = document.getElementById('c3b5');
-
 
 const c4b1 = document.getElementById('c4b1');
 const c4b2 = document.getElementById('c4b2');
@@ -481,7 +301,6 @@ function spliceMethodSecond(value) {
     }
 }
 
-
 function c1b1Click() {
     if (c1b1.checked == true) {
         filterOptionArray.push('Настольный')
@@ -533,7 +352,6 @@ function c1b4Click() {
     }
     updateFilterParam()
 }
-
 
 
 function c2b1Click() {
@@ -643,7 +461,6 @@ function c3b3Click() {
     updateFilterParam()
 }
 
-
 function c3b4Click() {
     if (c3b4.checked == true) {
         filterOptionArray.push('до 500кг')
@@ -656,7 +473,6 @@ function c3b4Click() {
     }
     updateFilterParam()
 }
-
 
 function c3b5Click() {
     if (c3b5.checked == true) {
@@ -685,7 +501,6 @@ function c4b1Click() {
     updateFilterParam()
 }
 
-
 function c4b2Click() {
     if (c4b2.checked == true) {
         filterOptionArray.push('Весы TB')
@@ -698,7 +513,6 @@ function c4b2Click() {
     }
     updateFilterParam()
 }
-
 
 function c4b3Click() {
     if (c4b3.checked == true) {
@@ -713,7 +527,6 @@ function c4b3Click() {
     updateFilterParam()
 }
 
-
 function c4b4Click() {
     if (c4b4.checked == true) {
         filterOptionArray.push('Весы 4D')
@@ -726,7 +539,6 @@ function c4b4Click() {
     }
     updateFilterParam()
 }
-
 
 
 c1b1.addEventListener('click', c1b1Click)
@@ -769,12 +581,10 @@ iziToast.settings({
     }
 });
 
-
 // error
 function errorMsg() {
     iziToast.warning({ title: '', message: 'По таким параметрам продуктов не найдено' });
 }
-
 
 const filter = document.getElementById("filter");
 let arrCounter = true;
@@ -828,8 +638,6 @@ document.addEventListener(
     },
     false
 );
-
-
 
 function removeFilterElement(value) {
     filterOptionArray.splice(value, 1);
@@ -922,8 +730,6 @@ function countParam(array) {
     ]
 
 }
-
-
 
 function showParamCounters(array) {
     for (let i = 0; i < array.length; i++) {

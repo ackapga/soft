@@ -1,5 +1,5 @@
 // Imitate a Database Product list ;-)
-export const data = [
+export const dataProducts = [
   {
     link: 'label_3120t.php',
     title: 'Принтер этикеток 3120T',
@@ -1420,3 +1420,17 @@ export const data = [
     code: '9042',
   },
 ];
+
+function getCategoryFromUrl() {
+  return window.location.href
+      .split('/')
+      .pop()
+      .split('#')[0]
+      .split('?')[0]
+      .split('.')[0];
+}
+
+export function getListByCategory() {
+  const value = getCategoryFromUrl();
+  return dataProducts.filter(item => item['category'] === value);
+}
