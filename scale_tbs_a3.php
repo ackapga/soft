@@ -28,11 +28,11 @@ if ($respponse->success) {    //отправлен комментарий
 
     if ($mess_login != '' and $user_text != '') {
         if (is_numeric($_POST["parent_id"]) and is_numeric($_POST["f_parent"]))
-            $res = mysqli_query($db, "insert into scaletbm
+            $res = mysqli_query($db, "insert into scaletbsaruew
     (parent_id, first_parent, date, theme_id, login, message, rating)
     values ('" . $_POST["parent_id"] . "','" . $_POST["f_parent"] . "',
     '" . $time . "','" . $theme_id . "','" . $mess_login . "','" . $user_text . "', '" . $rating . "')");
-        else $res = mysqli_query($db, "insert into scaletbm (date, theme_id, login, message, rating)
+        else $res = mysqli_query($db, "insert into scaletbsaruew (date, theme_id, login, message, rating)
    values ('" . $time . "','" . $theme_id . "','" . $mess_login . "','" . $user_text . "','" . $rating . "')");
         $_SESSION["send"] = "Комментарий принят!";
         header("Location: $mess_url#last");
@@ -53,13 +53,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы товарные TB-M_А3 в Алматы от компании Softgroup</title>
+    <title>Весы напольные ТВ-S_А3, купить по доступным ценам в Алматы</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="keywords"
-          content="весы товарные, напольные, электронные, ТВ-M_А3, алматы, астана, шымкент, купить, цена, продажа."/>
-    <meta name="description" content="напиши информативно и грамотически правильно "Весы напольные  с вертикальной стойкой, легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).">
+    <meta name="keywords" content="весы напольные, масса к, электронные, ТВ-S_A3, товарные, алматы, купить, цена, продажа."/>
+    <meta name="description" content="Напольные весы ТВ-S_3 со стойкой купить в Алматы. Огромный выбор электронных весов. Купить высококачественные весы Масса-К в Алматы.">
     <!--//tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
@@ -102,8 +101,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HWCNF" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HWCNF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="header-bot" id="home">
@@ -118,28 +116,28 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div id="box_2" class="mymagicoverbox_fenetre">
                 <div class="mymagicoverbox_fenetreinterieur">
                     <ul>
-                        <li><a href="aktau/scale_tb_m.php">Актау</a></li>
-                        <li><a href="aktobe/scale_tb_m.php">Актобе</a></li>
-                        <li><a href="scale_tb_m.php">Алматы</a></li>
-                        <li><a href="atyrau/scale_tb_m.php">Атырау</a></li>
-                        <li><a href="janaozen/scale_tb_m.php">Жанаозен</a></li>
-                        <li><a href="jezkazgan/scale_tb_m.php">Жезказган</a></li>
-                        <li><a href="karaganda/scale_tb_m.php">Караганда</a></li>
-                        <li><a href="kokshetau/scale_tb_m.php">Кокшетау</a></li>
-                        <li><a href="kostanai/scale_tb_m.php">Костанай</a></li>
-                        <li><a href="kyzylorda/scale_tb_m.php">Кызылорда</a></li>
+                        <li><a href="aktau/scale_tbs_aruew.php">Актау</a></li>
+                        <li><a href="aktobe/scale_tbs_aruew.php">Актобе</a></li>
+                        <li><a href="scale_tbs_aruew.php">Алматы</a></li>
+                        <li><a href="atyrau/scale_tbs_aruew.php">Атырау</a></li>
+                        <li><a href="janaozen/scale_tbs_aruew.php">Жанаозен</a></li>
+                        <li><a href="jezkazgan/scale_tbs_aruew.php">Жезказган</a></li>
+                        <li><a href="karaganda/scale_tbs_aruew.php">Караганда</a></li>
+                        <li><a href="kokshetau/scale_tbs_aruew.php">Кокшетау</a></li>
+                        <li><a href="kostanai/scale_tbs_aruew.php">Костанай</a></li>
+                        <li><a href="kyzylorda/scale_tbs_aruew.php">Кызылорда</a></li>
                     </ul>
                     <ul class="dlya_left">
-                        <li><a href="astana/scale_tb_m.php">Астана</a></li>
-                        <li><a href="pavlodar/scale_tb_m.php">Павлодар</a></li>
-                        <li><a href="petropavlovsk/scale_tb_m.php">Петропавловск</a></li>
-                        <li><a href="semei/scale_tb_m.php">Семей</a></li>
-                        <li><a href="taldykorgan/scale_tb_m.php">Талдыкорган</a></li>
-                        <li><a href="taraz/scale_tb_m.php">Тараз</a></li>
-                        <li><a href="turkestan/scale_tb_m.php">Туркестан</a></li>
-                        <li><a href="uralsk/scale_tb_m.php">Уральск</a></li>
-                        <li><a href="ust-kamenogorsk/scale_tb_m.php">Усть-Каменогорск</a></li>
-                        <li><a href="shymkent/scale_tb_m.php">Шымкент</a></li>
+                        <li><a href="astana/scale_tbs_aruew.php">Астана</a></li>
+                        <li><a href="pavlodar/scale_tbs_aruew.php">Павлодар</a></li>
+                        <li><a href="petropavlovsk/scale_tbs_aruew.php">Петропавловск</a></li>
+                        <li><a href="semei/scale_tbs_aruew.php">Семей</a></li>
+                        <li><a href="taldykorgan/scale_tbs_aruew.php">Талдыкорган</a></li>
+                        <li><a href="taraz/scale_tbs_aruew.php">Тараз</a></li>
+                        <li><a href="turkestan/scale_tbs_aruew.php">Туркестан</a></li>
+                        <li><a href="uralsk/scale_tbs_aruew.php">Уральск</a></li>
+                        <li><a href="ust-kamenogorsk/scale_tbs_aruew.php">Усть-Каменогорск</a></li>
+                        <li><a href="shymkent/scale_tbs_aruew.php">Шымкент</a></li>
                     </ul>
                 </div>
             </div>
@@ -181,6 +179,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                             <li class=" active menu__item menu__item--current"><a class="menu__link"
                                                                                   href="products.html">Оборудование<span
                                             class="sr-only">(current)</span></a></li>
+
                             <li class=" menu__item"><a class="menu__link" href="uslugi.html">Программы</a></li>
                             <li class=" menu__item"><a class="menu__link" href="automation.html">Автоматизация</a></li>
                             <li class=" menu__item"><a class="menu__link" href="reviews.php">Отзывы</a></li>
@@ -202,7 +201,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 <div class="page-head_agile_info_w3l">
     <div class="container">
         <!--/w3_short-->
-        <h1>ВЕСЫ НАПОЛЬНЫЕ</h1>
+        <h1>Напольные весы Масса-К</h1>
         <!--//w3_short-->
     </div>
 </div>
@@ -212,11 +211,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="container">
         <div class="services-breadcrumb">
             <div class="agile_inner_breadcrumb">
+
                 <ul class="w3_short">
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Весы товарные TB-M_А3</li>
+                    <li>Весы напольные ТВ-S_А3 (платформа+терминал)</li>
                 </ul>
             </div>
         </div>
@@ -224,9 +224,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div class="grid images_3_of_2">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="images/scale/tb-m_a3-1.jpg">
-                            <div class="thumb-image"><img src="images/scale/tb-m_a3-1.jpg" id="target"
-                                                          class="img-responsive">
+                        <li data-thumb="images/scale/tb_s_a3.jpg">
+                            <div class="thumb-image"><img src="images/scale/tb_s_a3.jpg" id="target" class="img-responsive">
                             </div>
                         </li>
                         <li data-thumb="images/scale/tb-m_a3-2.jpg">
@@ -241,10 +240,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             </div>
         </div>
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h2>Весы товарные TB-M_А3</h2>
+            <h2>Весы напольные ТВ-S_А3 (платформа+терминал)</h2>
             <hr>
-            <p class="code-products">Код товара: 5021</p>
-            <p><span class="item-price-indicator">Цена: </span><span class="item_price">164 850 тг. </span></p>
+            <p class="code-products">Код товара: 5027</p>
+            <p><span class="item-price-indicator">Цена: </span><span class="item_price">99 750 тг. </span></p>
             <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -260,16 +259,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     </span>
             </div>
             <div class="description">
-                <p>Напольные товарные весы с вертикальной стойкой представляют собой не только функциональное, но и
-                    стильное решение. Легко интегрируемые с учетными системами, POS-системами и смарт-терминалами, эти
-                    весы обеспечивают широкий спектр возможностей.
-                    Они могут работать в счетном и дозаторном режимах, а также в режимах процентного взвешивания и
-                    контроля массы (компараторный режим). Встроенный аккумулятор обеспечивает автономную работу весов до
-                    80 часов, что делает их удобными для использования в различных условиях.
-                    Обмен информацией с внешними устройствами реализован по интерфейсу RS-232, обеспечивая эффективную и
-                    надежную передачу данных. Эти весы сочетают в себе современные технологии и стабильную
-                    производительность, предоставляя надежный инструмент для взвешивания товаров.
-                </p>
+                <p>Напольные товарные весы с вертикальной стойкой. Весы легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим). Встроенный аккумулятор обеспечивает автономную работу весов до 80 часов. Обмен информацией с внешними устройствами реализован по интерфейсу RS-232.</p>
                 <div style="margin-top:20px" class="znachok"><i class="fa fa-check"></i>
                     <p>Есть в наличии</p>
                 </div>
@@ -279,10 +269,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                     <p>Бесплатная доставка</p>
                 </div>
-                <button id="fly" class="add_item" data-id="5021"
-                        data-title="<a href='https://softgroup.kz/scale_tb-m-a3.php'>Весы ТВ-M_RP с принтером этикеток и регистрацией товароучетных</a>"
-                        data-price="164850" data-quantity="1" data-img="https://softgroup.kz/images/scale/tb-m_a3-1.jpg"><i
-                            class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
+                <button id="fly" class="add_item" data-id="5027"
+                        data-title="<a href='https://softgroup.kz/scale_tbs_aruew.php'>Весы напольные ТВ-S_А3 (платформа+терминал)</a>"
+                        data-price="99750"
+                        data-quantity="1"
+                        data-img="images/scale/tb_s_a3.jpg">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
                 </button>
             </div>
         </div>
@@ -292,17 +284,18 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="responsive_tabs_agileits">
         <div class="bootstrap-tab-text-grids">
             <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:40px">
+
                 <div class="container">
                     <div class="models" style="margin-top:50px">
                         <p style="font-size:1.9em">Описание</p>
                         <hr>
                     </div>
                     <div style="text-align:center">
-                        <img src="images/scale/tb-m_a3-desc.png"></div>
+                        <img src="images/scale/tb_s_a3-1.png"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                         Диапазон взвешивания</p>
-                    <p style="line-height:normal; text-align: center;">Главным преимуществом оборудования является высокая точность
-                        измерений. Максимальный предел взвешивания - 600 кг. Устройства широко применяются в быту, в
+                    <p style="line-height:normal; text-align: center">Главным преимуществом оборудования является высокая точность
+                        измерений. Максимальный предел взвешивания - 200 кг. Устройства широко применяются в быту, в
                         сфере продаж (подходят для магазинов любого формата), на предприятиях общественного питания, на
                         складах, в фармацевтических компаниях и т. д. </p>
                     <div class="clearfix"></div>
@@ -312,17 +305,15 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
                         <img src="images/scale/tb_s_a3-2.png"></div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0;">Панель
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">Панель
                         управления</p>
-                    <p style="line-height:normal; text-align: center;"> Клавиши электронных весов — это прямая и адресная
-                        память для хранения
+                    <p style="line-height:normal"> Клавиши электронных весов — это прямая и адресная память для хранения
                         данных о товаре. Клавиши позволяют вызвать из памяти весов часто используемую информацию и
                         записанные товары. По устройству кнопочная клавиатура. </p>
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="bootstrap-tab-text-grid"
-                 style="background-color: #e5f6f8;   border-top: 1px solid #eee; padding-bottom:20px">
+            <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:40px">
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
                         <img src="images/scale/s2.png" style="text-align:center; margin-top:20px"></div>
@@ -336,12 +327,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div class="bootstrap-tab-text-grid" style="padding-bottom:20px">
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
-                        <img src="images/scale/1cyn.png" style="text-align:center; margin-top:20px"></div>
+                        <img src="images/scale/nerjaveika.png" style="text-align:center; margin-top:20px"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                        Возможность интегрироваться с 1С, Umag, R-keeper, Rosta и т.д</p>
-                    <p style="line-height:normal; text-align: center;">Весы легко легко интегрируются в системы учета, взаимодействуя с
-                        другими устройствами. Это позволяет клиентам более комфортно делать покупки, а работникам –
-                        быстрее выполнять возложенные на них обязанности.</p>
+                        Высокачественный материал из нержавеющей стали </p>
+                    <p style="line-height:normal">Для производства весов используется нержавеющая сталь. Весы из
+                        нержавеющей стали служить значительно дольше, вам не придется постоянно осуществлять ремонт и
+                        замену весового оборудования.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -349,16 +340,15 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                  style="background-color: #e5f6f8;   border-top: 1px solid #eee; padding-bottom:20px">
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
-                        <img src="images/scale/nerjaveika.png" style="text-align:center; margin-top:20px"></div>
+                        <img src="images/scale/1cyn.png" style="text-align:center; margin-top:20px"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                        Высокачественный материал из нержавеющей стали </p>
-                    <p style="line-height:normal; text-align: center">Для производства весов используется нержавеющая сталь. Весы из
-                        нержавеющей стали служить значительно дольше, вам не придется постоянно осуществлять ремонт и
-                        замену весового оборудования.</p>
+                        Возможность интегрироваться с 1С, Umag, R-keeper, Rosta и т.д</p>
+                    <p style="line-height:normal">Весы легко легко интегрируются в системы учета, взаимодействуя с
+                        другими устройствами. Это позволяет клиентам более комфортно делать покупки, а работникам –
+                        быстрее выполнять возложенные на них обязанности.</p>
                     <div class="clearfix"></div>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="container">
@@ -372,25 +362,31 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <tbody>
             <tr>
                 <td>Размер платформы (ДхШ):</td>
-                <td>600х927 мм;</td>
+                <td>520x395мм;</td>
             </tr>
             <tr>
 
                 <td>
                     Габаритные размеры модуля взвешивающего (ДхШхВ):
                 </td>
-                <td>600х927х782 мм;</td>
+                <td>520х395x765мм;</td>
             </tr>
             <tr>
                 <td>Максимальная нагрузка:</td>
-                <td>150, 300, 600 кг</td>
+                <td>32, 60, 200 кг</td>
             </tr>
             <tr>
 
                 <td>Материал модуля взвешивающего:</td>
-                <td> платформа нержавеющая сталь,<br> рама конструкционная сталь;</td>
+                <td> платформа нержавеющая сталь,<br> - рама алюминиевый сплав;</td>
             </tr>
             <tr>
+
+                <td>Число цифровых датчиков взвешивания:</td>
+                <td> 1 шт;</td>
+            </tr>
+            <tr>
+
                 <td>Степень защиты терминала:</td>
                 <td> IP67;</td>
             </tr>
@@ -400,14 +396,14 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <td>от -20 до +40 °С;</td>
             </tr>
             <tr>
+
                 <td>Масса модуля взвешивающего нетто/брутто:</td>
-                <td> 34,5/35,3 кг;</td>
+                <td> 12,3 кг;</td>
             </tr>
 
             </tbody>
         </table>
-        <br>
-        <br>
+        <br><br>
         <p style="font-size:1.2em; margin-bottom:10px;"><b>Терминал:</b></p>
         <table class="zui-table zui-table-zebra zui-table-horizontal">
             <tbody>
@@ -419,7 +415,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <td>Степень защиты терминала:</td>
                 <td>IP54;</td>
             </tr>
-           <tr>
+            <tr>
                 <td>Жидкокристаллический индикатор с подсветкой:</td>
                 <td>1шт;</td>
             </tr>
@@ -442,7 +438,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 </div>
 </div>
 <div class="container">
-
     <div class="models">
         <p>Автоматизация торговли:</p>
         <hr>
@@ -553,7 +548,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         }
     }
 
-    $res = mysqli_query($db, "SELECT * FROM scaletbm
+    $res = mysqli_query($db, "SELECT * FROM scaletbsaruew
     WHERE theme_id='" . $theme_id . "' ORDER BY id");
     $number = mysqli_num_rows($res);
 
@@ -631,7 +626,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="coupons-grids text-center">
         <div class="w3layouts_mail_grid">
             <div class="models">
-                <h3>Причины купить весы с принтером этикеток у нас</h3>
+                <h3>Причины купить весы с wi-fi у нас</h3>
                 <hr>
             </div>
             <div class="col-md-3 w3layouts_mail_grid_left">
