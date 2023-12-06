@@ -1,4 +1,4 @@
- import { data5 } from '../../js/data5.js';
+ import { data5 } from '../../js/modules/dataProducts.js';
 // import { data5 } from './array-other.js';
 // Функция фильтрации
 function filterByKeyValue(array, key, value) {
