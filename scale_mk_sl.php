@@ -6,7 +6,6 @@ if (session_id() == '') session_start();
 
 // <!--ackapga-->
 //$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
-
 $db = mysqli_connect("localhost", "root", "", "mysql") or die();
 $res = mysqli_query($db, "set names utf8");
 
@@ -53,13 +52,14 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</title>
+    <title>Весы с печатью этикеток MK_SL(12)</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="keywords" content="весы с дисплеем, двойной экран, алматы, астана, казахстан, купить, цена, продажа."/>
+    <meta name="keywords"
+          content="весы самообслуживания, весы с дисплеем, алматы, астана, казахстан, купить, цена, продажа."/>
     <meta name="description"
-          content="15,6-дюймовый сенсорный экран, дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.">
+          content="Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания, а также при фасовке товаров. ">
     <!--//tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
@@ -212,7 +212,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</li>
+                    <li>Весы с печатью этикеток MK_SL(12)</li>
                 </ul>
             </div>
         </div>
@@ -223,19 +223,19 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="flexslider">
 
                     <ul class="slides">
-                        <li data-thumb="images/scale/d2ai-1.jpg">
+                        <li data-thumb="images/scale/mk-sl-1.jpg">
                             <div class="thumb-image">
-                                <img src="images/scale/d2ai-1.jpg" id="target" class="img-responsive">
+                                <img src="images/scale/mk-sl-1.jpg" id="target" class="img-responsive">
                             </div>
                         </li>
-                        <li data-thumb="images/scale/d2ai-2.jpg">
+                        <li data-thumb="images/scale/mk-sl-2.jpg">
                             <div class="thumb-image">
-                                <img src="images/scale/d2ai-2.jpg" class="img-responsive">
+                                <img src="images/scale/mk-sl-2.jpg" class="img-responsive">
                             </div>
                         </li>
-                        <li data-thumb="images/scale/d2ai-3.jpg">
+                        <li data-thumb="images/scale/mk-sl-3.jpg">
                             <div class="thumb-image">
-                                <img src="images/scale/d2ai-3.jpg" class="img-responsive">
+                                <img src="images/scale/mk-sl-3.jpg" class="img-responsive">
                             </div>
                         </li>
                     </ul>
@@ -246,10 +246,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         </div>
 
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h1>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</h1>
+            <h1>Весы с печатью этикеток MK_SL(12)</h1>
             <hr>
-            <!-- <p class="code-products">Код товара: XXXX</p>-->
-            <p><span class="item-price-indicator">Цена: </span><span class="item_price">399 000 тг. </span></p>
+             <p class="code-products">Код товара: 5023</p>
+            <p><span class="item-price-indicator">Цена: </span><span class="item_price">292 500 тг. </span></p>
             <div class="rating1">
                         <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -265,14 +265,18 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     </span>
             </div>
             <div class="description">
-                <p>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</p>
-                <p>1. 15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками
-                    или в перчатках. Водонепроницаемая панель управления.</p>
-                <p>2. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность
-                    расчетов.</p>
-                <p>3. Точное взвешивание, погрешность в пределах 2 г.</p>
-                <p>4. Быстрая печать этикеток за счет интеграции взвешивания и печати, что экономит время и усилия.</p>
-                <p>5. Интеллектуальное обучение, анализ и обработка данных.</p>
+                <p>Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как
+                    продавцами, так и покупателями в режиме самообслуживания, а также при фасовке товаров.</p>
+                <p>Весы имеют встроенный шаблон печати, который автоматически настраивается под размер этикетки в
+                    рулоне, установленном в весах.</p>
+                <p>Весы совместимы с 1С и интегрируются в другие системы учета, а также подключаются к различным кассам
+                    и кассовым программам.</p>
+                <hr>
+                <h3><b>Основные характеристики</b></h3>
+                <p><i class="fa fa-check"></i> Автоматическая подготовка весов к работе сразу, после загрузки товаров
+                </p>
+                <p><i class="fa fa-check"></i> Встроенные алгоритмы формирования 4-х типов клавиатур поиска товаров: по
+                    коду, по алфавиту, по категории, набором номера</p>
                 <div style="margin-top:20px" class="znachok"><i class="fa fa-check"></i>
                     <p>Есть в наличии</p>
                 </div>
@@ -282,13 +286,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                     <p>Бесплатная доставка</p>
                 </div>
-                <img src="images/scale/icon5.png" style="float:none">
                 <div>
-                    <button id="fly" class="add_item" data-id="0001"
-                            data-title="<a href='https://softgroup.kz/scale_aurora-d2.php'>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</a>"
-                            data-price="399000"
+                    <button id="fly" class="add_item" data-id="5023"
+                            data-title="<a href='https://softgroup.kz/scale_mk-sl.php'>Весы с печатью этикеток MK_SL(12)</a>"
+                            data-price="292500"
                             data-quantity="1"
-                            data-img="images/scale/d2ai-1.jpg">
+                            data-img="images/scale/mk-sl-1.jpg">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
                     </button>
                 </div>
@@ -301,65 +304,57 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <!-- Descripion -->
     <div class="responsive_tabs_agileits">
         <div class="bootstrap-tab-text-grids">
-            <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:20px;">
+            <div class="bootstrap-tab-text-grid" style="padding-bottom:20px; background-color: #e5f6f8;">
                 <div class="container">
                     <div class="models" style="margin-top:50px">
                         <p style="font-size:1.9em">Описание</p>
+                        <hr>
                     </div>
                     <div style="text-align:center; margin-top:0px">
-                        <img src="images/scale/d2ai-desc-1.png" style="text-align:center; width: 40%">
+                        <img src="images/scale/mk-sl-desc-1.png" style="text-align:center; width: 40%">
                     </div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:25px 0 10px 0;">
                         Диапазон взвешивания</p>
-                    <p style="line-height:normal; text-align: center">Главным преимуществом оборудования является
-                        высокая точность измерений.
-                        Максимальный предел взвешивания - 15 кг. <br>
-                        Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата), в
-                        фармацевтических компаниях.</p>
+                    <p style="line-height:normal;text-align: center">
+                        Пределы взвешивания 6, 15 и 32 кг.
+                        Весы могут использоваться для маркировки весовых товаров при их реализации.
+                        Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата) в
+                        фармацевтических компаниях и т. д.
+                    </p>
                     <div class="clearfix"></div>
                 </div>
             </div>
             <div class="bootstrap-tab-text-grid" style="background-color: #fff; padding-bottom:20px">
                 <div class="container">
                     <div style="text-align:center;">
-                        <img src="images/scale/d2ai-desc-2.png" style="text-align:center; width: 30%;">
-                    </div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                        Двойной дисплей</p>
-                    <p style="line-height:normal; text-align: center">Имеются два двухлинейных жидкокристаллических
-                        дисплея высокой четкости FHD,
-                        предназначенных для продавца и покупателя.
-                        15,6-дюймовый сенсорный экран обеспечивает высокую четкость изображения,
-                        мультитач-панель позволяет работать с устройством даже мокрыми руками или в перчатках.
-                        Также имеется водонепроницаемая панель управления.</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:20px;">
-                <div class="container">
-                    <div style="text-align:center; margin-top:50px">
-                        <img src="images/scale/d2ai-desc-3.png" style="text-align:center; width: 30%;">
-                    </div>
+                        <img src="images/scale/mk-sl-desc-2.png" style="text-align:center; width: 30%;"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                         Принтер для печати этикеток</p>
-                    <p style="line-height:normal; text-align: center">Быстрая печать этикеток достигается за счет
-                        интеграции взвешивания и печати, что экономит время и усилия. Интеллектуальное обучение, анализ
-                        и обработка данных также включены в процесс. Чувствительный сенсор принтера, определяющий длину
-                        используемой этикетки, работает надежно, не теряя край этикетки. Распознавание искусственного
-                        интеллекта (AI) позволяет быстро идентифицировать товары и существенно повышает эффективность
-                        расчетов.</p>
+                    <p style="line-height:normal; text-align: center">
+                        Весы обладают встроенными шаблонами печати этикеток,
+                        которые автоматически настраиваются под размер этикетки в установленном весах рулоне.
+                        Штрихкоды EAN 13 можно размещать несколько на одной этикетке вместе с рисунками.
+                        <br>Возможна редакция этикеток в графическом редакторе этикеток.
+                    </p>
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="container">
-                <div style="text-align:center; margin-top:0px">
-                    <img src="images/3021_white/wifi.png" style="text-align:center; margin-top:20px; width: 20%;">
+            <div class="bootstrap-tab-text-grid" style="padding-bottom:20px;background-color: #e5f6f8;">
+                <div class="container">
+                    <div style="text-align:center; margin-top:50px">
+                        <img src="images/scale/mk-sl-desc-3.png" style="text-align:center; width: 30%;"></div>
+                    <div class="wthree_text_info">
+                        <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                            Сенсорный экран</p>
+                    </div>
+                    <p style="line-height:normal; text-align: center">
+                        Весы оснащены большим сенсорным экраном и выпускаются с верхними пределами взвешивания 6, 15 и 32 кг.
+                        Этот сенсорный экран предназначен для отображения различной информации,
+                        такой как наименование товара, стоимость товара, сумма чека, сумма сдачи и прочее.
+                        Это предназначено для обслуживания клиента на кассовом узле.
+                    </p>
+                    <div class="clearfix"></div>
                 </div>
-                <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                    Подключение к сети</p>
-                <p style="line-height:normal; text-align: center;">Данный тип весов имеет свойство подключения к
-                    быстроскоростному и безпроводному интернету.</p>
-                <div class="clearfix"></div>
             </div>
         </div>
     </div>
@@ -372,70 +367,80 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         <hr>
     </div>
     <table class="zui-table zui-table-zebra zui-table-horizontal">
-        <tbody>
-        <tr>
-            <td>Аппаратное обеспечение:</td>
-            <td style="display: flex;justify-content: space-between">
-                <span>Windows
-                    <br>Память: 4 ГБ DDR3 L 1333
-                    <br>Жесткий диск: 128 ГБ SSD
-                    <br>Беспроводная связь: 802,11 ac/B/G/N
-                </span>
-                <span>Android
-                    <br>Память: 2 ГБ DDR3
-                    <br>Жесткий диск: 16 ГБ iNAND
-                    <br>Беспроводная связь: 802,11 B/G/N
-                </span>
+        <tr style="width: 40%">
+            <td>Наименование модификации:</td>
+            <td style="display: flex;justify-content: space-around">
+                <span>МК 6.2</span>
+                <span>МК 15.2</span>
+                <span>МК 32.2</span>
             </td>
         </tr>
         <tr>
-            <td>Внешний интерфейс:</td>
-            <td>
-                Дисплей: 15,6 (1366*768) + 15,6 (1366*768)
-                <br>Ethernet: 1 * RJ45
-                <br> * USB3.0 + 3 * USB2.0 / 3 * USB2.0
-                <br>Аудио: 1*3 Вт динамик
-                <br>Мощность: 12V 5A
+            <td>Верхний предел взвешивания:</td>
+            <td style="display: flex;justify-content: space-around">
+                <span>6 кг</span>
+                <span>15 кг</span>
+                <span>32 кг</span>
             </td>
         </tr>
         <tr>
-            <td>Диапазон взвешивания:</td>
-            <td>
-                Макс Емкость: 15 кг
-                <br>Интервал шкалы проверки: 2/5g (Замечание: 6/15 кг)
-                <br>Мин Емкость: 40g
+            <td>Нижний предел взвешивания:</td>
+            <td style="display: flex;justify-content: space-around">
+                <span>0,02 кг</span>
+                <span>0,04 кг</span>
+                <span>0,1 кг</span>
             </td>
         </tr>
         <tr>
-            <td>Аппаратные средства принтера:</td>
-            <td>
-                Метод печатания: Прямая термальная печать
-                <br>Ширина печатания: 58 мм
-                <br>Разрешение: 203DPI
-                <br>Скорость печатания: 70 мм/с
-                <br>Емкость отсека: 70 мм
-                <br>Штрих-код: UCP-A, EAN(JAN)13, EAN(JAN)8, CODE39, КОДЕБАР, CODE128
+            <td>Цена деления (дискретность ):</td>
+            <td style="display: flex;justify-content: space-around">
+                <span>1/2 г</span>
+                <span>2/5 г</span>
+                <span>5/10 г</span>
             </td>
         </tr>
         <tr>
-            <td>Упаковка:</td>
-            <td>
-                Аксессуары: Шнур питания; Адаптер; Руководство по быстрой установке; Рулон бумаги
-                <br>
-                Упаковка: Коричневая коробка;
-                <br>
-                Размер коробки: 588*493*620 мм
-            </td>
-        </tr>
-        <tr>
-            <td>Окружающая среда энт:</td>
-            <td>
-                Температура хранения: -10℃—60℃; Рабочая: 0℃—40℃
-                <br>
-                Влажность Хранение: 10–90 % ; Рабочая: 5–85 %
-            </td>
-        </tr>
+            <td>Предел выборки массы тары:</td>
 
+            <td style="display: flex;justify-content: space-around">
+                <span>3 кг</span>
+                <span>6 кг</span>
+                <span>15 кг</span>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Ширина рулона/этикеток:</td>
+            <td>60/58 мм</td>
+        </tr>
+        <tr>
+            <td>Скорость печати этикеток:</td>
+            <td>60 мм/с</td>
+        </tr>
+        <tr>
+            <td>Типы печатаемых штрих-кодов:</td>
+            <td>EAN 13</td>
+        </tr>
+        <tr>
+            <td>Габаритные размеры:</td>
+            <td>384 x 386 x 484 мм</td>
+        </tr>
+        <tr>
+            <td>Грузоприемная платформа:</td>
+            <td>336 x 240 мм</td>
+        </tr>
+        <tr>
+            <td>Масса весов в сборе:</td>
+            <td>9,3 кг</td>
+        </tr>
+        <tr>
+            <td>В комплекте поставки:</td>
+            <td>сетевой адаптер, шт. 1<br>кабель интерфейсный (патч-корд), шт. 1</td>
+        </tr>
+        <tr>
+            <td>Окружающая среда:</td>
+            <td>Диапазон температур: °С	от 0 до +40</td>
+        </tr>
         </tbody>
     </table>
 </div>

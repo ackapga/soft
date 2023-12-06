@@ -248,7 +248,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                         <p>Бесплатная доставка</p>
                     </div>
-                    <button id="fly" class="add_item" data-id="22" data-title="<a href='https://softgroup.kz/scale_mk_ab_ruew.php'>Весы  влагозащищенные MK_AB2(RUEW)</a>" data-price="103598" data-quantity="1" data-img="https://softgroup.kz/images/scale/6.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                    <button id="fly" class="add_item" data-id="5005"
+                            data-title="<a href='https://softgroup.kz/scale_mk_ab_ruew.php'>Весы влагозащищенные MK_AB2(RUEW)</a>"
+                            data-price="103598" data-quantity="1" data-img="https://softgroup.kz/images/scale/6.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
                 </div>
             </div>
         </div>

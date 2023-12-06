@@ -49,12 +49,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Напольные весы ТВ-S_A RUEW с wi-fi, usb купить по доступным ценам в Алматы</title>
+    <title>Напольные весы ТВ-М_A RUEW с wi-fi, usb купить по доступным ценам в Алматы</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="keywords" content="весы напольные, масса к, электронные, ТВ-S_A RUEW, товарные, алматы, купить, цена, продажа." />
-    <meta name="description" content="Напольные весы ТВ-S_A RUEW с wi-fi, usb купить в Алматы. Огромный выбор электронных весов. Купить высококачественные весы Масса-К в Алматы.">
+    <meta name="keywords" content="весы напольные, масса к, электронные, ТВ-М_A RUEW, товарные, алматы, купить, цена, продажа." />
+    <meta name="description" content="Напольные весы ТВ-М_A RUEW с wi-fi, usb купить в Алматы. Огромный выбор электронных весов. Купить высококачественные весы Масса-К в Алматы.">
 
     <!--//tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -99,7 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul>
                             <li><a href="aktau/scale_tbs_aruew_rs.php">Актау</a></li>
                             <li><a href="aktobe/scale_tbs_aruew_rs.php">Актобе</a></li>
-                            <li><a href="scale_tbs_aruew_rs.php">Алматы</a></li>
+                            <li><a href="scale_tb_m_aruew_rs.php">Алматы</a></li>
                             <li><a href="atyrau/scale_tbs_aruew_rs.php">Атырау</a></li>
                             <li><a href="janaozen/scale_tbs_aruew_rs.php">Жанаозен</a></li>
                             <li><a href="jezkazgan/scale_tbs_aruew_rs.php">Жезказган</a></li>
@@ -194,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="index.html">Главная</a><i>/</i></li>
                         <li><a href="products.html">Оборудование</a><i>/</i></li>
                         <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                        <li>Весы товарные ТВ-S_A RUEW с интерфейсами RS, USB, Ethernet, WiFi</li>
+                        <li>Весы товарные ТВ-М_A RUEW с интерфейсами RS, USB, Ethernet, WiFi</li>
                     </ul>
                 </div>
             </div>
@@ -218,10 +218,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="col-md-8 single-right-left simpleCart_shelfItem">
-                <h2>Весы товарные ТВ-S_A RUEW с интерфейсами RS, USB, Ethernet, WiFi</h2>
+                <h2>Весы товарные ТВ-М_A RUEW с интерфейсами RS, USB, Ethernet, WiFi</h2>
                 <hr>
                 <p class="code-products">Код товара: 5016</p>
-                <p><span class="item-price-indicator">Цена: </span><span class="item_price">116 340 тг. </span></p>
+                <p><span class="item-price-indicator">Цена: </span><span class="item_price">162 500 тг. </span></p>
                 <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -248,7 +248,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                         <p>Бесплатная доставка</p>
                     </div>
-                    <button id="fly" class="add_item" data-id="22" data-title="<a href='https://softgroup.kz/scale_tbs_aruew_rs.php'>Весы  товарные ТВ-S_A RUEW с интерфейсами RS, USB, Ethernet, WiFi</a>" data-price="116340" data-quantity="1" data-img="https://softgroup.kz/images/scale/80.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                    <button id="fly" class="add_item" data-id="5016"
+                            data-title="<a href='https://softgroup.kz/scale_tbs_aruew_rs.php'>Весы товарные ТВ-М_A RUEW с интерфейсами RS, USB, Ethernet, WiFi</a>"
+                            data-price="162500" data-quantity="1" data-img="https://softgroup.kz/images/scale/80.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
                 </div>
             </div>
         </div>

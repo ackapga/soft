@@ -1171,7 +1171,7 @@ const data4 = [{
         img: "images/scale/6.jpg",
         code: "5005"
     }, {
-        link: "scale_tbs_aruew_rs.php",
+        link: "scale_tb_m_aruew_rs.php",
         title: "Весы товарные ТВ-S_A RUEW с интерфейсами RS, USB, Ethernet, WiFi",
         price: "116340",
         img: "images/scale/80.jpg",

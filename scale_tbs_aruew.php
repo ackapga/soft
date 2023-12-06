@@ -221,7 +221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2>Весы товарные ТВ-S_A(RUEW)3</h2>
                 <hr>
                 <p class="code-products">Код товара: 5015</p>
-                <p><span class="item-price-indicator">Цена: </span><span class="item_price">90 080 тг. </span></p>
+                <p><span class="item-price-indicator">Цена: </span><span class="item_price">124 500 тг. </span></p>
                 <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -247,7 +247,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                         <p>Бесплатная доставка</p>
                     </div>
-                    <button id="fly" class="add_item" data-id="22" data-title="<a href='https://softgroup.kz/scale_tbs_aruew.php'>Весы  товарные ТВ-S_A(RUEW)3</a>" data-price="90080" data-quantity="1" data-img="https://softgroup.kz/images/scale/70.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                    <button id="fly" class="add_item" data-id="5015"
+                            data-title="<a href='https://softgroup.kz/scale_tbs_aruew.php'>Весы товарные ТВ-S_A(RUEW)3</a>"
+                            data-price="124500" data-quantity="1" data-img="https://softgroup.kz/images/scale/70.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
                 </div>
             </div>
         </div>

@@ -28,11 +28,11 @@ if ($respponse->success) {    //отправлен комментарий
 
     if ($mess_login != '' and $user_text != '') {
         if (is_numeric($_POST["parent_id"]) and is_numeric($_POST["f_parent"]))
-            $res = mysqli_query($db, "insert into scale4d
+            $res = mysqli_query($db, "insert into pos3021
     (parent_id, first_parent, date, theme_id, login, message, rating)
     values ('" . $_POST["parent_id"] . "','" . $_POST["f_parent"] . "',
     '" . $time . "','" . $theme_id . "','" . $mess_login . "','" . $user_text . "', '" . $rating . "')");
-        else $res = mysqli_query($db, "insert into scale4d (date, theme_id, login, message, rating)
+        else $res = mysqli_query($db, "insert into pos3021 (date, theme_id, login, message, rating)
    values ('" . $time . "','" . $theme_id . "','" . $mess_login . "','" . $user_text . "','" . $rating . "')");
         $_SESSION["send"] = "Комментарий принят!";
         header("Location: $mess_url#last");
@@ -53,14 +53,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы паллетные электронные 4D-U-1A(RUEW) купить в Алматы | Весы для груза от Softgroup</title>
+    <title>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="keywords"
-          content="масса к, электронные, 4d, с регистрацией товароучетных операций, товарные, алматы, купить, цена, продажа."/>
+    <meta name="keywords" content="весы с дисплеем, двойной экран, алматы, астана, казахстан, купить, цена, продажа."/>
     <meta name="description"
-          content="Весы паллетные для груза, транспортируемого на поддонах купить в Алматы. Огромный выбор электронных весов. Купить паллетные весы Масса-К">
+          content="15,6-дюймовый сенсорный экран, дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.">
     <!--//tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
@@ -84,8 +83,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-T3HWCNF');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0MLEWZE9L"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -98,15 +95,17 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
         gtag('config', 'G-E0MLEWZE9L');
     </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HWCNF"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HWCNF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <div class="header-bot" id="home">
     <!-- фильтр под регионы -->
     <div class="header-bot_inner_wthreeinfo_header_mid">
@@ -119,28 +118,28 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div id="box_2" class="mymagicoverbox_fenetre">
                 <div class="mymagicoverbox_fenetreinterieur">
                     <ul>
-                        <li><a href="aktau/scale_4d.php">Актау</a></li>
-                        <li><a href="aktobe/scale_4d.php">Актобе</a></li>
-                        <li><a href="scale_4d.php">Алматы</a></li>
-                        <li><a href="atyrau/scale_4d.php">Атырау</a></li>
-                        <li><a href="janaozen/scale_4d.php">Жанаозен</a></li>
-                        <li><a href="jezkazgan/scale_4d.php">Жезказган</a></li>
-                        <li><a href="karaganda/scale_4d.php">Караганда</a></li>
-                        <li><a href="kokshetau/scale_4d.php">Кокшетау</a></li>
-                        <li><a href="kostanai/scale_4d.php">Костанай</a></li>
-                        <li><a href="kyzylorda/scale_4d.php">Кызылорда</a></li>
+                        <li><a href="aktau/pos_t3.php">Актау</a></li>
+                        <li><a href="aktobe/pos_t3.php">Актобе</a></li>
+                        <li><a href="pos_t3.php">Алматы</a></li>
+                        <li><a href="atyrau/pos_t3.php">Атырау</a></li>
+                        <li><a href="janaozen/pos_t3.php">Жанаозен</a></li>
+                        <li><a href="jezkazgan/pos_t3.php">Жезказган</a></li>
+                        <li><a href="karaganda/pos_t3.php">Караганда</a></li>
+                        <li><a href="kokshetau/pos_t3.php">Кокшетау</a></li>
+                        <li><a href="kostanai/pos_t3.php">Костанай</a></li>
+                        <li><a href="kyzylorda/pos_t3.php">Кызылорда</a></li>
                     </ul>
                     <ul class="dlya_left">
-                        <li><a href="astana/scale_4d.php">Астана</a></li>
-                        <li><a href="pavlodar/scale_4d.php">Павлодар</a></li>
-                        <li><a href="petropavlovsk/scale_4d.php">Петропавловск</a></li>
-                        <li><a href="semei/scale_4d.php">Семей</a></li>
-                        <li><a href="taldykorgan/scale_4d.php">Талдыкорган</a></li>
-                        <li><a href="taraz/scale_4d.php">Тараз</a></li>
-                        <li><a href="turkestan/scale_4d.php">Туркестан</a></li>
-                        <li><a href="uralsk/scale_4d.php">Уральск</a></li>
-                        <li><a href="ust-kamenogorsk/scale_4d.php">Усть-Каменогорск</a></li>
-                        <li><a href="shymkent/scale_4d.php">Шымкент</a></li>
+                        <li><a href="astana/pos_t3.php">Астана</a></li>
+                        <li><a href="pavlodar/pos_t3.php">Павлодар</a></li>
+                        <li><a href="petropavlovsk/pos_t3.php">Петропавловск</a></li>
+                        <li><a href="semei/pos_t3.php">Семей</a></li>
+                        <li><a href="taldykorgan/pos_t3.php">Талдыкорган</a></li>
+                        <li><a href="../taraz/pos_t3.php">Тараз</a></li>
+                        <li><a href="turkestan/pos_t3.php">Туркестан</a></li>
+                        <li><a href="uralsk/pos_t3.php">Уральск</a></li>
+                        <li><a href="ust-kamenogorsk/pos_t3.php">Усть-Каменогорск</a></li>
+                        <li><a href="shymkent/pos_t3.php">Шымкент</a></li>
                     </ul>
                 </div>
             </div>
@@ -148,7 +147,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     </div>
     <!-- end фильтр под регионы -->
     <div class="header-bot_inner_wthreeinfo_header_mid">
-
         <!-- header-bot -->
         <div class="col-md-4 logo_agile">
             <p><a href="index.html"><span>Soft</span>Gr<img src="images/globe1.png">up</a></p>
@@ -161,6 +159,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         <div class="clearfix"></div>
     </div>
 </div>
+
 <div class="ban-top">
     <div class="container">
         <div class="top_nav_left">
@@ -184,9 +183,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                             <li class=" active menu__item menu__item--current"><a class="menu__link"
                                                                                   href="products.html">Оборудование<span
                                             class="sr-only">(current)</span></a></li>
-
                             <li class=" menu__item"><a class="menu__link" href="uslugi.html">Программы</a></li>
-                            <li class=" menu__item"><a class="menu__link" href="automation.html">Автоматизация</a></li>
                             <li class=" menu__item"><a class="menu__link" href="reviews.php">Отзывы</a></li>
                             <li class=" menu__item"><a class="menu__link" href="about.html">О нас</a></li>
                             <li style="margin:0;" class=" menu__item"><a class="menu__link"
@@ -203,55 +200,58 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         <div class="clearfix"></div>
     </div>
 </div>
-<div class="page-head_agile_info_w3l">
-    <div class="container">
-
-        <!--/w3_short-->
-        <h1>Весы паллетные</h1>
-        <!--//w3_short-->
-    </div>
-</div>
 
 <!-- banner-bootom-w3-agileits -->
 <div class="banner-bootom-w3-agileits">
     <div class="container">
+
+        <!-- Breadcrumbs -->
         <div class="services-breadcrumb">
             <div class="agile_inner_breadcrumb">
                 <ul class="w3_short">
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Весы паллетные электронные 4D-U-1A(RUEW)</li>
+                    <li>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</li>
                 </ul>
             </div>
         </div>
+
+        <!-- Flexslider -->
         <div class="col-md-333 single-right-left ">
             <div class="grid images_3_of_2">
                 <div class="flexslider">
+
                     <ul class="slides">
-                        <li data-thumb="images/scale/4d-u1-1.jpg">
-                            <div class="thumb-image"><img src="images/scale/4d-u1-1.jpg" id="target"
-                                                          class="img-responsive">
+                        <li data-thumb="images/scale/d2ai-1.jpg">
+                            <div class="thumb-image">
+                                <img src="images/scale/d2ai-1.jpg" id="target" class="img-responsive">
                             </div>
                         </li>
-                        <li data-thumb="images/scale/4d-u1-2.jpg">
-                            <div class="thumb-image"><img src="images/scale/4d-u1-2.jpg" class="img-responsive"></div>
+                        <li data-thumb="images/scale/d2ai-2.jpg">
+                            <div class="thumb-image">
+                                <img src="images/scale/d2ai-2.jpg" class="img-responsive">
+                            </div>
                         </li>
-                        <li data-thumb="images/scale/4d-u1-3.jpg">
-                            <div class="thumb-image"><img src="images/scale/4d-u1-3.jpg" class="img-responsive"></div>
+                        <li data-thumb="images/scale/d2ai-3.jpg">
+                            <div class="thumb-image">
+                                <img src="images/scale/d2ai-3.jpg" class="img-responsive">
+                            </div>
                         </li>
                     </ul>
+
                     <div class="clearfix"></div>
                 </div>
             </div>
         </div>
+
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h2>Весы паллетные электронные 4D-U-1A(RUEW)</h2>
+            <h1>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</h1>
             <hr>
-            <!--<p class="code-products">Код товара: 5019</p>-->
-            <p><span class="item-price-indicator">Цена: </span><span class="item_price">220 000 тг. </span></p>
+             <p class="code-products">Код товара: 5025</p>
+            <p><span class="item-price-indicator">Цена: </span><span class="item_price">399 000 тг. </span></p>
             <div class="rating1">
-                    <span class="starRating">
+                        <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
                         <label for="rating55">5</label>
                         <input id="rating44" type="radio" name="rating" value="4">
@@ -265,13 +265,14 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     </span>
             </div>
             <div class="description">
-                <p>Весы для взвешивания груза, транспортируемого на поддонах. Весы состоят из модуля взвешивающего и
-                    терминала. П-образная грузоприемная платформа выполнена из конструкционной стали. Терминал
-                    поддерживает счетный и дозаторный режимы работы. Режимы процентного взвешивания, контроля массы
-                    (компараторный) и взвешивания подвижных грузов. Весы легко интегрируются в системы учета. Обмен
-                    информацией с внешними устройствами реализован по интерфейсам RS-232, USB, Ethernet и Wi-Fi.
-                    Крепление терминала к стене входит в комплект поставки. Переносная стойка для крепления терминала
-                    ST4D приобретается дополнительно.</p>
+                <p>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</p>
+                <p>1. 15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками
+                    или в перчатках. Водонепроницаемая панель управления.</p>
+                <p>2. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность
+                    расчетов.</p>
+                <p>3. Точное взвешивание, погрешность в пределах 2 г.</p>
+                <p>4. Быстрая печать этикеток за счет интеграции взвешивания и печати, что экономит время и усилия.</p>
+                <p>5. Интеллектуальное обучение, анализ и обработка данных.</p>
                 <div style="margin-top:20px" class="znachok"><i class="fa fa-check"></i>
                     <p>Есть в наличии</p>
                 </div>
@@ -281,183 +282,157 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                     <p>Бесплатная доставка</p>
                 </div>
-                <img src="images/scale/icon4.png" style="text-align:center; margin-top:20px"></div>
-            <button id="fly" class="add_item" data-id="0005"
-                    data-title="<a href='https://softgroup.kz/scale_4d-u1.php'>Весы паллетные электронные 4D-U-1A(RUEW)</a>"
-                    data-price="220000" data-quantity="1" data-img="https://softgroup.kz/images/scale/4d-u1-1.jpg"><i
-                        class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
-            </button>
-        </div>
-    </div>
-</div>
-<div class="clearfix"></div>
-<!-- /new_arrivals -->
-<div class="responsive_tabs_agileits">
-    <div class="bootstrap-tab-text-grids">
-        <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:40px">
-
-            <div class="container">
-                <div class="models" style="margin-top:50px">
-                    <p style="font-size:1.9em">Описание</p>
-                    <hr>
+                <img src="images/scale/icon5.png" style="float:none">
+                <div>
+                    <button id="fly" class="add_item" data-id="5025"
+                            data-title="<a href='https://softgroup.kz/scale_aurora-d2.php'>Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)</a>"
+                            data-price="399000"
+                            data-quantity="1"
+                            data-img="images/scale/d2ai-1.jpg">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
+                    </button>
                 </div>
-                <div style="text-align:center">
-                    <img src="images/scale/4d-u1-desc-1.png"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+
+    <!-- Descripion -->
+    <div class="responsive_tabs_agileits">
+        <div class="bootstrap-tab-text-grids">
+            <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:20px;">
+                <div class="container">
+                    <div class="models" style="margin-top:50px">
+                        <p style="font-size:1.9em">Описание</p>
+                    </div>
+                    <div style="text-align:center; margin-top:0px">
+                        <img src="images/scale/d2ai-desc-1.png" style="text-align:center; width: 40%">
+                    </div>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                        Диапазон взвешивания</p>
+                    <p style="line-height:normal; text-align: center">Главным преимуществом оборудования является
+                        высокая точность измерений.
+                        Максимальный предел взвешивания - 15 кг. <br>
+                        Устройства широко применяются в быту, в сфере продаж (подходят для магазинов любого формата), в
+                        фармацевтических компаниях.</p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="bootstrap-tab-text-grid" style="background-color: #fff; padding-bottom:20px">
+                <div class="container">
+                    <div style="text-align:center;">
+                        <img src="images/scale/d2ai-desc-2.png" style="text-align:center; width: 30%;">
+                    </div>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                        Двойной дисплей</p>
+                    <p style="line-height:normal; text-align: center">Имеются два двухлинейных жидкокристаллических
+                        дисплея высокой четкости FHD,
+                        предназначенных для продавца и покупателя.
+                        15,6-дюймовый сенсорный экран обеспечивает высокую четкость изображения,
+                        мультитач-панель позволяет работать с устройством даже мокрыми руками или в перчатках.
+                        Также имеется водонепроницаемая панель управления.</p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:20px;">
+                <div class="container">
+                    <div style="text-align:center; margin-top:50px">
+                        <img src="images/scale/d2ai-desc-3.png" style="text-align:center; width: 30%;">
+                    </div>
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
+                        Принтер для печати этикеток</p>
+                    <p style="line-height:normal; text-align: center">Быстрая печать этикеток достигается за счет
+                        интеграции взвешивания и печати, что экономит время и усилия. Интеллектуальное обучение, анализ
+                        и обработка данных также включены в процесс. Чувствительный сенсор принтера, определяющий длину
+                        используемой этикетки, работает надежно, не теряя край этикетки. Распознавание искусственного
+                        интеллекта (AI) позволяет быстро идентифицировать товары и существенно повышает эффективность
+                        расчетов.</p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div style="text-align:center; margin-top:0px">
+                    <img src="images/3021_white/wifi.png" style="text-align:center; margin-top:20px; width: 20%;">
+                </div>
                 <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                    Диапазон взвешивания</p>
-                <p style="line-height:normal; text-align: center;">Главным преимуществом оборудования является высокая
-                    точность
-                    измерений. Максимальный предел взвешивания - 1 т. Устройства широко применяются в быту, в сфере
-                    продаж (подходят для магазинов любого формата), на предприятиях общественного питания, на
-                    складах, в фармацевтических компаниях и т. д. </p>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="bootstrap-tab-text-grid" style="padding-bottom:20px">
-            <div class="container">
-                <div style="text-align:center; margin-top:50px">
-                    <img src="images/scale/4d-u1-desc-2.png"></div>
-                <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0;">Панель
-                    управления</p>
-                <p style="line-height:normal; text-align: center;"> Клавиши электронных весов — это прямая и адресная
-                    память для хранения
-                    данных о товаре. Клавиши позволяют вызвать из памяти весов часто используемую информацию и
-                    записанные товары. По устройству кнопочная клавиатура. </p>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:40px">
-            <div class="container">
-                <div style="text-align:center; margin-top:50px">
-                    <img src="images/scale/4d-u1-desc-3.png" style="text-align:center; margin-top:20px"></div>
-                <p class="wthree_text_info" style=" color:#ff9601; text-transform:none;">Модуль взвешивающий</p>
-                <p style="line-height:normal; text-align: center;">
-                    П-образная грузоприемная платформа выполнена из конструкционной стали и предназначена для
-                    взвешивания подвижных грузов, размещаемых на паллете. Весы рекомендованы для использования в складских
-                    помещениях и производственных цехах. Они состоят из взвешивающего модуля (платформы), к которому
-                    подключается весовой терминал.</p>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="bootstrap-tab-text-grid"
-             style="background-color: #fff; border-top: 1px solid #eee; padding-bottom:20px">
-            <div class="container">
-                <div style="text-align:center; margin-top:50px">
-                    <img src="images/scale/1cyn.png" style="text-align:center; margin-top:20px"></div>
-                <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
-                    Возможность интегрироваться с 1С, Umag, R-keeper, Rosta и т.д</p>
-                <p style="line-height:normal">Весы легко легко интегрируются в системы учета, взаимодействуя с
-                    другими устройствами. Это позволяет клиентам более комфортно делать покупки, а работникам –
-                    быстрее выполнять возложенные на них обязанности.</p>
+                    Подключение к сети</p>
+                <p style="line-height:normal; text-align: center;">Данный тип весов имеет свойство подключения к
+                    быстроскоростному и безпроводному интернету.</p>
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Characteristic -->
 <div class="container">
     <div class="models" style="margin-top:70px">
         <p>Характеристика</p>
         <hr>
     </div>
-    <p style="font-size:1.2em; margin-bottom:10px;"><b>Модуль взвешивающий:</b></p>
     <table class="zui-table zui-table-zebra zui-table-horizontal">
-
         <tbody>
         <tr>
-            <td>Размер платформы (ДхШ):</td>
-            <td> 1200х840 мм</td>
+            <td>Аппаратное обеспечение:</td>
+            <td style="display: flex;justify-content: space-between">
+                <span>Windows
+                    <br>Память: 4 ГБ DDR3 L 1333
+                    <br>Жесткий диск: 128 ГБ SSD
+                    <br>Беспроводная связь: 802,11 ac/B/G/N
+                </span>
+                <span>Android
+                    <br>Память: 2 ГБ DDR3
+                    <br>Жесткий диск: 16 ГБ iNAND
+                    <br>Беспроводная связь: 802,11 B/G/N
+                </span>
+            </td>
         </tr>
         <tr>
-
+            <td>Внешний интерфейс:</td>
             <td>
-                Габаритные размеры модуля взвешивающего (ДхШхВ):
+                Дисплей: 15,6 (1366*768) + 15,6 (1366*768)
+                <br>Ethernet: 1 * RJ45
+                <br> * USB3.0 + 3 * USB2.0 / 3 * USB2.0
+                <br>Аудио: 1*3 Вт динамик
+                <br>Мощность: 12V 5A
             </td>
-            <td>1290х840х100 мм</td>
         </tr>
         <tr>
-            <td>Максимальная нагрузка:</td>
-            <td>1000 кг</td>
+            <td>Диапазон взвешивания:</td>
+            <td>
+                Макс Емкость: 15 кг
+                <br>Интервал шкалы проверки: 2/5g (Замечание: 6/15 кг)
+                <br>Мин Емкость: 40g
+            </td>
         </tr>
         <tr>
-
-            <td>Материал модуля взвешивающего:</td>
-            <td>конструкционная сталь</td>
+            <td>Аппаратные средства принтера:</td>
+            <td>
+                Метод печатания: Прямая термальная печать
+                <br>Ширина печатания: 58 мм
+                <br>Разрешение: 203DPI
+                <br>Скорость печатания: 70 мм/с
+                <br>Емкость отсека: 70 мм
+                <br>Штрих-код: UCP-A, EAN(JAN)13, EAN(JAN)8, CODE39, КОДЕБАР, CODE128
+            </td>
         </tr>
         <tr>
-
-            <td>Число цифровых датчиков взвешивания:</td>
-            <td> 4 шт</td>
+            <td>Упаковка:</td>
+            <td>
+                Аксессуары: Шнур питания; Адаптер; Руководство по быстрой установке; Рулон бумаги
+                <br>
+                Упаковка: Коричневая коробка;
+                <br>
+                Размер коробки: 588*493*620 мм
+            </td>
         </tr>
         <tr>
-
-            <td>Степень защиты терминала:</td>
-            <td> IP68</td>
-        </tr>
-        <tr>
-
-            <td>Диапазон рабочих температур модуля взвешивающего:</td>
-            <td>от -30 до +40 °С</td>
-        </tr>
-        <tr>
-
-            <td>Масса модуля взвешивающего нетто/брутто:</td>
-            <td> 34 кг</td>
-        </tr>
-        <tr>
-
-            <td>Длина кабеля:</td>
-            <td> 5 м</td>
-        </tr>
-        </tbody>
-    </table>
-    <br><br>
-    <p style="font-size:1.2em; margin-bottom:10px;"><b>Терминал:</b></p>
-    <table class="zui-table zui-table-zebra zui-table-horizontal">
-
-        <tbody>
-
-        <tr>
-
-            <td>Габаритные размеры терминала (ДхШхВ):</td>
-            <td>265x105x60 мм</td>
-        </tr>
-        <tr>
-
-            <td>Степень защиты терминала:</td>
-            <td>IP54</td>
-        </tr>
-        <tr>
-
-            <td>Масса терминала нетто/брутто:</td>
-            <td>1,4 кг</td>
-        </tr>
-        <tr>
-
-            <td>Работа от аккумулятора:</td>
-            <td>до 80 часов</td>
-        </tr>
-        <tr>
-
-            <td>Жидкокристаллический индикатор с подсветкой:</td>
-            <td>1шт</td>
-        </tr>
-
-
-        <tr>
-
-            <td>Разъёмы для подключения к компьютерам, POS и SMART-терминалам:</td>
-            <td>DB9-FА/розетка (интерфейс RS-232) , USB , Ethernet</td>
-        </tr>
-        <tr>
-
-            <td>Интерфейсы для подключения:</td>
-            <td> RS-232, USB, Ethernet, Wi-Fi</td>
-        </tr>
-
-        <tr>
-
-            <td>В комплекте поставки:</td>
-            <td>кронштейн крепления терминала на стене - 1шт, кронштейн крепления терминала на стойке - 1шт, сетевой адаптер- 1 шт, кабель переходной 4D - 1шт
+            <td>Окружающая среда энт:</td>
+            <td>
+                Температура хранения: -10℃—60℃; Рабочая: 0℃—40℃
+                <br>
+                Влажность Хранение: 10–90 % ; Рабочая: 5–85 %
             </td>
         </tr>
 
@@ -465,19 +440,20 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     </table>
 </div>
 </div>
-</div>
+
+<!-- Advertising -->
 <div class="container">
     <div class="models">
         <p>Автоматизация торговли:</p>
         <hr>
     </div>
     <div>
-        <div class="col-md-333 product-men"><a href="r_keeper.html">
+        <div class="col-md-333 product-men">
+            <a href="r_keeper.html">
                 <div class="men-pro-item " style="border:none;">
                     <div class="men-thumb-item qwe">
                         <img src="images/caffe.jpg" alt="" class="pro-image-front" style="border-radius: 1000px; ">
                         <img src="images/caffe.jpg" alt="" class="pro-image-back" style="border-radius: 1000px; ">
-
                     </div>
                     <div class="qwe">
                         R-keeper
@@ -486,8 +462,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 </div>
             </a>
         </div>
-
-        <div class="col-md-333 product-men"><a href="1c.html">
+        <div class="col-md-333 product-men">
+            <a href="1c.html">
                 <div class="men-pro-item " style="border:none;">
                     <div class="men-thumb-item qwe">
                         <img src="images/magazin.jpg" alt="" class="pro-image-front" style="border-radius:1000px; ">
@@ -501,7 +477,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 </div>
             </a>
         </div>
-        <div class="col-md-333 product-men"><a href="pharmacy.html">
+        <div class="col-md-333 product-men">
+            <a href="pharmacy.html">
                 <div class="men-pro-item " style="border:none;">
                     <div class="men-thumb-item qwe">
                         <img src="images/apteka.jpg" alt="" class="pro-image-front" style="border-radius:1000px; ">
@@ -515,7 +492,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 </div>
             </a>
         </div>
-        <div class="col-md-333 product-men"><a href="umag_magazin.html">
+        <div class="col-md-333 product-men">
+            <a href="umag_magazin.html">
                 <div class="men-pro-item " style="border:none;">
                     <div class="men-thumb-item qwe">
                         <img src="images/odejda.jpg" alt="" class="pro-image-front" style="border-radius:1000px; ">
@@ -535,7 +513,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
     </div>
-    <!--/slider_owl-->
+    <!-- Comments-->
     <?php
     function parents($up = 0, $left = 0)
     {    //Строим иерархическое дерево комментариев
@@ -577,7 +555,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         }
     }
 
-    $res = mysqli_query($db, "SELECT * FROM scale4d
+    $res = mysqli_query($db, "SELECT * FROM pos3021
     WHERE theme_id='" . $theme_id . "' ORDER BY id");
     $number = mysqli_num_rows($res);
 
@@ -635,29 +613,28 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     echo '</form></div>';
     ?>
 </div>
+
+<!-- Clients -->
 <div class="ll">
     <p><span>Наши</span> клиенты</p>
 </div>
 <ul class="our-clients" id="flexiselDemo3">
 </ul>
-
+<!-- Recommendation -->
 <div class="w3_agile_latest_arrivals" style="background-color: #f4f4f4;">
     <div class="con-wrapper">
         <div class="sm-things-title" style="padding-top: 20px;">
             <h1 style="color: teal;">Рекомендуемые товары</h1>
         </div>
-        <ul class="sm-cards " id="flexiselDemo1">
-        </ul>
+        <ul class="sm-cards" id="flexiselDemo1"></ul>
     </div>
 </div>
-<!--//single_page-->
+<script src="js/newProducts.js"></script>
+
+<!-- Grids -->
 <div class="coupons">
     <div class="coupons-grids text-center">
         <div class="w3layouts_mail_grid">
-            <div class="models">
-                <h3>Причины купить паллетные весы у нас</h3>
-                <hr>
-            </div>
             <div class="col-md-3 w3layouts_mail_grid_left">
                 <div class="w3layouts_mail_grid_left1 hvr-radial-out">
                     <i class="fa fa-truck" aria-hidden="true"></i>
@@ -703,13 +680,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
     </div>
 </div>
-<!--grids-->
+
 <!-- footer -->
 <div class="footer">
     <div class="footer_agile_inner_info_w3l">
         <div class="col-md-3 footer-left">
             <div class="sign-gd">
-
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="products.html">Оборудование</a></li>
@@ -727,7 +703,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         <div class="col-md-9 footer-right">
             <div class="sign-grds">
                 <div class="col-md-4 sign-gd">
-
                     <ul>
                         <li><a href="pos.html">POS системы</a></li>
                         <li><a href="monoblock.html">Сенсорные моноблоки</a></li>
@@ -784,10 +759,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                                                                                                            height="50"
                                                                                                            src="images/youtube.png"
                                                                                                            title="youtube"
-                                                                                                           alt="youtube"/></a><a
-                                    href="https://www.instagram.com/idiamarket/"><img width="50" height="50"
-                                                                                      src="images/insta.png"
-                                                                                      title="instagram" alt="instagram"></a>
+                                                                                                           alt="youtube"/></a>
+                            <a href="https://www.instagram.com/idiamarket/"><img width="50" height="50"
+                                                                                 src="images/insta.png"
+                                                                                 title="instagram" alt="instagram"></a>
                         </div>
                     </div>
                 </div>
@@ -797,17 +772,16 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         </div>
         <div class="clearfix"></div>
 
-        <p class="copy-right">&copy 2010-2021 SoftGroup</p>
+        <p class="copy-right">&copy 2010-2023 SoftGroup</p>
     </div>
 </div>
 <!-- //footer -->
 
-
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<!-- //js -->
 <script src="js/modernizr.custom.js"></script>
-<!-- Custom-JavaScript-File-Links -->
+<!-- //js -->
+
 <!-- cart-js -->
 <script type="text/javascript">
     $(document).ready(function () {
@@ -823,8 +797,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     opacity: 0.8,
                     marginLeft: 550,
                     marginTop: -900,
-                    /* Важно помнить, что названия СSS-свойств пишущихся
-                                                через дефис заменяются на аналогичные в стиле "camelCase" */
                     width: 100,
                     height: 100
                 }, 500, function () {
@@ -832,7 +804,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 });
         });
     });
-
 </script>
 <link href="css/jqcart.css" rel="stylesheet" type="text/css">
 <script src="js/jquery-1.11.3.min.js"></script>
@@ -854,13 +825,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             $.jqCart('openCart'); // открыть корзину
         });
     });
-
 </script>
-
 <!-- //cart-js -->
+
 <!-- single -->
 <script src="js/imagezoom.js"></script>
 <!-- single -->
+
 <!-- script for responsive tabs -->
 <script src="js/easy-responsive-tabs.js"></script>
 <script>
@@ -884,7 +855,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             fit: true
         });
     });
-
 </script>
 <!-- FlexSlider -->
 <script src="js/jquery.flexslider.js"></script>
@@ -902,11 +872,11 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             });
         }
     });
-
 </script>
 <!-- //FlexSlider-->
 <!-- //script for responsive tabs -->
-<!-- start-smoth-scrolling -->
+
+<!-- smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <script type="text/javascript">
@@ -918,13 +888,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             }, 1000);
         });
     });
-
 </script>
+<!-- //smoth-scrolling  -->
 
-<!-- //here ends scrolling icon -->
-
-<!-- for bootstrap working -->
+<!-- bootstrap working -->
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- //bootstrap working -->
+
 <!-- WhatsHelp.io widget -->
 <script type="text/javascript">
     (function () {
@@ -955,7 +925,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     })();
-
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -978,11 +947,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             $("body").attr("style", "overflow:visible;");
         });
     });
+</script>
+<!-- /WhatsHelp.io widget -->
 
-</script> <!-- /WhatsHelp.io widget -->
-<script type="text/javascript" src="js/newProducts.js"></script>
 <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-
 <script type="text/javascript" src="js/jquery.flexisel1.js"></script>
 
 </body>

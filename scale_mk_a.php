@@ -221,7 +221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2>Весы настольные электронные MK_A</h2>
                 <hr>
                 <p class="code-products">Код товара: 5002</p>
-                <p><span class="item-price-indicator">Цена: </span><span class="item_price">37 007 тг. </span></p>
+                <p><span class="item-price-indicator">Цена: </span><span class="item_price">41 000 тг. </span></p>
                 <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -248,12 +248,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                         <p>Бесплатная доставка</p>
                     </div>
-                    <button id="fly" class="add_item" data-id="22" data-title="<a href='https://softgroup.kz/scale_mk_a.php'>Весы электронные MK_A</a>" data-price="37007" data-quantity="1" data-img="https://softgroup.kz/images/scale/3.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                    <button id="fly" class="add_item" data-id="5002"
+                            data-title="<a href='https://softgroup.kz/scale_mk_a.php'>Весы электронные MK_A</a>"
+                            data-price="41000" data-quantity="1" data-img="https://softgroup.kz/images/scale/3.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
                 </div>
             </div>
         </div>
         <div class="clearfix"> </div>
         <!-- /new_arrivals -->
+        <div class="container">
+            <div id="models" class="models" style="margin-top:70px">
+                <p>Модели:</p>
+                <hr>
+            </div>
+            <table class="zui-table zui-table-zebra zui-table-horizontal">
+                <tbody>
+                <tr>
+                    <td style="width: 20%;">Модель</td>
+                    <td>Цена</td>
+                    <td>Описания</td>
+                </tr>
+                <tr>
+                    <td>МК-А20 LED</td>
+                    <td>41 000 тг.</td>
+                    <td>
+                        Светодиодный индикатор: 1 шт;
+                        <br>Масса весов нетто/брутто: 3,3кг.
+                    </td>
+                </tr>
+                <tr>
+                    <td>МК-А11 LCD</td>
+                    <td>54 500 тг.</td>
+                    <td>
+                        Работа от аккумулятора: до 94 часов;
+                        <br>Жидкокристаллический индикатор с подсветкой: 1 шт;
+                        <br>Масса весов нетто/брутто: 4,2кг.
+                    </td>
+                </tr>
+                <tr>
+                    <td>МК-A-21</td>
+                    <td>54 500 тг.</td>
+                    <td>
+                        Работа от аккумулятора: до 60 часов;
+                        <br>Светодиодный индикатор: 1 шт;
+                        <br>Масса весов нетто/брутто: 4,2кг.
+                    </td>
+                </tr>
+                <tr>
+                    <td>МК-А21 <b>(RU)</b></td>
+                    <td>62 000 тг.</td>
+                    <td>
+                        RU - интерфейсы
+                        <br>Разъёмы для подключения к компьютерам: да
+                        <br>POS и SMART-терминалам: USB, DB9-FА/розетка (интерфейс RS-232)
+                        <br>Работа от аккумулятора: до 60 часов
+                        <br>Светодиодный индикатор: 1 шт
+                        <br>Масса весов нетто/брутто: 3,3кг
+                    </td>
+                </tr>
+                <tr>
+                    <td>МК-А21 <b>(RI)</b></td>
+                    <td>60 000 тг.</td>
+                    <td>
+                        RI - интерфейсы
+                        <br>Разъёмы для подключения к компьютерам: да
+                        <br>POS и SMART-терминалам: DB9-FА/розетка (интерфейс RS-232)
+                        <br>Индикатор выносной к весам
+                        <br>Работа от аккумулятора: до 60 часов
+                        <br>Светодиодный индикатор: 1 шт
+                        <br>Масса весов нетто/брутто: 3,3кг
+                    </td>
+                </tr>
+                <tr>
+                    <td>МК-А21 <b>(RUW)</b></td>
+                    <td>64 000 тг.</td>
+                    <td>
+                        RUW - интерфейсы
+                        <br>Разъёмы для подключения к компьютерам: да
+                        <br>Подключения к Wi-Fi: да
+                        <br>POS и SMART-терминалам: USB, DB9-FА/розетка (интерфейс RS-232)
+                        <br>Индикатор выносной к весам
+                        <br>Работа от аккумулятора: до 30 часов
+                        <br>Светодиодный индикатор: 1 шт
+                        <br>Масса весов нетто/брутто: 4,2кг
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="responsive_tabs_agileits">
             <div class="bootstrap-tab-text-grids">
                 <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8; padding-bottom:40px">
@@ -291,7 +373,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
 
-
                 <div class="bootstrap-tab-text-grid" style="padding-bottom:20px">
                     <div class="container">
                         <div style="text-align:center; margin-top:50px">
@@ -301,7 +382,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="clearfix"> </div>
                     </div>
                 </div>
-
 
                 <div class="bootstrap-tab-text-grid" style="background-color: #e5f6f8;   border-top: 1px solid #eee; padding-bottom:20px">
                     <div class="container">

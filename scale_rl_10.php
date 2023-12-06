@@ -221,7 +221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2>Весы торговые с печатью этикеток МК_RL10-1</h2>
                 <hr>
                 <p class="code-products">Код товара: 5011</p>
-                <p><span class="item-price-indicator">Цена: </span><span class="item_price">176 172 тг. </span></p>
+                <p><span class="item-price-indicator">Цена: </span><span class="item_price">258 500 тг. </span></p>
                 <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -248,7 +248,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                         <p>Бесплатная доставка</p>
                     </div>
-                    <button id="fly" class="add_item" data-id="22" data-title="<a href='https://softgroup.kz/scale_rl_10.php'>Весы   торговые с печатью этикеток МК_RL10-1</a>" data-price="176172" data-quantity="1" data-img="https://softgroup.kz/images/scale/30.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                    <button id="fly" class="add_item" data-id="5011"
+                            data-title="<a href='https://softgroup.kz/scale_rl_10.php'>Весы торговые с печатью этикеток МК_RL10-1</a>"
+                            data-price="258500" data-quantity="1" data-img="https://softgroup.kz/images/scale/30.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
                 </div>
             </div>
         </div>

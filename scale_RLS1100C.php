@@ -202,7 +202,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="col-md-333 single-right-left ">
                     <div class="grid images_3_of_2">
                         <div class="flexslider">
-
                             <ul class="slides">
                                 <li data-thumb="images/rongta_rlsc/rongta_2mfruits_wm.png">
                                     <div class="thumb-image"> <img src="images/rongta_rlsc/rongta_2mfruits_wm.png" id="target" class="img-responsive"> </div>
@@ -224,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>Весы Rongta RLS1100 C с принтером этикеток</h2>
                     <hr>
                     <p class="code-products">Код товара: 5089</p>
-                    <p><span class="item-price-indicator">Цена: </span><span class="item_price">158 920 тг. </span></p>
+                    <p><span class="item-price-indicator">Цена: </span><span class="item_price">151 050 тг. </span></p>
                     <div class="rating1">
                         <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -253,7 +252,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                             <p>Бесплатная доставка</p>
                         </div>
-                        <button id="fly" class="add_item" data-id="5089" data-title="<a href='https://softgroup.kz/scale_RLS1100C.php'>Весы Rongta RLS1100 C с принтером этикеток и регистрацией товароучетных</a>" data-price="158920" data-quantity="1" data-img="https://softgroup.kz/images/rongta_rlsc/rongta_2m1.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                        <button id="fly" class="add_item" data-id="5089"
+                                data-title="<a href='https://softgroup.kz/scale_RLS1100C.php'>Весы Rongta RLS1100 C с принтером этикеток и регистрацией товароучетных</a>"
+                                data-price="151050" data-quantity="1" data-img="https://softgroup.kz/images/rongta_rlsc/rongta_2m1.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
                     </div>
                 </div>
             </div>
