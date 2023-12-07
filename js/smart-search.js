@@ -355,8 +355,8 @@ function getEditDistance(a, b, max) {
 //     window.smartSearch = smartSearch;
 // }
 
-// SEARCH FUNCTION
-// ===============
+// - - - - - SEARCH FUNCTION - - - - -
+// ===================================
 import {dataProducts} from './modules/dataProducts.js';
 const data4 = dataProducts;
 

@@ -194,6 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="index.html">Главная</a><i>/</i></li>
                         <li><a href="products.html">Оборудование</a><i>/</i></li>
                         <li><a href="scale.html">Весы электронные</a><i>/</i></li>
+                        <li><a href="scale_none.html">Весы электронные без печати этикеток</a><i>/</i></li>
                         <li>Весы электронные MK_A</li>
                     </ul>
                 </div>

@@ -1,6 +1,6 @@
 import {getListByCategory} from '../modules/dataProducts.js';
-
 const data = getListByCategory();
+
 const scales = document.getElementById('scales_with');
 const priceSort = document.getElementById('priceSort');
 
