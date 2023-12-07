@@ -2362,23 +2362,10 @@ if (typeof jQuery === 'undefined') {
   });
 })(jQuery);
 
-const banTopContainer = document.querySelector(
-  '.header-bot_inner_wthreeinfo_header_mid .agileits-social',
-);
+  // SEARCH FUNCTION
+  // ===============
 
-const banTopLeft = document.querySelector('.top_nav_left');
-
-const searchBox2 = document.createElement('div');
-searchBox2.classList.add('search-box2');
-searchBox2.innerHTML = `
-        <a class="search-btn2 ">
-            <i class="fa fa-search "></i>
-        </a>
-        <input class="search-txt2 " autocomplete="off " id="txtSearch2" type="text " name=" " placeholder="Введите запрос... ">
-`;
-
-banTopLeft.appendChild(searchBox2);
-
+const banTopContainer = document.querySelector('.header-bot_inner_wthreeinfo_header_mid .agileits-social',);
 banTopContainer.innerHTML += `
     <div class="search-box">
     <a class="search-btn">
@@ -2387,9 +2374,26 @@ banTopContainer.innerHTML += `
     <input class="search-txt" autocomplete="off" id="txtSearch" type="text" name="" placeholder="Введите запрос...">
     </div>
 `;
+
+const banTopLeft = document.querySelector('.top_nav_left');
+const searchBox2 = document.createElement('div');
+searchBox2.classList.add('search-box2');
+searchBox2.innerHTML = `
+        <a class="search-btn2 ">
+            <i class="fa fa-search "></i>
+        </a>
+        <input class="search-txt2 " autocomplete="off " id="txtSearch2" type="text " name=" " placeholder="Введите запрос... ">
+`;
+banTopLeft.appendChild(searchBox2);
+
+
 const searchScript = document.createElement('script');
+searchScript.type = 'module';
 searchScript.src = 'js/smart-search.js';
 document.querySelector('body').appendChild(searchScript);
+
+  // RIGHT HEADER
+  // ============
 
 const topNavRight = document.querySelector('.top_nav_right');
 
