@@ -25,11 +25,11 @@ if ($respponse->success) {    //отправлен комментарий
 
     if ($mess_login != '' and $user_text != '') {
         if (is_numeric($_POST["parent_id"]) and is_numeric($_POST["f_parent"]))
-            $res = mysqli_query($db, "insert into scaletbm
+            $res = mysqli_query($db, "insert into scaletbma3
     (parent_id, first_parent, date, theme_id, login, message, rating)
     values ('" . $_POST["parent_id"] . "','" . $_POST["f_parent"] . "',
     '" . $time . "','" . $theme_id . "','" . $mess_login . "','" . $user_text . "', '" . $rating . "')");
-        else $res = mysqli_query($db, "insert into scaletbm (date, theme_id, login, message, rating)
+        else $res = mysqli_query($db, "insert into scaletbma3 (date, theme_id, login, message, rating)
    values ('" . $time . "','" . $theme_id . "','" . $mess_login . "','" . $user_text . "','" . $rating . "')");
         $_SESSION["send"] = "Комментарий принят!";
         header("Location: $mess_url#last");
@@ -562,7 +562,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         }
     }
 
-    $res = mysqli_query($db, "SELECT * FROM scaletbm
+    $res = mysqli_query($db, "SELECT * FROM scaletbma3
     WHERE theme_id='" . $theme_id . "' ORDER BY id");
     $number = mysqli_num_rows($res);
 

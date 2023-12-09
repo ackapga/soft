@@ -14,7 +14,15 @@ if ($conn->connect_error) {
 }
 
 // Массив с разными именами таблиц
-$tableNames = ["ASQ1", "ASQ2"];
+$tableNames = [
+    "scaletbmaruewrs",
+    "scaletbma3",
+    "scale4du1",
+    "scaletbsa3",
+    "scalemksl",
+    "scalemks2l",
+    "scaleaurorad2",
+    "scaleauroray3l",];
 
 // Общие параметры для создания таблицы
 $commonColumns = "(
