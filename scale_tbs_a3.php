@@ -4,10 +4,7 @@
 $time = time();
 if (session_id() == '') session_start();
 
-// <!--ackapga-->
-//$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
-
-$db = mysqli_connect("localhost", "root", "", "mysql") or die();
+$db = mysqli_connect("localhost", "v_20478_Gulbanu", "dala3940", "v_20478_metal") or die();
 $res = mysqli_query($db, "set names utf8");
 
 $mess_url = mysqli_real_escape_string($db, basename($_SERVER['SCRIPT_FILENAME']));
@@ -53,12 +50,14 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы напольные ТВ-S_А3, купить по доступным ценам в Алматы</title>
+    <title>Весы напольные ТВ-S_А3, купить по доступным ценам в Алматы от SoftGroup</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="keywords" content="весы напольные, масса к, электронные, ТВ-S_A3, товарные, алматы, купить, цена, продажа."/>
-    <meta name="description" content="Напольные весы ТВ-S_3 со стойкой купить в Алматы. Огромный выбор электронных весов. Купить высококачественные весы Масса-К в Алматы.">
+    <meta name="keywords"
+          content="весы напольные, масса к, электронные, ТВ-S_A3, товарные, алматы, купить, цена, продажа."/>
+    <meta name="description"
+          content="Напольные весы ТВ-S_3 со стойкой купить в Алматы. Огромный выбор электронных весов. Купить высококачественные весы Масса-К в Алматы.">
     <!--//tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
@@ -101,7 +100,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HWCNF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HWCNF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="header-bot" id="home">
@@ -109,7 +109,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="header-bot_inner_wthreeinfo_header_mid">
         <div class="fond">
             <div id="myfond_gris" opendiv=""></div>
-            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i> Алматы <i
+            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span><i
                         class="fa fa-caret-down " aria-hidden="true"></i></div>
             <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet'
                   type='text/css'>
@@ -211,12 +211,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="container">
         <div class="services-breadcrumb">
             <div class="agile_inner_breadcrumb">
-
                 <ul class="w3_short">
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Весы напольные ТВ-S_А3 (платформа+терминал)</li>
+                    <li><a href="scale_none.html">Весы электронные без печати этикеток</a><i>/</i></li>
+                    <li class="titleName"></li>
                 </ul>
             </div>
         </div>
@@ -225,7 +225,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="flexslider">
                     <ul class="slides">
                         <li data-thumb="images/scale/tb_s_a3.jpg">
-                            <div class="thumb-image"><img src="images/scale/tb_s_a3.jpg" id="target" class="img-responsive">
+                            <div class="thumb-image"><img src="images/scale/tb_s_a3.jpg" id="target"
+                                                          class="img-responsive">
                             </div>
                         </li>
                         <li data-thumb="images/scale/tb-m_a3-2.jpg">
@@ -240,10 +241,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             </div>
         </div>
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h2>Весы напольные ТВ-S_А3 (платформа+терминал)</h2>
+            <h2 class="titleName"></h2>
             <hr>
-            <p class="code-products">Код товара: 5027</p>
-            <p><span class="item-price-indicator">Цена: </span><span class="item_price">99 750 тг. </span></p>
+            <p class="code-products"></p>
+            <p><span class="item-price-indicator">Цена: </span><span class="item_price"></span></p>
             <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -259,7 +260,11 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     </span>
             </div>
             <div class="description">
-                <p>Напольные товарные весы с вертикальной стойкой. Весы легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим). Встроенный аккумулятор обеспечивает автономную работу весов до 80 часов. Обмен информацией с внешними устройствами реализован по интерфейсу RS-232.</p>
+                <p>Напольные товарные весы с вертикальной стойкой. Весы легко интегрируются с учетными системами,
+                    POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах
+                    процентного взвешивания и контроля массы (компараторный режим). Встроенный аккумулятор обеспечивает
+                    автономную работу весов до 80 часов. Обмен информацией с внешними устройствами реализован по
+                    интерфейсу RS-232.</p>
                 <div style="margin-top:20px" class="znachok"><i class="fa fa-check"></i>
                     <p>Есть в наличии</p>
                 </div>
@@ -269,11 +274,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                     <p>Бесплатная доставка</p>
                 </div>
-                <button id="fly" class="add_item" data-id="5027"
-                        data-title="<a href='https://softgroup.kz/scale_tbs_aruew.php'>Весы напольные ТВ-S_А3 (платформа+терминал)</a>"
-                        data-price="99750"
+                <button id="fly" class="add_item"
+                        data-id=""
+                        data-title=""
+                        data-price=""
                         data-quantity="1"
-                        data-img="images/scale/tb_s_a3.jpg">
+                        data-img="">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
                 </button>
             </div>
@@ -294,7 +300,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                         <img src="images/scale/tb_s_a3-1.png"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                         Диапазон взвешивания</p>
-                    <p style="line-height:normal; text-align: center">Главным преимуществом оборудования является высокая точность
+                    <p style="line-height:normal; text-align: center">Главным преимуществом оборудования является
+                        высокая точность
                         измерений. Максимальный предел взвешивания - 200 кг. Устройства широко применяются в быту, в
                         сфере продаж (подходят для магазинов любого формата), на предприятиях общественного питания, на
                         складах, в фармацевтических компаниях и т. д. </p>

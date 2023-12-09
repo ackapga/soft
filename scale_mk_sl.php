@@ -4,9 +4,7 @@
 $time = time();
 if (session_id() == '') session_start();
 
-// <!--ackapga-->
-//$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
-$db = mysqli_connect("localhost", "root", "", "mysql") or die();
+$db = mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
 $res = mysqli_query($db, "set names utf8");
 
 $mess_url = mysqli_real_escape_string($db, basename($_SERVER['SCRIPT_FILENAME']));
@@ -52,7 +50,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы с печатью этикеток MK_SL(12)</title>
+    <title>Весы с печатью этикеток MK_SL(12) от SoftGroup</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -111,7 +109,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="header-bot_inner_wthreeinfo_header_mid">
         <div class="fond">
             <div id="myfond_gris" opendiv=""></div>
-            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i> Алматы <i
+            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span><i
                         class="fa fa-caret-down " aria-hidden="true"></i></div>
             <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet'
                   type='text/css'>
@@ -178,16 +176,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav menu__list">
-                            <li class=" menu__item"><a class="menu__link" href="index.html">Главная <span
-                                            class="sr-only">(current)</span></a></li>
-                            <li class=" active menu__item menu__item--current"><a class="menu__link"
-                                                                                  href="products.html">Оборудование<span
-                                            class="sr-only">(current)</span></a></li>
+                            <li class=" menu__item"><a class="menu__link" href="index.html">Главная <span class="sr-only">(current)</span></a></li>
+                            <li class=" active menu__item menu__item--current"><a class="menu__link" href="products.html">Оборудование<span class="sr-only">(current)</span></a></li>
                             <li class=" menu__item"><a class="menu__link" href="uslugi.html">Программы</a></li>
                             <li class=" menu__item"><a class="menu__link" href="reviews.php">Отзывы</a></li>
                             <li class=" menu__item"><a class="menu__link" href="about.html">О нас</a></li>
-                            <li style="margin:0;" class=" menu__item"><a class="menu__link"
-                                                                         href="contact.html">Контакты</a></li>
+                            <li style="margin:0;" class=" menu__item"><a class="menu__link" href="contact.html">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -212,7 +206,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Весы с печатью этикеток MK_SL(12)</li>
+                    <li><a href="scale_with.html">Весы электронные с печатью этикеток</a><i>/</i></li>
+                    <li class="titleName"></li>
                 </ul>
             </div>
         </div>
@@ -246,10 +241,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         </div>
 
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h1>Весы с печатью этикеток MK_SL(12)</h1>
+            <h2 class="titleName"></h2>
             <hr>
-             <p class="code-products">Код товара: 5023</p>
-            <p><span class="item-price-indicator">Цена: </span><span class="item_price">292 500 тг. </span></p>
+            <p class="code-products"></p>
+            <p><span class="item-price-indicator">Цена: </span><span class="item_price"></span></p>
             <div class="rating1">
                         <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -287,11 +282,12 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <p>Бесплатная доставка</p>
                 </div>
                 <div>
-                    <button id="fly" class="add_item" data-id="5023"
-                            data-title="<a href='https://softgroup.kz/scale_mk-sl.php'>Весы с печатью этикеток MK_SL(12)</a>"
-                            data-price="292500"
+                    <button id="fly" class="add_item"
+                            data-id=""
+                            data-title=""
+                            data-price=""
                             data-quantity="1"
-                            data-img="images/scale/mk-sl-1.jpg">
+                            data-img="">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
                     </button>
                 </div>

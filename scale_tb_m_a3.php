@@ -4,10 +4,7 @@
 $time = time();
 if (session_id() == '') session_start();
 
-// <!--ackapga-->
-//$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
-
-$db = mysqli_connect("localhost", "root", "", "mysql") or die();
+$db = mysqli_connect("localhost", "v_20478_Gulbanu", "dala3940", "v_20478_metal") or die();
 $res = mysqli_query($db, "set names utf8");
 
 $mess_url = mysqli_real_escape_string($db, basename($_SERVER['SCRIPT_FILENAME']));
@@ -53,13 +50,16 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы товарные TB-M_А3 в Алматы от компании Softgroup</title>
+    <title>Весы товарные TB-M_А3 в Алматы от компании SoftGroup</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="keywords"
           content="весы товарные, напольные, электронные, ТВ-M_А3, алматы, астана, шымкент, купить, цена, продажа."/>
-    <meta name="description" content="напиши информативно и грамотически правильно "Весы напольные  с вертикальной стойкой, легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).">
+    <meta name="description" content="напиши информативно и грамотически правильно " Весы напольные с вертикальной
+          стойкой, легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в
+          счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).
+    ">
     <!--//tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
@@ -111,7 +111,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="header-bot_inner_wthreeinfo_header_mid">
         <div class="fond">
             <div id="myfond_gris" opendiv=""></div>
-            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i> Алматы <i
+            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span><i
                         class="fa fa-caret-down " aria-hidden="true"></i></div>
             <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet'
                   type='text/css'>
@@ -216,7 +216,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Весы товарные TB-M_А3</li>
+                    <li><a href="scale_none.html">Весы электронные без печати этикеток</a><i>/</i></li>
+                    <li class="titleName"></li>
                 </ul>
             </div>
         </div>
@@ -241,10 +242,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             </div>
         </div>
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h2>Весы товарные TB-M_А3</h2>
+            <h2 class="titleName"></h2>
             <hr>
-            <p class="code-products">Код товара: 5021</p>
-            <p><span class="item-price-indicator">Цена: </span><span class="item_price">164 850 тг. </span></p>
+            <p class="code-products"></p>
+            <p><span class="item-price-indicator">Цена: </span><span class="item_price"></span></p>
             <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -279,10 +280,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                     <p>Бесплатная доставка</p>
                 </div>
-                <button id="fly" class="add_item" data-id="5021"
-                        data-title="<a href='https://softgroup.kz/scale_tb-m-a3.php'>Весы ТВ-M_RP с принтером этикеток и регистрацией товароучетных</a>"
-                        data-price="164850" data-quantity="1" data-img="https://softgroup.kz/images/scale/tb-m_a3-1.jpg"><i
-                            class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
+                <button id="fly" class="add_item"
+                        data-id=""
+                        data-title=""
+                        data-price=""
+                        data-quantity="1"
+                        data-img="">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
                 </button>
             </div>
         </div>
@@ -301,7 +305,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                         <img src="images/scale/tb-m_a3-desc.png"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                         Диапазон взвешивания</p>
-                    <p style="line-height:normal; text-align: center;">Главным преимуществом оборудования является высокая точность
+                    <p style="line-height:normal; text-align: center;">Главным преимуществом оборудования является
+                        высокая точность
                         измерений. Максимальный предел взвешивания - 600 кг. Устройства широко применяются в быту, в
                         сфере продаж (подходят для магазинов любого формата), на предприятиях общественного питания, на
                         складах, в фармацевтических компаниях и т. д. </p>
@@ -312,9 +317,11 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <div class="container">
                     <div style="text-align:center; margin-top:50px">
                         <img src="images/scale/tb_s_a3-2.png"></div>
-                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0;">Панель
+                    <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0;">
+                        Панель
                         управления</p>
-                    <p style="line-height:normal; text-align: center;"> Клавиши электронных весов — это прямая и адресная
+                    <p style="line-height:normal; text-align: center;"> Клавиши электронных весов — это прямая и
+                        адресная
                         память для хранения
                         данных о товаре. Клавиши позволяют вызвать из памяти весов часто используемую информацию и
                         записанные товары. По устройству кнопочная клавиатура. </p>
@@ -339,7 +346,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                         <img src="images/scale/1cyn.png" style="text-align:center; margin-top:20px"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                         Возможность интегрироваться с 1С, Umag, R-keeper, Rosta и т.д</p>
-                    <p style="line-height:normal; text-align: center;">Весы легко легко интегрируются в системы учета, взаимодействуя с
+                    <p style="line-height:normal; text-align: center;">Весы легко легко интегрируются в системы учета,
+                        взаимодействуя с
                         другими устройствами. Это позволяет клиентам более комфортно делать покупки, а работникам –
                         быстрее выполнять возложенные на них обязанности.</p>
                     <div class="clearfix"></div>
@@ -352,7 +360,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                         <img src="images/scale/nerjaveika.png" style="text-align:center; margin-top:20px"></div>
                     <p class="wthree_text_info" style=" color:#ff9601; text-transform:none; margin:40px 0 10px 0">
                         Высокачественный материал из нержавеющей стали </p>
-                    <p style="line-height:normal; text-align: center">Для производства весов используется нержавеющая сталь. Весы из
+                    <p style="line-height:normal; text-align: center">Для производства весов используется нержавеющая
+                        сталь. Весы из
                         нержавеющей стали служить значительно дольше, вам не придется постоянно осуществлять ремонт и
                         замену весового оборудования.</p>
                     <div class="clearfix"></div>
@@ -419,7 +428,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <td>Степень защиты терминала:</td>
                 <td>IP54;</td>
             </tr>
-           <tr>
+            <tr>
                 <td>Жидкокристаллический индикатор с подсветкой:</td>
                 <td>1шт;</td>
             </tr>

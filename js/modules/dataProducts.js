@@ -1571,19 +1571,23 @@ export function getListByCategory() {
     return dataProducts.filter(item => item['category'] === pageName);
 }
 
-function setPriceIfChange() {
-    if (window.location.href.endsWith('.php')) {
-        const infoProduct = getProductByArray();
+// PULLS DATA IF ON PRODUCT PAGE
+if (getProductByArray()) {
+    const infoCity = getCityByUrl();
+    const infoProduct = getProductByArray();
 
-        var itemHtml = document.querySelector('.item_price').innerHTML;
+    document.querySelector('.mymagicoverbox span').textContent = ` ${infoCity.cyrillic} `;
 
-        var newPrice = infoProduct.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    document.querySelectorAll('.titleName').forEach(function(element) {
+        element.textContent = infoProduct.title;
+    });
+    document.querySelector('.code-products').textContent = `Код товара: ${infoProduct.code}`;
+    document.querySelector('.item_price').textContent = `${infoProduct.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} тг. `;
 
-        document.querySelector('.item_price').innerHTML = itemHtml.replace(/(\d[\d\s]*)/, newPrice + ' ');
-
-        document.getElementById('fly').dataset.price = infoProduct.price;
-
-    }
+    document.getElementById('fly').dataset.id = infoProduct.code;
+    document.getElementById('fly').dataset.title = `<a href='https://softgroup.kz/${infoProduct.link}'>${infoProduct.title}</a>`;
+    document.getElementById('fly').dataset.price = infoProduct.price;
+    document.getElementById('fly').dataset.img = infoProduct.img;
 }
 
-setPriceIfChange();
+

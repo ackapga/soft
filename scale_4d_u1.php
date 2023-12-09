@@ -4,10 +4,7 @@
 $time = time();
 if (session_id() == '') session_start();
 
-// <!--ackapga-->
-//$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
-
-$db = mysqli_connect("localhost", "root", "", "mysql") or die();
+$db = mysqli_connect("localhost", "v_20478_Gulbanu", "dala3940", "v_20478_metal") or die();
 $res = mysqli_query($db, "set names utf8");
 
 $mess_url = mysqli_real_escape_string($db, basename($_SERVER['SCRIPT_FILENAME']));
@@ -53,7 +50,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы паллетные электронные 4D-U-1A(RUEW) купить в Алматы | Весы для груза от Softgroup</title>
+    <title>Весы паллетные электронные 4D-U-1A(RUEW) купить в Алматы | Весы для груза от SoftGroup</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -112,7 +109,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
     <div class="header-bot_inner_wthreeinfo_header_mid">
         <div class="fond">
             <div id="myfond_gris" opendiv=""></div>
-            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i> Алматы <i
+            <div iddiv="box_2" class="mymagicoverbox"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span><i
                         class="fa fa-caret-down " aria-hidden="true"></i></div>
             <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet'
                   type='text/css'>
@@ -205,7 +202,6 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
 </div>
 <div class="page-head_agile_info_w3l">
     <div class="container">
-
         <!--/w3_short-->
         <h1>Весы паллетные</h1>
         <!--//w3_short-->
@@ -221,7 +217,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <li><a href="index.html">Главная</a><i>/</i></li>
                     <li><a href="products.html">Оборудование</a><i>/</i></li>
                     <li><a href="scale.html">Весы электронные</a><i>/</i></li>
-                    <li>Весы паллетные электронные 4D-U-1A(RUEW)</li>
+                    <li><a href="scale_none.html">Весы электронные без печати этикеток</a><i>/</i></li>
+                    <li class="titleName"></li>
                 </ul>
             </div>
         </div>
@@ -246,10 +243,10 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             </div>
         </div>
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
-            <h2>Весы паллетные электронные 4D-U-1A(RUEW)</h2>
+            <h2 class="titleName"></h2>
             <hr>
-            <p class="code-products">Код товара: 5022</p>
-            <p><span class="item-price-indicator">Цена: </span><span class="item_price">220 000 тг. </span></p>
+            <p class="code-products"></p>
+            <p><span class="item-price-indicator">Цена: </span><span class="item_price"></span></p>
             <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -282,10 +279,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                     <p>Бесплатная доставка</p>
                 </div>
                 <img src="images/scale/icon4.png" style="text-align:center; margin-top:20px"></div>
-            <button id="fly" class="add_item" data-id="5022"
-                    data-title="<a href='https://softgroup.kz/scale_4d-u1.php'>Весы паллетные электронные 4D-U-1A(RUEW)</a>"
-                    data-price="220000" data-quantity="1" data-img="https://softgroup.kz/images/scale/4d-u1-1.jpg"><i
-                        class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
+            <button id="fly" class="add_item"
+                    data-id=""
+                    data-title=""
+                    data-price=""
+                    data-quantity="1"
+                    data-img="">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
             </button>
         </div>
     </div>
@@ -333,7 +333,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <p class="wthree_text_info" style=" color:#ff9601; text-transform:none;">Модуль взвешивающий</p>
                 <p style="line-height:normal; text-align: center;">
                     П-образная грузоприемная платформа выполнена из конструкционной стали и предназначена для
-                    взвешивания подвижных грузов, размещаемых на паллете. Весы рекомендованы для использования в складских
+                    взвешивания подвижных грузов, размещаемых на паллете. Весы рекомендованы для использования в
+                    складских
                     помещениях и производственных цехах. Они состоят из взвешивающего модуля (платформы), к которому
                     подключается весовой терминал.</p>
                 <div class="clearfix"></div>
@@ -457,7 +458,8 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
         <tr>
 
             <td>В комплекте поставки:</td>
-            <td>кронштейн крепления терминала на стене - 1шт, кронштейн крепления терминала на стойке - 1шт, сетевой адаптер- 1 шт, кабель переходной 4D - 1шт
+            <td>кронштейн крепления терминала на стене - 1шт, кронштейн крепления терминала на стойке - 1шт, сетевой
+                адаптер- 1 шт, кабель переходной 4D - 1шт
             </td>
         </tr>
 

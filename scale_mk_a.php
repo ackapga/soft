@@ -49,7 +49,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <title>Весы настольные MK_A купить по доступным ценам в Алматы от Softgroup</title>
+    <title>Весы настольные MK_A купить по доступным ценам в Алматы от SoftGroup</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -92,7 +92,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="header-bot_inner_wthreeinfo_header_mid">
             <div class="fond">
                 <div id="myfond_gris" opendiv=""></div>
-                <div iddiv="box_2" class="mymagicoverbox"> <i class="fa fa-map-marker" aria-hidden="true"></i> Алматы <i class="fa fa-caret-down " aria-hidden="true"></i> </div>
+                <div iddiv="box_2" class="mymagicoverbox"> <i class="fa fa-map-marker" aria-hidden="true"></i><span></span><i class="fa fa-caret-down " aria-hidden="true"></i> </div>
                 <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet' type='text/css'>
                 <div id="box_2" class="mymagicoverbox_fenetre">
                     <div class="mymagicoverbox_fenetreinterieur">
@@ -133,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- header-bot -->
             <div class="col-md-4 agileits-social top_content">
                 <div class="nomer"><a href="tel:87273449900">8(727) <span>344-99-00</span></a></div>
-<div class="nomer"><a href="tel:87012667700">8(701) <span>266-77-00</span></a></div>
+                <div class="nomer"><a href="tel:87012667700">8(701) <span>266-77-00</span></a></div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -189,13 +189,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <div class="services-breadcrumb">
                 <div class="agile_inner_breadcrumb">
-
                     <ul class="w3_short">
                         <li><a href="index.html">Главная</a><i>/</i></li>
                         <li><a href="products.html">Оборудование</a><i>/</i></li>
                         <li><a href="scale.html">Весы электронные</a><i>/</i></li>
                         <li><a href="scale_none.html">Весы электронные без печати этикеток</a><i>/</i></li>
-                        <li>Весы электронные MK_A</li>
+                        <li class="titleName"></li>
                     </ul>
                 </div>
             </div>
@@ -219,10 +218,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="col-md-8 single-right-left simpleCart_shelfItem">
-                <h2>Весы настольные электронные MK_A</h2>
+                <h2 class="titleName"></h2>
                 <hr>
-                <p class="code-products">Код товара: 5002</p>
-                <p><span class="item-price-indicator">Цена: </span><span class="item_price">41 000 тг. </span></p>
+                <p class="code-products"></p>
+                <p><span class="item-price-indicator">Цена: </span><span class="item_price"></span></p>
                 <div class="rating1">
                     <span class="starRating">
                         <input id="rating55" type="radio" name="rating" value="5" checked="">
@@ -249,9 +248,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="znachok"><i class="fa fa-truck" aria-hidden="true"></i>
                         <p>Бесплатная доставка</p>
                     </div>
-                    <button id="fly" class="add_item" data-id="5002"
-                            data-title="<a href='https://softgroup.kz/scale_mk_a.php'>Весы электронные MK_A</a>"
-                            data-price="41000" data-quantity="1" data-img="https://softgroup.kz/images/scale/3.jpg"><i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину</button>
+                    <button id="fly" class="add_item"
+                            data-id=""
+                            data-title=""
+                            data-price=""
+                            data-quantity="1"
+                            data-img="">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> В корзину
+                    </button>
                 </div>
             </div>
         </div>
