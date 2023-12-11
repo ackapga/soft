@@ -2453,7 +2453,7 @@ document.querySelector('.w3-address').children[2].children[1].innerHTML = `
 `;
 
 const menuShylock = document.querySelector('.menu--shylock');
-
+//askar
 var filename = window.location.href.split('/').pop().split('#')[0].split('?')[0].split('.'[0]).shift();
 
 let loct;
