@@ -2389,7 +2389,7 @@ banTopLeft.appendChild(searchBox2);
 
 const searchScript = document.createElement('script');
 searchScript.type = 'module';
-searchScript.src = 'js/smart-search.js';
+searchScript.src = '../js/smart-search.js';
 document.querySelector('body').appendChild(searchScript);
 
   // RIGHT HEADER
