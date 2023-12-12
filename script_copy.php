@@ -1,5 +1,5 @@
 <?php
-die();
+
 $directories = [
     'aktau',
 //    'aktobe',
@@ -87,6 +87,7 @@ function copyChanges($sourceFile, $targetFile)
 function updateLinks($file)
 {
     $content = file_get_contents($file);
+    $content = str_replace('src="js/', 'src="' . str_repeat('../', substr_count($file, DIRECTORY_SEPARATOR)) . 'js/', $content);
     $content = str_replace('href="css/', 'href="' . str_repeat('../', substr_count($file, DIRECTORY_SEPARATOR)) . 'css/', $content);
     $content = str_replace('href="images/', 'href="' . str_repeat('../', substr_count($file, DIRECTORY_SEPARATOR)) . 'images/', $content);
     $content = str_replace('src="images/', 'src="' . str_repeat('../', substr_count($file, DIRECTORY_SEPARATOR)) . 'images/', $content);
