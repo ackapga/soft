@@ -97,28 +97,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="box_2" class="mymagicoverbox_fenetre">
                     <div class="mymagicoverbox_fenetreinterieur">
                         <ul>
-                            <li><a href="aktau/scale_tbs_aruew_rs.php">Актау</a></li>
-                            <li><a href="aktobe/scale_tbs_aruew_rs.php">Актобе</a></li>
+                            <li><a href="aktau/scale_tb_m_aruew_rs.php">Актау</a></li>
+                            <li><a href="aktobe/scale_tb_m_aruew_rs.php">Актобе</a></li>
                             <li><a href="scale_tb_m_aruew_rs.php">Алматы</a></li>
-                            <li><a href="atyrau/scale_tbs_aruew_rs.php">Атырау</a></li>
-                            <li><a href="janaozen/scale_tbs_aruew_rs.php">Жанаозен</a></li>
-                            <li><a href="jezkazgan/scale_tbs_aruew_rs.php">Жезказган</a></li>
-                            <li><a href="karaganda/scale_tbs_aruew_rs.php">Караганда</a></li>
-                            <li><a href="kokshetau/scale_tbs_aruew_rs.php">Кокшетау</a></li>
-                            <li><a href="kostanai/scale_tbs_aruew_rs.php">Костанай</a></li>
-                            <li><a href="kyzylorda/scale_tbs_aruew_rs.php">Кызылорда</a></li>
+                            <li><a href="atyrau/scale_tb_m_aruew_rs.php">Атырау</a></li>
+                            <li><a href="janaozen/scale_tb_m_aruew_rs.php">Жанаозен</a></li>
+                            <li><a href="jezkazgan/scale_tb_m_aruew_rs.php">Жезказган</a></li>
+                            <li><a href="karaganda/scale_tb_m_aruew_rs.php">Караганда</a></li>
+                            <li><a href="kokshetau/scale_tb_m_aruew_rs.php">Кокшетау</a></li>
+                            <li><a href="kostanai/scale_tb_m_aruew_rs.php">Костанай</a></li>
+                            <li><a href="kyzylorda/scale_tb_m_aruew_rs.php">Кызылорда</a></li>
                         </ul>
                         <ul class="dlya_left">
-                            <li><a href="astana/scale_tbs_aruew_rs.php">Астана</a></li>
-                            <li><a href="pavlodar/scale_tbs_aruew_rs.php">Павлодар</a></li>
-                            <li><a href="petropavlovsk/scale_tbs_aruew_rs.php">Петропавловск</a></li>
-                            <li><a href="semei/scale_tbs_aruew_rs.php">Семей</a></li>
-                            <li><a href="taldykorgan/scale_tbs_aruew_rs.php">Талдыкорган</a></li>
-                            <li><a href="taraz/scale_tbs_aruew_rs.php">Тараз</a></li>
-                            <li><a href="turkestan/scale_tbs_aruew_rs.php">Туркестан</a></li>
-                            <li><a href="uralsk/scale_tbs_aruew_rs.php">Уральск</a></li>
-                            <li><a href="ust-kamenogorsk/scale_tbs_aruew_rs.php">Усть-Каменогорск</a></li>
-                            <li><a href="shymkent/scale_tbs_aruew_rs.php">Шымкент</a></li>
+                            <li><a href="astana/scale_tb_m_aruew_rs.php">Астана</a></li>
+                            <li><a href="pavlodar/scale_tb_m_aruew_rs.php">Павлодар</a></li>
+                            <li><a href="petropavlovsk/scale_tb_m_aruew_rs.php">Петропавловск</a></li>
+                            <li><a href="semei/scale_tb_m_aruew_rs.php">Семей</a></li>
+                            <li><a href="taldykorgan/scale_tb_m_aruew_rs.php">Талдыкорган</a></li>
+                            <li><a href="taraz/scale_tb_m_aruew_rs.php">Тараз</a></li>
+                            <li><a href="turkestan/scale_tb_m_aruew_rs.php">Туркестан</a></li>
+                            <li><a href="uralsk/scale_tb_m_aruew_rs.php">Уральск</a></li>
+                            <li><a href="ust-kamenogorsk/scale_tb_m_aruew_rs.php">Усть-Каменогорск</a></li>
+                            <li><a href="shymkent/scale_tb_m_aruew_rs.php">Шымкент</a></li>
                         </ul>
                     </div>
                 </div>

@@ -116,28 +116,28 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div id="box_2" class="mymagicoverbox_fenetre">
                 <div class="mymagicoverbox_fenetreinterieur">
                     <ul>
-                        <li><a href="aktau/scale_tbs_aruew.php">Актау</a></li>
-                        <li><a href="aktobe/scale_tbs_aruew.php">Актобе</a></li>
-                        <li><a href="scale_tbs_aruew.php">Алматы</a></li>
-                        <li><a href="atyrau/scale_tbs_aruew.php">Атырау</a></li>
-                        <li><a href="janaozen/scale_tbs_aruew.php">Жанаозен</a></li>
-                        <li><a href="jezkazgan/scale_tbs_aruew.php">Жезказган</a></li>
-                        <li><a href="karaganda/scale_tbs_aruew.php">Караганда</a></li>
-                        <li><a href="kokshetau/scale_tbs_aruew.php">Кокшетау</a></li>
-                        <li><a href="kostanai/scale_tbs_aruew.php">Костанай</a></li>
-                        <li><a href="kyzylorda/scale_tbs_aruew.php">Кызылорда</a></li>
+                        <li><a href="aktau/scale_tbs_a3.php">Актау</a></li>
+                        <li><a href="aktobe/scale_tbs_a3.php">Актобе</a></li>
+                        <li><a href="scale_tbs_a3.php">Алматы</a></li>
+                        <li><a href="atyrau/scale_tbs_a3.php">Атырау</a></li>
+                        <li><a href="janaozen/scale_tbs_a3.php">Жанаозен</a></li>
+                        <li><a href="jezkazgan/scale_tbs_a3.php">Жезказган</a></li>
+                        <li><a href="karaganda/scale_tbs_a3.php">Караганда</a></li>
+                        <li><a href="kokshetau/scale_tbs_a3.php">Кокшетау</a></li>
+                        <li><a href="kostanai/scale_tbs_a3.php">Костанай</a></li>
+                        <li><a href="kyzylorda/scale_tbs_a3.php">Кызылорда</a></li>
                     </ul>
                     <ul class="dlya_left">
-                        <li><a href="astana/scale_tbs_aruew.php">Астана</a></li>
-                        <li><a href="pavlodar/scale_tbs_aruew.php">Павлодар</a></li>
-                        <li><a href="petropavlovsk/scale_tbs_aruew.php">Петропавловск</a></li>
-                        <li><a href="semei/scale_tbs_aruew.php">Семей</a></li>
-                        <li><a href="taldykorgan/scale_tbs_aruew.php">Талдыкорган</a></li>
-                        <li><a href="taraz/scale_tbs_aruew.php">Тараз</a></li>
-                        <li><a href="turkestan/scale_tbs_aruew.php">Туркестан</a></li>
-                        <li><a href="uralsk/scale_tbs_aruew.php">Уральск</a></li>
-                        <li><a href="ust-kamenogorsk/scale_tbs_aruew.php">Усть-Каменогорск</a></li>
-                        <li><a href="shymkent/scale_tbs_aruew.php">Шымкент</a></li>
+                        <li><a href="astana/scale_tbs_a3.php">Астана</a></li>
+                        <li><a href="pavlodar/scale_tbs_a3.php">Павлодар</a></li>
+                        <li><a href="petropavlovsk/scale_tbs_a3.php">Петропавловск</a></li>
+                        <li><a href="semei/scale_tbs_a3.php">Семей</a></li>
+                        <li><a href="taldykorgan/scale_tbs_a3.php">Талдыкорган</a></li>
+                        <li><a href="taraz/scale_tbs_a3.php">Тараз</a></li>
+                        <li><a href="turkestan/scale_tbs_a3.php">Туркестан</a></li>
+                        <li><a href="uralsk/scale_tbs_a3.php">Уральск</a></li>
+                        <li><a href="ust-kamenogorsk/scale_tbs_a3.php">Усть-Каменогорск</a></li>
+                        <li><a href="shymkent/scale_tbs_a3.php">Шымкент</a></li>
                     </ul>
                 </div>
             </div>

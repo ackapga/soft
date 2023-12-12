@@ -117,28 +117,28 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div id="box_2" class="mymagicoverbox_fenetre">
                 <div class="mymagicoverbox_fenetreinterieur">
                     <ul>
-                        <li><a href="aktau/scale_4d.php">Актау</a></li>
-                        <li><a href="aktobe/scale_4d.php">Актобе</a></li>
-                        <li><a href="scale_4d.php">Алматы</a></li>
-                        <li><a href="atyrau/scale_4d.php">Атырау</a></li>
-                        <li><a href="janaozen/scale_4d.php">Жанаозен</a></li>
-                        <li><a href="jezkazgan/scale_4d.php">Жезказган</a></li>
-                        <li><a href="karaganda/scale_4d.php">Караганда</a></li>
-                        <li><a href="kokshetau/scale_4d.php">Кокшетау</a></li>
-                        <li><a href="kostanai/scale_4d.php">Костанай</a></li>
-                        <li><a href="kyzylorda/scale_4d.php">Кызылорда</a></li>
+                        <li><a href="aktau/scale_4d_u1.php">Актау</a></li>
+                        <li><a href="aktobe/scale_4d_u1.php">Актобе</a></li>
+                        <li><a href="scale_4d_u1.php">Алматы</a></li>
+                        <li><a href="atyrau/scale_4d_u1.php">Атырау</a></li>
+                        <li><a href="janaozen/scale_4d_u1.php">Жанаозен</a></li>
+                        <li><a href="jezkazgan/scale_4d_u1.php">Жезказган</a></li>
+                        <li><a href="karaganda/scale_4d_u1.php">Караганда</a></li>
+                        <li><a href="kokshetau/scale_4d_u1.php">Кокшетау</a></li>
+                        <li><a href="kostanai/scale_4d_u1.php">Костанай</a></li>
+                        <li><a href="kyzylorda/scale_4d_u1.php">Кызылорда</a></li>
                     </ul>
                     <ul class="dlya_left">
-                        <li><a href="astana/scale_4d.php">Астана</a></li>
-                        <li><a href="pavlodar/scale_4d.php">Павлодар</a></li>
-                        <li><a href="petropavlovsk/scale_4d.php">Петропавловск</a></li>
-                        <li><a href="semei/scale_4d.php">Семей</a></li>
-                        <li><a href="taldykorgan/scale_4d.php">Талдыкорган</a></li>
-                        <li><a href="taraz/scale_4d.php">Тараз</a></li>
-                        <li><a href="turkestan/scale_4d.php">Туркестан</a></li>
-                        <li><a href="uralsk/scale_4d.php">Уральск</a></li>
-                        <li><a href="ust-kamenogorsk/scale_4d.php">Усть-Каменогорск</a></li>
-                        <li><a href="shymkent/scale_4d.php">Шымкент</a></li>
+                        <li><a href="astana/scale_4d_u1.php">Астана</a></li>
+                        <li><a href="pavlodar/scale_4d_u1.php">Павлодар</a></li>
+                        <li><a href="petropavlovsk/scale_4d_u1.php">Петропавловск</a></li>
+                        <li><a href="semei/scale_4d_u1.php">Семей</a></li>
+                        <li><a href="taldykorgan/scale_4d_u1.php">Талдыкорган</a></li>
+                        <li><a href="taraz/scale_4d_u1.php">Тараз</a></li>
+                        <li><a href="turkestan/scale_4d_u1.php">Туркестан</a></li>
+                        <li><a href="uralsk/scale_4d_u1.php">Уральск</a></li>
+                        <li><a href="ust-kamenogorsk/scale_4d_u1.php">Усть-Каменогорск</a></li>
+                        <li><a href="shymkent/scale_4d_u1.php">Шымкент</a></li>
                     </ul>
                 </div>
             </div>

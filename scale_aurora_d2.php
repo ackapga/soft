@@ -115,28 +115,28 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
             <div id="box_2" class="mymagicoverbox_fenetre">
                 <div class="mymagicoverbox_fenetreinterieur">
                     <ul>
-                        <li><a href="aktau/pos_t3.php">Актау</a></li>
-                        <li><a href="aktobe/pos_t3.php">Актобе</a></li>
-                        <li><a href="pos_t3.php">Алматы</a></li>
-                        <li><a href="atyrau/pos_t3.php">Атырау</a></li>
-                        <li><a href="janaozen/pos_t3.php">Жанаозен</a></li>
-                        <li><a href="jezkazgan/pos_t3.php">Жезказган</a></li>
-                        <li><a href="karaganda/pos_t3.php">Караганда</a></li>
-                        <li><a href="kokshetau/pos_t3.php">Кокшетау</a></li>
-                        <li><a href="kostanai/pos_t3.php">Костанай</a></li>
-                        <li><a href="kyzylorda/pos_t3.php">Кызылорда</a></li>
+                        <li><a href="aktau/scale_aurora_d2.php">Актау</a></li>
+                        <li><a href="aktobe/scale_aurora_d2.php">Актобе</a></li>
+                        <li><a href="scale_aurora_d2.php">Алматы</a></li>
+                        <li><a href="atyrau/scale_aurora_d2.php">Атырау</a></li>
+                        <li><a href="janaozen/scale_aurora_d2.php">Жанаозен</a></li>
+                        <li><a href="jezkazgan/scale_aurora_d2.php">Жезказган</a></li>
+                        <li><a href="karaganda/scale_aurora_d2.php">Караганда</a></li>
+                        <li><a href="kokshetau/scale_aurora_d2.php">Кокшетау</a></li>
+                        <li><a href="kostanai/scale_aurora_d2.php">Костанай</a></li>
+                        <li><a href="kyzylorda/scale_aurora_d2.php">Кызылорда</a></li>
                     </ul>
                     <ul class="dlya_left">
-                        <li><a href="astana/pos_t3.php">Астана</a></li>
-                        <li><a href="pavlodar/pos_t3.php">Павлодар</a></li>
-                        <li><a href="petropavlovsk/pos_t3.php">Петропавловск</a></li>
-                        <li><a href="semei/pos_t3.php">Семей</a></li>
-                        <li><a href="taldykorgan/pos_t3.php">Талдыкорган</a></li>
-                        <li><a href="../taraz/pos_t3.php">Тараз</a></li>
-                        <li><a href="turkestan/pos_t3.php">Туркестан</a></li>
-                        <li><a href="uralsk/pos_t3.php">Уральск</a></li>
-                        <li><a href="ust-kamenogorsk/pos_t3.php">Усть-Каменогорск</a></li>
-                        <li><a href="shymkent/pos_t3.php">Шымкент</a></li>
+                        <li><a href="astana/scale_aurora_d2.php">Астана</a></li>
+                        <li><a href="pavlodar/scale_aurora_d2.php">Павлодар</a></li>
+                        <li><a href="petropavlovsk/scale_aurora_d2.php">Петропавловск</a></li>
+                        <li><a href="semei/scale_aurora_d2.php">Семей</a></li>
+                        <li><a href="taldykorgan/scale_aurora_d2.php">Талдыкорган</a></li>
+                        <li><a href="../taraz/scale_aurora_d2.php">Тараз</a></li>
+                        <li><a href="turkestan/scale_aurora_d2.php">Туркестан</a></li>
+                        <li><a href="uralsk/scale_aurora_d2.php">Уральск</a></li>
+                        <li><a href="ust-kamenogorsk/scale_aurora_d2.php">Усть-Каменогорск</a></li>
+                        <li><a href="shymkent/scale_aurora_d2.php">Шымкент</a></li>
                     </ul>
                 </div>
             </div>
