@@ -153,11 +153,11 @@
 			slider.animProp = slider.settings.mode == 'vertical' ? 'top' : 'left';
 			// determine if hardware acceleration can be used
 			slider.usingCSS = slider.settings.useCSS && slider.settings.mode != 'fade' && (function(){
-				// create our test div element
+				// create our ackapga div element
 				var div = document.createElement('div');
 				// css transition properties
 				var props = ['WebkitPerspective', 'MozPerspective', 'OPerspective', 'msPerspective'];
-				// test for each property
+				// ackapga for each property
 				for(var i in props){
 					if(div.style[props[i]] !== undefined){
 						slider.cssPrefix = props[i].replace('Perspective', '').toLowerCase();

@@ -1,4 +1,6 @@
 <?php
+echo '404';
+die();
 
 $directories = [
     'aktau',
@@ -307,14 +309,14 @@ function updateMetaTags($file, $location, $originalFile)
 function getContent($location, $originalFile, $content)
 {
     $array = [];
+    $array[] = 'href="' . $originalFile;
+    $array[] = 'href="../' . $originalFile;
+
     $array[] = 'aktau/' . $originalFile;
     $array[] = $location == 'aktau' ? $originalFile : '../aktau/' . $originalFile;
 
     $array[] = 'aktobe/' . $originalFile;
     $array[] = $location == 'aktobe' ? $originalFile : '../aktobe/' . $originalFile;
-
-    $array[] = 'href="' . $originalFile;
-    $array[] = 'href="../' . $originalFile;
 
     $array[] = 'atyrau/' . $originalFile;
     $array[] = $location == 'atyrau' ? $originalFile : '../atyrau/' . $originalFile;
