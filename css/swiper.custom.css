@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 /*Swiper Slider*/
-
 .slider-swiper-first,
 .slider-swiper-first::before,
 .slider-swiper-first::after {
@@ -22,6 +21,7 @@
 .slider-swiper-second {
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
+    background: #f5f5f5;
 }
 
 @media (min-width: 1440px) {
@@ -29,48 +29,21 @@
         zoom: 0.78;
     }
 }
-
-@media (min-width: 2560px) {
-    .slider-swiper-second {
-        zoom: 0.98;
-    }
-}
-
-@media (min-width: 3860px) {
-    .slider-swiper-second {
-        zoom: 1.78;
-    }
-}
-
-
 .slider-swiper-first::-webkit-scrollbar-thumb {
     border-radius: 1rem;
     background: #797979;
     transition: all 0.5s ease-in-out;
 }
 
-.slider-swiper-first::-webkit-scrollbar-thumb:hover {
-    background: #222224;
-}
-
-.slider-swiper-first::-webkit-scrollbar-track {
-    background: #f9f9f9;
-}
-
 .slider-swiper-third {
     font-size: 1.6rem;
-    background: #f5f5f5;
-    transition: all 0.5s ease;
 }
 
-.slider-swiper-third:hover {
-    transform: scale(1.02);
-}
 .container_for_slider {
     margin: 0 auto;
 }
 
-.wws {
+.gradient {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -78,7 +51,7 @@
     width: 15%;
 }
 
-.wws.left {
+.gradient.left {
     background-image: -webkit-linear-gradient(left, rgb(243, 243, 244) 0, rgba(0, 0, 0, .0001) 100%);
     background-image: -o-linear-gradient(left, rgb(243, 243, 244) 0, rgba(0, 0, 0, .0001) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgb(243, 243, 244)), to(rgba(0, 0, 0, .0001)));
@@ -87,7 +60,7 @@
     background-repeat: repeat-x
 }
 
-.wws.right {
+.gradient.right {
     right: 0;
     left: auto;
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgb(243, 243, 244) 100%);
@@ -98,7 +71,6 @@
     background-repeat: repeat-x
 }
 
-
 .text-center {
     text-align: center;
 }
@@ -107,11 +79,16 @@
     font-size: 3rem;
     color: #fdb801;
     padding: 2rem 0;
+    text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0,0,0,0.15), 0px 8px 2px rgba(0,0,0,0.1), 0px 24px 30px rgba(0,0,0,0.1);
+
 }
 
 #tranding {
     padding: 1rem 0;
+    position: relative;
+    margin: 0 auto;
 }
+
 
 @media (max-width: 1440px) {
     #tranding {
@@ -125,6 +102,13 @@
     position: relative;
 }
 
+.swiper-scale {
+    transition: all 0.5s ease;
+}
+
+.swiper-scale:hover {
+    transform: scale(1.02);
+}
 
 @media (max-width: 500px) {
     #tranding .tranding-slider {
@@ -164,28 +148,25 @@
     bottom: 0;
 }
 
-.tranding-slide-content .food-price {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    color: #ffffff;
-}
-
 .tranding-slide-content .tranding-slide-content-bottom {
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     left: 2rem;
     color: #ffffff;
 }
 
-.food-rating {
-    padding-top: 1rem;
-    display: flex;
-    gap: 1rem;
+.tranding-slide-content-bottom .large-text {
+    color: #ffb900;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 1em #00000057, 0 0 0.2em #00000075;
 }
 
-.rating ion-icon {
-    color: #fdb801;
+.tranding-slide-content-bottom .small-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 1em #00000057, 0 0 0.2em #00000075;
 }
 
 .swiper-slide-shadow-left,

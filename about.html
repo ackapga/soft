@@ -19,6 +19,8 @@
     <!-- NewSliderLibrary -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/swiper.custom.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -185,126 +187,116 @@
 <div class="slider-swiper-first">
     <div class="slider-swiper-second">
         <div class="slider-swiper-third">
-            <section id="tranding" style="position: relative">
-                <div class="container_for_slider">
-                    <h1 class="text-center section-heading">НАШИ ОСНОВНЫЕ ПРЕИМУЩЕСТВА</h1>
-                </div>
-
-
-                <div class="container_for_slider">
-                    <div class="swiper tranding-slider">
-                        <div class="swiper-wrapper">
-                            <!-- Slide-start -->
-                            <!-- 1 -->
-                            <div class="swiper-slide tranding-slide">
-                                <div class="tranding-slide-img">
-                                    <img src="images/about/slider-1.png" alt="SliderImg">
-                                </div>
-                                <div class="tranding-slide-content">
-                                    <div class="tranding-slide-content-bottom">
-                                        <h2 class="food-name">
-                                            TEXT
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 2 -->
-                            <div class="swiper-slide tranding-slide">
-                                <div class="tranding-slide-img">
-                                    <img src="images/about/slider-2.png" alt="SliderImg">
-                                </div>
-                                <div class="tranding-slide-content">
-                                    <div class="tranding-slide-content-bottom">
-                                        <h2 class="food-name">
-                                            TEXT
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 3 -->
-                            <div class="swiper-slide tranding-slide">
-                                <div class="tranding-slide-img">
-                                    <img src="images/about/slider-3.png" alt="SliderImg">
-                                </div>
-                                <div class="tranding-slide-content">
-                                    <div class="tranding-slide-content-bottom">
-                                        <h2 class="food-name">
-                                            TEXT
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 4 -->
-                            <div class="swiper-slide tranding-slide">
-                                <div class="tranding-slide-img">
-                                    <img src="images/about/slider-4.png" alt="SliderImg">
-                                </div>
-                                <div class="tranding-slide-content">
-                                    <div class="tranding-slide-content-bottom">
-                                        <h2 class="food-name">
-                                            TEXT
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 5 -->
-                            <div class="swiper-slide tranding-slide">
-                                <div class="tranding-slide-img">
-                                    <img src="images/about/slider-5.png" alt="SliderImg">
-                                </div>
-                                <div class="tranding-slide-content">
-                                    <div class="tranding-slide-content-bottom">
-                                        <h2 class="food-name">
-                                            TEXT
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 6 -->
-                            <div class="swiper-slide tranding-slide">
-                                <div class="tranding-slide-img">
-                                    <img src="images/about/slider-6.png" alt="SliderImg">
-                                </div>
-                                <div class="tranding-slide-content">
-                                    <div class="tranding-slide-content-bottom">
-                                        <h2 class="food-name">
-                                            Vanilla cake
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--7 -->
-                            <div class="swiper-slide tranding-slide">
-                                <div class="tranding-slide-img">
-                                    <img src="images/about/slider-7.png" alt="SliderImg">
-                                </div>
-                                <div class="tranding-slide-content">
-                                    <div class="tranding-slide-content-bottom">
-                                        <h2 class="food-name">
-                                            TEXT
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Slide-end-->
-                        </div>
-
-                        <div class="tranding-slider-control">
-                            <div class="swiper-button-prev slider-arrow">
-                                <ion-icon name="arrow-back-outline"></ion-icon>
-                            </div>
-                            <div class="swiper-button-next slider-arrow">
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-
+                <section id="tranding" data-aos="zoom-in">
+                    <div class="container_for_slider">
+                        <h1 class="text-center section-heading">НАШИ ОСНОВНЫЕ ПРЕИМУЩЕСТВА</h1>
                     </div>
-                </div>
+                    <div class="container_for_slider swiper-scale">
+                        <div class="swiper tranding-slider">
+                            <div class="swiper-wrapper" data-aos="flip-left">
+                                <!-- Slide-start -->
+                                <!-- 1 -->
+                                <div  class="swiper-slide tranding-slide">
+                                    <div class="tranding-slide-img">
+                                        <img src="images/about/slider-1.jpg" alt="SliderImg">
+                                    </div>
+                                    <div class="tranding-slide-content">
+                                        <div class="tranding-slide-content-bottom">
+                                            <span class="large-text">Самый широкий выбор </span>
+                                            <span class="small-text">предлагаемой продукции</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="swiper-slide tranding-slide">
+                                    <div class="tranding-slide-img">
+                                        <img src="images/about/slider-2.jpg" alt="SliderImg">
+                                    </div>
+                                    <div class="tranding-slide-content">
+                                        <div class="tranding-slide-content-bottom">
+                                            <span class="large-text">Гарантия качества</span>
+                                            <br>
+                                            <span class="small-text">на всю продукцию</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 3 -->
+                                <div class="swiper-slide tranding-slide">
+                                    <div class="tranding-slide-img">
+                                        <img src="images/about/slider-3.jpg" alt="SliderImg">
+                                    </div>
+                                    <div class="tranding-slide-content">
+                                        <div class="tranding-slide-content-bottom">
+                                            <span class="large-text">Высокое качество </span>
+                                            <span class="small-text">упаковочного материала</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 4 -->
+                                <div class="swiper-slide tranding-slide">
+                                    <div class="tranding-slide-img">
+                                        <img src="images/about/slider-4.jpg" alt="SliderImg">
+                                    </div>
+                                    <div class="tranding-slide-content">
+                                        <div class="tranding-slide-content-bottom">
+                                            <span class="large-text">Безупречный сервис</span>
+                                            <span class="small-text">Доставка и Установка – БЕСПЛАТНО</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 5 -->
+                                <div class="swiper-slide tranding-slide">
+                                    <div class="tranding-slide-img">
+                                        <img src="images/about/slider-5.jpg" alt="SliderImg">
+                                    </div>
+                                    <div class="tranding-slide-content">
+                                        <div class="tranding-slide-content-bottom">
+                                            <span class="large-text">Доступная стоимость</span>
+                                            <span class="small-text" style="font-size: 22px">предусмотрены скидки нашим клиентам</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 6 -->
+                                <div class="swiper-slide tranding-slide">
+                                    <div class="tranding-slide-img">
+                                        <img src="images/about/slider-6.jpg" alt="SliderImg">
+                                    </div>
+                                    <div class="tranding-slide-content">
+                                        <div class="tranding-slide-content-bottom">
+                                            <span class="large-text">Популярные модели</span>
+                                            <span class="small-text">всегда в наличии</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--7 -->
+                                <div class="swiper-slide tranding-slide">
+                                    <div class="tranding-slide-img">
+                                        <img src="images/about/slider-7.jpg" alt="SliderImg">
+                                    </div>
+                                    <div class="tranding-slide-content">
+                                        <div class="tranding-slide-content-bottom">
+                                            <span class="large-text">Постгарантийное</span>
+                                            <span class="small-text">сервисное обслуживание</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Slide-end-->
+                            </div>
+                            <div class="tranding-slider-control">
+                                <div class="swiper-button-prev slider-arrow">
+                                    <ion-icon name="arrow-back-outline"></ion-icon>
+                                </div>
+                                <div class="swiper-button-next slider-arrow">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="left wws"></div>
-                <div class="right wws"></div>
-            </section>
+                    <div class="left gradient"></div>
+                    <div class="right gradient"></div>
+                </section>
         </div>
     </div>
 </div>
@@ -313,23 +305,23 @@
 <!--picture-->
 <div class="automation-container">
 
-    <div class="automation-images">
+    <div class="automation-images" data-aos="zoom-in">
         <img src="images/about/automation.png" alt="Automation">
     </div>
     <div class="automation-mini-content">
-        <div class="automation-mini-content-item">
+        <div class="automation-mini-content-item" data-aos="flip-left">
             <img src="images/about/1-star.png" alt="Star" class="icon-image">
             <img src="images/about/automation-item.png" alt="Item" class="item-image">
         </div>
-        <div class="automation-mini-content-item">
+        <div class="automation-mini-content-item" data-aos="flip-left">
             <img src="images/about/2-percent.png" alt="Percent" class="icon-image">
             <img src="images/about/automation-item.png" alt="Item" class="item-image">
         </div>
-        <div class="automation-mini-content-item">
+        <div class="automation-mini-content-item" data-aos="flip-left">
             <img src="images/about/3-key.png" alt="Key" class="icon-image">
             <img src="images/about/automation-item.png" alt="Item" class="item-image">
         </div>
-        <div class="automation-mini-content-item">
+        <div class="automation-mini-content-item" data-aos="flip-left">
             <img src="images/about/4-hand.png" alt="Hand" class="icon-image">
             <img src="images/about/automation-item.png" alt="Item" class="item-image">
         </div>
@@ -868,45 +860,50 @@
 <!-- For bootstrap working -->
 <script type="text/javascript" src="js/bootstrap.js"></script>
 
-<!-- WhatsHelp.io widget -->
-<script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "+7 (701) 877-33-00", // WhatsApp number
-            telegram: "botaidiamarket", // Telegram number
+<!-- WhatsHelp.io widget askar -->
+<!--<script type="text/javascript">-->
+<!--    (function () {-->
+<!--        var options = {-->
+<!--            whatsapp: "+7 (701) 877-33-00", // WhatsApp number-->
+<!--            telegram: "botaidiamarket", // Telegram number-->
 
-            email: "zakaz@idiamarket.kz", // Email
-            sms: "+7 (701) 877-33-00", // Sms phone number
-            call: "8 (727) 344-99-00", // Call phone number
-            company_logo_url: "//softgroup.kz/images/globe1.png", // URL of company logo (png, jpg, gif)
-            greeting_message: "Выберите удобный для Вас способ связи с нами.", // Text of greeting message
-            call_to_action: "Если у вас есть вопросы, пишите нам.", // Call to action
-            button_color: "#FF6550", // Color of button
-            position: "right", // Position may be 'right' or 'left'
-            order: "whatsapp,telegram,sms,call,email", // Order of buttons
-        };
-        var proto = document.location.protocol,
-            host = "whatshelp.io",
-            url = proto + "//static." + host;
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () {
-            WhWidgetSendButton.init(host, proto, options);
-        };
-        var x = document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
-    })();
+<!--            email: "zakaz@idiamarket.kz", // Email-->
+<!--            sms: "+7 (701) 877-33-00", // Sms phone number-->
+<!--            call: "8 (727) 344-99-00", // Call phone number-->
+<!--            company_logo_url: "//softgroup.kz/images/globe1.png", // URL of company logo (png, jpg, gif)-->
+<!--            greeting_message: "Выберите удобный для Вас способ связи с нами.", // Text of greeting message-->
+<!--            call_to_action: "Если у вас есть вопросы, пишите нам.", // Call to action-->
+<!--            button_color: "#FF6550", // Color of button-->
+<!--            position: "right", // Position may be 'right' or 'left'-->
+<!--            order: "whatsapp,telegram,sms,call,email", // Order of buttons-->
+<!--        };-->
+<!--        var proto = document.location.protocol,-->
+<!--            host = "whatshelp.io",-->
+<!--            url = proto + "//static." + host;-->
+<!--        var s = document.createElement('script');-->
+<!--        s.type = 'text/javascript';-->
+<!--        s.async = true;-->
+<!--        s.src = url + '/widget-send-button/js/init.js';-->
+<!--        s.onload = function () {-->
+<!--            WhWidgetSendButton.init(host, proto, options);-->
+<!--        };-->
+<!--        var x = document.getElementsByTagName('script')[0];-->
+<!--        x.parentNode.insertBefore(s, x);-->
+<!--    })();-->
 
 
-</script>
+<!--</script>-->
 
 <!-- NewSliderLibrary JS -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodulesrc="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/swiper.custom.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </body>
 

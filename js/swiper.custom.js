@@ -30,7 +30,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
 //     clearInterval(animationAuto);
 // });
 
-// Region Slider
 
 // Region Slider
 const images = [
