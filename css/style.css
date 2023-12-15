@@ -15496,58 +15496,84 @@ margin-left: 20px; */
 }
 
 /*ackapga*/
+/*Main Info*/
+.main_information {
+    padding: 7rem 0 210px;
+    height: 47rem;
+    color: #fff;
+    background: url(/images/about01.webp) no-repeat top;
+    background-size: cover;
+    text-shadow: #000000c2 0 0 30px;
+}
 
-.automation-container {
-    background-color: #f5f5f5;
+.main_information_title {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 25px;
+    color: #fff;
+}
+
+.main_information_wrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.main_information_item {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.main_information_item img {
+    width: 50px;
+    opacity: 0.9;
+}
+
+.main_information_number {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.main_information_desc {
+    font-size: 30px;
+}
+
+/*Service*/
+
+.service {
+    height: 1000px;
+    /*height: 53rem;*/
+}
+
+.section{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    padding-bottom: 7rem;
-    transition: all 0.5s ease;
 }
 
-.automation-container:hover {
-    transform: scale(1.02);
+
+.top-section {
+    background: linear-gradient(140deg, rgb(20, 74, 157) 50%, rgb(170, 217, 207) 60%, rgb(212, 254, 242) 100%);
 }
 
-.automation-images {
-    width: 1440px;
-    box-shadow: 0px 4px 41px -14px #1f2034;
-    margin: 10px auto 0;
-    background: linear-gradient(90deg, #0064AD 1.08%, rgba(42, 50, 128, 0.9) 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    border-radius: 15px;
-    border: 6px solid #FFFFFF;
+.top-section img {
+
 }
 
-.automation-mini-content {
-    display: flex;
-    width: 1500px;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 4rem;
+.bottom-section{
+    background: linear-gradient(135deg, #d4fef2 0%, #2fd8b8 100%);
 }
 
-.automation-mini-content-item {
-    width: 290px;
-    transition: all 0.5s ease;
-}
 
-.automation-mini-content-item:hover {
-    transform: scale(1.1);
-}
 
-.automation-mini-content-item .icon-image {
-    position: absolute;
-    top: -30px;
-}
 
-.automation-mini-content-item .item-image {
-    border-radius: 1rem;
-    border: 3px solid #FFFFFF;
-    box-shadow: 0px 4px 41px -14px #313131;
-}
 
+
+
+/*Region*/
 .region-container {
     background-color: #f5f5f5;
     display: flex;
