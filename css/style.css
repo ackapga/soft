@@ -1177,6 +1177,21 @@ a.simpleCart_empty {
 
 /*-- banner --*/
 
+.carousel .item.item7 {
+    background-image: url(../images/Chairs.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.carousel .item.item8 {
+    background-image: url(../images/Chairs2.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+
+
 .carousel .item {
     background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner5.jpg) no-repeat;
     background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner5.jpg) no-repeat;
@@ -1255,12 +1270,13 @@ a.simpleCart_empty {
     background-size: cover;
 }
 
+
 .carousel-caption h2,
 .carousel-caption p {
     font-size: 4.5em;
     font-weight: 300;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: px;
     text-transform: uppercase;
 }
 
@@ -15700,6 +15716,58 @@ figure.collage_animate:hover p {
     font-size: 30px;
 }
 
+/*_________________________________________________________*/
+.wws {
+    height: 35rem;
+    background-color: #0ba98b;
+    display: flex;
+    justify-content: center;
+}
+
+.wws_block {
+    width: 35rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.wws_block img {
+    position: absolute;
+    transition: transform 0.5s ease-out;
+    overflow: hidden;
+}
+
+.wws_block img:hover {
+    transform: scale(1.1);
+}
+
+.wws_block img:nth-child(1) {
+    top: -3rem;
+    left: 5rem;
+}
+.wws_block img:nth-child(2) {
+    top: 2rem;
+    left: 8rem;
+}
+.wws_block img:nth-child(3) {
+    top: 2rem;
+}
+.wws_block img:nth-child(4) {
+    top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*__________________________________________________________________________________________________________________*/
+
 /*Download*/
 .download {
     background-color: #f5f5f5;
@@ -15745,9 +15813,6 @@ figure.collage_animate:hover p {
     opacity: 0.4;
 }
 
-
-
-/* Center the book */
 .panel__image.panel__image--book {
     display: flex;
     justify-content: center;
@@ -15796,10 +15861,6 @@ figure.collage_animate:hover p {
 .books__book__image:hover {
     position: relative;
 }
-
-
-
-
 
 /*Region*/
 .region-container {
@@ -15939,3 +16000,5 @@ figure.collage_animate:hover p {
     width: 42px;
     padding-left: 1rem;
 }
+
+/*__________________________________________________________________________________________________________________*/

@@ -21,7 +21,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
     padding: 100px 120px;
-    background: url('../images/card-icons/background.png');
+    background: url('/images/card-icons/background.png');
 }
 
 .new_card {

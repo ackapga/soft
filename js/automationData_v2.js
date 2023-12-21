@@ -2,73 +2,73 @@ const data = [{
         title: "Супермаркеты",
         desc: "установка электронного торгового оборудования и автоматизированной системы управления бизнес-процессом.",
         link: 'market.html',
-	    img: "../../images/automation/grocery-cart.svg"
+	    img: "/images/automation/grocery-cart.svg"
     },
     {
         title: "Магазины",
         desc: "выполняем сервисные функции по запросу клиента, предоставляя ему доступ к определённым ресурсам или услугам.",
         link: 'shop.html',
-        img: "../../images/automation/shops.svg"
+        img: "/images/automation/shops.svg"
     },
     {
         title: "Магазин косметики",
         desc: "установка электронного торгового оборудования и автоматизированной системы управления бизнес-процессом.",
         link: 'cosmetic.html',
-        img: "../../images/automation/cosmetics.svg"
+        img: "/images/automation/cosmetics.svg"
     },
     {
         title: "Магазин одежды",
         desc: "установка электронного торгового оборудования и автоматизированной системы управления бизнес-процессом.",
         link: 'clothes.html',
-        img: "../../images/automation/clothing-store.svg"
+        img: "/images/automation/clothing-store.svg"
     },
     {
         title: "Рестораны",
         desc: "внедрения программно-аппаратных комплексов автоматизации бизнес-процессов на предприятиях общественного питания.",
         link: 'restaurant.html',
-        img: "../../images/automation/catering.svg"
+        img: "/images/automation/catering.svg"
     },
     {
         title: "Кафе",
         desc: "внедрения программно-аппаратных комплексов автоматизации бизнес-процессов на предприятиях общественного питания.",
         link: 'cafe.html',
-        img: "../../images/automation/cafe.svg"
+        img: "/images/automation/cafe.svg"
     },
     {
         title: "Быстрое питание (фаст фуды)",
         desc: "внедрения программно-аппаратных комплексов автоматизации бизнес-процессов на предприятиях общественного питания.",
         link: 'fast-food.html',
-        img: "../../images/automation/fast-food.svg"
+        img: "/images/automation/fast-food.svg"
     },
     {
         title: "Аптека",
         desc: "служит для того, чтобы обеспечивать оптимизацию бизнес-процессов и разных видов складской работы на предприятии.",
         link: 'apteka.html',
-        img: "../../images/automation/drugstore.svg"
+        img: "/images/automation/drugstore.svg"
     },
     {
         title: "Склады",
         desc: "служит для того, чтобы обеспечивать оптимизацию бизнес-процессов и разных видов складской работы на предприятии.",
         link: 'sklad.html',
-        img: "../../images/automation/warehouse.svg"
+        img: "/images/automation/warehouse.svg"
     },
     {
         title: "Бухгалтерия",
         desc: "комплекс программных средств, который позволяет вести непрерывное фиксирование и анализ данных.",
         link: 'account.html',
-        img: "../../images/automation/accounting/icon.svg"
+        img: "/images/automation/accounting/icon.svg"
     },
     {
         title: "Производства",
         desc: "выполняем сервисные функции по запросу клиента, предоставляя ему доступ к определённым ресурсам или услугам.",
         link: 'production.html',
-        img: "../../images/automation/production.svg"
+        img: "/images/automation/production.svg"
     },
     //  {
     //     title: "ПO для <br> серверов",
     //     desc: "выполняем сервисные функции по запросу клиента, предоставляя ему доступ к определённым ресурсам или услугам.",
     //     link: '1c.html',
-    //     img: "../../images/automation/q.svg"
+    //     img: "/images/automation/q.svg"
     // },
 
 ]
@@ -144,7 +144,7 @@ function currentYPosition() {
     return 0;
 }
 
-var audio = new Audio('../images/audio2.mp3');
+var audio = new Audio('/images/audio2.mp3');
 var video = document.getElementById("background-video")
 video.play();
 

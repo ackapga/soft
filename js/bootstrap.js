@@ -2476,7 +2476,7 @@ switch (filename) {
   case 'umag_pharmacy':
     loct = 2;
     break;
-  case 'otzovik':
+  case 'reviews':
     loct = 4;
     break;
   case 'about':
