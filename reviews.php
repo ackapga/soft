@@ -42,7 +42,7 @@ if ($respponse->success){    //отправлен комментарий
    $_SESSION["send"]="Не все поля заполнены!";
    header("Location: $mess_url#last"); exit;
   }
- 
+
 }
 
 if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод сообщения
@@ -53,7 +53,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    
+
     <title>Отзывы наших клиентов о работе компании – Softgroup.kz</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,7 +83,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
 
   gtag('config', 'G-E0MLEWZE9L');
-</script></head>
+</script>
+</head>
 
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -92,7 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <div class="header-bot" id="home">
-<div class="header-bot_inner_wthreeinfo_header_mid">
+        <div class="header-bot_inner_wthreeinfo_header_mid">
             <!-- header-bot -->
             <div class="col-md-4 logo_agile">
                 <p><a href="index.html"><span>Soft</span>Gr<img src="images/globe1.png">up</a></p>
@@ -100,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- header-bot -->
             <div class="col-md-4 agileits-social top_content">
                 <div class="nomer"><a href="tel:87273449900">8(727) <span>344-99-00</span></a></div>
-<div class="nomer"><a href="tel:87012667700">8(701) <span>266-77-00</span></a></div>
+                <div class="nomer"><a href="tel:87012667700">8(701) <span>266-77-00</span></a></div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -279,7 +280,7 @@ $number=mysqli_num_rows($res);
 if ($number>0) {
  echo '<div style="padding-top:10px;">';
  while ($com=mysqli_fetch_assoc($res))
-    $tag[(int)$com["parent_id"]][] = array((int)$com["id"], $com["message"], $com["rating"], $com["city"], 
+    $tag[(int)$com["parent_id"]][] = array((int)$com["id"], $com["message"], $com["rating"], $com["city"],
     $com["login"], $com["date"], $com["plus"], $com["minus"], $com["first_parent"]);
  echo parents().'</div><br>';
 }
@@ -519,7 +520,7 @@ echo '</form></div>';
                         opacity: 0.8,
                         marginLeft: 550,
                         marginTop: -750,
-                        /* Важно помнить, что названия СSS-свойств пишущихся  
+                        /* Важно помнить, что названия СSS-свойств пишущихся
                                                     через дефис заменяются на аналогичные в стиле "camelCase" */
                         width: 100,
                         height: 100
@@ -555,7 +556,7 @@ echo '</form></div>';
     <!-- //cart-js -->
     <!---->
     <script type='text/javascript'>
-        //<![CDATA[ 
+        //<![CDATA[
         $(window).load(function() {
             $("#slider-range").slider({
                 range: true,
@@ -568,11 +569,10 @@ echo '</form></div>';
             });
             $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
 
-        }); //]]>  
+        }); //]]>
 
     </script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <!---->
     <!-- start-smoth-scrolling -->
     <script type="text/javascript" src="js/move-top.js"></script>
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
@@ -587,43 +587,11 @@ echo '</form></div>';
         });
 
     </script>
-
     <!-- //here ends scrolling icon -->
 
     <!-- for bootstrap working -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <!-- WhatsHelp.io widget -->
-    <script type="text/javascript">
-        (function() {
-            var options = {
-                whatsapp: "+7 (701) 877-33-00", // WhatsApp number
-                telegram: "botaidiamarket", // Telegram number
 
-                email: "zakaz@idiamarket.kz", // Email
-                sms: "+7 (701) 877-33-00", // Sms phone number
-                call: "8 (727) 344-99-00", // Call phone number
-                company_logo_url: "//softgroup.kz/images/globe1.png", // URL of company logo (png, jpg, gif)
-                greeting_message: "Выберите удобный для Вас способ связи с нами.", // Text of greeting message
-                call_to_action: "Если у вас есть вопросы, пишите нам.", // Call to action
-                button_color: "#FF6550", // Color of button
-                position: "right", // Position may be 'right' or 'left'
-                order: "whatsapp,telegram,sms,call,email", // Order of buttons
-            };
-            var proto = document.location.protocol,
-                host = "whatshelp.io",
-                url = proto + "//static." + host;
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = url + '/widget-send-button/js/init.js';
-            s.onload = function() {
-                WhWidgetSendButton.init(host, proto, options);
-            };
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-        })();
-
-    </script>
     </body>
 
 </html>
