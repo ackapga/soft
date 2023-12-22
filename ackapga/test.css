@@ -1,0 +1,184 @@
+.advantages_block {
+    font-family: 'Oswald', sans-serif;
+    box-shadow: inset 0px 0px 64px 0px rgba(50, 50, 50, 0.75);
+}
+
+.advantages_wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.border-1,
+.border-2,
+.border-3 {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 46px;
+    left: -3px;
+    border-radius: 5%;
+    border-left: 3px solid;
+    border-right: 3px solid;
+}
+
+.border-2 {
+    transform: rotate(60deg);
+}
+
+.border-3 {
+    transform: rotate(120deg);
+}
+
+.advantages_block .grid-1,
+.advantages_block .grid-2,
+.advantages_block .grid-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.advantages_block .grid-2,
+.advantages_block .grid-3 {
+    margin-top: -50px;
+}
+
+.hex-wrap {
+    position: relative;
+    width: 150px;
+    height: 190px;
+    margin: 0 1rem;
+}
+
+.hex-wrap .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex-wrap .label svg, .hex-wrap .label img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+}
+
+.hex-init {
+    position: absolute;
+    top: 46px;
+    left: 0px;
+    height: 46%;
+    width: 100%;
+    z-index: 9;
+    transform: rotate(-60deg);
+    cursor: pointer;
+}
+
+.advantages_right {
+    position: relative;
+    color: #f6f6f6;
+    width: 600px;
+    height: 260px;
+}
+
+.advantages_right h1 {
+    color: #333;
+}
+
+.advantages_description {
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+.advantages_description * {
+    display: none;
+}
+
+.advantages_description > div {
+    padding: 0 40px;
+    font-size: 26px;
+    height: 20rem;
+    width: 100%;
+}
+
+.advantages_active {
+    display: block;
+    position: relative;
+}
+
+.advantages_active > p {
+    display: block;
+    margin: 0;
+}
+
+p.advantages_title {
+    position: relative;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.advantages_active::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.first.advantages_active::after {
+    background: url(../images/abouticon02.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.second.advantages_active::after {
+    background: url(../images/abouticon04.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.third.advantages_active::after {
+    background: url(../images/abouticon06.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.four.advantages_active::after {
+    background: url(../images/abouticon08.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.five.advantages_active::after {
+    background: url(http://i.imgur.com/QjrmHkb.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.six.advantages_active::after {
+    background: url(http://i.imgur.com/YmCqPpk.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.seven.advantages_active::after {
+    background: url(http://i.imgur.com/V9vAVUO.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}

@@ -15724,37 +15724,6 @@ figure.collage_animate:hover p {
     justify-content: center;
 }
 
-.wws_block {
-    width: 35rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.wws_block img {
-    position: absolute;
-    transition: transform 0.5s ease-out;
-    overflow: hidden;
-}
-
-.wws_block img:hover {
-    transform: scale(1.1);
-}
-
-.wws_block img:nth-child(1) {
-    top: -3rem;
-    left: 5rem;
-}
-.wws_block img:nth-child(2) {
-    top: 2rem;
-    left: 8rem;
-}
-.wws_block img:nth-child(3) {
-    top: 2rem;
-}
-.wws_block img:nth-child(4) {
-    top: 2rem;
-}
 
 
 
