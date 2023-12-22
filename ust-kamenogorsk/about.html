@@ -6,9 +6,8 @@
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="о компании SoftGroup, автоматизация розничной торговли, Усть-Каменогорск, астана, казахстан, купить, цена, продажа." />
+    <meta name="keywords" content="о компании SoftGroup, автоматизация розничной торговли, усть-каменогорск, астана, казахстан, купить, цена, продажа." />
     <meta name="description" content="О компании Softgroup. Комплексная автоматизация предприятия. Оборудования для автоматизации в широком ассортименте купить.">
-
     <!--//tags -->
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
@@ -17,6 +16,7 @@
     <link href="../css/font-awesome.css" rel="stylesheet">
     <link href="../css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../css/jqcart.css" rel="stylesheet" type="text/css">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -32,7 +32,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
 
   gtag('config', 'G-E0MLEWZE9L');
-</script></head>
+</script>
+</head>
 
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -73,7 +74,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul class="nav navbar-nav menu__list">
                                 <li class=" menu__item"><a class="menu__link" href="index.html">Главная <span class="sr-only">(current)</span></a></li>
                                 <li class=" menu__item"><a class="menu__link" href="products.html">Оборудование<span class="sr-only">(current)</span></a></li>
-
                                 <li class=" menu__item"><a class="menu__link" href="uslugi.html">Программы</a></li>
                                 <li class=" menu__item"><a class="menu__link" href="automation.html">Автоматизация</a></li>
                                 <li class=" menu__item"><a class="menu__link" href="reviews.php">Отзывы</a></li>
@@ -466,8 +466,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <figcaption>
                                     <h3>Автоматизация <span>с</span>кладов</h3>
                                     <p>Управление складскими процессами</p>
-                                    </figcap< /a>tion>
+                                </figcaption>
                             </figure>
+                        </a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -479,22 +480,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <!-- //mens -->
         <!-- /our clients -->
-        <div class="ll">
-            <p><span>Наши</span> клиенты</p>
-        </div>
-        <ul id="flexiselDemo3">
-            <li><img src="../images/logo/sinooil.png" /></li>
-            <li><img src="../images/logo/hel.png" /></li>
-            <li><img src="../images/logo/tech.png" /></li>
-            <li><img src="../images/logo/meg.png" /></li>
-            <li><img src="../images/logo/magnum.png" /></li>
-            <li><img src="../images/logo/ecco.png" /></li>
-            <li><img src="../images/logo/koton.png" /></li>
-            <li><img src="../images/logo/kul.png" /></li>
-            <li><img src="../images/logo/kaz.png" /></li>
-            <li><img src="../images/logo/naz.png" /></li>
 
-        </ul>
+        <div>
+            <div class="ll">
+                <h3><span>Наши</span> клиенты</h3>
+            </div>
+            <ul id="flexiselDemo3">
+                <li><img src="../images/logo/sinooil.png"/></li>
+                <li><img src="../images/logo/hel.png"/></li>
+                <li><img src="../images/logo/tech.png"/></li>
+                <li><img src="../images/logo/meg.png"/></li>
+                <li><img src="../images/logo/magnum.png"/></li>
+                <li><img src="../images/logo/ecco.png"/></li>
+                <li><img src="../images/logo/koton.png"/></li>
+                <li><img src="../images/logo/kul.png"/></li>
+                <li><img src="../images/logo/kaz.png"/></li>
+                <li><img src="../images/logo/naz.png"/></li>
+            </ul>
+        </div>
         <!--/grids-->
         <div class="coupons">
             <div class="coupons-grids text-center">
@@ -632,12 +635,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         <!-- //footer -->
+    </div>
 
 
         <!-- js -->
-        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-        <script src="js/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.flexisel.js"></script>
         <!-- Custom-JavaScript-File-Links -->
         <!-- cart-js -->
         <script type="text/javascript">
@@ -654,8 +658,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             opacity: 0.8,
                             marginLeft: 550,
                             marginTop: -750,
-                            /* Важно помнить, что названия СSS-свойств пишущихся  
-                                                        через дефис заменяются на аналогичные в стиле "camelCase" */
+                            /* Важно помнить, что названия СSS-свойств пишущихся через дефис заменяются на аналогичные в стиле "camelCase" */
                             width: 100,
                             height: 100
                         }, 500, function() {
@@ -664,22 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 });
             });
         </script>
-        <link href="../css/jqcart.css" rel="stylesheet" type="text/css">
-
-        <script src="js/jqcart.min.js"></script>
-        <script type="text/javascript">
-            $(window).load(function() {
-                $("#flexiselDemo3").flexisel({
-                    visibleItems: 5,
-                    itemsToScroll: 1,
-                    autoPlay: {
-                        enable: true,
-                        interval: 5000,
-                        pauseOnHover: true
-                    }
-                });
-            });
-        </script>
+        <script src="../js/jqcart.min.js"></script>
         <script>
             $(function() {
                 'use strict';
@@ -700,10 +688,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </script>
         <!-- //cart-js -->
         <!-- script for responsive tabs -->
-        <script src="js/easy-responsive-tabs.js"></script>
+        <script src="../js/easy-responsive-tabs.js"></script>
         <!-- start-smoth-scrolling -->
-        <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="../js/move-top.js"></script>
+        <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $(".scroll").click(function(event) {
@@ -717,38 +705,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- //here ends scrolling icon -->
         <!-- for bootstrap working -->
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <!-- WhatsHelp.io widget -->
-        <script type="text/javascript">
-            (function() {
-                var options = {
-                    whatsapp: "+7 (701) 877-33-00", // WhatsApp number
-                    telegram: "botaidiamarket", // Telegram number
-
-                    email: "zakaz@idiamarket.kz", // Email
-                    sms: "+7 (701) 877-33-00", // Sms phone number
-                    call: "8 (727) 344-99-00", // Call phone number
-                    company_logo_url: "//softgroup.kz/images/globe1.png", // URL of company logo (png, jpg, gif)
-                    greeting_message: "Выберите удобный для Вас способ связи с нами.", // Text of greeting message
-                    call_to_action: "Если у вас есть вопросы, пишите нам.", // Call to action
-                    button_color: "#FF6550", // Color of button
-                    position: "right", // Position may be 'right' or 'left'
-                    order: "whatsapp,telegram,sms,call,email", // Order of buttons
-                };
-                var proto = document.location.protocol,
-                    host = "whatshelp.io",
-                    url = proto + "//static." + host;
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = true;
-                s.src = url + '/widget-send-button/js/init.js';
-                s.onload = function() {
-                    WhWidgetSendButton.init(host, proto, options);
-                };
-                var x = document.getElementsByTagName('script')[0];
-                x.parentNode.insertBefore(s, x);
-            })();
-        </script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
 </body>
 
 </html>

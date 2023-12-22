@@ -24,15 +24,17 @@ $respponse = json_decode($verify);
 if ($respponse->success){    //отправлен комментарий
  $mess_login=htmlspecialchars($_POST["mess_login"]);
  $user_text=htmlspecialchars($_POST["user_text"]);
+ $rating=htmlspecialchars($_POST["rating"]);
+ $city_text=htmlspecialchars($_POST["city_text"]);
 
   if ($mess_login!='' and $user_text!=''){
    if (is_numeric($_POST["parent_id"]) and is_numeric($_POST["f_parent"]))
     $res=mysqli_query($db,"insert into softgroup
-    (parent_id, first_parent, date, theme_id, login, message)
+    (parent_id, first_parent, date, theme_id, login, message, rating, city)
     values ('".$_POST["parent_id"]."','".$_POST["f_parent"]."',
-    '".$time."','".$theme_id."','".$mess_login."','".$user_text."')");
-   else $res=mysqli_query($db,"insert into softgroup (date, theme_id, login, message)
-   values ('".$time."','".$theme_id."','".$mess_login."','".$user_text."')");
+    '".$time."','".$theme_id."','".$mess_login."','".$user_text."','".$rating."','".$city_text."')");
+   else $res=mysqli_query($db,"insert into softgroup (date, theme_id, login, message, rating, city)
+   values ('".$time."','".$theme_id."','".$mess_login."','".$user_text."','".$rating."','".$city_text."')");
     $_SESSION["send"]="Комментарий принят!";
     header("Location: $mess_url#last"); exit;
   }
@@ -40,7 +42,7 @@ if ($respponse->success){    //отправлен комментарий
    $_SESSION["send"]="Не все поля заполнены!";
    header("Location: $mess_url#last"); exit;
   }
- 
+
 }
 
 if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод сообщения
@@ -51,13 +53,13 @@ if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод соо
 
 <head>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    
-    <title>Отзывы наших клиентов о работе компании – Softgroup.kz</title>
+
+    <title>Отзывы наших клиентов о работе компании SoftGroup</title>
     <!--/tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="keywords" content="SoftGroup, отзывы компании, продукции." />
-    <meta name="description" content="Отзывы клиентов о компании Softgroup. Все отзывы публикуются без предварительного рецензирования. Отправить жалобу, благодарность на работу Softgroup.kz">
+    <meta name="description" content="Отзывы клиентов о компании Softgroup. Все отзывы публикуются без предварительного рецензирования. Отправить жалобу, благодарность на работу SoftGroup">
     <!--//tags -->
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
@@ -81,7 +83,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
 
   gtag('config', 'G-E0MLEWZE9L');
-</script></head>
+</script>
+</head>
 
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -90,7 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <div class="header-bot" id="home">
-<div class="header-bot_inner_wthreeinfo_header_mid">
+        <div class="header-bot_inner_wthreeinfo_header_mid">
             <!-- header-bot -->
             <div class="col-md-4 logo_agile">
                 <p><a href="index.html"><span>Soft</span>Gr<img src="../images/globe1.png">up</a></p>
@@ -98,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- header-bot -->
             <div class="col-md-4 agileits-social top_content">
                 <div class="nomer"><a href="tel:87273449900">8(727) <span>344-99-00</span></a></div>
-<div class="nomer"><a href="tel:87012667700">8(701) <span>266-77-00</span></a></div>
+                <div class="nomer"><a href="tel:87012667700">8(701) <span>266-77-00</span></a></div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -229,36 +232,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 function parents($up=0, $left=0) {    //Строим иерархическое дерево комментариев
 global $tag,$mess_url;
 
-for ($i=0; $i<=count($tag[$up])-1; $i++) {
- //Можно выделять цветом указанные логины
- if ($tag[$up][$i][2]=='Admin') $tag[$up][$i][2]='<font color="#C00">Admin</font>';
- if ($tag[$up][$i][6]==0) $tag[$up][$i][6]=$tag[$up][$i][0];
- //Высчитываем рейтинг комментария
- $sum=$tag[$up][$i][4]-$tag[$up][$i][5];
+    for ($i=0; $i<=count($tag[$up])-1; $i++) {
+    //Можно выделять цветом указанные логины
+        if ($tag[$up][$i][2]=='Admin') $tag[$up][$i][2]='<font color="#C00">Admin</font>';
+        if ($tag[$up][$i][6]==0) $tag[$up][$i][6]=$tag[$up][$i][0];
+        //Высчитываем рейтинг комментария
+        $sum=$tag[$up][$i][4]-$tag[$up][$i][5];
 
- if ($up==0) echo '<div class="otz" style=" color: #2a4f5e;   margin-top:20px; border-bottom: 1px solid #e6e6ec; padding-bottom:10px; float:none!important; width:830px;">';
- else {
-    if (count($tag[$up])-1!=$i)
-        echo '<div class="strelka" style="padding:5px 0 0 '.($left-2).'px;">';
-    else echo '<div class="strelka_2" style="padding:5px 0 0 '.$left.'px;">';
- }
- echo '<div class="comm_head" id="m'.$tag[$up][$i][0].'">';
- echo '<div style="float:left; margin-right:5px; font-size:16px!important; color:#2a4f5e;"><b>'.$tag[$up][$i][2].'</b></div>';
- 
+        if ($up==0) echo '<div class="otz" style=" color: #2a4f5e; margin-top:25px; border-bottom: 1px solid #e6e6ec; padding-bottom:10px; float:none!important; width:850px;">';
+        else {
+            if (count($tag[$up])-1!=$i)
+                echo '<div class="strelka" style="padding:5px 0 0 '.($left-2).'px;">';
+            else echo '<div class="strelka_2" style="padding:5px 0 0 '.$left.'px;">';
+        }
+        echo '<div class="comm_head" id="m'.$tag[$up][$i][0].'">';
+        echo '<div style="float:left; margin-right:5px; font-size:16px!important; color:#2a4f5e;">Имя: <b>'.$tag[$up][$i][4].'</b></div>';
+        echo '<div style="text-align:right; float:none">  '.date("d.m.Y в H:i ", $tag[$up][$i][5]).'</div></div>';
+        echo '<div class="city-name-ds">';
+        echo '<div style="float:left; margin-right:5px; font-size:16px!important; color:#2a4f5e;">Город: <b>'.$tag[$up][$i][3].'</b></div>';
+        echo '<div style="float:none; display:none;"> '.$tag[$up][$i][2].' </div>';
+        if ($tag[$up][$i][2]==5) echo '<img src="../images/five.png">';
+        elseif ($tag[$up][$i][2]==4){
+            echo '<img src="../images/four.png">';
+        }
+        elseif ($tag[$up][$i][2]==3) {
+            echo '<img src="../images/three.png">';
+        }
+        elseif ($tag[$up][$i][2]==2) {
+            echo '<img src="../images/two.png">';
+        }
+        else echo '<img src="../images/one.png">';
+        echo '</div>';
+        echo '<div style="clear:both; "></div>';
+        echo '<div class="comm_body"  style="float:none!important; margin:15px 0 20px 0;">';
+        echo '<div style="word-wrap:break-word; float:none!important;">';
+        echo str_replace("<br />","<br>",nl2br($tag[$up][$i][1])).'</div>';
 
-
-
-
- echo '<div style="text-align:right; float:none">  '.date("d.m.Y в H:i ", $tag[$up][$i][3]).'</div></div>';
- echo '<div style="clear:both; "></div>';
- echo '<div class="comm_body"  style="float:none!important;">';
- if ($sum<0) echo '<u class="sp_link">Показать/скрыть</u><div class="comm_text">';
- else echo '<div style="word-wrap:break-word; float:none!important;">';
- echo str_replace("<br />","<br>",nl2br($tag[$up][$i][1])).'</div>';
-
- if (isset($tag[ $tag[$up][$i][0] ])) parents($tag[$up][$i][0],20);
- echo '</div></div>';
-}
+        if (isset($tag[ $tag[$up][$i][0] ])) parents($tag[$up][$i][0],20);
+        echo '</div></div>';
+    }
 }
 
 $res=mysqli_query($db,"SELECT * FROM softgroup
@@ -266,9 +278,9 @@ $res=mysqli_query($db,"SELECT * FROM softgroup
 $number=mysqli_num_rows($res);
 
 if ($number>0) {
- echo '<div style="ppadding-top:10px; ">';
+ echo '<div style="padding-top:10px;">';
  while ($com=mysqli_fetch_assoc($res))
-    $tag[(int)$com["parent_id"]][] = array((int)$com["id"], $com["message"],
+    $tag[(int)$com["parent_id"]][] = array((int)$com["id"], $com["message"], $com["rating"], $com["city"],
     $com["login"], $com["date"], $com["plus"], $com["minus"], $com["first_parent"]);
  echo parents().'</div><br>';
 }
@@ -280,11 +292,51 @@ echo '<form method="POST" action="'.$mess_url.'#last" class="add_comment">';
 echo '<div class="imya" style="float:none;font-size:18px; font-weight:bold; color:#0ba98b;"><h2>Оставить отзыв о компании Softgroup</h2></div>';
 echo '<div class="oott" style="margin-left:150px; margin-top:10px; float:none;">';
 echo '<div style="float:left; margin-right:5px;">Имя*</div>';
-echo '<input style="height:23px; width:419px; " type="text" name="mess_login" maxlength="20" value=""></div>';
+echo '<input style="height:23px; width:419px; " type="text" name="mess_login" maxlength="20" value=""> 
+	</br>
+	 <div style="float:left; margin-right:5px;">Город*</div>
+	<select height:23px; width:419px; "type="text" name="city_text" maxlength="20" value="" style="margin-top: 5px">
+		<option value="Алматы" selected="selected">Алматы</option>
+		<option value="Астана">Астана</option>
+		<option value="Актау">Актау</option>
+		<option value="Актобе">Актобе</option>
+		<option value="Атырау">Атырау</option>
+		<option value="Жанаозен">Жанаозен</option>
+		<option value="Жезказган">Жезказган</option>
+		<option value="Караганда">Караганда</option>
+		<option value="Кокшетау">Кокшетау</option>
+		<option value="Костанай">Костанай</option>
+		<option value="Кызылорда">Кызылорда</option>
+		<option value="Павлодар">Павлодар</option>
+		<option value="Петропавловск">Петропавловск</option>
+		<option value="Семей">Семей</option>
+		<option value="Талдыкорган">Талдыкорган</option>
+		<option value="Тараз">Тараз</option>
+		<option value="Туркестан">Туркестан</option>
+		<option value="Уральск">Уральск</option>
+		<option value="Усть-Каменогорск">Усть-Каменогорск</option>
+		<option value="Шымкент">Шымкент</option>
+	</select>
+</div>';
+
 echo '<div class="oott" style="float:none;margin-left:150px; margin-top:10px">';
 echo '<div  style="float:left; margin-right:5px;">Отзыв*</div>';
 echo '<textarea cols="50" rows="5" name="user_text"></textarea>';
 echo '</div>';
+echo '<div class="rating1" style="margin-left:150px; margin-top:10px;">Ваша оценка:';
+					echo '	<span class="starRating">';
+						echo '	<input id="rating5" type="radio" name="rating" value="5"  checked="">';
+							echo '<label for="rating5">5</label>';
+							echo '<input id="rating4" type="radio" name="rating" value="4">';
+							echo '<label for="rating4">4</label>';
+							echo '<input id="rating3" type="radio" name="rating" value="3">';
+							echo '<label for="rating3">3</label>';
+							echo '<input id="rating2" type="radio" name="rating" value="2">';
+							echo '<label for="rating2">2</label>';
+							echo '<input id="rating1" type="radio" name="rating" value="1" >';
+							echo '<label for="rating1">1</label>';
+						echo '</span>';
+					echo '</div>';
 echo '<div class="g-recaptcha" data-sitekey="6LcU8NAcAAAAAKMeqxFEqGWMQoGb3-SFufCyr_Pe"></div>';
 echo '<div class="imya" style="margin-top:15px; margin-left:150px;"><input class="knopka" style="height:28px; font-size: 14px !important;
     background: #3a5265;
@@ -447,11 +499,11 @@ echo '</form></div>';
 
     <!-- js -->
 
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
     <!-- //js -->
-    <script src="js/responsiveslides.min.js"></script>
+    <script src="../js/responsiveslides.min.js"></script>
 
-    <script src="js/modernizr.custom.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
     <!-- Custom-JavaScript-File-Links -->
     <!-- cart-js -->
     <script type="text/javascript">
@@ -468,7 +520,7 @@ echo '</form></div>';
                         opacity: 0.8,
                         marginLeft: 550,
                         marginTop: -750,
-                        /* Важно помнить, что названия СSS-свойств пишущихся  
+                        /* Важно помнить, что названия СSS-свойств пишущихся
                                                     через дефис заменяются на аналогичные в стиле "camelCase" */
                         width: 100,
                         height: 100
@@ -480,8 +532,8 @@ echo '</form></div>';
 
     </script>
     <link href="../css/jqcart.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/jqcart.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/jqcart.min.js"></script>
     <script>
         $(function() {
             'use strict';
@@ -504,7 +556,7 @@ echo '</form></div>';
     <!-- //cart-js -->
     <!---->
     <script type='text/javascript'>
-        //<![CDATA[ 
+        //<![CDATA[
         $(window).load(function() {
             $("#slider-range").slider({
                 range: true,
@@ -517,14 +569,13 @@ echo '</form></div>';
             });
             $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
 
-        }); //]]>  
+        }); //]]>
 
     </script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <!---->
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
     <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/move-top.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event) {
@@ -536,43 +587,11 @@ echo '</form></div>';
         });
 
     </script>
-
     <!-- //here ends scrolling icon -->
 
     <!-- for bootstrap working -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <!-- WhatsHelp.io widget -->
-    <script type="text/javascript">
-        (function() {
-            var options = {
-                whatsapp: "+7 (701) 877-33-00", // WhatsApp number
-                telegram: "botaidiamarket", // Telegram number
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
 
-                email: "zakaz@idiamarket.kz", // Email
-                sms: "+7 (701) 877-33-00", // Sms phone number
-                call: "8 (727) 344-99-00", // Call phone number
-                company_logo_url: "//softgroup.kz/images/globe1.png", // URL of company logo (png, jpg, gif)
-                greeting_message: "Выберите удобный для Вас способ связи с нами.", // Text of greeting message
-                call_to_action: "Если у вас есть вопросы, пишите нам.", // Call to action
-                button_color: "#FF6550", // Color of button
-                position: "right", // Position may be 'right' or 'left'
-                order: "whatsapp,telegram,sms,call,email", // Order of buttons
-            };
-            var proto = document.location.protocol,
-                host = "whatshelp.io",
-                url = proto + "//static." + host;
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = url + '/widget-send-button/js/init.js';
-            s.onload = function() {
-                WhWidgetSendButton.init(host, proto, options);
-            };
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-        })();
-
-    </script>
     </body>
 
 </html>

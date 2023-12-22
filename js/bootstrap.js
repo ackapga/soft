@@ -2444,13 +2444,14 @@ if (mobileCheck()) {
   }px`;
 }
 
-document.querySelector('.w3-address').children[2].children[1].innerHTML = `
-    
-<p style="margin:0">Адрес</p>
-<p>
-<a href="https://2gis.kz/almaty/firm/9429940000970891/tab/reviews?m=76.907294%2C43.237873%2F20">ул. Мынбаева 43 (уг. ул. между Ауезова и Манаса), 1-этаж, 050008</a>
-</p>
-`;
+// Закомител, вопросы @ackapga
+// document.querySelector('.w3-address').children[2].children[1].innerHTML = `
+//
+// <p style="margin:0">Адрес</p>
+// <p>
+// <a href="https://2gis.kz/almaty/firm/9429940000970891/tab/reviews?m=76.907294%2C43.237873%2F20">ул. Мынбаева 43 (уг. ул. между Ауезова и Манаса), 1-этаж, 050008</a>
+// </p>
+// `;
 
 const menuShylock = document.querySelector('.menu--shylock');
 //askar
