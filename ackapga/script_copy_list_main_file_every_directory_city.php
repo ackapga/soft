@@ -1,25 +1,25 @@
 <?php
 
 $directories = [
-    'aktau',
-    'aktobe',
+//    'aktau',
+//    'aktobe',
     'astana',
-    'atyrau',
-    'janaozen',
-    'jezkazgan',
-    'karaganda',
-    'kokshetau',
-    'kostanai',
-    'kyzylorda',
-    'pavlodar',
-    'petropavlovsk',
-    'semei',
+//    'atyrau',
+//    'janaozen',
+//    'jezkazgan',
+//    'karaganda',
+//    'kokshetau',
+//    'kostanai',
+//    'kyzylorda',
+//    'pavlodar',
+//    'petropavlovsk',
+//    'semei',
     'shymkent',
-    'taldykorgan',
-    'taraz',
-    'turkestan',
-    'uralsk',
-    'ust-kamenogorsk',
+//    'taldykorgan',
+//    'taraz',
+//    'turkestan',
+//    'uralsk',
+//    'ust-kamenogorsk',
 ];
 $originalFiles = [
     'index.html',
@@ -379,14 +379,7 @@ function updateMetaTags($file, $location, $originalFile)
             $content = str_replace('<li><a href="../' . $originalFile . '">Астана</a></li>', '<li><a href="../' . $originalFile . '">Алматы</a></li>', $content);
 
             $content = str_replace(
-                '<div class="agile-contact-grids">
-                <div class="modelss">
-                    <h1>Контакты Softgroup</h1>
-                    <hr>
-                </div>
-                <div class="agile-contact-left">
-                    <div class="address-grid">
-                        <div class="mail-agileits-w3layouts" style="margin-top:1.5em">
+                '<div class="mail-agileits-w3layouts" style="margin-top:1.5em">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <div class="contact-right">
                                 <p>Астана:</p><span><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"> ул.
@@ -396,7 +389,7 @@ function updateMetaTags($file, $location, $originalFile)
                                     <a href="tel:87027773656"> +7 702 777 3656</a>
                                     <br> <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a></span>
                                 <div style="margin-top:7px;"><a style="color:#07c;"
-                                        href="../contact_almaty.html"><b>посмотреть на карте</b></a></div>
+                                        href="contact_almaty.html"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"
                                         target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
@@ -413,7 +406,7 @@ function updateMetaTags($file, $location, $originalFile)
                                    
                                             <a href="tel:87015112200">+7(701) 511-22-00</a><br>
 											<a href="mailto:astana@idiamarket.kz">astana@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="../contact_astana.html"
+                                <div style="margin-top:7px;"><a href="contact_astana.html"
                                         style="color:#07c;"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a
                                         href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow"
@@ -431,93 +424,45 @@ function updateMetaTags($file, $location, $originalFile)
                                 <br><span><a href="tel:87252399900">8 (7252) 39-99-00</a><br>
                                     <a href="tel:87019447700">+7 (701) 944-77-00</a>
                                     <br> <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="../contact_shymkent.html"
+                                <div style="margin-top:7px;"><a href="contact_shymkent.html"
                                         style="color:#07c;"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a
                                         href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"
                                         target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
                             <div class="clearfix"> </div>
-                        </div>
+                        </div>',
 
-                        <div class="mail-agileits-w3layouts">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <div class="contact-right">
-                                <p>График работы: </p>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>Понедельник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Вторник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Среда:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Четверг:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Пятница:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Суббота:</td>
-                                            <td>09:00-16:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Воскресенье:</td>
-                                            <td>Выходной</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                        <div class="clearfix"> </div><br>
-                        <div class="contact-right" style="float:none">
-                            <a style="color:#07c;" href="../zakaz.php"><b>Написать письмо в отдел продаж</b></a></div>
-                        <div style="margin-top:10px" class="contact-right"><a style="color:#07c;"
-                                href="../pismo.php"><b>Написать письмо руководству</b></a></div>
-
-                    </div>
-
-                </div>
-                <div class="clearfix"> </div>
-            </div>',
-                '<div class="agile-contact-grids">
-                <div class="modelss">
-                    <h1>Контакты Softgroup</h1>
-                    <hr>
-                </div>
-                <div class="agile-contact-left">
-                    <div class="address-grid">
-                        <div class="mail-agileits-w3layouts" style="margin-top:1.5em">
+                '<div class="mail-agileits-w3layouts" style="margin-top:1.5em">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <div class="contact-right">
-                                <p>Астана:</p><span><a target="_blank" href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow" > ул. Бейсекбаева 24/1, 2-этаж, бизнес центр DARA</a></span>
-                                <br><span><a href="tel:87172279900">8 (7172) 27-99-00</a><br>
-                                    <a href="tel:87015112200">+7 (701) 511-22-00</a>
-                                    <br> <a href="mailto:astana@idiamarket.kz">astana@idiamarket.kz</a></span>
+                                <p>Астана:</p>
+                                <span><a href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow"> ул.Бейсекбаева 24/1, 2-этаж, бизнес центр DARA</a></span>
+                                <br>
+                                <span> 
+                                <a href="tel:87172279900">8 (7172) 27-99-00</a><br>
+                                <a href="tel:87015112200">+7(701) 511-22-00</a><br>
+								<a href="mailto:astana@idiamarket.kz">astana@idiamarket.kz</a>
+								</span>
                                 <div style="margin-top:7px;"><a href="contact_astana.html" style="color:#07c;"><b>посмотреть на карте</b></a></div>
-                                <div style="margin-top:7px;"><a href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
+                                <div style="margin-top:7px;"><a href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow" target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-
+                        
                         <div class="mail-agileits-w3layouts">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <div class="contact-right">
-                                <p>Алматы:</p><span><a href="https://2gis.kz/almaty/firm/9429940000970891?snow" target="_blank"> ул. Мынбаева 43 (уг. ул. Манаса), 1-этаж</a></span>
-                                <br><span><a href="tel:87273449900">+7 (727) 344-99-00</a><br>
-                                    <a href="tel:87012667700"> +7 (701) 266-77-00</a>
-                                    <br> <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a style="color:#07c;" href="../contact_almaty.html"><b>посмотреть на карте</b></a></div>
+                                <p>Алматы:</p>
+                                <span><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"> ул.Мынбаева 43 (уг. ул. Манаса)</a></span>
+                                <br>
+                                <span>
+                                <a href="tel:87273449900">8 (727) 344-99-00</a><br>
+                                <a href="tel:87012667700"> +7 (701) 266-77-00</a><br>
+                                <a href="tel:87027773656"> +7 702 777 3656</a><br> 
+                                <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a>
+                                </span>
+                                <div style="margin-top:7px;"><a style="color:#07c;" href="contact_almaty.html"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a href="https://2gis.kz/almaty/firm/9429940000970891?snow" target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
                             <div class="clearfix"> </div>
@@ -526,65 +471,19 @@ function updateMetaTags($file, $location, $originalFile)
                         <div class="mail-agileits-w3layouts">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <div class="contact-right">
-                                <p>Шымкент:</p><span><a href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"> ул. Мадели кожа 35/1, (уг.ул. Байтурсынова) 1-этаж, бизнес-центр BNK</a></span>
-                                <br><span><a href="tel:87252399900">8 (7252) 39-99-00</a><br>
-                                    <a href="tel:87019447700">+7 (701) 944-77-00</a>
-                                    <br> <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a></span>
+                                <p>Шымкент:</p>
+                                <span><a href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"> ул.Мадели кожа 35/1, (уг.ул. Байтурсынова) 1-этаж, бизнес-центр BNK</a></span>
+                                <br>
+                                <span>
+                                <a href="tel:87252399900">8 (7252) 39-99-00</a><br>
+                                <a href="tel:87019447700">+7 (701) 944-77-00</a><br> 
+                                <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a>
+                                </span>
                                 <div style="margin-top:7px;"><a href="contact_shymkent.html" style="color:#07c;"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72" target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
                             <div class="clearfix"> </div>
-                        </div>
-
-                        <div class="mail-agileits-w3layouts">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <div class="contact-right">
-                                <p>График работы: </p>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>Понедельник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Вторник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Среда:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Четверг:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Пятница:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Суббота:</td>
-                                            <td>09:00-16:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Воскресенье:</td>
-                                            <td>Выходной</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                        <div class="clearfix"> </div><br>
-                        <div class="contact-right" style="float:none">
-                            <a style="color:#07c;" href="../zakaz.php"><b>Написать письмо в отдел продаж</b></a></div>
-                        <div style="margin-top:10px" class="contact-right"><a style="color:#07c;" href="../pismo.php"><b>Написать письмо руководству</b></a></div>
-
-                    </div>
-
-                </div>
-                <div class="clearfix"> </div>
-            </div>',
+                        </div>',
                 $content);
 
             $content = str_replace(
@@ -907,14 +806,7 @@ function updateMetaTags($file, $location, $originalFile)
             $content = str_replace('<li><a href="../' . $originalFile . '">Шымкент</a></li>', '<li><a href="../' . $originalFile . '">Алматы</a></li>', $content);
 
             $content = str_replace(
-                ' <div class="agile-contact-grids">
-                <div class="modelss">
-                    <h1>Контакты Softgroup</h1>
-                    <hr>
-                </div>
-                <div class="agile-contact-left">
-                    <div class="address-grid">
-                        <div class="mail-agileits-w3layouts" style="margin-top:1.5em">
+                '<div class="mail-agileits-w3layouts" style="margin-top:1.5em">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <div class="contact-right">
                                 <p>Шымкент:</p><span><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"> ул.
@@ -922,131 +814,6 @@ function updateMetaTags($file, $location, $originalFile)
                                 <br><span><a href="tel:87273449900">8 (727) 344-99-00</a><br>
                                     <a href="tel:87012667700"> +7 (701) 266-77-00</a><br>
                                     <a href="tel:87027773656"> +7 702 777 3656</a>
-                                    <br> <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a style="color:#07c;"
-                                        href="../contact_almaty.html"><b>посмотреть на карте</b></a></div>
-                                <div style="margin-top:7px;"><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"
-                                        target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-
-                        <div class="mail-agileits-w3layouts">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <div class="contact-right">
-                                <p>Астана:</p><span><a
-                                        href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow">
-                                        ул. Бейсекбаева 24/1, 2-этаж, бизнес центр DARA</a></span>
-                                <span><br> <a href="tel:87172279900">8 (7172) 27-99-00</a><br>
-                                   
-                                            <a href="tel:87015112200">+7(701) 511-22-00</a><br>
-											<a href="mailto:astana@idiamarket.kz">astana@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="../contact_astana.html"
-                                        style="color:#07c;"><b>посмотреть на карте</b></a></div>
-                                <div style="margin-top:7px;"><a
-                                        href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow"
-                                        target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-
-                        <div class="mail-agileits-w3layouts">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <div class="contact-right">
-                                <p>Шымкент:</p><span><a
-                                        href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72">
-                                        ул. Мадели кожа 35/1, (уг.ул. Байтурсынова) 1-этаж, бизнес-центр BNK</a></span>
-                                <br><span><a href="tel:87252399900">8 (7252) 39-99-00</a><br>
-                                    <a href="tel:87019447700">+7 (701) 944-77-00</a>
-                                    <br> <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="../contact_shymkent.html"
-                                        style="color:#07c;"><b>посмотреть на карте</b></a></div>
-                                <div style="margin-top:7px;"><a
-                                        href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"
-                                        target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-
-                        <div class="mail-agileits-w3layouts">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <div class="contact-right">
-                                <p>График работы: </p>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>Понедельник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Вторник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Среда:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Четверг:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Пятница:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Суббота:</td>
-                                            <td>09:00-16:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Воскресенье:</td>
-                                            <td>Выходной</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                        <div class="clearfix"> </div><br>
-                        <div class="contact-right" style="float:none">
-                            <a style="color:#07c;" href="../zakaz.php"><b>Написать письмо в отдел продаж</b></a></div>
-                        <div style="margin-top:10px" class="contact-right"><a style="color:#07c;"
-                                href="../pismo.php"><b>Написать письмо руководству</b></a></div>
-
-                    </div>
-
-                </div>
-                <div class="clearfix"> </div>
-            </div>',
-                '<div class="agile-contact-grids">
-                <div class="modelss">
-                    <h1>Контакты Softgroup</h1>
-                    <hr>
-                </div>
-                <div class="agile-contact-left">
-                    <div class="address-grid">
-
-                        <div class="mail-agileits-w3layouts">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <div class="contact-right">
-                                <p>Шымкент:</p><span><a href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"> ул. Мадели кожа 35/1, (уг.ул. Байтурсынова) 1-этаж, бизнес-центр BNK</a></span>
-                                <br><span><a href="tel:87252399900">8 (7252) 39-99-00</a><br>
-                                    <a href="tel:87019447700">+7 (701) 944-77-00</a>
-                                    <br> <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="contact_shymkent.html" style="color:#07c;"><b>посмотреть на карте</b></a></div>
-                                <div style="margin-top:7px;"><a href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72" target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-
-                        <div class="mail-agileits-w3layouts" style="margin-top:1.5em">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                   <div class="contact-right">
-                                <p>Алматы:</p><span><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"> ул.
-                                        Мынбаева 43 (уг. ул. Манаса)</a></span>
-                                <br><span><a href="tel:87273449900">8 (727) 344-99-00</a><br>
-                                    <a href="tel:87012667700"> +7 (701) 266-77-00</a><br>
-                                    <a href="tel:87012336600"> +7 701 233 6600</a>
                                     <br> <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a></span>
                                 <div style="margin-top:7px;"><a style="color:#07c;"
                                         href="contact_almaty.html"><b>посмотреть на карте</b></a></div>
@@ -1076,54 +843,76 @@ function updateMetaTags($file, $location, $originalFile)
                         </div>
 
                         <div class="mail-agileits-w3layouts">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <div class="contact-right">
-                                <p>График работы: </p>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>Понедельник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Вторник:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Среда:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Четверг:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Пятница:</td>
-                                            <td>09:00-18:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Суббота:</td>
-                                            <td>09:00-16:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Воскресенье:</td>
-                                            <td>Выходной</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <p>Шымкент:</p><span><a
+                                        href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72">
+                                        ул. Мадели кожа 35/1, (уг.ул. Байтурсынова) 1-этаж, бизнес-центр BNK</a></span>
+                                <br><span><a href="tel:87252399900">8 (7252) 39-99-00</a><br>
+                                    <a href="tel:87019447700">+7 (701) 944-77-00</a>
+                                    <br> <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a></span>
+                                <div style="margin-top:7px;"><a href="contact_shymkent.html"
+                                        style="color:#07c;"><b>посмотреть на карте</b></a></div>
+                                <div style="margin-top:7px;"><a
+                                        href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"
+                                        target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
+                            <div class="clearfix"> </div>
+                        </div>',
 
+                '<div class="mail-agileits-w3layouts" style="margin-top:1.5em">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <div class="contact-right">
+                                <p>Шымкент:</p>
+                                <span><a href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"> ул.Мадели кожа 35/1, (уг.ул. Байтурсынова) 1-этаж, бизнес-центр BNK</a></span>
+                                <br>
+                                <span>
+                                <a href="tel:87252399900">8 (7252) 39-99-00</a><br>
+                                <a href="tel:87019447700">+7 (701) 944-77-00</a><br> 
+                                <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a>
+                                </span>
+                                <div style="margin-top:7px;"><a href="contact_shymkent.html" style="color:#07c;"><b>посмотреть на карте</b></a></div>
+                                <div style="margin-top:7px;"><a href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72" target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
+                            </div>
+                            <div class="clearfix"> </div>
                         </div>
-                        <div class="clearfix"> </div><br>
-                        <div class="contact-right" style="float:none">
-                            <a style="color:#07c;" href="zakaz.php"><b>Написать письмо в отдел продаж</b></a></div>
-                        <div style="margin-top:10px" class="contact-right"><a style="color:#07c;" href="pismo.php"><b>Написать письмо руководству</b></a></div>
-
-                    </div>
-
-                </div>
-                <div class="clearfix"> </div>
-            </div>',
+                        
+                        <div class="mail-agileits-w3layouts">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <div class="contact-right">
+                                <p>Алматы:</p>
+                                <span><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"> ул.Мынбаева 43 (уг. ул. Манаса)</a></span>
+                                <br>
+                                <span>
+                                <a href="tel:87273449900">8 (727) 344-99-00</a><br>
+                                <a href="tel:87012667700"> +7 (701) 266-77-00</a><br>
+                                <a href="tel:87027773656"> +7 702 777 3656</a><br> 
+                                <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a>
+                                </span>
+                                <div style="margin-top:7px;"><a style="color:#07c;" href="contact_almaty.html"><b>посмотреть на карте</b></a></div>
+                                <div style="margin-top:7px;"><a href="https://2gis.kz/almaty/firm/9429940000970891?snow" target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        
+                        <div class="mail-agileits-w3layouts">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <div class="contact-right">
+                                <p>Астана:</p>
+                                <span><a href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow"> ул.Бейсекбаева 24/1, 2-этаж, бизнес центр DARA</a></span>
+                                <br>
+                                <span> 
+                                <a href="tel:87172279900">8 (7172) 27-99-00</a><br>
+                                <a href="tel:87015112200">+7(701) 511-22-00</a><br>
+								<a href="mailto:astana@idiamarket.kz">astana@idiamarket.kz</a>
+								</span>
+                                <div style="margin-top:7px;"><a href="contact_astana.html" style="color:#07c;"><b>посмотреть на карте</b></a></div>
+                                <div style="margin-top:7px;"><a href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow" target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                       
+                        ',
                 $content);
 
             $content = str_replace(
