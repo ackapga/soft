@@ -118,9 +118,11 @@
 }
 
 p.advantages_title {
+    color: #e3b26e;
     position: relative;
     font-size: 5rem;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px #7a7a7a;
 }
 
 .advantages_active::after {
@@ -163,21 +165,21 @@ p.advantages_title {
 }
 
 .five.advantages_active::after {
-    background: url(http://i.imgur.com/QjrmHkb.jpg);
+    background: url(../images/abouticon10.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right center;
 }
 
 .six.advantages_active::after {
-    background: url(http://i.imgur.com/YmCqPpk.jpg);
+    background: url(../images/abouticon12.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right center;
 }
 
 .seven.advantages_active::after {
-    background: url(http://i.imgur.com/V9vAVUO.png);
+    background: url(../images/abouticon14.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right center;
