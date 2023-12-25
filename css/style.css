@@ -15426,8 +15426,8 @@ margin-left: 20px; */
 /*ackapga*/
 /*Main Info*/
 .main_information {
-    padding: 7rem 0 210px;
-    /*height: 45rem;*/
+    padding: 7rem 0 7rem;
+    height: 40rem;
     color: #fff;
     background: url(/images/about01.webp) no-repeat top;
     background-size: cover;
@@ -15437,7 +15437,6 @@ margin-left: 20px; */
 .main_information_title {
     text-align: center;
     font-size: 70px;
-    margin-top: 25px;
     color: #fff;
 }
 
@@ -15469,35 +15468,29 @@ margin-left: 20px; */
     font-size: 30px;
 }
 
-/*Service*/
-.service {
-}
-
-.top-section {
-    background: linear-gradient(140deg, rgba(63, 77, 100, 0.95) 40%, rgb(106 119 138) 60%, rgb(208 206 207) 100%);
-}
-
-.bottom-section {
-    background: linear-gradient(140deg, rgb(208, 206, 207) 10%, rgb(106 119 138) 30%, rgba(63, 77, 100, 0.95) 100%);
-}
-
-.service_title {
+/*Advantages*/
+.advantages_block {
     padding-top: 3rem;
+    padding-bottom: 5rem;
+    box-shadow: inset 0 0 65px 0 rgba(0, 6, 37, 0.47);
+}
+
+.advantages_main {
     width: 80%;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: #000000c2 0 0 30px;
 }
 
-.service_title h3 {
+.advantages_main h3 {
     font-size: 1.8rem;
     letter-spacing: 2px;
-    color: #ffffff;
-    margin-bottom: 0.5em;
+    color: #ff9601;
+    margin-bottom: 3rem;
+    text-shadow: #ff9d00 0 0 1px;
 }
 
-.service_title h3:before,
-.service_title h3:after {
+.advantages_main h3:before,
+.advantages_main h3:after {
     content: '';
     display: inline-block;
     position: relative;
@@ -15508,16 +15501,216 @@ margin-left: 20px; */
     border-radius: 1rem;
 }
 
-.service_title h3:before {
+.advantages_main h3:before {
     left: -10px;
     margin-left: -25%;
-    background-image: -webkit-linear-gradient(left, #49576c, #868f9d, #f0f0f0);
+    background-image: -webkit-linear-gradient(left, #fff7f0, #ffb852, #ff9d13);
 }
 
-.service_title h3:after {
+.advantages_main h3:after {
     left: 10px;
     margin-right: -50%;
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #868f9d, #49576c00);
+    background-image: -webkit-linear-gradient(left, #ff9d13, #ffb852, #fff7f0);
+}
+
+.advantages_wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.border-1,
+.border-2,
+.border-3 {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 46px;
+    left: 0;
+    border-radius: 8%;
+    border-left: 3px solid;
+    border-right: 3px solid;
+}
+
+.border-2 {
+    transform: rotate(60deg);
+}
+
+.border-3 {
+    transform: rotate(120deg);
+}
+
+.advantages_block .grid-1,
+.advantages_block .grid-2,
+.advantages_block .grid-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.advantages_block .grid-2,
+.advantages_block .grid-3 {
+    margin-top: -50px;
+}
+
+.hex-wrap {
+    position: relative;
+    width: 150px;
+    height: 190px;
+    margin: 0 1rem;
+}
+
+.hex-wrap .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex-wrap .label svg, .hex-wrap .label img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+}
+
+.hex-init {
+    position: absolute;
+    top: 46px;
+    left: 0px;
+    height: 46%;
+    width: 100%;
+    z-index: 9;
+    transform: rotate(-60deg);
+    cursor: pointer;
+}
+
+.advantages_right {
+    position: relative;
+    color: #f6f6f6;
+    width: 600px;
+    height: 260px;
+}
+
+.advantages_right h1 {
+    color: #333;
+}
+
+.advantages_description {
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+.advantages_description * {
+    display: none;
+}
+
+.advantages_description > div {
+    padding: 0 40px;
+    font-size: 26px;
+    height: 20rem;
+    width: 100%;
+}
+
+.advantages_active {
+    display: block;
+    position: relative;
+}
+
+.advantages_active > p {
+    display: block;
+    margin: 0;
+}
+
+p.advantages_title {
+    font-family: Trattatello, fantasy;
+    color: #e3b26e;
+    position: relative;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #7a7a7a;
+}
+
+.advantages_active::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.first.advantages_active::after {
+    background: url(/images/abouticon02.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.second.advantages_active::after {
+    background: url(/images/abouticon04.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.third.advantages_active::after {
+    background: url(/images/abouticon06.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.four.advantages_active::after {
+    background: url(/images/abouticon08.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.five.advantages_active::after {
+    background: url(/images/abouticon10.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.six.advantages_active::after {
+    background: url(/images/abouticon12.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.seven.advantages_active::after {
+    background: url(/images/abouticon14.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+/*Service*/
+.service{
+    padding-top: 2rem;
+    background: linear-gradient(140deg, rgba(63, 77, 100, 0.95) 40%, rgb(106 119 138) 60%, rgb(208 206 207) 100%);
+    /*box-shadow: inset 0px 0px 64px 0px rgba(50, 50, 50, 0.75);*/
+}
+
+.top-section {
+    /*background: linear-gradient(140deg, rgba(63, 77, 100, 0.95) 40%, rgb(106 119 138) 60%, rgb(208 206 207) 100%);*/
+
+}
+
+.bottom-section {
+
+    /*background: linear-gradient(140deg, rgb(208, 206, 207) 10%, rgb(106 119 138) 30%, rgba(63, 77, 100, 0.95) 100%);*/
 }
 
 .section {
@@ -15716,209 +15909,8 @@ figure.collage_animate:hover p {
     font-size: 30px;
 }
 
-/*_________________________________________________________*/
-.advantages_block {
-    padding: 3rem;
-    background-color: #f5f5f5;
-    font-family: 'Oswald', sans-serif;
-}
-
-.advantages_wrap {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-.border-1,
-.border-2,
-.border-3 {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    top: 46px;
-    left: 0;
-    border-radius: 8%;
-    border-left: 3px solid;
-    border-right: 3px solid;
-}
-
-.border-2 {
-    transform: rotate(60deg);
-}
-
-.border-3 {
-    transform: rotate(120deg);
-}
-
-.advantages_block .grid-1,
-.advantages_block .grid-2,
-.advantages_block .grid-3 {
-    display: flex;
-    justify-content: center;
-}
-
-.advantages_block .grid-2,
-.advantages_block .grid-3 {
-    margin-top: -50px;
-}
-
-.hex-wrap {
-    position: relative;
-    width: 150px;
-    height: 190px;
-    margin: 0 1rem;
-}
-
-.hex-wrap .label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hex-wrap .label svg, .hex-wrap .label img {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1rem;
-}
-
-.hex-init {
-    position: absolute;
-    top: 46px;
-    left: 0px;
-    height: 46%;
-    width: 100%;
-    z-index: 9;
-    transform: rotate(-60deg);
-    cursor: pointer;
-}
-
-.advantages_right {
-    position: relative;
-    color: #f6f6f6;
-    width: 600px;
-    height: 260px;
-}
-
-.advantages_right h1 {
-    color: #333;
-}
-
-.advantages_description {
-    width: 100%;
-    height: 100%;
-    color: #333;
-}
-
-.advantages_description * {
-    display: none;
-}
-
-.advantages_description > div {
-    padding: 0 40px;
-    font-size: 26px;
-    height: 20rem;
-    width: 100%;
-}
-
-.advantages_active {
-    display: block;
-    position: relative;
-}
-
-.advantages_active > p {
-    display: block;
-    margin: 0;
-}
-
-p.advantages_title {
-    color: #e3b26e;
-    position: relative;
-    font-size: 5rem;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px #7a7a7a;
-}
-
-.advantages_active::after {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    content: "";
-    opacity: 0.5;
-    z-index: -1;
-}
-
-.first.advantages_active::after {
-    background: url(/images/abouticon02.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.second.advantages_active::after {
-    background: url(/images/abouticon04.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.third.advantages_active::after {
-    background: url(/images/abouticon06.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.four.advantages_active::after {
-    background: url(/images/abouticon08.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.five.advantages_active::after {
-    background: url(/images/abouticon10.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.six.advantages_active::after {
-    background: url(/images/abouticon12.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-.seven.advantages_active::after {
-    background: url(/images/abouticon14.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*__________________________________________________________________________________________________________________*/
-
+/*position: relative; z-index: 2; display: flex; justify-content: center;align-items: center*/
 /*Download*/
 .download {
     background-color: #f5f5f5;
@@ -15927,7 +15919,6 @@ p.advantages_title {
     display: flex;
     justify-content: center;
     align-items: center;
-
     border: 1px solid red;
 }
 
@@ -15940,7 +15931,7 @@ p.advantages_title {
     width: 75rem;
     height: 40rem;
     background: rgba(0, 0, 0, 0);
-    transform: rotate(-30deg) skew(25deg) scale(0.8);
+    transform: rotate(-15deg) skew(25deg) scale(0.8);
     transition: 0.5s;
 }
 
@@ -15962,55 +15953,6 @@ p.advantages_title {
 .download_img:hover img:nth-child(1) {
     transform: translate(40px, -40px);
     opacity: 0.4;
-}
-
-.panel__image.panel__image--book {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.article__content a:not(.btn):not(.toolbar-item) {
-    color: #006fc6;
-}
-
-.product-panel--book .panel__image--book img {
-    width: 100% !important;
-}
-
-.books__book__img {
-    width: 100%;
-    will-change: transform;
-    transform-origin: 0 100%;
-    transform: rotate(-10deg);
-    transition: transform 0.3s ease-out;
-}
-
-.books__book__img:hover {
-    transform: rotate(0);
-}
-
-.author__image-wrapper::before,
-.books__book__image::before {
-    display: block;
-    content: "";
-    height: 20%;
-    width: 45%;
-    position: absolute;
-    background-image: url(https://i.imgur.com/5udcDlp.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    top: 84%;
-    left: 35%;
-    right: 0;
-    transition: all 0.2s ease-out;
-    transform-origin: 30% 50%;
-    pointer-events: none;
-}
-
-.books__book__image:hover {
-    position: relative;
 }
 
 /*Region*/
