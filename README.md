@@ -98,4 +98,86 @@
                         })();
                     </script>
 
-   
+
+
+
+<!-- -------------------------------------------------------------------------------- -!->
+<div class="banner-bootom-w3-agileits">
+    <div class="container">
+        <div class="models">
+            <h3>Автоматизация торговли:</h3>
+            <hr>
+        </div>
+        <div>
+            <div class="col-md-333 product-men">
+                <a href="r_keeper.html">
+                    <div class="men-pro-item " style="border:none;">
+                        <div class="men-thumb-item qwe">
+                            <img src="images/caffe.jpg" alt="" class="pro-image-front"
+                                 style="border-radius: 1000px; ">
+                            <img src="images/caffe.jpg" alt="" class="pro-image-back"
+                                 style="border-radius: 1000px; ">
+                        </div>
+                        <div class="qwe">
+                            R-keeper
+                            <p class="text1">Автоматизация ресторанов</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-333 product-men">
+                <a href="1c.html">
+                    <div class="men-pro-item " style="border:none;">
+                        <div class="men-thumb-item qwe">
+                            <img src="images/magazin.jpg" alt="" class="pro-image-front"
+                                 style="border-radius:1000px; ">
+                            <img src="images/magazin.jpg" alt="" class="pro-image-back"
+                                 style="border-radius: 1000px; ">
+
+                        </div>
+                        <div class="qwe">
+                            1C Розница
+                            <p class="text1">Автоматизация магазинов</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-333 product-men">
+                <a href="pharmacy.html">
+                    <div class="men-pro-item " style="border:none;">
+                        <div class="men-thumb-item qwe">
+                            <img src="images/apteka.jpg" alt="" class="pro-image-front"
+                                 style="border-radius:1000px; ">
+                            <img src="images/apteka.jpg" alt="" class="pro-image-back"
+                                 style="border-radius: 1000px; ">
+
+                        </div>
+                        <div class="qwe">
+                            1С Аптека
+                            <p class="text1">Автоматизация аптек</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-333 product-men">
+                <a href="umag_odejda.html">
+                    <div class="men-pro-item " style="border:none;">
+                        <div class="men-thumb-item qwe">
+                            <img src="images/product.jpg" alt="" class="pro-image-front"
+                                 style="border-radius:1000px; ">
+                            <img src="images/product.jpg" alt="" class="pro-image-back"
+                                 style="border-radius: 1000px; ">
+
+                        </div>
+                        <div class="qwe">
+                            Umag
+                            <p class="text1">Автоматизация розничной торговли</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-!----------------------------------------------------------------------------------->

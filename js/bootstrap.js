@@ -4121,7 +4121,8 @@ $(function () {
 // _____________________________Copyright year change___________________________________
 
 let copyrightText = document.querySelector('.copy-right');
-copyrightText.innerHTML = `© 2010-2022 SoftGroup`;
+let currentYear = new Date().getFullYear();
+copyrightText.innerHTML = `© 2010-${currentYear} SoftGroup`;
 
 let footer = document.querySelector('footer');
 
