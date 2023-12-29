@@ -2389,7 +2389,7 @@ banTopLeft.appendChild(searchBox2);
 
 const searchScript = document.createElement('script');
 searchScript.type = 'module';
-searchScript.src = '../js/smart-search.js';
+searchScript.src = '/js/smart-search.js';
 document.querySelector('body').appendChild(searchScript);
 
   // RIGHT HEADER
@@ -4123,7 +4123,3 @@ $(function () {
 let copyrightText = document.querySelector('.copy-right');
 let currentYear = new Date().getFullYear();
 copyrightText.innerHTML = `© 2010-${currentYear} SoftGroup`;
-
-let footer = document.querySelector('footer');
-
-footer.innerHTML = ``;

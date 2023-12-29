@@ -1539,8 +1539,8 @@ const citiesList = [
 ];
 
 /* PRIVATE/INTERNAL FUNCTION */
+/* Возвращает строку, из названия файла в которой находитесь */
 function getLastValueUrl() {
-    // Возвращает строку, из названия файла в которой находитесь
     return window.location.href
         .split('/')
         .pop()
@@ -1548,9 +1548,8 @@ function getLastValueUrl() {
         .split('?')[0]
         .split('.')[0];
 }
-
+/* Возвращает массив города из объектов, учитывая в какой вы директории */
 function getCityByUrl() {
-    // Возвращает массив города из объектов, учитывая в какой вы директории
     const urlParts = window.location.href.split('/');
 
     for (const part of urlParts) {
@@ -1559,22 +1558,23 @@ function getCityByUrl() {
     }
     return citiesList[0];
 }
-
+/* Возвращает массив продукта из объектов, учитывая на какой странице */
 function getProductByArray() {
-    // Возвращает массив продукта из объектов, учитывая на какой странице
     return dataProducts.find(printer => printer.link === `${getLastValueUrl()}.php`);
 }
 
-// GET LIST PRODUCTS BY CATEGORY
+/* GET LIST PRODUCTS BY CATEGORY | USED -> "../products/etc..."   */
 export function getListByCategory() {
     const pageName = getLastValueUrl();
     return dataProducts.filter(item => item['category'] === pageName);
 }
 
-// PULLS DATA IF ON PRODUCT PAGE
+/* PULLS DATA IF ON PRODUCT PAGE | IF SCRIPT FIND */
 if (getProductByArray()) {
     const infoCity = getCityByUrl();
     const infoProduct = getProductByArray();
+    console.log(infoCity)
+    console.log(infoCity.cyrillic)
 
     document.querySelector('.mymagicoverbox span').textContent = ` ${infoCity.cyrillic} `;
 

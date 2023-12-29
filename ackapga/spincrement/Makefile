@@ -1,2 +1,2 @@
-jquery.spincrement.min.js: jquery.spincrement.js
-	uglifyjs jquery.spincrement.js --compress --mangle --output jquery.spincrement.min.js
+jquery.spin-number.min.js: jquery.spin-number.js
+	uglifyjs jquery.spin-number.js --compress --mangle --output jquery.spin-number.min.js
