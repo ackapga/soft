@@ -1107,9 +1107,8 @@ a.menu__link:hover {
     background: #2fdab8;
     position: absolute;
     right: 50px;
-    height: 62px;
     padding-left: 22px;
-    padding-right: 22px;
+    padding-right: 13px;
     height: 100%;
 }
 
@@ -13656,8 +13655,6 @@ a:focus {
     color: transparent;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
-
 blockquote {
     font-size: 1.4em;
     width: 100%;
@@ -15758,15 +15755,20 @@ margin-left: 20px; */
 }
 
 .collage_left h1 {
-    font-size: 27px;
+    font-size: 1.5rem;
     text-transform: uppercase;
+}
+
+.collage_left p {
+    color: #857B8E;
+    font-size: 24px;
 }
 
 .collage_line::after {
     content: "";
     border-bottom: 3px solid #ff9601;
     display: block;
-    margin: 50px auto;
+    margin: 2rem auto;
     border-radius: 50%;
 }
 
@@ -15934,6 +15936,18 @@ figure.collage_animate:hover p {
     margin: 5rem;
 }
 
+.download_block h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.download_block p {
+    width: 597px;
+    color: #857B8E;
+    font-size: 24px;
+    line-height: 39px;
+}
+
 .download_img {
     position: relative;
     width: 40rem;
@@ -16002,12 +16016,13 @@ figure.collage_animate:hover p {
 
 .download_images:hover .download_pdf {
     opacity: 0.9;
-    right: -13rem;
+    right: -7rem;
+    bottom: -3.5rem;
 }
 
 /* Region */
 .region {
-    background: linear-gradient(90deg, #f5f5f5 1.08%, #f5f5f5 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background: #f5f5f5;
 }
 
 .region_content {
@@ -16028,7 +16043,7 @@ figure.collage_animate:hover p {
 }
 
 .region_href:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .region_href h4 {
@@ -16211,10 +16226,443 @@ figure.collage_animate:hover p {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) and (max-width: 1200px){
+    /*Advantages*/
+    .advantages_wrap {
+        overflow: hidden;
+    }
+
+    /*Service*/
+    .service {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .service .section img {
+        width: 30rem!important;
+    }
+
+    /*Collage*/
+    .collage {
+        padding: 3rem;
+    }
+
+    .collage_left {
+        margin: 0;
+    }
+
+    .collage_left h1 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .collage_line::after {
+        margin: 20px auto;
+    }
+
+    .collage_left p {
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    /*Download*/
+    .download {
+        padding: 7rem 0 0;
+    }
+
+    .download_container {
+        height: 100%;
+    }
+
+    .download_block {
+        margin: 0 1rem 0 0;
+    }
+
+    .download_img {
+        width: 30rem;
+        height: 0;
+    }
+
+    .download_block h1 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .download_block p {
+        width: 100%;
+        text-align: justify;
+        font-size: 18px;
+        line-height: unset;
+    }
+
+    .download_pdf {
+        width: 5rem;
+        bottom: -3rem;
+        right: 10rem;
+    }
+
+    .download_images:hover .download_pdf {
+        width: 6rem;
+        right: -2rem;
+        bottom: -4rem;
+    }
+
+    /*Region*/
+    .region_content {
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .region_left {
+        margin-top: 1rem;
+    }
+
+    .region_left .region_text {
+        margin-top: 1rem;
+        font-size: 18px;
+        line-height: unset;
+    }
+
+    .region_right {
+        margin-top: 2rem;
+        width: 27rem;
+    }
+
+    .region_slider {
+        right: 3rem;
+    }
+
+    /*Clients*/
+    .clients_items img {
+        width: 10rem !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
     /*Main Info*/
     .main_information {
-        padding: 2rem 0 0;
+        height: 100%;
+        padding: 3rem 0 1rem;
+    }
+
+    .main_information_wrapper {
+        padding: 3rem 0;
+    }
+
+    .main_information_title {
+        font-size: 3rem;
+    }
+
+    .main_information_item img {
+        width: 3rem;
+    }
+
+    .main_information_number {
+        font-size: 2rem;
+    }
+
+    .main_information_desc {
+        font-size: 1rem;
+    }
+
+    /*Advantages*/
+    .advantages_block {
+        padding: 1px;
+    }
+
+    .advantages_main {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .advantages_main h3 {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        padding: 1rem 0 1rem;
+        margin: 0;
+    }
+
+    .advantages_main h3:before,
+    .advantages_main h3:after {
+        display: none;
+    }
+
+    .advantages_wrap {
+        overflow: hidden;
+    }
+
+    .hex-wrap {
+        width: 5rem;
+        height: 7rem;
+        margin: 7px 0;
+    }
+
+    .hex-borders {
+        display: none;
+    }
+
+    .hex-wrap .label {
+        display: unset;
+    }
+
+    .hex-wrap .label img {
+        height: unset;
+    }
+
+    .advantages_right {
+        width: unset;
+    }
+
+    .advantages_description > div {
+        padding: 0 0 0 1rem;
+        font-size: unset;
+        height: 15rem;
+        width: 17rem;
+    }
+
+    .advantages_title {
+        font-size: 2.5rem;
+    }
+
+    /*Service*/
+    .service {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .section_info {
+        position: absolute;
+        z-index: 1;
+        margin: 0 4rem;
+    }
+
+    .section h3 {
+        font-size: 1.2rem;
+    }
+
+    .section p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    .section img {
+        width: 50% !important;
+        opacity: 0.3 !important;
+    }
+
+    .bottom-section {
+        text-align: end;
+    }
+
+    /*Collage*/
+    .collage {
+        padding: 2rem 0 2rem;
+        overflow: hidden;
+    }
+
+    .collage_container {
+        margin: 0 1rem;
+        flex-direction: column;
+    }
+
+    .collage_left {
+        margin: 0;
+        padding: 0 15px;
+        text-align: justify;
+        width: 100%;
+    }
+
+    .collage_left h1 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .collage_line::after {
+        margin: 1rem;
+    }
+
+    .collage_left p {
+        padding: 0 1rem 0;
+        font-size: 1.2rem;
+    }
+
+    .collage_right {
+        margin: 0;
+    }
+
+    .collage_right h2 {
+        font-size: 1rem;
+    }
+
+    /*Blag*/
+    .blag_title h1 {
+        font-size: 1.4rem;
+    }
+
+    .blag_items {
+        margin-bottom: 0;
+    }
+
+    .blag_items .slick-prev:before {
+        display: none;
+    }
+
+    .blag_items .slick-next:before {
+        display: none;
+    }
+
+    .blag_items .slick-dots {
+        display: none !important;
+    }
+
+    /*Download*/
+    .download {
+        padding: 1rem;
+    }
+
+    .download_container {
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        overflow: hidden;
+        padding-bottom: 1rem;
+    }
+
+    .download_block {
+        width: auto;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .download_block h1 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .download_block p {
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: justify;
+        line-height: normal;
+        padding: 0 1rem 0;
+    }
+
+    .download_img {
+        position: unset;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .download_img img {
+        position: unset;
+    }
+
+    .download_img img:nth-child(1) {
+        display: none;
+    }
+
+    .download_img img:nth-child(2) {
+        display: none;
+    }
+
+    .download_img:hover img:nth-child(3) {
+        transform: none;
+    }
+
+    .download_pdf {
+        position: absolute;
+        width: 5rem;
+        z-index: 1;
+        top: 1rem;
+        left: 3rem;
+        opacity: 1;
+    }
+
+    /*Region*/
+    .region {
+        overflow: hidden;
+    }
+
+    .region_content {
+        display: unset;
+    }
+
+    .region_left {
+        margin-top: 1rem;
+    }
+
+    .region_left .region_title .region_map_circle {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .region_left .region_title .span_title h4 {
+        font-size: 1rem;
+    }
+
+    .region_left .region_title .span_title h1 {
+        font-size: 2.25rem;
+    }
+
+    .region_left .region_title .span_title img {
+        display: none;
+    }
+
+    .region_left .region_title {
+        margin: 2rem 0 1rem 5rem;
+    }
+
+    .region_left .region_text {
+        font-size: 1.2rem;
+        text-align: justify;
+        line-height: normal;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 5rem 1rem;
+    }
+
+    .region_right {
+        position: absolute;
+        z-index: 1;
+        opacity: 0.3;
+        top: 3rem;
+        right: -42rem;
+        width: 17rem;
+    }
+
+    .region_slider {
+        overflow: hidden;
+        margin: 0 !important;
+    }
+
+    .region_href {
+        display: none;
+    }
+
+    /*Clients*/
+    .clients {
+        padding: 0;
+    }
+
+    .clients_title {
+        display: block;
+        padding: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .clients_items img {
+        width: 10rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /*Main Info*/
+    .main_information {
+        padding: 2rem 0 2rem;
         height: 100%;
     }
 
@@ -16228,13 +16676,12 @@ figure.collage_animate:hover p {
     }
 
     .main_information_item img {
-        width: 30px;
+        width: 2rem;
     }
 
     .main_information_wrapper {
         padding: 1rem 0;
         display: block;
-        text-align: center;
     }
 
     .main_information_number {
@@ -16247,7 +16694,8 @@ figure.collage_animate:hover p {
 
     /*Advantages*/
     .advantages_block {
-        padding-bottom: 0;
+        padding-bottom: 1rem;
+        box-shadow: inset 0 0 65px 0 rgb(99 121 141 / 70%);
     }
 
     .advantages_main {
@@ -16255,8 +16703,7 @@ figure.collage_animate:hover p {
     }
 
     .advantages_main h3 {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+        margin: 0 2rem 2rem 2rem;
     }
 
     .advantages_main h3:before,
@@ -16277,15 +16724,15 @@ figure.collage_animate:hover p {
     }
 
     .advantages_description > div {
-        height: 10rem;
+        height: 11rem;
     }
 
     .advantages_title {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .advantages_active::after {
-        opacity: 0.2;
+        opacity: 0.5;
     }
 
     .hex-borders {
@@ -16306,6 +16753,10 @@ figure.collage_animate:hover p {
         display: unset;
     }
 
+    .hex-wrap .label img {
+        height: unset;
+    }
+
     /*Service*/
     .service {
         position: relative;
@@ -16316,7 +16767,7 @@ figure.collage_animate:hover p {
     .section_info {
         position: absolute;
         z-index: 1;
-        margin: 0 1rem;
+        margin: 0 2rem;
     }
 
     .bottom-section {
@@ -16328,7 +16779,7 @@ figure.collage_animate:hover p {
     }
 
     .section_info p {
-        font-size: 10px;
+        font-size: 0.7rem;
         width: 100%;
     }
 
@@ -16341,7 +16792,7 @@ figure.collage_animate:hover p {
     .collage {
         overflow: hidden;
         font-size: 16px;
-        padding-top: 2rem;
+        padding: 2rem 0 2rem;
     }
 
     .collage_container {
@@ -16360,7 +16811,9 @@ figure.collage_animate:hover p {
     }
 
     .collage_left p {
+        font-size: 15px;
         text-align: justify;
+        padding: 0 1rem 0;
     }
 
     .collage_line::after {
@@ -16381,6 +16834,10 @@ figure.collage_animate:hover p {
         width: 100%;
     }
 
+    .blag_title h1 {
+        font-size: 1.4rem;
+    }
+
     .blag_items .slick-prev:before {
         display: none;
     }
@@ -16395,7 +16852,7 @@ figure.collage_animate:hover p {
         display: flex;
         flex-direction: column-reverse;
         overflow: hidden;
-        padding-bottom: 1.5rem;
+        padding-bottom: 2rem;
     }
 
     .download_block {
@@ -16404,9 +16861,16 @@ figure.collage_animate:hover p {
         text-align: center;
     }
 
+    .download_block h1 {
+        font-size: 1.2rem;
+    }
+
     .download_block p {
+        width: 100%;
+        font-size: 15px;
         text-align: justify;
-        font-size: 16px;
+        line-height: normal;
+        padding: 0 1rem 0;
     }
 
     .download_img {
@@ -16443,6 +16907,10 @@ figure.collage_animate:hover p {
     }
 
     /*Region*/
+    .region {
+        overflow: hidden;
+    }
+
     .region_content {
         display: unset;
     }
@@ -16468,13 +16936,17 @@ figure.collage_animate:hover p {
         font-size: 2.25rem;
     }
 
+    .region_left .region_title .span_title img {
+        display: none;
+    }
+
     .region_left .region_text {
         font-size: 15px;
         text-align: justify;
         line-height: normal;
         width: 100%;
         margin: 0;
-        padding: 1rem 1rem 3rem;
+        padding: 1rem 2rem 3rem;
     }
 
     .region_right {
@@ -16501,252 +16973,9 @@ figure.collage_animate:hover p {
         text-transform: uppercase;
         text-align: center;
     }
-}
 
-@media (min-width: 769px) and (max-width: 1023px) {
-    /*Main Info*/
-    .main_information {
-        height: 100%;
-        padding: 3rem 0;
-    }
-
-    .main_information_title {
-        font-size: 50px;
-    }
-
-    .main_information_item img {
-        width: 40px;
-    }
-
-    .main_information_number {
-        font-size: 3rem;
-    }
-
-    .main_information_desc {
-        font-size: 20px;
-    }
-
-    /*Advantages*/
-    .advantages_main {
-        width: 100%;
-    }
-
-    .advantages_main h3:before,
-    .advantages_main h3:after {
-        display: none;
-    }
-
-    .advantages_wrap {
-        overflow: hidden;
-    }
-
-    .hex-wrap {
-        width: 6rem;
-        height: 7rem;
-        margin: 15px 0;
-    }
-
-    .hex-borders {
-        display: none;
-    }
-
-    .hex-wrap .label {
-        display: unset;
-    }
-
-    /*Service*/
-    .service {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .section_info {
-        position: absolute;
-        z-index: 1;
-        margin: 0 1rem;
-    }
-
-    .section img {
-        width: 70%;
-        opacity: 0.3 !important;
-    }
-
-    /*Collage*/
-    .collage {
-        overflow: hidden;
-    }
-
-    .collage_container {
-        display: unset;
-    }
-
-    .collage_left {
-        margin: 0;
-        padding: 2rem;
-        text-align: justify;
-        width: 100%;
-    }
-
-    .collage_left h1 {
-        text-align: center;
-    }
-
-    .collage_line::after {
-        margin: 1rem;
-    }
-
-    /*Download*/
-    .download_container {
-        height: 100%;
-        justify-content: unset;
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-bottom: 3rem;
-        overflow: hidden;
-    }
-
-    .download_container h1 {
-        text-align: center;
-    }
-
-    .download_container p {
-        text-align: justify;
-        margin: 0 2rem;
-    }
-
-    .download_block {
-        width: auto;
-        margin: 1rem;
-    }
-
-    .download_img {
-        position: unset;
-        width: 80%;
-        height: 50%;
-        margin: 0 auto;
-        transform: none;
-    }
-
-    .download_img img {
-        position: unset;
-    }
-
-    .download_img img:nth-child(1) {
-        display: none;
-    }
-
-    .download_img img:nth-child(2) {
-        display: none;
-    }
-
-    .download_img:hover img:nth-child(3) {
-        transform: none;
-    }
-
-    .download_pdf {
-        position: absolute;
-        width: 7rem;
-        z-index: 1;
-        top: 0;
-        left: 1rem;
-        opacity: 1;
-    }
-
-    /*Region*/
-    .region_content {
-        justify-content: unset;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .region_left {
-        margin-top: 1rem;
-    }
-
-    .region_right {
-        margin-top: 2rem;
-    }
-
-    .region_href {
-        top: 2rem;
-        right: 8rem;
-    }
-
-    /*Clients*/
-    .clients {
-        padding: 0;
-    }
-
-    .clients_title {
-        display: block;
-        padding: 1rem;
-        text-transform: uppercase;
-        text-align: center;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-    /*HEADER*/
-    .navbar-nav > li {
-        margin: 0;
-    }
-
-    /*Advantages*/
-    .advantages_main h3:before, .advantages_main h3:after {
-        width: 20%;
-    }
-
-    .advantages_wrap {
-        overflow: hidden;
-    }
-
-    /*Service*/
-    .service {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .section {
-        justify-content: unset;
-        padding-left: 3rem;
-        padding-right: 33rem;
-    }
-
-    /*Collage*/
-    .collage_line::after {
-        margin: 20px auto;
-    }
-
-    /*Download*/
-    .download_block {
-        margin: 5rem 2rem 5rem 2rem;
-    }
-
-    .download_img {
-        width: 100%;
-        left: 10%;
-    }
-
-    /*Region*/
-    .region_content {
-        overflow: hidden;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .region_left {
-        margin-top: 1rem;
-    }
-
-    .region_right {
-        margin-top: 2rem;
-        width: 27rem;
-    }
-
-    .region_slider {
-        right: 3rem;
+    .clients_items img {
+        width: 10rem !important;
     }
 }
 /* End About */

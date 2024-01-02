@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
     <title>SoftGroup - комплексная автоматизация бизнеса. Оборудования для автоматизации в Алматы</title>
     <!-- Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="О компании SoftGroup. автоматизация розничной торговли, алматы, астана, казахстан, купить, цена, продажа."/>
+    <meta name="keywords" content="О компании SoftGroup. автоматизация розничной торговли, алматы, казахстан, купить, цена, продажа."/>
     <meta name="description" content="О компании SoftGroup. Комплексная автоматизация предприятия. Оборудования для автоматизации в широком ассортименте купить.">
     <!-- End Tags -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/jqcart.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/jquery.cart.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/jquery.aos.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/jquery.slick.css" rel="stylesheet" type="text/css" media="all">
@@ -405,7 +405,7 @@
 <div class="download">
     <div class="download_container">
         <div class="download_block" data-aos="fade-left">
-            <a href="IDIA_Market.pdf" target="_blank" class="download_images">
+            <a href="/images/IDIA_Market.pdf" target="_blank" class="download_images">
                 <div class="download_img">
                     <img src="images/aboutbook03.webp" alt="">
                     <img src="images/aboutbook02.webp" alt="">
@@ -465,7 +465,7 @@
     </div>
 </div>
 
-<!-- Clients-->
+<!-- Clients -->
 <div class="clients">
     <h3 class="clients_title">наши клиенты</h3>
     <div class="clients_items">
@@ -564,207 +564,15 @@
     </div>
 </div>
 
-<!-- JQuery -->
 <script src="js/jquery-1.11.3.min.js"></script>
-
-<!-- CART JS -->
-<script>
-    $(document).ready(function () {
-        $("#fly").click(function () {
-            $("#target")
-                .clone()
-                .css({
-                    'position': 'absolute',
-                    'z-index': '100'
-                })
-                .appendTo("#fly")
-                .animate({
-                    opacity: 0.8,
-                    marginLeft: 550,
-                    marginTop: -750,
-                    width: 100,
-                    height: 100
-                }, 500, function () {
-                    $(this).remove();
-                });
-        });
-    });
-</script>
-<script src="js/jqcart.min.js"></script>
-<script>
-    $(function () {
-        'use strict';
-        // инициализация плагина
-        $.jqCart({
-            buttons: '.add_item',
-            handler: './request/handler.php',
-            cartLabel: '.label-place',
-            visibleLabel: true,
-            openByAdding: false,
-            currency: 'тг'
-        });
-        // Пример с дополнительными методами
-        $('#open').click(function () {
-            $.jqCart('openCart'); // открыть корзину
-        });
-    });
-</script>
-<!-- End CART JS -->
-
+<script src="js/jquery.cart.js"></script>
 <!-- Bootstrap -->
 <script src="js/bootstrap.js"></script>
-<!-- EndBootstrap -->
-
-<!-- AOS -->
+<!-- End Bootstrap -->
 <script src="js/jquery.aos.js"></script>
-<!-- Slick -->
 <script src="js/jquery.slick.js"></script>
-<!-- MainInfo -->
 <script src="js/jquery.spin-number.js"></script>
-<!-- Advantages -->
 <script src="js/jquery.advantages.js"></script>
-<!-- AboutSetting-->
-<script>
-    /* Scroll Animation | AOS */
-    AOS.init({
-        duration: 1500,
-        offset: 70,
-    });
-    /* MainInfo | Advantages */
-    $(document).ready(function () {
-        /* MainInfo */
-        let show = true;
-        let countBox = ".main_information_wrapper";
-        $(window).on("scroll load resize", function() {
-            if (!show) return false;
-            let w_top = $(window).scrollTop();
-            let e_top = $(countBox).offset().top;
-            let w_height = $(window).height();
-            let d_height = $(document).height();
-            let e_height = $(countBox).outerHeight();
-            if (w_top + 500 >= e_top || w_height + w_top === d_height || e_height + e_top < w_height) {
-                $('.main_information_number').css('opacity', '1').spincrement({
-                    thousandSeparator: "",
-                    duration: 1500
-                });
-                show = false;
-            }
-        });
-
-        /* Advantages */
-        $('.four').addClass('advantages_active');
-        $('.advantages_title').velocity({color: '#ff9601'}, {queue: false});
-        $('.data-color').velocity({color: '#ff9601'}, {queue: false});
-
-        function hex_initial_animation() {
-            $(".hex-wrap").velocity("callout.pulse", {stagger: 150});
-        }
-
-        setInterval(() => {
-            hex_initial_animation();
-        }, 5000);
-
-        let interval = null;
-
-        function myStopFunction() {
-            $(".hover-notify").velocity('stop', true).velocity("fadeOut");
-            clearInterval(interval);
-        }
-
-        $(".hex-init").mouseenter(function () {
-            myStopFunction();
-
-            let title_color = $(this).parent().attr("data-color");
-            let desc_name = $(this).parent().attr("data-content");
-
-            function hex_description(color) {
-                if (!desc_name) {
-                    desc_name = color;
-                }
-                $('.advantages_description').velocity('stop', true).velocity("transition.slideRightBigIn");
-                let activeAdvantages = $('.advantages_active');
-                activeAdvantages.removeClass('advantages_active');
-                $('.' + desc_name).addClass('advantages_active');
-                activeAdvantages.children().velocity('stop', true).velocity("transition.slideRightBigIn", {stagger: 300});
-                $('.advantages_title').velocity({color: title_color}, {queue: false});
-                $('.data-color').velocity({color: title_color}, {queue: false});
-            }
-
-            hex_description(title_color);
-
-            $(this).parent().addClass('hexactive');
-            $('.hexactive').velocity({scaleX: "1.1", scaleY: "1.1"}, {duration: 200});
-
-        }).mouseleave(function () {
-            $('.hexactive').velocity('stop', true).velocity('reverse').removeClass('hexactive');
-        });
-    });
-    /* Blag */
-    $('.blag_items').slick({
-        dots: true,
-        infinite: true,
-        speed: 2000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3500,
-        adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-            {
-                breakpoint: 1023,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }
-        ],
-    });
-    /* Region */
-    $('.region_slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 2000,
-        slidesToShow: 1,
-        autoplay: true,
-        adaptiveHeight: true,
-    });
-    /* Clients */
-    $('.clients_items').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 5,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 7000,
-        cssEase: 'linear',
-        adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 1023,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 1439,
-                settings: {
-                    slidesToShow: 4,
-                }
-            }
-        ],
-    });
-</script>
 </body>
 
 </html>

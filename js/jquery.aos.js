@@ -363,3 +363,10 @@
         }, refresh: ce, refreshHard: se
     }
 });
+/* Scroll Animation | AOS | @ackapga - по вопросам */
+AOS.init({
+    duration: 1500,
+    offset: 70,
+    once: true,
+});
+/* Scroll Animation | AOS | END */

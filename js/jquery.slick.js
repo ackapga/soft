@@ -1,20 +1,11 @@
-/*
+/* Version: 1.8.0
      _ _      _       _
  ___| (_) ___| | __  (_)___
 / __| | |/ __| |/ /  | / __|
 \__ \ | | (__|   < _ | \__ \
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
-
- Version: 1.8.0
-  Author: Ken Wheeler
- Website: http://kenwheeler.github.io
-    Docs: http://kenwheeler.github.io/slick
-    Repo: http://github.com/kenwheeler/slick
-  Issues: http://github.com/kenwheeler/slick/issues
-
  */
-/* global window, document, define, jQuery, setInterval, clearInterval */
 ;(function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -3009,3 +3000,86 @@
     };
 
 }));
+
+/* Use script => about.html => .Blag | @ackapga - по вопросам */
+let blagItems = ".blag_items";
+let $blagItems = $(blagItems);
+if ($blagItems.length > 0) {
+    $('.blag_items').slick({
+        dots: true,
+        infinite: true,
+        speed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3500,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+        ],
+    });
+}
+/* Use script => about.html => .Blag | END */
+
+/* Use script => about.html => .Region | @ackapga - по вопросам */
+let regionSlider = ".region_slider";
+let $regionSlider = $(regionSlider);
+if ($regionSlider.length > 0) {
+    $('.region_slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 2000,
+        slidesToShow: 1,
+        autoplay: true,
+        adaptiveHeight: true,
+    });
+}
+/* Use script => about.html => .Blag | END */
+
+/* Use script => about.html => .Clients | @ackapga - по вопросам */
+let clientsItems = ".clients_items";
+let $clientsItems = $(clientsItems);
+if ($clientsItems.length > 0) {
+    $('.clients_items').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 5,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 7000,
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                }
+            }
+        ],
+    });
+}
+/* Use script => about.html => .Clients | END */

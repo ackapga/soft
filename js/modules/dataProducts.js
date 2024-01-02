@@ -1573,10 +1573,10 @@ export function getListByCategory() {
 if (getProductByArray()) {
     const infoCity = getCityByUrl();
     const infoProduct = getProductByArray();
-    console.log(infoCity)
-    console.log(infoCity.cyrillic)
 
-    document.querySelector('.mymagicoverbox span').textContent = ` ${infoCity.cyrillic} `;
+    if (document.querySelector('.mymagicoverbox span')) {
+        document.querySelector('.mymagicoverbox span').textContent = ` ${infoCity.cyrillic} `;
+    }
 
     document.querySelectorAll('.titleName').forEach(function(element) {
         element.textContent = infoProduct.title;
@@ -1589,5 +1589,3 @@ if (getProductByArray()) {
     document.getElementById('fly').dataset.price = infoProduct.price;
     document.getElementById('fly').dataset.img = infoProduct.img;
 }
-
-
