@@ -115,7 +115,7 @@ function updateMetaTags($file, $location, $originalFile)
                                     <a href="tel:87027773656"> +7 702 777 3656</a>
                                     <br> <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a></span>
                                 <div style="margin-top:7px;"><a style="color:#07c;"
-                                        href="contact_almaty.html"><b>посмотреть на карте</b></a></div>
+                                        href="../contact_almaty.html"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"
                                         target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
@@ -132,7 +132,7 @@ function updateMetaTags($file, $location, $originalFile)
                                    
                                             <a href="tel:87015112200">+7(701) 511-22-00</a><br>
 											<a href="mailto:astana@idiamarket.kz">astana@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="contact_astana.html"
+                                <div style="margin-top:7px;"><a href="../contact_astana.html"
                                         style="color:#07c;"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a
                                         href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow"
@@ -150,7 +150,7 @@ function updateMetaTags($file, $location, $originalFile)
                                 <br><span><a href="tel:87252399900">8 (7252) 39-99-00</a><br>
                                     <a href="tel:87019447700">+7 (701) 944-77-00</a>
                                     <br> <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="contact_shymkent.html"
+                                <div style="margin-top:7px;"><a href="../contact_shymkent.html"
                                         style="color:#07c;"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a
                                         href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"
@@ -305,7 +305,7 @@ function updateMetaTags($file, $location, $originalFile)
                                     <a href="tel:87027773656"> +7 702 777 3656</a>
                                     <br> <a href="mailto:zakaz@idiamarket.kz">zakaz@idiamarket.kz</a></span>
                                 <div style="margin-top:7px;"><a style="color:#07c;"
-                                        href="contact_almaty.html"><b>посмотреть на карте</b></a></div>
+                                        href="../contact_almaty.html"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a href="https://2gis.kz/almaty/firm/9429940000970891?snow"
                                         target="_blank" style="color:#07c;"><b>посмотреть на 2Gis</b></a></div>
                             </div>
@@ -322,7 +322,7 @@ function updateMetaTags($file, $location, $originalFile)
                                    
                                             <a href="tel:87015112200">+7(701) 511-22-00</a><br>
 											<a href="mailto:astana@idiamarket.kz">astana@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="contact_astana.html"
+                                <div style="margin-top:7px;"><a href="../contact_astana.html"
                                         style="color:#07c;"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a
                                         href="https://2gis.kz/nur_sultan/firm/70000001027762786?m=71.460673%2C51.171641%2F16&snow"
@@ -340,7 +340,7 @@ function updateMetaTags($file, $location, $originalFile)
                                 <br><span><a href="tel:87252399900">8 (7252) 39-99-00</a><br>
                                     <a href="tel:87019447700">+7 (701) 944-77-00</a>
                                     <br> <a href="mailto:shymkent@idiamarket.kz">shymkent@idiamarket.kz</a></span>
-                                <div style="margin-top:7px;"><a href="contact_shymkent.html"
+                                <div style="margin-top:7px;"><a href="../contact_shymkent.html"
                                         style="color:#07c;"><b>посмотреть на карте</b></a></div>
                                 <div style="margin-top:7px;"><a
                                         href="https://2gis.kz/shymkent/inside/22659371323900392/firm/70000001061039192?m=69.598973%2C42.331511%2F17.72"
