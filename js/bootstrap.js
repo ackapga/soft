@@ -1,8 +1,5 @@
-/*!
- * Bootstrap v3.3.4 (https://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+/* ======================================================================== */
+/* HEAD ADD */
 
 document.head.innerHTML += `
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,34 +17,31 @@ document.head.innerHTML += `
 </script>
 `;
 
+/* ======================================================================== */
+
 if (typeof jQuery === 'undefined') {
   throw new Error("Bootstrap's JavaScript requires jQuery");
 }
+
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
   var version = $.fn.jquery.split(' ')[0].split('.');
   if (
-    (version[0] < 2 && version[1] < 9) ||
-    (version[0] == 1 && version[1] == 9 && version[2] < 1)
+      (version[0] < 2 && version[1] < 9) ||
+      (version[0] == 1 && version[1] == 9 && version[2] < 1)
   ) {
     throw new Error("Bootstrap's JavaScript requires jQuery version 1.9.1 or higher");
   }
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: transition.js v3.3.4
- * https://getbootstrap.com/javascript/#transitions
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
 
-  // CSS TRANSITION SUPPORT (Shoutout: https://www.modernizr.com/)
-  // ============================================================
+  // CSS TRANSITION SUPPORT (https://www.modernizr.com/)
 
   function transitionEnd() {
     var el = document.createElement('bootstrap');
@@ -65,10 +59,9 @@ if (typeof jQuery === 'undefined') {
       }
     }
 
-    return false; // explicit for ie8 (  ._.)
+    return false;
   }
 
-  // https://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false;
     var $el = this;
@@ -97,19 +90,12 @@ if (typeof jQuery === 'undefined') {
   });
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: alert.js v3.3.4
- * https://getbootstrap.com/javascript/#alerts
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
 
   // ALERT CLASS DEFINITION
-  // ======================
 
   var dismiss = '[data-dismiss="alert"]';
   var Alert = function (el) {
@@ -156,7 +142,6 @@ if (typeof jQuery === 'undefined') {
   };
 
   // ALERT PLUGIN DEFINITION
-  // =======================
 
   function Plugin(option) {
     return this.each(function () {
@@ -187,13 +172,7 @@ if (typeof jQuery === 'undefined') {
   $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close);
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: button.js v3.3.4
- * https://getbootstrap.com/javascript/#buttons
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -225,18 +204,18 @@ if (typeof jQuery === 'undefined') {
 
     // push to event loop to allow forms to submit
     setTimeout(
-      $.proxy(function () {
-        $el[val](data[state] == null ? this.options[state] : data[state]);
+        $.proxy(function () {
+          $el[val](data[state] == null ? this.options[state] : data[state]);
 
-        if (state == 'loadingText') {
-          this.isLoading = true;
-          $el.addClass(d).attr(d, d);
-        } else if (this.isLoading) {
-          this.isLoading = false;
-          $el.removeClass(d).removeAttr(d);
-        }
-      }, this),
-      0,
+          if (state == 'loadingText') {
+            this.isLoading = true;
+            $el.addClass(d).attr(d, d);
+          } else if (this.isLoading) {
+            this.isLoading = false;
+            $el.removeClass(d).removeAttr(d);
+          }
+        }, this),
+        0,
     );
   };
 
@@ -291,30 +270,24 @@ if (typeof jQuery === 'undefined') {
   // ===============
 
   $(document)
-    .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
-      var $btn = $(e.target);
-      if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn');
-      Plugin.call($btn, 'toggle');
-      e.preventDefault();
-    })
-    .on(
-      'focus.bs.button.data-api blur.bs.button.data-api',
-      '[data-toggle^="button"]',
-      function (e) {
-        $(e.target)
-          .closest('.btn')
-          .toggleClass('focus', /^focus(in)?$/.test(e.type));
-      },
-    );
+      .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+        var $btn = $(e.target);
+        if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn');
+        Plugin.call($btn, 'toggle');
+        e.preventDefault();
+      })
+      .on(
+          'focus.bs.button.data-api blur.bs.button.data-api',
+          '[data-toggle^="button"]',
+          function (e) {
+            $(e.target)
+                .closest('.btn')
+                .toggleClass('focus', /^focus(in)?$/.test(e.type));
+          },
+      );
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: carousel.js v3.3.4
- * https://getbootstrap.com/javascript/#carousel
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -335,8 +308,8 @@ if (typeof jQuery === 'undefined') {
     this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this));
 
     this.options.pause == 'hover' &&
-      !('ontouchstart' in document.documentElement) &&
-      this.$element
+    !('ontouchstart' in document.documentElement) &&
+    this.$element
         .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
         .on('mouseleave.bs.carousel', $.proxy(this.cycle, this));
   };
@@ -374,8 +347,8 @@ if (typeof jQuery === 'undefined') {
     this.interval && clearInterval(this.interval);
 
     this.options.interval &&
-      !this.paused &&
-      (this.interval = setInterval($.proxy(this.next, this), this.options.interval));
+    !this.paused &&
+    (this.interval = setInterval($.proxy(this.next, this), this.options.interval));
 
     return this;
   };
@@ -388,8 +361,8 @@ if (typeof jQuery === 'undefined') {
   Carousel.prototype.getItemForDirection = function (direction, active) {
     var activeIndex = this.getItemIndex(active);
     var willWrap =
-      (direction == 'prev' && activeIndex === 0) ||
-      (direction == 'next' && activeIndex == this.$items.length - 1);
+        (direction == 'prev' && activeIndex === 0) ||
+        (direction == 'next' && activeIndex == this.$items.length - 1);
     if (willWrap && !this.options.wrap) return active;
     var delta = direction == 'prev' ? -1 : 1;
     var itemIndex = (activeIndex + delta) % this.$items.length;
@@ -471,15 +444,15 @@ if (typeof jQuery === 'undefined') {
       $active.addClass(direction);
       $next.addClass(direction);
       $active
-        .one('bsTransitionEnd', function () {
-          $next.removeClass([type, direction].join(' ')).addClass('active');
-          $active.removeClass(['active', direction].join(' '));
-          that.sliding = false;
-          setTimeout(function () {
-            that.$element.trigger(slidEvent);
-          }, 0);
-        })
-        .emulateTransitionEnd(Carousel.TRANSITION_DURATION);
+          .one('bsTransitionEnd', function () {
+            $next.removeClass([type, direction].join(' ')).addClass('active');
+            $active.removeClass(['active', direction].join(' '));
+            that.sliding = false;
+            setTimeout(function () {
+              that.$element.trigger(slidEvent);
+            }, 0);
+          })
+          .emulateTransitionEnd(Carousel.TRANSITION_DURATION);
     } else {
       $active.removeClass('active');
       $next.addClass('active');
@@ -500,10 +473,10 @@ if (typeof jQuery === 'undefined') {
       var $this = $(this);
       var data = $this.data('bs.carousel');
       var options = $.extend(
-        {},
-        Carousel.DEFAULTS,
-        $this.data(),
-        typeof option == 'object' && option,
+          {},
+          Carousel.DEFAULTS,
+          $this.data(),
+          typeof option == 'object' && option,
       );
       var action = typeof option == 'string' ? option : options.slide;
 
@@ -534,7 +507,7 @@ if (typeof jQuery === 'undefined') {
     var href;
     var $this = $(this);
     var $target = $(
-      $this.attr('data-target') ||
+        $this.attr('data-target') ||
         ((href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')),
     ); // strip for ie7
     if (!$target.hasClass('carousel')) return;
@@ -552,8 +525,8 @@ if (typeof jQuery === 'undefined') {
   };
 
   $(document)
-    .on('click.bs.carousel.data-api', '[data-slide]', clickHandler)
-    .on('click.bs.carousel.data-api', '[data-slide-to]', clickHandler);
+      .on('click.bs.carousel.data-api', '[data-slide]', clickHandler)
+      .on('click.bs.carousel.data-api', '[data-slide-to]', clickHandler);
 
   $(window).on('load', function () {
     $('[data-ride="carousel"]').each(function () {
@@ -563,13 +536,7 @@ if (typeof jQuery === 'undefined') {
   });
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: collapse.js v3.3.4
- * https://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -581,7 +548,7 @@ if (typeof jQuery === 'undefined') {
     this.$element = $(element);
     this.options = $.extend({}, Collapse.DEFAULTS, options);
     this.$trigger = $(
-      '[data-toggle="collapse"][href="#' +
+        '[data-toggle="collapse"][href="#' +
         element.id +
         '"],' +
         '[data-toggle="collapse"][data-target="#' +
@@ -635,10 +602,10 @@ if (typeof jQuery === 'undefined') {
     var dimension = this.dimension();
 
     this.$element
-      .removeClass('collapse')
-      .addClass('collapsing')
-      [dimension](0)
-      .attr('aria-expanded', true);
+        .removeClass('collapse')
+        .addClass('collapsing')
+        [dimension](0)
+        .attr('aria-expanded', true);
 
     this.$trigger.removeClass('collapsed').attr('aria-expanded', true);
 
@@ -655,9 +622,9 @@ if (typeof jQuery === 'undefined') {
     var scrollSize = $.camelCase(['scroll', dimension].join('-'));
 
     this.$element
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
-      [dimension](this.$element[0][scrollSize]);
+        .one('bsTransitionEnd', $.proxy(complete, this))
+        .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+        [dimension](this.$element[0][scrollSize]);
   };
 
   Collapse.prototype.hide = function () {
@@ -685,8 +652,8 @@ if (typeof jQuery === 'undefined') {
     if (!$.support.transition) return complete.call(this);
 
     this.$element[dimension](0)
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION);
+        .one('bsTransitionEnd', $.proxy(complete, this))
+        .emulateTransitionEnd(Collapse.TRANSITION_DURATION);
   };
 
   Collapse.prototype.toggle = function () {
@@ -695,14 +662,14 @@ if (typeof jQuery === 'undefined') {
 
   Collapse.prototype.getParent = function () {
     return $(this.options.parent)
-      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
-      .each(
-        $.proxy(function (i, element) {
-          var $element = $(element);
-          this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element);
-        }, this),
-      )
-      .end();
+        .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+        .each(
+            $.proxy(function (i, element) {
+              var $element = $(element);
+              this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element);
+            }, this),
+        )
+        .end();
   };
 
   Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
@@ -715,8 +682,8 @@ if (typeof jQuery === 'undefined') {
   function getTargetFromTrigger($trigger) {
     var href;
     var target =
-      $trigger.attr('data-target') ||
-      ((href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')); // strip for ie7
+        $trigger.attr('data-target') ||
+        ((href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')); // strip for ie7
 
     return $(target);
   }
@@ -729,10 +696,10 @@ if (typeof jQuery === 'undefined') {
       var $this = $(this);
       var data = $this.data('bs.collapse');
       var options = $.extend(
-        {},
-        Collapse.DEFAULTS,
-        $this.data(),
-        typeof option == 'object' && option,
+          {},
+          Collapse.DEFAULTS,
+          $this.data(),
+          typeof option == 'object' && option,
       );
 
       if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false;
@@ -770,13 +737,7 @@ if (typeof jQuery === 'undefined') {
   });
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: dropdown.js v3.3.4
- * https://getbootstrap.com/javascript/#dropdowns
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -915,23 +876,17 @@ if (typeof jQuery === 'undefined') {
   // ===================================
 
   $(document)
-    .on('click.bs.dropdown.data-api', clearMenus)
-    .on('click.bs.dropdown.data-api', '.dropdown form', function (e) {
-      e.stopPropagation();
-    })
-    .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
-    .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
-    .on('keydown.bs.dropdown.data-api', '[role="menu"]', Dropdown.prototype.keydown)
-    .on('keydown.bs.dropdown.data-api', '[role="listbox"]', Dropdown.prototype.keydown);
+      .on('click.bs.dropdown.data-api', clearMenus)
+      .on('click.bs.dropdown.data-api', '.dropdown form', function (e) {
+        e.stopPropagation();
+      })
+      .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+      .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+      .on('keydown.bs.dropdown.data-api', '[role="menu"]', Dropdown.prototype.keydown)
+      .on('keydown.bs.dropdown.data-api', '[role="listbox"]', Dropdown.prototype.keydown);
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: modal.js v3.3.4
- * https://getbootstrap.com/javascript/#modals
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -952,10 +907,10 @@ if (typeof jQuery === 'undefined') {
 
     if (this.options.remote) {
       this.$element.find('.modal-content').load(
-        this.options.remote,
-        $.proxy(function () {
-          this.$element.trigger('loaded.bs.modal');
-        }, this),
+          this.options.remote,
+          $.proxy(function () {
+            this.$element.trigger('loaded.bs.modal');
+          }, this),
       );
     }
   };
@@ -1022,12 +977,12 @@ if (typeof jQuery === 'undefined') {
       var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget });
 
       transition
-        ? that.$dialog // wait for modal to slide in
-            .one('bsTransitionEnd', function () {
-              that.$element.trigger('focus').trigger(e);
-            })
-            .emulateTransitionEnd(Modal.TRANSITION_DURATION)
-        : that.$element.trigger('focus').trigger(e);
+          ? that.$dialog // wait for modal to slide in
+              .one('bsTransitionEnd', function () {
+                that.$element.trigger('focus').trigger(e);
+              })
+              .emulateTransitionEnd(Modal.TRANSITION_DURATION)
+          : that.$element.trigger('focus').trigger(e);
     });
   };
 
@@ -1048,40 +1003,40 @@ if (typeof jQuery === 'undefined') {
     $(document).off('focusin.bs.modal');
 
     this.$element
-      .removeClass('in')
-      .attr('aria-hidden', true)
-      .off('click.dismiss.bs.modal')
-      .off('mouseup.dismiss.bs.modal');
+        .removeClass('in')
+        .attr('aria-hidden', true)
+        .off('click.dismiss.bs.modal')
+        .off('mouseup.dismiss.bs.modal');
 
     this.$dialog.off('mousedown.dismiss.bs.modal');
 
     $.support.transition && this.$element.hasClass('fade')
-      ? this.$element
-          .one('bsTransitionEnd', $.proxy(this.hideModal, this))
-          .emulateTransitionEnd(Modal.TRANSITION_DURATION)
-      : this.hideModal();
+        ? this.$element
+            .one('bsTransitionEnd', $.proxy(this.hideModal, this))
+            .emulateTransitionEnd(Modal.TRANSITION_DURATION)
+        : this.hideModal();
   };
 
   Modal.prototype.enforceFocus = function () {
     $(document)
-      .off('focusin.bs.modal') // guard against infinite focus loop
-      .on(
-        'focusin.bs.modal',
-        $.proxy(function (e) {
-          if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
-            this.$element.trigger('focus');
-          }
-        }, this),
-      );
+        .off('focusin.bs.modal') // guard against infinite focus loop
+        .on(
+            'focusin.bs.modal',
+            $.proxy(function (e) {
+              if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
+                this.$element.trigger('focus');
+              }
+            }, this),
+        );
   };
 
   Modal.prototype.escape = function () {
     if (this.isShown && this.options.keyboard) {
       this.$element.on(
-        'keydown.dismiss.bs.modal',
-        $.proxy(function (e) {
-          e.which == 27 && this.hide();
-        }, this),
+          'keydown.dismiss.bs.modal',
+          $.proxy(function (e) {
+            e.which == 27 && this.hide();
+          }, this),
       );
     } else if (!this.isShown) {
       this.$element.off('keydown.dismiss.bs.modal');
@@ -1122,15 +1077,15 @@ if (typeof jQuery === 'undefined') {
       this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />').appendTo(this.$body);
 
       this.$element.on(
-        'click.dismiss.bs.modal',
-        $.proxy(function (e) {
-          if (this.ignoreBackdropClick) {
-            this.ignoreBackdropClick = false;
-            return;
-          }
-          if (e.target !== e.currentTarget) return;
-          this.options.backdrop == 'static' ? this.$element[0].focus() : this.hide();
-        }, this),
+          'click.dismiss.bs.modal',
+          $.proxy(function (e) {
+            if (this.ignoreBackdropClick) {
+              this.ignoreBackdropClick = false;
+              return;
+            }
+            if (e.target !== e.currentTarget) return;
+            this.options.backdrop == 'static' ? this.$element[0].focus() : this.hide();
+          }, this),
       );
 
       if (doAnimate) this.$backdrop[0].offsetWidth; // force reflow
@@ -1140,10 +1095,10 @@ if (typeof jQuery === 'undefined') {
       if (!callback) return;
 
       doAnimate
-        ? this.$backdrop
-            .one('bsTransitionEnd', callback)
-            .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION)
-        : callback();
+          ? this.$backdrop
+              .one('bsTransitionEnd', callback)
+              .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION)
+          : callback();
     } else if (!this.isShown && this.$backdrop) {
       this.$backdrop.removeClass('in');
 
@@ -1152,10 +1107,10 @@ if (typeof jQuery === 'undefined') {
         callback && callback();
       };
       $.support.transition && this.$element.hasClass('fade')
-        ? this.$backdrop
-            .one('bsTransitionEnd', callbackRemove)
-            .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION)
-        : callbackRemove();
+          ? this.$backdrop
+              .one('bsTransitionEnd', callbackRemove)
+              .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION)
+          : callbackRemove();
     } else if (callback) {
       callback();
     }
@@ -1250,8 +1205,8 @@ if (typeof jQuery === 'undefined') {
     var href = $this.attr('href');
     var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))); // strip for ie7
     var option = $target.data('bs.modal')
-      ? 'toggle'
-      : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data());
+        ? 'toggle'
+        : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data());
 
     if ($this.is('a')) e.preventDefault();
 
@@ -1265,14 +1220,7 @@ if (typeof jQuery === 'undefined') {
   });
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: tooltip.js v3.3.4
- * https://getbootstrap.com/javascript/#tooltip
- * Inspired by the original jQuery.tipsy by Jason Frame
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -1300,7 +1248,7 @@ if (typeof jQuery === 'undefined') {
     placement: 'top',
     selector: false,
     template:
-      '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+        '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -1318,11 +1266,11 @@ if (typeof jQuery === 'undefined') {
     this.$element = $(element);
     this.options = this.getOptions(options);
     this.$viewport =
-      this.options.viewport && $(this.options.viewport.selector || this.options.viewport);
+        this.options.viewport && $(this.options.viewport.selector || this.options.viewport);
 
     if (this.$element[0] instanceof document.constructor && !this.options.selector) {
       throw new Error(
-        '`selector` option must be specified when initializing ' +
+          '`selector` option must be specified when initializing ' +
           this.type +
           ' on the window.document object!',
       );
@@ -1340,21 +1288,21 @@ if (typeof jQuery === 'undefined') {
         var eventOut = trigger == 'hover' ? 'mouseleave' : 'focusout';
 
         this.$element.on(
-          eventIn + '.' + this.type,
-          this.options.selector,
-          $.proxy(this.enter, this),
+            eventIn + '.' + this.type,
+            this.options.selector,
+            $.proxy(this.enter, this),
         );
         this.$element.on(
-          eventOut + '.' + this.type,
-          this.options.selector,
-          $.proxy(this.leave, this),
+            eventOut + '.' + this.type,
+            this.options.selector,
+            $.proxy(this.leave, this),
         );
       }
     }
 
     this.options.selector
-      ? (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' }))
-      : this.fixTitle();
+        ? (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' }))
+        : this.fixTitle();
   };
 
   Tooltip.prototype.getDefaults = function () {
@@ -1379,9 +1327,9 @@ if (typeof jQuery === 'undefined') {
     var defaults = this.getDefaults();
 
     this._options &&
-      $.each(this._options, function (key, value) {
-        if (defaults[key] != value) options[key] = value;
-      });
+    $.each(this._options, function (key, value) {
+      if (defaults[key] != value) options[key] = value;
+    });
 
     return options;
   };
@@ -1450,23 +1398,23 @@ if (typeof jQuery === 'undefined') {
       if (this.options.animation) $tip.addClass('fade');
 
       var placement =
-        typeof this.options.placement == 'function'
-          ? this.options.placement.call(this, $tip[0], this.$element[0])
-          : this.options.placement;
+          typeof this.options.placement == 'function'
+              ? this.options.placement.call(this, $tip[0], this.$element[0])
+              : this.options.placement;
 
       var autoToken = /\s?auto?\s?/i;
       var autoPlace = autoToken.test(placement);
       if (autoPlace) placement = placement.replace(autoToken, '') || 'top';
 
       $tip
-        .detach()
-        .css({ top: 0, left: 0, display: 'block' })
-        .addClass(placement)
-        .data('bs.' + this.type, this);
+          .detach()
+          .css({ top: 0, left: 0, display: 'block' })
+          .addClass(placement)
+          .data('bs.' + this.type, this);
 
       this.options.container
-        ? $tip.appendTo(this.options.container)
-        : $tip.insertAfter(this.$element);
+          ? $tip.appendTo(this.options.container)
+          : $tip.insertAfter(this.$element);
 
       var pos = this.getPosition();
       var actualWidth = $tip[0].offsetWidth;
@@ -1475,20 +1423,20 @@ if (typeof jQuery === 'undefined') {
       if (autoPlace) {
         var orgPlacement = placement;
         var $container = this.options.container
-          ? $(this.options.container)
-          : this.$element.parent();
+            ? $(this.options.container)
+            : this.$element.parent();
         var containerDim = this.getPosition($container);
 
         placement =
-          placement == 'bottom' && pos.bottom + actualHeight > containerDim.bottom
-            ? 'top'
-            : placement == 'top' && pos.top - actualHeight < containerDim.top
-            ? 'bottom'
-            : placement == 'right' && pos.right + actualWidth > containerDim.width
-            ? 'left'
-            : placement == 'left' && pos.left - actualWidth < containerDim.left
-            ? 'right'
-            : placement;
+            placement == 'bottom' && pos.bottom + actualHeight > containerDim.bottom
+                ? 'top'
+                : placement == 'top' && pos.top - actualHeight < containerDim.top
+                    ? 'bottom'
+                    : placement == 'right' && pos.right + actualWidth > containerDim.width
+                        ? 'left'
+                        : placement == 'left' && pos.left - actualWidth < containerDim.left
+                            ? 'right'
+                            : placement;
 
         $tip.removeClass(orgPlacement).addClass(placement);
       }
@@ -1506,8 +1454,8 @@ if (typeof jQuery === 'undefined') {
       };
 
       $.support.transition && this.$tip.hasClass('fade')
-        ? $tip.one('bsTransitionEnd', complete).emulateTransitionEnd(Tooltip.TRANSITION_DURATION)
-        : complete();
+          ? $tip.one('bsTransitionEnd', complete).emulateTransitionEnd(Tooltip.TRANSITION_DURATION)
+          : complete();
     }
   };
 
@@ -1530,19 +1478,19 @@ if (typeof jQuery === 'undefined') {
     // $.fn.offset doesn't round pixel values
     // so we use setOffset directly with our own function B-0
     $.offset.setOffset(
-      $tip[0],
-      $.extend(
-        {
-          using: function (props) {
-            $tip.css({
-              top: Math.round(props.top),
-              left: Math.round(props.left),
-            });
-          },
-        },
-        offset,
-      ),
-      0,
+        $tip[0],
+        $.extend(
+            {
+              using: function (props) {
+                $tip.css({
+                  top: Math.round(props.top),
+                  left: Math.round(props.left),
+                });
+              },
+            },
+            offset,
+        ),
+        0,
     );
 
     $tip.addClass('in');
@@ -1562,8 +1510,8 @@ if (typeof jQuery === 'undefined') {
 
     var isVertical = /top|bottom/.test(placement);
     var arrowDelta = isVertical
-      ? delta.left * 2 - width + actualWidth
-      : delta.top * 2 - height + actualHeight;
+        ? delta.left * 2 - width + actualWidth
+        : delta.top * 2 - height + actualHeight;
     var arrowOffsetPosition = isVertical ? 'offsetWidth' : 'offsetHeight';
 
     $tip.offset(offset);
@@ -1572,8 +1520,8 @@ if (typeof jQuery === 'undefined') {
 
   Tooltip.prototype.replaceArrow = function (delta, dimension, isVertical) {
     this.arrow()
-      .css(isVertical ? 'left' : 'top', 50 * (1 - delta / dimension) + '%')
-      .css(isVertical ? 'top' : 'left', '');
+        .css(isVertical ? 'left' : 'top', 50 * (1 - delta / dimension) + '%')
+        .css(isVertical ? 'top' : 'left', '');
   };
 
   Tooltip.prototype.setContent = function () {
@@ -1602,8 +1550,8 @@ if (typeof jQuery === 'undefined') {
     $tip.removeClass('in');
 
     $.support.transition && $tip.hasClass('fade')
-      ? $tip.one('bsTransitionEnd', complete).emulateTransitionEnd(Tooltip.TRANSITION_DURATION)
-      : complete();
+        ? $tip.one('bsTransitionEnd', complete).emulateTransitionEnd(Tooltip.TRANSITION_DURATION)
+        : complete();
 
     this.hoverState = null;
 
@@ -1638,8 +1586,8 @@ if (typeof jQuery === 'undefined') {
     var elOffset = isBody ? { top: 0, left: 0 } : $element.offset();
     var scroll = {
       scroll: isBody
-        ? document.documentElement.scrollTop || document.body.scrollTop
-        : $element.scrollTop(),
+          ? document.documentElement.scrollTop || document.body.scrollTop
+          : $element.scrollTop(),
     };
     var outerDims = isBody ? { width: $(window).width(), height: $(window).height() } : null;
 
@@ -1648,20 +1596,20 @@ if (typeof jQuery === 'undefined') {
 
   Tooltip.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
     return placement == 'bottom'
-      ? { top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2 }
-      : placement == 'top'
-      ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 }
-      : placement == 'left'
-      ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth }
-      : /* placement == 'right' */
-        { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width };
+        ? { top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2 }
+        : placement == 'top'
+            ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 }
+            : placement == 'left'
+                ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth }
+                : /* placement == 'right' */
+                { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width };
   };
 
   Tooltip.prototype.getViewportAdjustedDelta = function (
-    placement,
-    pos,
-    actualWidth,
-    actualHeight,
+      placement,
+      pos,
+      actualWidth,
+      actualHeight,
   ) {
     var delta = { top: 0, left: 0 };
     if (!this.$viewport) return delta;
@@ -1700,8 +1648,8 @@ if (typeof jQuery === 'undefined') {
     var o = this.options;
 
     title =
-      $e.attr('data-original-title') ||
-      (typeof o.title == 'function' ? o.title.call($e[0]) : o.title);
+        $e.attr('data-original-title') ||
+        (typeof o.title == 'function' ? o.title.call($e[0]) : o.title);
 
     return title;
   };
@@ -1782,13 +1730,7 @@ if (typeof jQuery === 'undefined') {
   };
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: popover.js v3.3.4
- * https://getbootstrap.com/javascript/#popovers
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -1809,7 +1751,7 @@ if (typeof jQuery === 'undefined') {
     trigger: 'click',
     content: '',
     template:
-      '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>',
+        '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>',
   });
 
   // NOTE: POPOVER EXTENDS tooltip.js
@@ -1830,11 +1772,11 @@ if (typeof jQuery === 'undefined') {
 
     $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title);
     $tip
-      .find('.popover-content')
-      .children()
-      .detach()
-      .end() // we use append for html objects to maintain js events
-      [this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'](content);
+        .find('.popover-content')
+        .children()
+        .detach()
+        .end() // we use append for html objects to maintain js events
+        [this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'](content);
 
     $tip.removeClass('fade top bottom left right in');
 
@@ -1852,8 +1794,8 @@ if (typeof jQuery === 'undefined') {
     var o = this.options;
 
     return (
-      $e.attr('data-content') ||
-      (typeof o.content == 'function' ? o.content.call($e[0]) : o.content)
+        $e.attr('data-content') ||
+        (typeof o.content == 'function' ? o.content.call($e[0]) : o.content)
     );
   };
 
@@ -1890,13 +1832,7 @@ if (typeof jQuery === 'undefined') {
   };
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: scrollspy.js v3.3.4
- * https://getbootstrap.com/javascript/#scrollspy
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -1927,8 +1863,8 @@ if (typeof jQuery === 'undefined') {
 
   ScrollSpy.prototype.getScrollHeight = function () {
     return (
-      this.$scrollElement[0].scrollHeight ||
-      Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+        this.$scrollElement[0].scrollHeight ||
+        Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
     );
   };
 
@@ -1947,26 +1883,26 @@ if (typeof jQuery === 'undefined') {
     }
 
     this.$body
-      .find(this.selector)
-      .map(function () {
-        var $el = $(this);
-        var href = $el.data('target') || $el.attr('href');
-        var $href = /^#./.test(href) && $(href);
+        .find(this.selector)
+        .map(function () {
+          var $el = $(this);
+          var href = $el.data('target') || $el.attr('href');
+          var $href = /^#./.test(href) && $(href);
 
-        return (
-          ($href &&
-            $href.length &&
-            $href.is(':visible') && [[$href[offsetMethod]().top + offsetBase, href]]) ||
-          null
-        );
-      })
-      .sort(function (a, b) {
-        return a[0] - b[0];
-      })
-      .each(function () {
-        that.offsets.push(this[0]);
-        that.targets.push(this[1]);
-      });
+          return (
+              ($href &&
+                  $href.length &&
+                  $href.is(':visible') && [[$href[offsetMethod]().top + offsetBase, href]]) ||
+              null
+          );
+        })
+        .sort(function (a, b) {
+          return a[0] - b[0];
+        })
+        .each(function () {
+          that.offsets.push(this[0]);
+          that.targets.push(this[1]);
+        });
   };
 
   ScrollSpy.prototype.process = function () {
@@ -1993,9 +1929,9 @@ if (typeof jQuery === 'undefined') {
 
     for (i = offsets.length; i--; ) {
       activeTarget != targets[i] &&
-        scrollTop >= offsets[i] &&
-        (offsets[i + 1] === undefined || scrollTop < offsets[i + 1]) &&
-        this.activate(targets[i]);
+      scrollTop >= offsets[i] &&
+      (offsets[i + 1] === undefined || scrollTop < offsets[i + 1]) &&
+      this.activate(targets[i]);
     }
   };
 
@@ -2005,7 +1941,7 @@ if (typeof jQuery === 'undefined') {
     this.clear();
 
     var selector =
-      this.selector + '[data-target="' + target + '"],' + this.selector + '[href="' + target + '"]';
+        this.selector + '[data-target="' + target + '"],' + this.selector + '[href="' + target + '"]';
 
     var active = $(selector).parents('li').addClass('active');
 
@@ -2058,13 +1994,7 @@ if (typeof jQuery === 'undefined') {
   });
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: tab.js v3.3.4
- * https://getbootstrap.com/javascript/#tabs
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -2123,18 +2053,18 @@ if (typeof jQuery === 'undefined') {
   Tab.prototype.activate = function (element, container, callback) {
     var $active = container.find('> .active');
     var transition =
-      callback &&
-      $.support.transition &&
-      (($active.length && $active.hasClass('fade')) || !!container.find('> .fade').length);
+        callback &&
+        $.support.transition &&
+        (($active.length && $active.hasClass('fade')) || !!container.find('> .fade').length);
 
     function next() {
       $active
-        .removeClass('active')
-        .find('> .dropdown-menu > .active')
-        .removeClass('active')
-        .end()
-        .find('[data-toggle="tab"]')
-        .attr('aria-expanded', false);
+          .removeClass('active')
+          .find('> .dropdown-menu > .active')
+          .removeClass('active')
+          .end()
+          .find('[data-toggle="tab"]')
+          .attr('aria-expanded', false);
 
       element.addClass('active').find('[data-toggle="tab"]').attr('aria-expanded', true);
 
@@ -2147,19 +2077,19 @@ if (typeof jQuery === 'undefined') {
 
       if (element.parent('.dropdown-menu').length) {
         element
-          .closest('li.dropdown')
-          .addClass('active')
-          .end()
-          .find('[data-toggle="tab"]')
-          .attr('aria-expanded', true);
+            .closest('li.dropdown')
+            .addClass('active')
+            .end()
+            .find('[data-toggle="tab"]')
+            .attr('aria-expanded', true);
       }
 
       callback && callback();
     }
 
     $active.length && transition
-      ? $active.one('bsTransitionEnd', next).emulateTransitionEnd(Tab.TRANSITION_DURATION)
-      : next();
+        ? $active.one('bsTransitionEnd', next).emulateTransitionEnd(Tab.TRANSITION_DURATION)
+        : next();
 
     $active.removeClass('in');
   };
@@ -2199,17 +2129,11 @@ if (typeof jQuery === 'undefined') {
   };
 
   $(document)
-    .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
-    .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler);
+      .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
+      .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler);
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: affix.js v3.3.4
- * https://getbootstrap.com/javascript/#affix
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* ======================================================================== */
 
 +(function ($) {
   'use strict';
@@ -2221,8 +2145,8 @@ if (typeof jQuery === 'undefined') {
     this.options = $.extend({}, Affix.DEFAULTS, options);
 
     this.$target = $(this.options.target)
-      .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
-      .on('click.bs.affix.data-api', $.proxy(this.checkPositionWithEventLoop, this));
+        .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
+        .on('click.bs.affix.data-api', $.proxy(this.checkPositionWithEventLoop, this));
 
     this.$element = $(element);
     this.affixed = null;
@@ -2305,9 +2229,9 @@ if (typeof jQuery === 'undefined') {
       this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null;
 
       this.$element
-        .removeClass(Affix.RESET)
-        .addClass(affixType)
-        .trigger(affixType.replace('affix', 'affixed') + '.bs.affix');
+          .removeClass(Affix.RESET)
+          .addClass(affixType)
+          .trigger(affixType.replace('affix', 'affixed') + '.bs.affix');
     }
 
     if (affix == 'bottom') {
@@ -2362,8 +2286,8 @@ if (typeof jQuery === 'undefined') {
   });
 })(jQuery);
 
-  // SEARCH FUNCTION
-  // ===============
+/* ======================================================================== */
+/* SEARCH FUNCTION */
 
 const banTopContainer = document.querySelector('.header-bot_inner_wthreeinfo_header_mid .agileits-social',);
 banTopContainer.innerHTML += `
@@ -2386,14 +2310,8 @@ searchBox2.innerHTML = `
 `;
 banTopLeft.appendChild(searchBox2);
 
-
-const searchScript = document.createElement('script');
-searchScript.type = 'module';
-searchScript.src = '/js/smart-search.js';
-document.querySelector('body').appendChild(searchScript);
-
-  // RIGHT HEADER
-  // ============
+/* ======================================================================== */
+/* RIGHT HEADER */
 
 const topNavRight = document.querySelector('.top_nav_right');
 
@@ -2401,9 +2319,9 @@ let check = false;
 
 window.onclick = function (event) {
   if (
-    event.target === topNavRight ||
-    event.target === topNavRight.children[0] ||
-    event.target === topNavRight.children[0].children[0]
+      event.target === topNavRight ||
+      event.target === topNavRight.children[0] ||
+      event.target === topNavRight.children[0].children[0]
   ) {
     scroll(0, 300);
   }
@@ -2411,9 +2329,9 @@ window.onclick = function (event) {
 
 window.addEventListener('touchstart', function (event) {
   if (
-    event.target === topNavRight ||
-    event.target === topNavRight.children[0] ||
-    event.target === topNavRight.children[0].children[0]
+      event.target === topNavRight ||
+      event.target === topNavRight.children[0] ||
+      event.target === topNavRight.children[0].children[0]
   ) {
     scroll(0, 300);
   }
@@ -2422,12 +2340,12 @@ window.addEventListener('touchstart', function (event) {
 window.mobileCheck = function () {
   (function (a) {
     if (
-      /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
-        a,
-      ) ||
-      /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
-        a.substr(0, 4),
-      )
+        /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
+            a,
+        ) ||
+        /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+            a.substr(0, 4),
+        )
     )
       check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
@@ -2435,20 +2353,25 @@ window.mobileCheck = function () {
 };
 
 if (mobileCheck()) {
-  document.querySelector('.top_nav_right').style.height = `${
-    document.querySelector('.navbar-header').offsetHeight
-  }px`;
+    document.querySelector('.top_nav_right').style.height = `${
+        document.querySelector('.navbar-header').offsetHeight
+    }px`;
 } else {
-  document.querySelector('.top_nav_right').style.height = `${
-    document.querySelector('.container-fluid').offsetHeight
-  }px`;
+    document.querySelector('.top_nav_right').style.height = `${
+        document.querySelector('.container-fluid').offsetHeight
+    }px`;
 }
+
+/* ======================================================================== */
 
 /* Закомител, вопросы @ackapga
  document.querySelector('.w3-address').children[2].children[1].innerHTML = `<p style="margin:0">Адрес</p><p>
  <a href="https://2gis.kz/almaty/firm/9429940000970891/tab/reviews?m=76.907294%2C43.237873%2F20">ул. Мынбаева 43 (уг. ул. между Ауезова и Манаса), 1-этаж, 050008</a>
  </p>`;
 */
+
+/* ======================================================================== */
+/* MENU SHYLOCK */
 
 const menuShylock = document.querySelector('.menu--shylock');
 var filename = window.location.href.split('/').pop().split('#')[0].split('?')[0].split('.'[0]).shift();
@@ -2527,6 +2450,9 @@ function addActiveClass() {
 
 addActiveClass();
 
+/* ======================================================================== */
+/* TREE LIST PAID */
+
 if (document.querySelector('.tree-list-pad') != null) {
   document.querySelector('.tree-list-pad').innerHTML = `
         <li>
@@ -2580,1463 +2506,1465 @@ if (document.querySelector('.tree-list-pad') != null) {
 }
 
 if (document.querySelector('.w3_short') != null) {
-  if (document.querySelector('.w3_short').children[2] != null) {
-    if (document.querySelector('.w3_short').children[2].children != null) {
-      let categoryText =
-        document.querySelector('.w3_short').children[2].children.length > 1
-          ? document.querySelector('.w3_short').children[2].children[0].innerHTML
-          : document.querySelector('.w3_short').children[2].innerHTML;
+    if (document.querySelector('.w3_short').children[2] != null) {
+        if (document.querySelector('.w3_short').children[2].children != null) {
+            let categoryText =
+                document.querySelector('.w3_short').children[2].children.length > 1
+                    ? document.querySelector('.w3_short').children[2].children[0].innerHTML
+                    : document.querySelector('.w3_short').children[2].innerHTML;
 
-      if (document.querySelector('.tree-list-pad') != null) {
-        const treeListArray = document.querySelector('.tree-list-pad').children;
+            if (document.querySelector('.tree-list-pad') != null) {
+                const treeListArray = document.querySelector('.tree-list-pad').children;
 
-        for (let i = 0; i < treeListArray.length; i++) {
-          const element = treeListArray[i];
-          let str = element.children[0].children[0].innerHTML;
-          const newStr = str.substring(53);
-          if (newStr == categoryText) {
-            treeListArray[i].children[0].style.color = '#ff8400';
-          }
+                for (let i = 0; i < treeListArray.length; i++) {
+                    const element = treeListArray[i];
+                    let str = element.children[0].children[0].innerHTML;
+                    const newStr = str.substring(53);
+                    if (newStr == categoryText) {
+                        treeListArray[i].children[0].style.color = '#ff8400';
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
+/* ======================================================================== */
+/* Выводит список */
 const data5 = [
-  {
-    link: 'label_3120t.php',
-    title: 'Принтер этикеток 3120T',
-    desc: 'Легкий и удобный принтер этикеток со скоростью 127мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 76 мм. Принтер этикеток 3120T имеет функции: автоматической калибровки бумаги и функцию контроля температуры.',
-    img: '/images/label/1.jpg',
-    price: 45360,
-    color: 'black',
-    paperWidth: 76,
-    interfaces: ['usb'],
-    autoCut: true,
-    winding: true,
-    code: '4001',
-  },
-  {
-    link: 'label_2408d.php',
-    title: 'Принтер этикеток 2408DC белый',
-    desc: 'Высокопроизводительный принтер GS-2408D со скоростью 203мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 104 мм. Данный принетер является отличным решением для розничной торговли, маркировки полок, а также для сервисов доставки.',
-    img: '/images/2408D/1.png',
-    price: 45360,
-    color: 'white',
-    paperWidth: 104,
-    interfaces: ['usb', 'serial', 'wifi', 'bluetooth'],
-    autoCut: true,
-    winding: true,
-    code: '4940',
-  },
-  {
-    link: 'label_3120tub.php',
-    title: 'Принтер этикеток 3120TUB',
-    desc: 'Высокопроизводительный принтер 3120TUB со скоростью 127 мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 76 мм. Данный принетер является безупречным решением для организации работы торговых компаний разной специализации.',
-    img: '/images/3120TUB/1.jpg',
-    price: 33390,
-    color: 'gray',
-    paperWidth: 76,
-    interfaces: ['usb'],
-    autoCut: false,
-    winding: false,
-    code: '4939',
-  },
-  {
-    link: 'label_3120tl.php',
-    title: 'Принтер этикеток 3120TL',
-    desc: 'Высокопроизводительный принтер GP-3120TL со скоростью 127 мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 76 мм. Данный принетер является безупречным решением для организации работы торговых компаний разной специализации.',
-    img: '/images/3120TL/2.jpg',
-    price: 44100,
-    color: 'black',
-    paperWidth: 76,
-    interfaces: ['usb'],
-    autoCut: true,
-    winding: false,
-    code: '1821',
-  },
-  {
-    link: 'label_3120tuc.php',
-    title: 'Принтер этикеток 3120TUC',
-    desc: 'Высокопроизводительный принтер GP-3120TL со скоростью 127 мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 80 мм. Данный принетер является безупречным решением для организации работы торговых компаний разной специализации.',
-    img: '/images/3120TUC/1.jpg',
-    price: 37080,
-    color: 'black',
-    paperWidth: 80,
-    interfaces: ['usb'],
-    autoCut: true,
-    winding: false,
-    code: '4938',
-  },
-  {
-    link: 'thermalprinter_5802.php',
-    title: 'Принтер чеков 5802',
-    desc: 'Принтер чеков 5802 с термопечатью обладает высоким уровнем обслуживания в любых сферах. Принтер чеков имеет компактные размеры корпуса и предназначен для печати на 58 мм термоленте.',
-    img: '/images/thermalprinter/1.jpg',
-    price: 15120,
-    paperWidth: 58,
-    printSpeed: 90,
-    thermSource: 100,
-    interfaces: ['USB'],
-    autoCut: false,
-    connections: ['autonomous'],
-    code: '3001',
-  },
-  {
-    link: 'thermalprinter_8256.php',
-    title: 'Принтер кассовых чеков 8256',
-    desc: 'Принтер кассовых чеков 8256 обладает не только замечательными техническими параметрами, но и высокоскоростной печатью 300мм/сек. Функциональные возможности принтера чеков существенно экономят время оператора и помогают бесперебойно обслуживать большой поток клиентов.',
-    img: '/images/thermalprinter/9.jpg',
-    price: 35280,
-    paperWidth: 80,
-    printSpeed: 300,
-    thermSource: 100,
-    interfaces: ['USB', 'LAN'],
-    autoCut: true,
-    connections: ['autonomous'],
-    code: '3002',
-  },
-  {
-    link: 'thermalprinter_5860.php',
-    title: 'Мобильный термопринтер 5860 (bluetooth)',
-    desc: 'Мобильный термопринтер 5860 (bluetooth) легко синхронизируется с устройствами(Android) на смартфоне, планшете, компьютере и печатает на стандартной термоленте шириной 58 мм. Принтер чеков 5860 совместим с любыми программными обеспечениями и отлично впишется в малый или средний бизнес.',
-    img: '/images/thermalprinter/10.png',
-    price: 27720,
-    paperWidth: 58,
-    printSpeed: 50,
-    thermSource: 80,
-    interfaces: ['USB'],
-    autoCut: false,
-    connections: ['autonomous', 'bluetooth'],
-    code: '3004',
-  },
-  {
-    link: 'thermalprinter_58B.php',
-    title: 'Принтер чеков Rongta 58 B',
-    desc: 'Принтер чеков Rongta 58B `обладает скоростью печати 90 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте.',
-    img: '/images/58Bwith wm/1.jpg',
-    price: 12096,
-    paperWidth: 58,
-    printSpeed: 90,
-    thermSource: 50,
-    interfaces: ['USB'],
-    autoCut: false,
-    connections: ['autonomous'],
-    code: '5382',
-  },
-  {
-    link: 'thermalprinter_58A.php',
-    title: 'Принтер чеков Rongta 58A',
-    desc: 'Принтер чеков Rongta 58A обладает скоростью печати 90 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте.',
-    img: '/images/58Awith wm/3.jpg',
-    price: 12600,
-    paperWidth: 58,
-    printSpeed: 90,
-    thermSource: 50,
-    interfaces: ['USB'],
-    autoCut: false,
-    connections: ['autonomous'],
-    code: '5383',
-  },
-  {
-    link: 'thermalprinter_58E.php',
-    title: 'Принтер чеков Rongta 58E',
-    desc: 'Принтер чеков Rongta 58 E обладает скоростью печати 90 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте. Термопринтер чеков успешно используется в крупных торговых сетях, гостиницах и ресторанах, интернет-магазинах с большим клиентским потоком.',
-    img: '/images/thermalprinter/1.jpg',
-    price: 14742,
-    paperWidth: 58,
-    printSpeed: 100,
-    thermSource: 100,
-    interfaces: ['USB'],
-    autoCut: false,
-    connections: ['autonomous'],
-    code: '5381',
-  },
-  {
-    link: 'thermalprinter_RP328.php',
-    title: 'Принтер чеков Rongta RP 328',
-    desc: 'Принтер чеков Rongta RP 328 обладает скоростью печати 250 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 80мм термоленте. Термопринтер чеков успешно используется в крупных торговых сетях, гостиницах и ресторанах, интернет-магазинах с большим клиентским потоком.',
-    img: '/images/RP328/1.jpg',
-    price: 35280,
-    paperWidth: 80,
-    printSpeed: 250,
-    thermSource: 100,
-    interfaces: ['USB', 'LAN', 'Serial'],
-    autoCut: true,
-    connections: ['autonomous'],
-    code: '5384',
-  },
-  {
-    link: 'thermalprinter_RP326.php',
-    title: 'Принтер чеков RP 326',
-    desc: 'Принтер чеков RP 326 обладает скоростью печати 250 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте. Термопринтер чеков успешно используется в крупных торговых сетях, гостиницах и ресторанах, интернет-магазинах с большим клиентским потоком.',
-    img: '/images/RP326/1.jpg',
-    price: 42210,
-    paperWidth: 58,
-    printSpeed: 250,
-    thermSource: 100,
-    interfaces: ['USB', 'LAN', 'Serial'],
-    autoCut: false,
-    connections: ['autonomous'],
-    code: '5387',
-  },
-  {
-    link: 'scanner_6900.php',
-    title: 'Сканер штрих кода 6900',
-    desc: 'Сканер штрих кода с подставкой обладает высоким уровнем обслуживания. Кнопка сканирования выдерживает не менее 100 нажатий в сек., поэтому может применяться в различных магазинах, супермаркетах, аптеках или же в любой торговли.',
-    img: '/images/scanner/11.jpg',
-    price: 11840,
-    scanType: ['bar-code'],
-    screenScan: false,
-    connections: ['wired'],
-    readType: 'laser',
-    scanMode: ['first', 'second'],
-    code: '2001',
-  },
-  {
-    link: 'scanner_t_5.php',
-    title: 'Сканер для считывания штрих кодов T5',
-    desc: 'Светодиодный сканер для считывания штрих кодов T5 может считывать любые штрих коды. Главным преимуществом сканера T5 является - считывание штрих-кодов прямо с экрана смартфона или монитора компьютера.',
-    img: '/images/scanner/3.jpg',
-    price: 15120,
-    scanType: ['bar-code'],
-    screenScan: false,
-    connections: ['wired'],
-    readType: 'led',
-    scanMode: ['first', 'third', 'fourth', 'fifth'],
-    code: '2002',
-  },
-  {
-    link: 'scanner_10t_2d.php',
-    title: 'Cканер QR и штрих-кодов 10T-2D',
-    desc: 'Cканер QR и штрих-кодов 10T- с 2D режимом считывания, сканирует любые штрих-коды: с экрана монитора, смартфона, а также считывает QR-коды. Применяется в розничной торговли, легкой промышленности, документообороте, а также в сфере банковских и коммунальных услуг.',
-    img: '/images/scanner/9.png',
-    price: 23940,
-    scanType: ['bar-code', 'qr-code'],
-    screenScan: true,
-    connections: ['wired'],
-    readType: 'image',
-    scanMode: ['first', 'second'],
-    code: '2005',
-  },
-  {
-    link: 'scanner_1880.php',
-    title: 'Беспроводной сканер штрих кода 1880',
-    desc: 'Беспроводной сканер штрих кода с подставкой обладает высокой производительностью. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
-    img: '/images/scanner/7.jpg',
-    price: 20160,
-    scanType: ['bar-code'],
-    screenScan: true,
-    connections: ['wired', 'wifi'],
-    readType: 'laser',
-    scanMode: ['first', 'second'],
-    code: '2004',
-  },
-  {
-    link: 'scanner_6100CG.php',
-    title: 'Беспроводной сканер штрих кода 6100 CG',
-    desc: 'Беспроводной сканер штрих кода обладает высокой производительностью. Имеет три вида сканирования: Штрих-код, QR-код, DATA Matrix. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
-    img: '/images/6100CG/ava1.jpg',
-    price: 20304,
-    scanType: ['bar-code', 'qr-code', 'dmx-code'],
-    screenScan: true,
-    connections: ['wired', 'wifi'],
-    readType: 'led',
-    scanMode: ['first', 'third', 'fourth', 'fifth'],
-    code: '5311',
-  },
-  {
-    link: 'scanner_6600G.php',
-    title: 'Беспроводной сканер штрих кода 6600 G',
-    desc: 'Беспроводной сканер штрих кода обладает высокой производительностью. Имеет три вида сканирования: Штрих-код, QR-код, DATA Matrix. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
-    img: '/images/6600G/ava1.jpg',
-    price: 21855,
-    scanType: ['bar-code', 'qr-code', 'dmx-code'],
-    screenScan: true,
-    connections: ['wired', 'wifi'],
-    readType: 'image',
-    scanMode: ['first', 'fourth'],
-    code: '5312',
-  },
-  {
-    link: 'scanner_6600B.php',
-    title: 'Беспроводной сканер штрих кода 6600 B (Bluetooth)',
-    desc: 'Беспроводной сканер штрих кода обладает высокой производительностью и подключается через bluetooth. Имеет три вида сканирования: Штрих-код, QR-код, DATA Matrix. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
-    img: '/images/6600B/ava.jpg',
-    price: 23970,
-    scanType: ['bar-code', 'qr-code', 'dmx-code'],
-    screenScan: true,
-    connections: ['wired', 'wifi', 'bluetooth'],
-    readType: 'image',
-    scanMode: ['first', 'fourth'],
-    code: '5313',
-  },
-  {
-    link: 'stoika.php',
-    title: 'Стойка для сканера 6900',
-    desc: 'Стандартная стойка для сканера штрих-кода 6900 предназначена для непрерывного сканирования, то есть в режиме “Hands-Free”. Она надежно закрепляется у основания сканера.',
-    img: '/images/scanner/30.png',
-    price: 1260,
-    code: '2009',
-  },
-  {
-    link: 'stoika_t5.php',
-    title: 'Стойка для сканера Т5',
-    desc: 'Стандартная стойка для сканера штрих-кода Т5 предназначена для непрерывного сканирования. Она надежно закрепляется у основания сканера.',
-    img: '/images/rack/t5.jpg',
-    price: 1890,
-    code: '3941',
-  },
-  {
-    link: 'stoika_universal.php',
-    title: 'Стойка для сканера Универсальная',
-    desc: 'Стандартная стойка для сканера штрих-кода Универсальная предназначена для непрерывного сканирования. Она надежно закрепляется у основания сканера.',
-    img: '/images/rack/st1.jpg',
-    price: 2115,
-    code: '4843',
-  },
-  {
-    link: 'pos_3072.php',
-    title: 'Сенсорный монитор 3072, белый',
-    desc: 'Сенсорный моноблок 3072 имеет новый компактный дизайн. Сенсорный экран с высокой чувствительностью идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/p4.png',
-    price: 163800,
-    diagonal: 12.1,
-    color: 'white',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1001',
-  },
-  {
-    link: 'pos_3072_black.php',
-    title: 'Сенсорный монитор 3072, черный',
-    desc: 'Сенсорный моноблок 3072 имеет новый компактный дизайн. Сенсорный экран с высокой чувствительностью идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/3072.png',
-    price: 163800,
-    diagonal: 12.1,
-    color: 'black',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1002',
-  },
-  {
-    link: 'pos_t8_white.php',
-    title: 'Сенсорный моноблок Т8, белый',
-    desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 32 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
-    img: '/images/24.jpg',
-    price: 163800,
-    diagonal: 15.6,
-    color: 'white',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1003',
-  },
-  {
-    link: 'pos_t8.php',
-    title: 'Сенсорный моноблок T8, черный',
-    desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 32 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
-    img: '/images/21.png',
-    price: 163800,
-    diagonal: 15.6,
-    color: 'black',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1004',
-  },
-  {
-    link: 'pos_t8_white_printer.php',
-    title: 'Сенсорный моноблок T8 с принтером чеков, белый',
-    desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью и с принтером чеков 58мм является главным отличием и достоинством. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
-    img: '/images/t8_white_printer.jpg',
-    price: 182700,
-    diagonal: 15.6,
-    color: 'white',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1005',
-  },
-  {
-    link: 'pos_t8_printer.php',
-    title: 'Сенсорный моноблок T8 с принтером чеков, черный',
-    desc: 'Сенсорный моноблок для кассы 15.6-дюймовым диагональю экрана с высокой чувствительностью и с принтером чеков 58мм является главным отличием и достоинством. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
-    img: '/images/t8_black_printer.png',
-    price: 182700,
-    diagonal: 15.6,
-    color: 'black',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1006',
-  },
-  {
-    link: 'pos_3021_white.php',
-    title: 'Сенсорный Моноблок 3021, белый',
-    desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/3021_white/1.png',
-    price: 138600,
-    diagonal: 15,
-    color: 'white',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '4491',
-  },
-  {
-    link: 'pos_3021_black.php',
-    title: 'Сенсорный Моноблок 3021, черный',
-    desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/avatars/3021_black.jpg',
-    price: 138600,
-    diagonal: 15,
-    color: 'black',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    code: '4492',
-  },
-  {
-    link: 'pos_t8_white_64.php',
-    title: 'Сенсорный моноблок T8 Pro, белый',
-    desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 64 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
-    img: '/images/avatars/T8.jpg',
-    price: 189000,
-    diagonal: 15.6,
-    color: 'white',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    code: '1007',
-  },
-  {
-    link: 'pos_t8_64.php',
-    title: 'Сенсорный моноблок T8 Pro, черный',
-    desc: 'Сенсорный монитор для кассы 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 64 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
-    img: '/images/avatars/T8_PRO.jpg',
-    price: 189000,
-    diagonal: 15.6,
-    color: 'black',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    code: '1008',
-  },
-  {
-    link: 'pos_3021_white_pro.php',
-    title: 'Сенсорный Моноблок 3021 PRO, белый',
-    desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/3021_white/pro_logo.jpg',
-    price: 154980,
-    diagonal: 15,
-    color: 'white',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    code: '4493',
-  },
-  {
-    link: 'pos_3021_pro_black.php',
-    title: 'Сенсорный Моноблок 3021 PRO, черный',
-    desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/3021_black/pro_logo.jpg',
-    price: 154980,
-    diagonal: 15,
-    color: 'black',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    code: '4494',
-  },
-  {
-    link: 'pos_3068.php',
-    title: 'Сенсорный Моноблок 3068',
-    desc: 'Сенсорный моноблок 3068 отличается от других моноблоков с размером дисплея. Диогональ экрана состовляет 17 дюймов. Модель имеет жесткий диск типа SSD 32 ГБ. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/3068/3068.jpg',
-    price: 163800,
-    diagonal: 17,
-    color: 'black',
-    ram: 4,
-    ssd: 32,
-    clientDisplay: true,
-    code: '4495',
-  },
-  {
-    link: 'pos_t6.php',
-    title: 'Сенсорный моноблок T6',
-    desc: '15,6-дюймовая сенсорный моноблок Touch Touch LVDS с высокой чувствительностью и широким экраном отвечает всем современным требованиям. Модель имеет превосходный дизайн. А также имеет дисплей для клиента с двумя линиями.',
-    img: '/images/p2.png',
-    price: 205380,
-    diagonal: 15.6,
-    color: 'black',
-    ram: 4,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1009',
-  },
-  {
-    link: 'pos_3068_pro.php',
-    title: 'Сенсорный Моноблок 3068 PRO',
-    desc: 'Сенсорный моноблок 3068 PRO отличается от других моноблоков с размером дисплея. Диогональ экрана состовляет 17 дюймов. Модель имеет жесткий диск типа SSD 64 ГБ. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/3068/3068_pro.jpg',
-    price: 176400,
-    diagonal: 17,
-    color: 'black',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    code: '4496',
-  },
-  {
-    link: 'pos_t3.php',
-    title: 'Сенсорный моноблок T3',
-    desc: 'Сенсорный моноблок 15-дюймовым диагональю экрана с высокой чувствительностью и с модной экранной панелью на спине является главным отличием и достоинством. Экранная панель имеет возможность показывать клиенту, что он заказывает.',
-    img: '/images/p3.png',
-    price: 205000,
-    diagonal: 15,
-    color: 'black',
-    ram: 4,
-    ssd: 32,
-    clientDisplay: true,
-    code: '1013',
-  },
-  {
-    link: 'pos_1701.php',
-    title: 'Сенсорный Моноблок 1701',
-    desc: '15-дюймовый сенсорный моноблок 1701 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/1701/ava.png',
-    price: 130000,
-    diagonal: 15,
-    color: 'black',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    displayType: 'capacitive',
-    code: '5150',
-  },
-  {
-    link: 'pos_1701_pro.php',
-    title: 'Сенсорный Моноблок 1701 PRO',
-    desc: '15-дюймовый сенсорный моноблок 1701 PRO — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/1701/pro.png',
-    price: 156090,
-    diagonal: 15,
-    color: 'black',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    displayType: 'capacitive',
-    code: '5151',
-  },
-  {
-    link: 'pos_1702.php',
-    title: 'Сенсорный Моноблок 1702',
-    desc: '15-дюймовый сенсорный моноблок 1702 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/1702/ava.png',
-    price: 130000,
-    diagonal: 15,
-    color: 'white',
-    ram: 2,
-    ssd: 34,
-    clientDisplay: true,
-    displayType: 'capacitive',
-    code: '5146',
-  },
-  {
-    link: 'pos_1702_pro.php',
-    title: 'Сенсорный Моноблок 1702 PRO',
-    desc: '15-дюймовый сенсорный моноблок 1702 PRO — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
-    img: '/images/1702/pro.png',
-    price: 156090,
-    diagonal: 15,
-    color: 'white',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    displayType: 'capacitive',
-    code: '5147',
-  },
-  {
-    link: 'pos_1905.php',
-    title: 'Сенсорный Моноблок 1905',
-    desc: 'Сенсорный монитор 1905 белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/1905/ava.png',
-    price: 130000,
-    diagonal: 15,
-    color: 'white',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    displayType: 'capacitive',
-    code: '5148',
-  },
-  {
-    link: 'pos_1905_pro.php',
-    title: 'Сенсорный Моноблок 1905 PRO',
-    desc: 'Сенсорный монитор 1905 PRO белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/1905/logo.png',
-    price: 162540,
-    diagonal: 15,
-    color: 'white',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    displayType: 'capacitive',
-    code: '5149',
-  },
-  {
-    link: 'pos_r10.php',
-    title: 'Сенсорный Моноблок R10',
-    desc: 'Сенсорный монитор R10 белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/r10/avaa.png',
-    price: 130000,
-    diagonal: 15,
-    color: 'black',
-    ram: 2,
-    ssd: 32,
-    clientDisplay: true,
-    displayType: 'resistive',
-    code: '5158',
-  },
-  {
-    link: 'pos_r10_pro.php',
-    title: 'Сенсорный Моноблок R10 PRO',
-    desc: 'Сенсорный монитор R10 PRO белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
-    img: '/images/r10/pro.png',
-    price: 148450,
-    diagonal: 15,
-    color: 'black',
-    ram: 4,
-    ssd: 64,
-    clientDisplay: true,
-    displayType: 'resistive',
-    code: '5159',
-  },
-  {
-    link: 'pos_376.php',
-    title: 'Pos-система для магазина',
-    price: '93981',
-    img: '/images/monitor/8.jpg',
-    code: '1010',
-  },
-  {
-    link: 'pos_td_35.php',
-    title: 'Pos-система TD-35',
-    price: '140300',
-    img: '/images/monitor/20.jpg',
-    code: '1014',
-  },
-  {
-    link: 'pos_mk_600.php',
-    title: 'Микрокиоск Zebra MK500',
-    price: '197750',
-    img: '/images/23.jpg',
-    code: '1011',
-  },
-  {
-    link: 'display_black.php',
-    title: 'Дисплей покупателя, черный',
-    price: '25200',
-    img: '/images/25.jpg',
-    code: '1015',
-  },
-  {
-    link: 'display_white.php',
-    title: 'Дисплей покупателя, белый',
-    price: '25200',
-    img: '/images/26.jpg',
-    code: '1016',
-  },
-  {
-    link: 'schityvatel_magnit.php',
-    title: 'Считыватель магнитных карт',
-    price: '18900',
-    img: '/images/monitor/27.png',
-    code: '1017',
-  },
-  {
-    link: 'Sistemnyy-blok-AMD.php',
-    title: 'Системный блок AMD',
-    price: '155800',
-    img: '/images/block-sistemy/block-1/ava.png',
-    code: '',
-  },
-  {
-    link: 'Sistemnyy-blok-Core-i3.php',
-    title: 'Системный блок Core i3',
-    price: '156490',
-    img: '/images/block-sistemy/block-2/ava.png',
-    code: '',
-  },
-  {
-    link: 'Sistemnyy-blok-Core-i5.php',
-    title: 'Системный блок Core i5',
-    price: '176700',
-    img: '/images/block-sistemy/block-3/ava.png',
-    code: '',
-  },
-  {
-    link: 'Sistemnyy-blok-Core-i7.php',
-    title: 'Системный блок Core i7',
-    price: '236400',
-    img: '/images/block-sistemy/block-4/2.png',
-    code: '',
-  },
-  {
-    link: 'Sistemnyy-blok-Core-i7-gtx.php',
-    title: 'Системный блок Core i7 GTX',
-    price: '381900',
-    img: '/images/block-sistemy/block-5/ava.png',
-    code: '',
-  },
-  {
-    link: 'Monitor-SAMSUNG-LS22.php',
-    title: 'Монитор 21.5″ SAMSUNG LS22',
-    price: '59300',
-    img: '/images/perif/first/ava.png',
-    code: '',
-  },
-  {
-    link: 'Monitor-SAMSUNG-LS24.php',
-    title: 'Монитор 21.5″ SAMSUNG LS24',
-    price: '69200',
-    img: '/images/perif/second/ava.png',
-    code: '',
-  },
-  {
-    link: 'Klaviatura-Delux-DLK-6010UB.php',
-    title: 'Клавиатура, Delux, DLK-6010UB',
-    price: '2808',
-    img: '/images/perif/third/ava.png',
-    code: '',
-  },
-  {
-    link: 'Klaviatura-Delux-DLD-1505OGB.php',
-    title: 'Клавиатура, Delux, DLD-1505OGB',
-    price: '5940',
-    img: '/images/perif/fourth/ava.png',
-    code: '',
-  },
-  {
-    link: "Mysh'-Delux-DLM-391-OUB.php",
-    title: 'Мышь Delux, DLM-391 OUB',
-    price: '1776',
-    img: '/images/perif/fifth/ava.png',
-    code: '',
-  },
-  {
-    link: "Mysh'-Delux-DLM-516-OGB.php",
-    title: 'Мышь Delux, DLM-516 OGB',
-    price: '3216',
-    img: '/images/perif/six/ava.png',
-    code: '',
-  },
-  {
-    link: "Komplekt-Klaviatura-Mysh'-Delux-DLD-6075OUB.php",
-    title: 'Комплект Клавиатура + Мышь, Delux, DLD-6075OUB',
-    price: '4296',
-    img: '/images/perif/seven/ava.png',
-    code: '',
-  },
-  {
-    link: "Komplekt-Klaviatura-Mysh'-Delux-DLD-1505OGB.php",
-    title: 'Комплект Клавиатура + Мышь, Delux, DLD-1505OGB',
-    price: '5940',
-    img: '/images/perif/eight/ava.png',
-    code: '',
-  },
-  {
-    link: 'scanner_2306.php',
-    title: 'Стационарный сканер штрих кодов 2306',
-    price: '35280',
-    img: '/images/2306/1.jpg',
-    code: '4907',
-  },
-  {
-    link: 'scanner_70-2D.php',
-    title: 'Стационарный сканер штрих кодов 70-2D',
-    price: '44100',
-    img: '/images/70-2D/1.jpg',
-    code: '4908',
-  },
-  {
-    link: 'scanner_2310.php',
-    title: 'Стационарный сканер штрих кодов 2310',
-    price: '69300',
-    img: '/images/2310/11.jpg',
-    code: '4909',
-  },
-  {
-    link: 'till_410b.php',
-    title: 'Кассовый ящик 410В',
-    price: '16748',
-    img: '/images/till/1.jpg',
-    code: '6001',
-  },
-  {
-    link: 'till_405a.php',
-    title: 'Денежный ящик 405A',
-    price: '18960',
-    img: '/images/till/2.jpg',
-    code: '6002',
-  },
-  {
-    link: 'till_170.php',
-    title: 'Денежный ящик 170',
-    price: '29925',
-    img: '/images/till/with.jpg',
-    code: '5305',
-  },
-  {
-    link: 'scale_mk_a.php',
-    title: 'Весы настольные электронные MK_A',
-    desc: 'Весы предназначены для измерений массы различных грузов при торговых, учетных и технологических операциях. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Позволяют работать в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).',
-    price: '41000',
-    img: '/images/scale/3.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['serial', 'usb', 'none'],
-    integration: [],
-    series: 'mk',
-    code: '5002',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_th_11.php',
-    title: 'Весы товарные MK_TH11',
-    desc: 'Весы предназначены для измерений массы товаров при торговых операциях. Поддерживается возможность суммирования стоимости покупки и расчета сдачи. Встроенный аккумулятор обеспечивает автономную работу весов до 115 часов. Двухсторонняя индикация на складной стойке.',
-    price: '61800',
-    img: '/images/scale/7.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['none'],
-    integration: [],
-    series: 'th',
-    code: '5006',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_mk_th.php',
-    title: 'Весы торговые MK_TH21(RU)',
-    desc: 'Весы предназначены для измерений массы товаров при торговых операциях. Двухсторонняя светодиодная индикация. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Поддерживается возможности суммирования стоимости покупки и расчета сдачи. Встроенный аккумулятор обеспечивает автономную работу весов до 50 часов. Обмен информацией с внешними устройствами реализован по интерфейсам RS-232 и USB.',
-    price: '68000',
-    img: '/images/scale/8.jpg',
-    position: ['floor'],
-    weight: 32,
-    interface: ['serial', 'usb'],
-    integration: [],
-    series: 'th',
-    code: '5007',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tbs_a.php',
-    title: 'Весы товарные ТВ-S_A01/TB3',
-    desc: 'Весы состоят из модуля взвешивающего и терминала, которые соединены между собой кабелем. Грузоприемная платформа может быть размещена на полу или на столе. В комплект поставки входят два кронштейна, с помощью которых терминал можно прикрепить либо непосредственно к модулю ТВ-S, либо закрепить его на стене. Весы предназначены для маркировки и учета весовых, штучных и счетных товаров.',
-    price: '87000',
-    img: '/images/scale/60.jpg',
-    position: ['floor'],
-    weight: 200,
-    interface: ['none'],
-    integration: [],
-    series: 'tb',
-    code: '5014',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_mk_ab.php',
-    title: 'Весы влагозащищенные MK_AB11',
-    desc: 'Весы с улучшенной влагозащитой предназначены для измерений массы товаров при торговых, учетных и технологических операциях. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами.',
-    price: '76500',
-    img: '/images/scale/4.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['serial'],
-    integration: [],
-    series: 'mk',
-    code: '5003',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tbs_t3.php',
-    title: 'Весы торговые TB-S_T3 (платформа + терминал)',
-    desc: 'Напольные товарные весы с вертикальной стойкой. Поддерживаются возможности расчета стоимости штучных товаров, суммирования стоимости покупки и расчета сдачи. Память на 16 значений цены товара. Встроенный аккумулятор обеспечивает автономную работу весов до 115 часов.',
-    price: '78818',
-    img: '/images/scale/9.jpg',
-    position: ['floor'],
-    weight: 32,
-    interface: ['serial', 'usb'],
-    integration: [],
-    series: 'tb',
-    code: '5008',
-    category: 'scale_none',
-    notInRealPrice: true,
-  },
-  {
-    link: 'scale_mk_ra.php',
-    title: 'Весы электронные со стойкой MK_RA11',
-    desc: 'есы предназначены для измерений массы и количества различных грузов при торговых, учетных и технологических операциях. Возможна работа в счетном режиме. Обеспечена возможность подключения к весам сканера штрихкодов и дозатора.',
-    price: '130000',
-    img: '/images/scale/5.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['serial', 'usb'],
-    integration: [],
-    series: 'mk',
-    code: '5004',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tbs_aruew.php',
-    title: 'Весы товарные ТВ-S_A(RUEW)3',
-    desc: 'Напольные товарные весы с вертикальной стойкой. Жидкокристаллический индикатор с подсветкой. Встроенный аккумулятор обеспечивает автономную работу весов до 15 часов. Счетный режим.',
-    price: '124500',
-    img: '/images/scale/70.jpg',
-    position: ['floor', 'trade'],
-    weight: 200,
-    interface: ['serial', 'usb', 'lan'],
-    integration: [],
-    series: 'tb',
-    code: '5015',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tbs_a3.php',
-    title: 'Весы напольные ТВ-S_А3 (платформа+терминал)',
-    desc: 'Напольные товарные весы с вертикальной стойкой. Весы легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Обмен информацией с внешними устройствами реализован по интерфейсу RS-232.',
-    price: '99750',
-    img: '/images/scale/tb_s_a3.jpg',
-    position: ['floor', 'trade'],
-    weight: 200,
-    interface: ['serial', 'wifi', 'lan'],
-    integration: [],
-    series: 'tb',
-    code: '5027',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tbs_ra.php',
-    title: 'Весы товарные ТВ-S_RA с регистрацией товароучетных операций',
-    desc: 'Напольные товарные весы с вертикальной стойкой. Возможна работа в счетном режиме. Обеспечена возможность подключения к весам сканера штрихкодов и дозатора. Весы регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация). Легко интегрируются в системы учета, в том числе в режиме весового терминала сбора данных. ',
-    price: '137500',
-    img: '/images/scale/91.jpg',
-    position: ['floor', 'trade'],
-    weight: 200,
-    interface: ['serial', 'usb'],
-    integration: [],
-    series: 'tb',
-    code: '5017',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_mk_ab_ruew.php',
-    title: 'Весы электронные влагозащищенные MK_AB2(RUEW)',
-    desc: 'Весы с улучшенной влагозащитой предназначены для измерений массы товаров при торговых, учетных и технологических операциях. Терминал весов в корпусе из нержавеющей стали. Весы легко интегрируются с учетными системами, POS и смарт-терминалами.',
-    price: '103598',
-    img: '/images/scale/6.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['serial', 'usb', 'wifi', 'lan'],
-    integration: [],
-    series: 'mk',
-    code: '5005',
-    category: 'scale_none',
-    notInRealPrice: true,
-  },
-  {
-    link: 'scale_tb_m_aruew_rs.php',
-    title: 'Весы товарные ТВ-М_A RUEW с интерфейсами RS, USB, Ethernet, WiFi',
-    desc: 'Весы состоят из двух частей: взвешивающего модуля и терминала, которые соединены между собой 5-метровым кабелем. Грузоприемная платформа может быть размещена на полу или на столе. ',
-    price: '162500',
-    img: '/images/scale/80.jpg',
-    position: ['floor'],
-    weight: 200,
-    interface: ['serial', 'usb', 'lan'],
-    integration: [],
-    series: 'tb',
-    code: '5016',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tbs_ab.php',
-    title: 'Весы товарные ТВ-S_AB с влагозащищенным терминалом',
-    desc: 'Весы состоят из модуля взвешивающего и терминала, которые соединены между собой 5-метровым кабелем. Грузоприемная платформа может быть размещена на полу или на столе. Терминал может быть закреплен на стене.',
-    price: '160000',
-    img: '/images/scale/90.jpg',
-    position: ['table'],
-    weight: 200,
-    interface: ['serial', 'usb', 'wifi', 'lan'],
-    integration: [],
-    series: 'tb',
-    code: '5020',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_4d.php',
-    title: "Весы паллетные электронные 4D-PM_1A(RUEW)",
-    desc: 'Весы состоят из модуля взвешивающего и терминала. Моноблочная грузоприемная платформа выполнена из конструкционной стали. Терминал поддерживает счетный и дозаторный режимы работы. Режимы процентного взвешивания, контроля массы (компараторный) и взвешивания подвижных грузов.',
-    price: '301500',
-    img: '/images/scale/93.jpg',
-    position: ['pallet'],
-    weight: 1000,
-    interface: ['serial', 'usb', 'wifi', 'lan'],
-    integration: [],
-    series: '4d',
-    code: '5019',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_4d_u1.php',
-    title: 'Весы паллетные электронные 4D-U-1A(RUEW)',
-    desc: 'Весы для взвешивания груза, транспортируемого на поддонах. Весы состоят из модуля взвешивающего и терминала. П-образная грузоприемная платформа выполнена из конструкционной стали.',
-    price: '220000',
-    img: '/images/scale/4d-u1-1.jpg',
-    position: ['pallet'],
-    weight: 1000,
-    interface: ['serial', 'usb', 'wifi', 'lan'],
-    integration: [],
-    series: '4d',
-    code: '5022',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tb_m_a3.php',
-    title: 'Весы товарные TB-M_А3',
-    desc: 'Весы напольные  с вертикальной стойкой, легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).',
-    price: '164850',
-    img: '/images/scale/tb-m_a3-1.jpg',
-    position: ['floor', 'trade'],
-    weight: 500,
-    interface: ['serial'],
-    integration: [],
-    series: 'tb',
-    code: '5021',
-    category: 'scale_none',
-  },
-  {
-    link: 'scale_tm30.php',
-    title: 'Весы электронные TM30A',
-    desc: 'Электронные торговые весы со стойкой TM30A предназначены для взвешивания и расчёта стоимости товара по измеренному весу и указанной цене за килограмм. Весы отлично применяются в различных сферах обслуживания, розничной и оптовой торговле.',
-    price: '96900',
-    img: '/images/scale/1.jpg',
-    position: ['trade'],
-    weight: 30,
-    interface: ['usb', 'serial', 'lan'],
-    integration: [],
-    series: 'tm',
-    code: '5001',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_mk_rp_10.php',
-    title: 'Весы торговые с печатью этикеток МК_RP10',
-    desc: 'Весы предназначены для маркировки и учета весовых, штучных и счетных товаров. Память на 20 000 товаров. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (продажа, прием, отпуск, списание, инвентаризация). ',
-    price: '193500',
-    img: '/images/scale/10.jpg',
-    position: ['trade', 'table'],
-    weight: 32,
-    interface: ['serial'],
-    integration: [],
-    series: 'mk',
-    code: '5009',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_mk_r2p_10.php',
-    title: 'Весы электронные с печатью этикеток МК_R2P10-1',
-    desc: 'Весы с устройством подмотки конца ленты предназначены для маркировки и учета весовых, штучных и счетных товаров за прилавком. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов.',
-    price: '203000',
-    img: '/images/scale/20.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['usb', 'serial'],
-    integration: [],
-    series: 'mk',
-    code: '5010',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_rl_10.php',
-    title: 'Весы торговые с печатью этикеток МК_RL10-1',
-    desc: 'Весы предназначены для маркировки и учета весовых, штучных и счетных товаров. Память на 20000 товаров. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация).',
-    price: '258500',
-    img: '/images/scale/30.jpg',
-    position: ['table', 'trade'],
-    weight: 32,
-    interface: ['usb', 'serial'],
-    integration: [],
-    series: 'mk',
-    code: '5011',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_mk_r2l.php',
-    title: 'Весы торговые с печатью этикеток МК_R2L10-1',
-    desc: 'Весы предназначены для маркировки и учета весовых, штучных и счетных товаров за прилавком. Память на 20000 товаров. Печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация).',
-    price: '267500',
-    img: '/images/scale/40.jpg',
-    position: ['table', 'trade'],
-    weight: 32,
-    interface: ['usb', 'serial', 'lan'],
-    integration: [],
-    series: 'mk',
-    code: '5012',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_tbs_rl.php',
-    title: 'Весы торговые с печатью этикеток TB-S_RL1',
-    desc: 'Весы состоят из модуля взвешивающего и терминала, которые соединены между собой кабелем. Грузоприемная платформа может быть размещена на полу или на столе. В комплект поставки входят два кронштейна, с помощью которых терминал можно прикрепить либо непосредственно к модулю ТВ-S, либо закрепить его на стене.',
-    price: '252000',
-    img: '/images/scale/50.jpg',
-    position: ['floor', 'trade'],
-    weight: 200,
-    interface: ['usb', 'serial'],
-    integration: [],
-    series: 'tb',
-    code: '5013',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_tb_m.php',
-    title: 'Весы ТВ-M_RP с принтером этикеток',
-    desc: 'Напольные товарные весы с вертикальной стойкой. Жидкокристаллический индикатор с подсветкой. Встроенный аккумулятор обеспечивает автономную работу весов до 15 часов. Счетный режим.',
-    price: '264000',
-    img: '/images/scale/92.jpg',
-    position: ['floor'],
-    weight: 500,
-    interface: ['usb', 'serial', 'lan'],
-    integration: [],
-    series: 'tb',
-    code: '5018',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_RLS1100.php',
-    title: 'Весы Rongta RLS1100 с принтером этикеток',
-    desc: 'Весы Rongta RLS1100 успешно могут использоваться в магазинах, в супермаркетах и на фасовке, они не только могут взвешивать товар, но и производить полную калькуляцию покупки. Вакуумно-флуоресцентный дисплей покупателя установлен на высокой и устойчивой стойке, и хорошо виден над витринами.',
-    price: '151050',
-    img: '/images/rongta_rls/1rongta.jpg',
-    position: ['trade'],
-    weight: 32,
-    interface: ['serial', 'lan'],
-    integration: [],
-    series: '4d',
-    code: '4488',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_RLS1100C.php',
-    title: 'Весы Rongta RLS1100 C с принтером этикеток',
-    desc: 'Весы Rongta RLS1100 C успешно могут использоваться в магазинах, в супермаркетах и на фасовке, они не только могут взвешивать товар, но и производить полную калькуляцию покупки.',
-    price: '151050',
-    img: '/images/rongta_rlsc/rongta_2mfruits_wm.png',
-    position: ['trade'],
-    weight: 32,
-    interface: ['serial', 'lan'],
-    integration: [],
-    series: '4d',
-    code: '5089',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_mk_sl.php',
-    title: 'Весы с печатью этикеток MK_SL(12)',
-    desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания, а также при фасовке товаров',
-    price: '292500',
-    img: '/images/scale/mk-sl-1.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['usb', 'serial'],
-    integration: [],
-    series: 'mk',
-    code: '5023',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_mk_s2l.php',
-    title: 'Весы с печатью этикеток MK_S2L(12)',
-    desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания. Имеет два дисплея.',
-    price: '306000',
-    img: '/images/scale/mk-s2l-1.jpg',
-    position: ['table'],
-    weight: 32,
-    interface: ['usb', 'serial'],
-    integration: [],
-    series: 'mk',
-    code: '5024',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_aurora_d2.php',
-    title: 'Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)',
-    desc: '15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.',
-    price: '399000',
-    img: '/images/scale/d2ai-1.jpg',
-    position: ['trade', 'table'],
-    weight: 30,
-    interface: ['usb', 'serial', 'lan'],
-    integration: [],
-    series: 'aurora',
-    code: '5025',
-    category: 'scale_with',
-  },
-  {
-    link: 'scale_aurora_y3l.php',
-    title: 'Умные весы с сенсорным экраном AURORA Y3L-AI',
-    desc: 'новые весы самообслуживания с передовыми технологиями, cенсорный экран, высокой точностью определяет продукты, экономия времени и затрат на персонал',
-    price: '421800',
-    img: '/images/scale/y3l-1.jpg',
-    position: ['trade', 'table'],
-    weight: 30,
-    interface: ['usb', 'serial', 'lan'],
-    integration: [],
-    series: 'aurora',
-    code: '5026',
-    category: 'scale_with',
-  },
-  {
-    link: 'scanpal_eda_50.php',
-    title: 'ТСД терминал Honeywell ScanPal EDA50',
-    price: '231650',
-    img: '/images/terminal/1.png',
-    code: '7001',
-  },
-  {
-    link: 'dors_1015.php',
-    title: 'Счетчики банкнот DORS CT1015',
-    price: '30988',
-    img: '/images/schetchiki/11.jpg',
-    code: '8001',
-  },
-  {
-    link: 'dors_1040.php',
-    title: 'Счетчики банкнот жидкокристаллические DORS CT1040',
-    price: '53582',
-    img: '/images/schetchiki/2.png',
-    code: '8002',
-  },
-  {
-    link: 'dors_600.php',
-    title: 'Счетчики банкнот светодиодные DORS 600 М2',
-    price: '106907',
-    img: '/images/schetchiki/3.png',
-    code: '8003',
-  },
-  {
-    link: 'magner_35.php',
-    title: 'Счетчики банкнот светодиодные Magner 35S',
-    price: '246239',
-    img: '/images/schetchiki/6.jpg',
-    code: '8006',
-  },
-  {
-    link: 'magner_2003.php',
-    title: 'Счетчики банкнот жидкокристаллические Magner 35-2003',
-    price: '209536',
-    img: '/images/schetchiki/7.jpg',
-    code: '8007',
-  },
-  {
-    link: 'magner_75.php',
-    title: 'Счетчики банкнот жидкокристаллические Magner 75 D',
-    price: '301716',
-    img: '/images/schetchiki/8.png',
-    code: '8008',
-  },
-  {
-    link: 'dors_750.php',
-    title: 'Счетчики монохромные жидкокристаллические DORS 750',
-    price: '351107',
-    img: '/images/schetchiki/4.jpg',
-    code: '8004',
-  },
-  {
-    link: 'dors_800.php',
-    title: 'Счетчики банкнот цветные сенсорные DORS 800',
-    price: '432632',
-    img: '/images/schetchiki/5.jpg',
-    code: '8005',
-  },
-  {
-    link: 'magner_100.php',
-    title: 'Счетчики банкнот графические Magner 100',
-    price: '708158',
-    img: '/images/schetchiki/9.png',
-    code: '8009',
-  },
-  {
-    link: 'magner_150.php',
-    title: 'Счетчики банкнот графические Magner 150',
-    price: '767000',
-    img: '/images/schetchiki/10.jpg',
-    code: '8010',
-  },
-  {
-    link: 'magner_175.php',
-    title: 'Счетчики банкнот жидкокристаллические Magner 175',
-    price: '1235000',
-    img: '/images/schetchiki/20.png',
-    code: '8011',
-  },
-  {
-    link: 'dors_50.php',
-    title: 'Ультрафиолетовые детекторы банкнот DORS 50',
-    price: '5345',
-    img: '/images/detector/1.jpg',
-    code: '9001',
-  },
-  {
-    link: 'dors_60.php',
-    title: 'Ультрафиолетовые детекторы банкнот DORS 60',
-    price: '8315',
-    img: '/images/detector/2.jpg',
-    code: '9002',
-  },
-  {
-    link: 'dors_125.php',
-    title: 'Ультрафиолетовые детекторы банкнот DORS',
-    price: '8639',
-    img: '/images/detector/3.jpg',
-    code: '9003',
-  },
-  {
-    link: 'dors_1000.php',
-    title: 'Инфракрасные детекторы банкнот DORS 1000 M3',
-    price: '33854',
-    img: '/images/detector/4.jpg',
-    code: '9004',
-  },
-  {
-    link: 'dors_1100.php',
-    title: 'Инфракрасные детекторы банкнот DORS 1100',
-    price: '53454',
-    img: '/images/detector/5.jpg',
-    code: '9005',
-  },
-  {
-    link: 'dors_1170.php',
-    title: 'Инфракрасные детекторы банкнот DORS 1170D',
-    price: '86380',
-    img: '/images/detector/6.jpg',
-    code: '9006',
-  },
-  {
-    link: 'dors_1250.php',
-    title: 'Инфракрасные детекторы банкнот DORS 1250',
-    price: '100968',
-    img: '/images/detector/8.jpg',
-    code: '9008',
-  },
-  {
-    link: 'dors_230.php',
-    title: 'Автоматические детекторы банкнот DORS 230',
-    price: '117229',
-    img: '/images/detector/10.jpg',
-    code: '9010',
-  },
-  {
-    link: 'dors_1300.php',
-    title: 'Инфракрасные детекторы банкнот DORS 1300',
-    price: '148482',
-    img: '/images/detector/9.jpg',
-    code: '9009',
-  },
-  {
-    link: 'radio_frequency.php',
-    title: 'Радиочастотные антикражные ворота',
-    price: '82934',
-    img: '/images/eas/4.jpg',
-    code: '9030',
-  },
-  {
-    link: 'mini_square.php',
-    title: 'Радиочастотная бирка Mini square',
-    price: '31',
-    img: '/images/eas/7.jpg',
-    code: '9031',
-  },
-  {
-    link: 'radio_golf.php',
-    title: 'Радиочастотная бирка Golf',
-    price: '84',
-    img: '/images/eas/8.png',
-    code: '9032',
-  },
-  {
-    link: 'radio_bottle.php',
-    title: 'Радиочастотная бирка Bottle tag',
-    price: '185',
-    img: '/images/eas/14.jpg',
-    code: '9033',
-  },
-  {
-    link: 'puller_universal.php',
-    title: 'Съемник универсальный',
-    price: '10462',
-    img: '/images/eas/6.jpg',
-    code: '9035',
-  },
-  {
-    link: 'radio_label.php',
-    title: 'Самоклеющиеся радиочастотные защитные этикетки',
-    price: '6380',
-    img: '/images/eas/10.jpg',
-    code: '9036',
-  },
-  {
-    link: 'radio_deactivator.php',
-    title: 'Радиочастотный деактиватор',
-    price: '38277',
-    img: '/images/eas/10.jpg',
-    code: '9037',
-  },
-  {
-    link: 'acoustomagnetic.php',
-    title: 'Акустомагнитная противокражная система',
-    price: '165867',
-    img: '/images/eas/1.jpg',
-    code: '9038',
-  },
-  {
-    link: 'acoustomagnetic_tag.php',
-    title: 'Акустомагнитная бирка Карандаш',
-    price: '57',
-    img: '/images/eas/2.jpg',
-    code: '9039',
-  },
-  {
-    link: 'loop.php',
-    title: 'Антикражный тросик',
-    price: '5742',
-    img: '/images/eas/9.jpg',
-    code: '9034',
-  },
-  {
-    link: 'acoustomagnetic_bottle.php',
-    title: 'Акустомагнитная бирка Bottle tag',
-    price: '204',
-    img: '/images/eas/13.png',
-    code: '9040',
-  },
-  {
-    link: 'acoustomagnetic_label.php',
-    title: 'Акустомагнитная этикетка лист',
-    price: '1403',
-    img: '/images/eas/3.jpg',
-    code: '9041',
-  },
-  {
-    link: 'acoustomagnetic_deactivator.php',
-    title: 'Акустомагнитный деактиватор',
-    price: '63795',
-    img: '/images/eas/5.png',
-    code: '9042',
-  },
+    {
+        link: 'label_3120t.php',
+        title: 'Принтер этикеток 3120T',
+        desc: 'Легкий и удобный принтер этикеток со скоростью 127мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 76 мм. Принтер этикеток 3120T имеет функции: автоматической калибровки бумаги и функцию контроля температуры.',
+        img: '/images/label/1.jpg',
+        price: 45360,
+        color: 'black',
+        paperWidth: 76,
+        interfaces: ['usb'],
+        autoCut: true,
+        winding: true,
+        code: '4001',
+    },
+    {
+        link: 'label_2408d.php',
+        title: 'Принтер этикеток 2408DC белый',
+        desc: 'Высокопроизводительный принтер GS-2408D со скоростью 203мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 104 мм. Данный принетер является отличным решением для розничной торговли, маркировки полок, а также для сервисов доставки.',
+        img: '/images/2408D/1.png',
+        price: 45360,
+        color: 'white',
+        paperWidth: 104,
+        interfaces: ['usb', 'serial', 'wifi', 'bluetooth'],
+        autoCut: true,
+        winding: true,
+        code: '4940',
+    },
+    {
+        link: 'label_3120tub.php',
+        title: 'Принтер этикеток 3120TUB',
+        desc: 'Высокопроизводительный принтер 3120TUB со скоростью 127 мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 76 мм. Данный принетер является безупречным решением для организации работы торговых компаний разной специализации.',
+        img: '/images/3120TUB/1.jpg',
+        price: 33390,
+        color: 'gray',
+        paperWidth: 76,
+        interfaces: ['usb'],
+        autoCut: false,
+        winding: false,
+        code: '4939',
+    },
+    {
+        link: 'label_3120tl.php',
+        title: 'Принтер этикеток 3120TL',
+        desc: 'Высокопроизводительный принтер GP-3120TL со скоростью 127 мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 76 мм. Данный принетер является безупречным решением для организации работы торговых компаний разной специализации.',
+        img: '/images/3120TL/2.jpg',
+        price: 44100,
+        color: 'black',
+        paperWidth: 76,
+        interfaces: ['usb'],
+        autoCut: true,
+        winding: false,
+        code: '1821',
+    },
+    {
+        link: 'label_3120tuc.php',
+        title: 'Принтер этикеток 3120TUC',
+        desc: 'Высокопроизводительный принтер GP-3120TL со скоростью 127 мм/сек с разрешением 203 dpi имеет превосходные технические характеристики для печати этикеток шириной 80 мм. Данный принетер является безупречным решением для организации работы торговых компаний разной специализации.',
+        img: '/images/3120TUC/1.jpg',
+        price: 37080,
+        color: 'black',
+        paperWidth: 80,
+        interfaces: ['usb'],
+        autoCut: true,
+        winding: false,
+        code: '4938',
+    },
+    {
+        link: 'thermalprinter_5802.php',
+        title: 'Принтер чеков 5802',
+        desc: 'Принтер чеков 5802 с термопечатью обладает высоким уровнем обслуживания в любых сферах. Принтер чеков имеет компактные размеры корпуса и предназначен для печати на 58 мм термоленте.',
+        img: '/images/thermalprinter/1.jpg',
+        price: 15120,
+        paperWidth: 58,
+        printSpeed: 90,
+        thermSource: 100,
+        interfaces: ['USB'],
+        autoCut: false,
+        connections: ['autonomous'],
+        code: '3001',
+    },
+    {
+        link: 'thermalprinter_8256.php',
+        title: 'Принтер кассовых чеков 8256',
+        desc: 'Принтер кассовых чеков 8256 обладает не только замечательными техническими параметрами, но и высокоскоростной печатью 300мм/сек. Функциональные возможности принтера чеков существенно экономят время оператора и помогают бесперебойно обслуживать большой поток клиентов.',
+        img: '/images/thermalprinter/9.jpg',
+        price: 35280,
+        paperWidth: 80,
+        printSpeed: 300,
+        thermSource: 100,
+        interfaces: ['USB', 'LAN'],
+        autoCut: true,
+        connections: ['autonomous'],
+        code: '3002',
+    },
+    {
+        link: 'thermalprinter_5860.php',
+        title: 'Мобильный термопринтер 5860 (bluetooth)',
+        desc: 'Мобильный термопринтер 5860 (bluetooth) легко синхронизируется с устройствами(Android) на смартфоне, планшете, компьютере и печатает на стандартной термоленте шириной 58 мм. Принтер чеков 5860 совместим с любыми программными обеспечениями и отлично впишется в малый или средний бизнес.',
+        img: '/images/thermalprinter/10.png',
+        price: 27720,
+        paperWidth: 58,
+        printSpeed: 50,
+        thermSource: 80,
+        interfaces: ['USB'],
+        autoCut: false,
+        connections: ['autonomous', 'bluetooth'],
+        code: '3004',
+    },
+    {
+        link: 'thermalprinter_58B.php',
+        title: 'Принтер чеков Rongta 58 B',
+        desc: 'Принтер чеков Rongta 58B `обладает скоростью печати 90 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте.',
+        img: '/images/58Bwith wm/1.jpg',
+        price: 12096,
+        paperWidth: 58,
+        printSpeed: 90,
+        thermSource: 50,
+        interfaces: ['USB'],
+        autoCut: false,
+        connections: ['autonomous'],
+        code: '5382',
+    },
+    {
+        link: 'thermalprinter_58A.php',
+        title: 'Принтер чеков Rongta 58A',
+        desc: 'Принтер чеков Rongta 58A обладает скоростью печати 90 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте.',
+        img: '/images/58Awith wm/3.jpg',
+        price: 12600,
+        paperWidth: 58,
+        printSpeed: 90,
+        thermSource: 50,
+        interfaces: ['USB'],
+        autoCut: false,
+        connections: ['autonomous'],
+        code: '5383',
+    },
+    {
+        link: 'thermalprinter_58E.php',
+        title: 'Принтер чеков Rongta 58E',
+        desc: 'Принтер чеков Rongta 58 E обладает скоростью печати 90 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте. Термопринтер чеков успешно используется в крупных торговых сетях, гостиницах и ресторанах, интернет-магазинах с большим клиентским потоком.',
+        img: '/images/thermalprinter/1.jpg',
+        price: 14742,
+        paperWidth: 58,
+        printSpeed: 100,
+        thermSource: 100,
+        interfaces: ['USB'],
+        autoCut: false,
+        connections: ['autonomous'],
+        code: '5381',
+    },
+    {
+        link: 'thermalprinter_RP328.php',
+        title: 'Принтер чеков Rongta RP 328',
+        desc: 'Принтер чеков Rongta RP 328 обладает скоростью печати 250 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 80мм термоленте. Термопринтер чеков успешно используется в крупных торговых сетях, гостиницах и ресторанах, интернет-магазинах с большим клиентским потоком.',
+        img: '/images/RP328/1.jpg',
+        price: 35280,
+        paperWidth: 80,
+        printSpeed: 250,
+        thermSource: 100,
+        interfaces: ['USB', 'LAN', 'Serial'],
+        autoCut: true,
+        connections: ['autonomous'],
+        code: '5384',
+    },
+    {
+        link: 'thermalprinter_RP326.php',
+        title: 'Принтер чеков RP 326',
+        desc: 'Принтер чеков RP 326 обладает скоростью печати 250 мм/сек. Термопринтер имеет компактные размеры корпуса и предназначен для печати на 58мм термоленте. Термопринтер чеков успешно используется в крупных торговых сетях, гостиницах и ресторанах, интернет-магазинах с большим клиентским потоком.',
+        img: '/images/RP326/1.jpg',
+        price: 42210,
+        paperWidth: 58,
+        printSpeed: 250,
+        thermSource: 100,
+        interfaces: ['USB', 'LAN', 'Serial'],
+        autoCut: false,
+        connections: ['autonomous'],
+        code: '5387',
+    },
+    {
+        link: 'scanner_6900.php',
+        title: 'Сканер штрих кода 6900',
+        desc: 'Сканер штрих кода с подставкой обладает высоким уровнем обслуживания. Кнопка сканирования выдерживает не менее 100 нажатий в сек., поэтому может применяться в различных магазинах, супермаркетах, аптеках или же в любой торговли.',
+        img: '/images/scanner/11.jpg',
+        price: 11840,
+        scanType: ['bar-code'],
+        screenScan: false,
+        connections: ['wired'],
+        readType: 'laser',
+        scanMode: ['first', 'second'],
+        code: '2001',
+    },
+    {
+        link: 'scanner_t_5.php',
+        title: 'Сканер для считывания штрих кодов T5',
+        desc: 'Светодиодный сканер для считывания штрих кодов T5 может считывать любые штрих коды. Главным преимуществом сканера T5 является - считывание штрих-кодов прямо с экрана смартфона или монитора компьютера.',
+        img: '/images/scanner/3.jpg',
+        price: 15120,
+        scanType: ['bar-code'],
+        screenScan: false,
+        connections: ['wired'],
+        readType: 'led',
+        scanMode: ['first', 'third', 'fourth', 'fifth'],
+        code: '2002',
+    },
+    {
+        link: 'scanner_10t_2d.php',
+        title: 'Cканер QR и штрих-кодов 10T-2D',
+        desc: 'Cканер QR и штрих-кодов 10T- с 2D режимом считывания, сканирует любые штрих-коды: с экрана монитора, смартфона, а также считывает QR-коды. Применяется в розничной торговли, легкой промышленности, документообороте, а также в сфере банковских и коммунальных услуг.',
+        img: '/images/scanner/9.png',
+        price: 23940,
+        scanType: ['bar-code', 'qr-code'],
+        screenScan: true,
+        connections: ['wired'],
+        readType: 'image',
+        scanMode: ['first', 'second'],
+        code: '2005',
+    },
+    {
+        link: 'scanner_1880.php',
+        title: 'Беспроводной сканер штрих кода 1880',
+        desc: 'Беспроводной сканер штрих кода с подставкой обладает высокой производительностью. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
+        img: '/images/scanner/7.jpg',
+        price: 20160,
+        scanType: ['bar-code'],
+        screenScan: true,
+        connections: ['wired', 'wifi'],
+        readType: 'laser',
+        scanMode: ['first', 'second'],
+        code: '2004',
+    },
+    {
+        link: 'scanner_6100CG.php',
+        title: 'Беспроводной сканер штрих кода 6100 CG',
+        desc: 'Беспроводной сканер штрих кода обладает высокой производительностью. Имеет три вида сканирования: Штрих-код, QR-код, DATA Matrix. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
+        img: '/images/6100CG/ava1.jpg',
+        price: 20304,
+        scanType: ['bar-code', 'qr-code', 'dmx-code'],
+        screenScan: true,
+        connections: ['wired', 'wifi'],
+        readType: 'led',
+        scanMode: ['first', 'third', 'fourth', 'fifth'],
+        code: '5311',
+    },
+    {
+        link: 'scanner_6600G.php',
+        title: 'Беспроводной сканер штрих кода 6600 G',
+        desc: 'Беспроводной сканер штрих кода обладает высокой производительностью. Имеет три вида сканирования: Штрих-код, QR-код, DATA Matrix. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
+        img: '/images/6600G/ava1.jpg',
+        price: 21855,
+        scanType: ['bar-code', 'qr-code', 'dmx-code'],
+        screenScan: true,
+        connections: ['wired', 'wifi'],
+        readType: 'image',
+        scanMode: ['first', 'fourth'],
+        code: '5312',
+    },
+    {
+        link: 'scanner_6600B.php',
+        title: 'Беспроводной сканер штрих кода 6600 B (Bluetooth)',
+        desc: 'Беспроводной сканер штрих кода обладает высокой производительностью и подключается через bluetooth. Имеет три вида сканирования: Штрих-код, QR-код, DATA Matrix. Ударопрочный сканер имеет возможность работать на расстоянии. Может использоваться непрерывно в течение более 20 часов без зарядки. Главным преимуществом сканера является - автоматическое хранение на расстоянии.',
+        img: '/images/6600B/ava.jpg',
+        price: 23970,
+        scanType: ['bar-code', 'qr-code', 'dmx-code'],
+        screenScan: true,
+        connections: ['wired', 'wifi', 'bluetooth'],
+        readType: 'image',
+        scanMode: ['first', 'fourth'],
+        code: '5313',
+    },
+    {
+        link: 'stoika.php',
+        title: 'Стойка для сканера 6900',
+        desc: 'Стандартная стойка для сканера штрих-кода 6900 предназначена для непрерывного сканирования, то есть в режиме “Hands-Free”. Она надежно закрепляется у основания сканера.',
+        img: '/images/scanner/30.png',
+        price: 1260,
+        code: '2009',
+    },
+    {
+        link: 'stoika_t5.php',
+        title: 'Стойка для сканера Т5',
+        desc: 'Стандартная стойка для сканера штрих-кода Т5 предназначена для непрерывного сканирования. Она надежно закрепляется у основания сканера.',
+        img: '/images/rack/t5.jpg',
+        price: 1890,
+        code: '3941',
+    },
+    {
+        link: 'stoika_universal.php',
+        title: 'Стойка для сканера Универсальная',
+        desc: 'Стандартная стойка для сканера штрих-кода Универсальная предназначена для непрерывного сканирования. Она надежно закрепляется у основания сканера.',
+        img: '/images/rack/st1.jpg',
+        price: 2115,
+        code: '4843',
+    },
+    {
+        link: 'pos_3072.php',
+        title: 'Сенсорный монитор 3072, белый',
+        desc: 'Сенсорный моноблок 3072 имеет новый компактный дизайн. Сенсорный экран с высокой чувствительностью идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/p4.png',
+        price: 163800,
+        diagonal: 12.1,
+        color: 'white',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1001',
+    },
+    {
+        link: 'pos_3072_black.php',
+        title: 'Сенсорный монитор 3072, черный',
+        desc: 'Сенсорный моноблок 3072 имеет новый компактный дизайн. Сенсорный экран с высокой чувствительностью идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/3072.png',
+        price: 163800,
+        diagonal: 12.1,
+        color: 'black',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1002',
+    },
+    {
+        link: 'pos_t8_white.php',
+        title: 'Сенсорный моноблок Т8, белый',
+        desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 32 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
+        img: '/images/24.jpg',
+        price: 163800,
+        diagonal: 15.6,
+        color: 'white',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1003',
+    },
+    {
+        link: 'pos_t8.php',
+        title: 'Сенсорный моноблок T8, черный',
+        desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 32 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
+        img: '/images/21.png',
+        price: 163800,
+        diagonal: 15.6,
+        color: 'black',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1004',
+    },
+    {
+        link: 'pos_t8_white_printer.php',
+        title: 'Сенсорный моноблок T8 с принтером чеков, белый',
+        desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью и с принтером чеков 58мм является главным отличием и достоинством. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
+        img: '/images/t8_white_printer.jpg',
+        price: 182700,
+        diagonal: 15.6,
+        color: 'white',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1005',
+    },
+    {
+        link: 'pos_t8_printer.php',
+        title: 'Сенсорный моноблок T8 с принтером чеков, черный',
+        desc: 'Сенсорный моноблок для кассы 15.6-дюймовым диагональю экрана с высокой чувствительностью и с принтером чеков 58мм является главным отличием и достоинством. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
+        img: '/images/t8_black_printer.png',
+        price: 182700,
+        diagonal: 15.6,
+        color: 'black',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1006',
+    },
+    {
+        link: 'pos_3021_white.php',
+        title: 'Сенсорный Моноблок 3021, белый',
+        desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/3021_white/1.png',
+        price: 138600,
+        diagonal: 15,
+        color: 'white',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '4491',
+    },
+    {
+        link: 'pos_3021_black.php',
+        title: 'Сенсорный Моноблок 3021, черный',
+        desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/avatars/3021_black.jpg',
+        price: 138600,
+        diagonal: 15,
+        color: 'black',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        code: '4492',
+    },
+    {
+        link: 'pos_t8_white_64.php',
+        title: 'Сенсорный моноблок T8 Pro, белый',
+        desc: 'Сенсорный моноблок 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 64 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
+        img: '/images/avatars/T8.jpg',
+        price: 189000,
+        diagonal: 15.6,
+        color: 'white',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        code: '1007',
+    },
+    {
+        link: 'pos_t8_64.php',
+        title: 'Сенсорный моноблок T8 Pro, черный',
+        desc: 'Сенсорный монитор для кассы 15.6-дюймовым диагональю экрана с высокой чувствительностью является главным отличием и достоинством. Модель имеет жесткий диск типа SSD 64 ГБ. Дисплей покупателя имеет возможность показывать клиенту то, что он заказывает.',
+        img: '/images/avatars/T8_PRO.jpg',
+        price: 189000,
+        diagonal: 15.6,
+        color: 'black',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        code: '1008',
+    },
+    {
+        link: 'pos_3021_white_pro.php',
+        title: 'Сенсорный Моноблок 3021 PRO, белый',
+        desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/3021_white/pro_logo.jpg',
+        price: 154980,
+        diagonal: 15,
+        color: 'white',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        code: '4493',
+    },
+    {
+        link: 'pos_3021_pro_black.php',
+        title: 'Сенсорный Моноблок 3021 PRO, черный',
+        desc: '15-дюймовый сенсорный моноблок 3021 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/3021_black/pro_logo.jpg',
+        price: 154980,
+        diagonal: 15,
+        color: 'black',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        code: '4494',
+    },
+    {
+        link: 'pos_3068.php',
+        title: 'Сенсорный Моноблок 3068',
+        desc: 'Сенсорный моноблок 3068 отличается от других моноблоков с размером дисплея. Диогональ экрана состовляет 17 дюймов. Модель имеет жесткий диск типа SSD 32 ГБ. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/3068/3068.jpg',
+        price: 163800,
+        diagonal: 17,
+        color: 'black',
+        ram: 4,
+        ssd: 32,
+        clientDisplay: true,
+        code: '4495',
+    },
+    {
+        link: 'pos_t6.php',
+        title: 'Сенсорный моноблок T6',
+        desc: '15,6-дюймовая сенсорный моноблок Touch Touch LVDS с высокой чувствительностью и широким экраном отвечает всем современным требованиям. Модель имеет превосходный дизайн. А также имеет дисплей для клиента с двумя линиями.',
+        img: '/images/p2.png',
+        price: 205380,
+        diagonal: 15.6,
+        color: 'black',
+        ram: 4,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1009',
+    },
+    {
+        link: 'pos_3068_pro.php',
+        title: 'Сенсорный Моноблок 3068 PRO',
+        desc: 'Сенсорный моноблок 3068 PRO отличается от других моноблоков с размером дисплея. Диогональ экрана состовляет 17 дюймов. Модель имеет жесткий диск типа SSD 64 ГБ. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/3068/3068_pro.jpg',
+        price: 176400,
+        diagonal: 17,
+        color: 'black',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        code: '4496',
+    },
+    {
+        link: 'pos_t3.php',
+        title: 'Сенсорный моноблок T3',
+        desc: 'Сенсорный моноблок 15-дюймовым диагональю экрана с высокой чувствительностью и с модной экранной панелью на спине является главным отличием и достоинством. Экранная панель имеет возможность показывать клиенту, что он заказывает.',
+        img: '/images/p3.png',
+        price: 205000,
+        diagonal: 15,
+        color: 'black',
+        ram: 4,
+        ssd: 32,
+        clientDisplay: true,
+        code: '1013',
+    },
+    {
+        link: 'pos_1701.php',
+        title: 'Сенсорный Моноблок 1701',
+        desc: '15-дюймовый сенсорный моноблок 1701 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/1701/ava.png',
+        price: 130000,
+        diagonal: 15,
+        color: 'black',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        displayType: 'capacitive',
+        code: '5150',
+    },
+    {
+        link: 'pos_1701_pro.php',
+        title: 'Сенсорный Моноблок 1701 PRO',
+        desc: '15-дюймовый сенсорный моноблок 1701 PRO — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/1701/pro.png',
+        price: 156090,
+        diagonal: 15,
+        color: 'black',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        displayType: 'capacitive',
+        code: '5151',
+    },
+    {
+        link: 'pos_1702.php',
+        title: 'Сенсорный Моноблок 1702',
+        desc: '15-дюймовый сенсорный моноблок 1702 — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/1702/ava.png',
+        price: 130000,
+        diagonal: 15,
+        color: 'white',
+        ram: 2,
+        ssd: 34,
+        clientDisplay: true,
+        displayType: 'capacitive',
+        code: '5146',
+    },
+    {
+        link: 'pos_1702_pro.php',
+        title: 'Сенсорный Моноблок 1702 PRO',
+        desc: '15-дюймовый сенсорный моноблок 1702 PRO — это коммерческое решение для предприятий любого масштаба, работающих в сфере торговли, в ресторанном и гостиничном бизнесе. Служат долго и идеально справляются с задачами автоматизации обслуживания клиентов. Поддерживает все виды периферийных устройств. Имеет конструкцию без вентилятора, что обеспечивает низкий уровень шума.',
+        img: '/images/1702/pro.png',
+        price: 156090,
+        diagonal: 15,
+        color: 'white',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        displayType: 'capacitive',
+        code: '5147',
+    },
+    {
+        link: 'pos_1905.php',
+        title: 'Сенсорный Моноблок 1905',
+        desc: 'Сенсорный монитор 1905 белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/1905/ava.png',
+        price: 130000,
+        diagonal: 15,
+        color: 'white',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        displayType: 'capacitive',
+        code: '5148',
+    },
+    {
+        link: 'pos_1905_pro.php',
+        title: 'Сенсорный Моноблок 1905 PRO',
+        desc: 'Сенсорный монитор 1905 PRO белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/1905/logo.png',
+        price: 162540,
+        diagonal: 15,
+        color: 'white',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        displayType: 'capacitive',
+        code: '5149',
+    },
+    {
+        link: 'pos_r10.php',
+        title: 'Сенсорный Моноблок R10',
+        desc: 'Сенсорный монитор R10 белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/r10/avaa.png',
+        price: 130000,
+        diagonal: 15,
+        color: 'black',
+        ram: 2,
+        ssd: 32,
+        clientDisplay: true,
+        displayType: 'resistive',
+        code: '5158',
+    },
+    {
+        link: 'pos_r10_pro.php',
+        title: 'Сенсорный Моноблок R10 PRO',
+        desc: 'Сенсорный монитор R10 PRO белый имеет новый компактный дизайн, сенсорный монитор с высокой чувствительностью. Идеально подойдет для автоматизации любой торговли: супермаркетов, магазинов, кафе или же аптек.',
+        img: '/images/r10/pro.png',
+        price: 148450,
+        diagonal: 15,
+        color: 'black',
+        ram: 4,
+        ssd: 64,
+        clientDisplay: true,
+        displayType: 'resistive',
+        code: '5159',
+    },
+    {
+        link: 'pos_376.php',
+        title: 'Pos-система для магазина',
+        price: '93981',
+        img: '/images/monitor/8.jpg',
+        code: '1010',
+    },
+    {
+        link: 'pos_td_35.php',
+        title: 'Pos-система TD-35',
+        price: '140300',
+        img: '/images/monitor/20.jpg',
+        code: '1014',
+    },
+    {
+        link: 'pos_mk_600.php',
+        title: 'Микрокиоск Zebra MK500',
+        price: '197750',
+        img: '/images/23.jpg',
+        code: '1011',
+    },
+    {
+        link: 'display_black.php',
+        title: 'Дисплей покупателя, черный',
+        price: '25200',
+        img: '/images/25.jpg',
+        code: '1015',
+    },
+    {
+        link: 'display_white.php',
+        title: 'Дисплей покупателя, белый',
+        price: '25200',
+        img: '/images/26.jpg',
+        code: '1016',
+    },
+    {
+        link: 'schityvatel_magnit.php',
+        title: 'Считыватель магнитных карт',
+        price: '18900',
+        img: '/images/monitor/27.png',
+        code: '1017',
+    },
+    {
+        link: 'Sistemnyy-blok-AMD.php',
+        title: 'Системный блок AMD',
+        price: '155800',
+        img: '/images/block-sistemy/block-1/ava.png',
+        code: '',
+    },
+    {
+        link: 'Sistemnyy-blok-Core-i3.php',
+        title: 'Системный блок Core i3',
+        price: '156490',
+        img: '/images/block-sistemy/block-2/ava.png',
+        code: '',
+    },
+    {
+        link: 'Sistemnyy-blok-Core-i5.php',
+        title: 'Системный блок Core i5',
+        price: '176700',
+        img: '/images/block-sistemy/block-3/ava.png',
+        code: '',
+    },
+    {
+        link: 'Sistemnyy-blok-Core-i7.php',
+        title: 'Системный блок Core i7',
+        price: '236400',
+        img: '/images/block-sistemy/block-4/2.png',
+        code: '',
+    },
+    {
+        link: 'Sistemnyy-blok-Core-i7-gtx.php',
+        title: 'Системный блок Core i7 GTX',
+        price: '381900',
+        img: '/images/block-sistemy/block-5/ava.png',
+        code: '',
+    },
+    {
+        link: 'Monitor-SAMSUNG-LS22.php',
+        title: 'Монитор 21.5″ SAMSUNG LS22',
+        price: '59300',
+        img: '/images/perif/first/ava.png',
+        code: '',
+    },
+    {
+        link: 'Monitor-SAMSUNG-LS24.php',
+        title: 'Монитор 21.5″ SAMSUNG LS24',
+        price: '69200',
+        img: '/images/perif/second/ava.png',
+        code: '',
+    },
+    {
+        link: 'Klaviatura-Delux-DLK-6010UB.php',
+        title: 'Клавиатура, Delux, DLK-6010UB',
+        price: '2808',
+        img: '/images/perif/third/ava.png',
+        code: '',
+    },
+    {
+        link: 'Klaviatura-Delux-DLD-1505OGB.php',
+        title: 'Клавиатура, Delux, DLD-1505OGB',
+        price: '5940',
+        img: '/images/perif/fourth/ava.png',
+        code: '',
+    },
+    {
+        link: "Mysh'-Delux-DLM-391-OUB.php",
+        title: 'Мышь Delux, DLM-391 OUB',
+        price: '1776',
+        img: '/images/perif/fifth/ava.png',
+        code: '',
+    },
+    {
+        link: "Mysh'-Delux-DLM-516-OGB.php",
+        title: 'Мышь Delux, DLM-516 OGB',
+        price: '3216',
+        img: '/images/perif/six/ava.png',
+        code: '',
+    },
+    {
+        link: "Komplekt-Klaviatura-Mysh'-Delux-DLD-6075OUB.php",
+        title: 'Комплект Клавиатура + Мышь, Delux, DLD-6075OUB',
+        price: '4296',
+        img: '/images/perif/seven/ava.png',
+        code: '',
+    },
+    {
+        link: "Komplekt-Klaviatura-Mysh'-Delux-DLD-1505OGB.php",
+        title: 'Комплект Клавиатура + Мышь, Delux, DLD-1505OGB',
+        price: '5940',
+        img: '/images/perif/eight/ava.png',
+        code: '',
+    },
+    {
+        link: 'scanner_2306.php',
+        title: 'Стационарный сканер штрих кодов 2306',
+        price: '35280',
+        img: '/images/2306/1.jpg',
+        code: '4907',
+    },
+    {
+        link: 'scanner_70-2D.php',
+        title: 'Стационарный сканер штрих кодов 70-2D',
+        price: '44100',
+        img: '/images/70-2D/1.jpg',
+        code: '4908',
+    },
+    {
+        link: 'scanner_2310.php',
+        title: 'Стационарный сканер штрих кодов 2310',
+        price: '69300',
+        img: '/images/2310/11.jpg',
+        code: '4909',
+    },
+    {
+        link: 'till_410b.php',
+        title: 'Кассовый ящик 410В',
+        price: '16748',
+        img: '/images/till/1.jpg',
+        code: '6001',
+    },
+    {
+        link: 'till_405a.php',
+        title: 'Денежный ящик 405A',
+        price: '18960',
+        img: '/images/till/2.jpg',
+        code: '6002',
+    },
+    {
+        link: 'till_170.php',
+        title: 'Денежный ящик 170',
+        price: '29925',
+        img: '/images/till/with.jpg',
+        code: '5305',
+    },
+    {
+        link: 'scale_mk_a.php',
+        title: 'Весы настольные электронные MK_A',
+        desc: 'Весы предназначены для измерений массы различных грузов при торговых, учетных и технологических операциях. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Позволяют работать в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).',
+        price: '41000',
+        img: '/images/scale/3.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['serial', 'usb', 'none'],
+        integration: [],
+        series: 'mk',
+        code: '5002',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_th_11.php',
+        title: 'Весы товарные MK_TH11',
+        desc: 'Весы предназначены для измерений массы товаров при торговых операциях. Поддерживается возможность суммирования стоимости покупки и расчета сдачи. Встроенный аккумулятор обеспечивает автономную работу весов до 115 часов. Двухсторонняя индикация на складной стойке.',
+        price: '61800',
+        img: '/images/scale/7.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['none'],
+        integration: [],
+        series: 'th',
+        code: '5006',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_mk_th.php',
+        title: 'Весы торговые MK_TH21(RU)',
+        desc: 'Весы предназначены для измерений массы товаров при торговых операциях. Двухсторонняя светодиодная индикация. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Поддерживается возможности суммирования стоимости покупки и расчета сдачи. Встроенный аккумулятор обеспечивает автономную работу весов до 50 часов. Обмен информацией с внешними устройствами реализован по интерфейсам RS-232 и USB.',
+        price: '68000',
+        img: '/images/scale/8.jpg',
+        position: ['floor'],
+        weight: 32,
+        interface: ['serial', 'usb'],
+        integration: [],
+        series: 'th',
+        code: '5007',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tbs_a.php',
+        title: 'Весы товарные ТВ-S_A01/TB3',
+        desc: 'Весы состоят из модуля взвешивающего и терминала, которые соединены между собой кабелем. Грузоприемная платформа может быть размещена на полу или на столе. В комплект поставки входят два кронштейна, с помощью которых терминал можно прикрепить либо непосредственно к модулю ТВ-S, либо закрепить его на стене. Весы предназначены для маркировки и учета весовых, штучных и счетных товаров.',
+        price: '87000',
+        img: '/images/scale/60.jpg',
+        position: ['floor'],
+        weight: 200,
+        interface: ['none'],
+        integration: [],
+        series: 'tb',
+        code: '5014',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_mk_ab.php',
+        title: 'Весы влагозащищенные MK_AB11',
+        desc: 'Весы с улучшенной влагозащитой предназначены для измерений массы товаров при торговых, учетных и технологических операциях. Легко интегрируются с учетными системами, POS-системами и смарт-терминалами.',
+        price: '76500',
+        img: '/images/scale/4.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['serial'],
+        integration: [],
+        series: 'mk',
+        code: '5003',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tbs_t3.php',
+        title: 'Весы торговые TB-S_T3 (платформа + терминал)',
+        desc: 'Напольные товарные весы с вертикальной стойкой. Поддерживаются возможности расчета стоимости штучных товаров, суммирования стоимости покупки и расчета сдачи. Память на 16 значений цены товара. Встроенный аккумулятор обеспечивает автономную работу весов до 115 часов.',
+        price: '78818',
+        img: '/images/scale/9.jpg',
+        position: ['floor'],
+        weight: 32,
+        interface: ['serial', 'usb'],
+        integration: [],
+        series: 'tb',
+        code: '5008',
+        category: 'scale_none',
+        notInRealPrice: true,
+    },
+    {
+        link: 'scale_mk_ra.php',
+        title: 'Весы электронные со стойкой MK_RA11',
+        desc: 'есы предназначены для измерений массы и количества различных грузов при торговых, учетных и технологических операциях. Возможна работа в счетном режиме. Обеспечена возможность подключения к весам сканера штрихкодов и дозатора.',
+        price: '130000',
+        img: '/images/scale/5.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['serial', 'usb'],
+        integration: [],
+        series: 'mk',
+        code: '5004',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tbs_aruew.php',
+        title: 'Весы товарные ТВ-S_A(RUEW)3',
+        desc: 'Напольные товарные весы с вертикальной стойкой. Жидкокристаллический индикатор с подсветкой. Встроенный аккумулятор обеспечивает автономную работу весов до 15 часов. Счетный режим.',
+        price: '124500',
+        img: '/images/scale/70.jpg',
+        position: ['floor', 'trade'],
+        weight: 200,
+        interface: ['serial', 'usb', 'lan'],
+        integration: [],
+        series: 'tb',
+        code: '5015',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tbs_a3.php',
+        title: 'Весы напольные ТВ-S_А3 (платформа+терминал)',
+        desc: 'Напольные товарные весы с вертикальной стойкой. Весы легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Обмен информацией с внешними устройствами реализован по интерфейсу RS-232.',
+        price: '99750',
+        img: '/images/scale/tb_s_a3.jpg',
+        position: ['floor', 'trade'],
+        weight: 200,
+        interface: ['serial', 'wifi', 'lan'],
+        integration: [],
+        series: 'tb',
+        code: '5027',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tbs_ra.php',
+        title: 'Весы товарные ТВ-S_RA с регистрацией товароучетных операций',
+        desc: 'Напольные товарные весы с вертикальной стойкой. Возможна работа в счетном режиме. Обеспечена возможность подключения к весам сканера штрихкодов и дозатора. Весы регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация). Легко интегрируются в системы учета, в том числе в режиме весового терминала сбора данных. ',
+        price: '137500',
+        img: '/images/scale/91.jpg',
+        position: ['floor', 'trade'],
+        weight: 200,
+        interface: ['serial', 'usb'],
+        integration: [],
+        series: 'tb',
+        code: '5017',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_mk_ab_ruew.php',
+        title: 'Весы электронные влагозащищенные MK_AB2(RUEW)',
+        desc: 'Весы с улучшенной влагозащитой предназначены для измерений массы товаров при торговых, учетных и технологических операциях. Терминал весов в корпусе из нержавеющей стали. Весы легко интегрируются с учетными системами, POS и смарт-терминалами.',
+        price: '103598',
+        img: '/images/scale/6.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['serial', 'usb', 'wifi', 'lan'],
+        integration: [],
+        series: 'mk',
+        code: '5005',
+        category: 'scale_none',
+        notInRealPrice: true,
+    },
+    {
+        link: 'scale_tb_m_aruew_rs.php',
+        title: 'Весы товарные ТВ-М_A RUEW с интерфейсами RS, USB, Ethernet, WiFi',
+        desc: 'Весы состоят из двух частей: взвешивающего модуля и терминала, которые соединены между собой 5-метровым кабелем. Грузоприемная платформа может быть размещена на полу или на столе. ',
+        price: '162500',
+        img: '/images/scale/80.jpg',
+        position: ['floor'],
+        weight: 200,
+        interface: ['serial', 'usb', 'lan'],
+        integration: [],
+        series: 'tb',
+        code: '5016',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tbs_ab.php',
+        title: 'Весы товарные ТВ-S_AB с влагозащищенным терминалом',
+        desc: 'Весы состоят из модуля взвешивающего и терминала, которые соединены между собой 5-метровым кабелем. Грузоприемная платформа может быть размещена на полу или на столе. Терминал может быть закреплен на стене.',
+        price: '160000',
+        img: '/images/scale/90.jpg',
+        position: ['table'],
+        weight: 200,
+        interface: ['serial', 'usb', 'wifi', 'lan'],
+        integration: [],
+        series: 'tb',
+        code: '5020',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_4d.php',
+        title: "Весы паллетные электронные 4D-PM_1A(RUEW)",
+        desc: 'Весы состоят из модуля взвешивающего и терминала. Моноблочная грузоприемная платформа выполнена из конструкционной стали. Терминал поддерживает счетный и дозаторный режимы работы. Режимы процентного взвешивания, контроля массы (компараторный) и взвешивания подвижных грузов.',
+        price: '301500',
+        img: '/images/scale/93.jpg',
+        position: ['pallet'],
+        weight: 1000,
+        interface: ['serial', 'usb', 'wifi', 'lan'],
+        integration: [],
+        series: '4d',
+        code: '5019',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_4d_u1.php',
+        title: 'Весы паллетные электронные 4D-U-1A(RUEW)',
+        desc: 'Весы для взвешивания груза, транспортируемого на поддонах. Весы состоят из модуля взвешивающего и терминала. П-образная грузоприемная платформа выполнена из конструкционной стали.',
+        price: '220000',
+        img: '/images/scale/4d-u1-1.jpg',
+        position: ['pallet'],
+        weight: 1000,
+        interface: ['serial', 'usb', 'wifi', 'lan'],
+        integration: [],
+        series: '4d',
+        code: '5022',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tb_m_a3.php',
+        title: 'Весы товарные TB-M_А3',
+        desc: 'Весы напольные  с вертикальной стойкой, легко интегрируются с учетными системами, POS-системами и смарт-терминалами. Возможна работа в счетном и дозаторном режиме, режимах процентного взвешивания и контроля массы (компараторный режим).',
+        price: '164850',
+        img: '/images/scale/tb-m_a3-1.jpg',
+        position: ['floor', 'trade'],
+        weight: 500,
+        interface: ['serial'],
+        integration: [],
+        series: 'tb',
+        code: '5021',
+        category: 'scale_none',
+    },
+    {
+        link: 'scale_tm30.php',
+        title: 'Весы электронные TM30A',
+        desc: 'Электронные торговые весы со стойкой TM30A предназначены для взвешивания и расчёта стоимости товара по измеренному весу и указанной цене за килограмм. Весы отлично применяются в различных сферах обслуживания, розничной и оптовой торговле.',
+        price: '96900',
+        img: '/images/scale/1.jpg',
+        position: ['trade'],
+        weight: 30,
+        interface: ['usb', 'serial', 'lan'],
+        integration: [],
+        series: 'tm',
+        code: '5001',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_mk_rp_10.php',
+        title: 'Весы торговые с печатью этикеток МК_RP10',
+        desc: 'Весы предназначены для маркировки и учета весовых, штучных и счетных товаров. Память на 20 000 товаров. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (продажа, прием, отпуск, списание, инвентаризация). ',
+        price: '193500',
+        img: '/images/scale/10.jpg',
+        position: ['trade', 'table'],
+        weight: 32,
+        interface: ['serial'],
+        integration: [],
+        series: 'mk',
+        code: '5009',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_mk_r2p_10.php',
+        title: 'Весы электронные с печатью этикеток МК_R2P10-1',
+        desc: 'Весы с устройством подмотки конца ленты предназначены для маркировки и учета весовых, штучных и счетных товаров за прилавком. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов.',
+        price: '203000',
+        img: '/images/scale/20.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['usb', 'serial'],
+        integration: [],
+        series: 'mk',
+        code: '5010',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_rl_10.php',
+        title: 'Весы торговые с печатью этикеток МК_RL10-1',
+        desc: 'Весы предназначены для маркировки и учета весовых, штучных и счетных товаров. Память на 20000 товаров. Весы печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация).',
+        price: '258500',
+        img: '/images/scale/30.jpg',
+        position: ['table', 'trade'],
+        weight: 32,
+        interface: ['usb', 'serial'],
+        integration: [],
+        series: 'mk',
+        code: '5011',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_mk_r2l.php',
+        title: 'Весы торговые с печатью этикеток МК_R2L10-1',
+        desc: 'Весы предназначены для маркировки и учета весовых, штучных и счетных товаров за прилавком. Память на 20000 товаров. Печатают как простые этикетки с автоматически настраиваемым форматом, так и этикетки любой сложности. Весы поддерживают печать 8 форматов штрихкодов, регистрируют товароучетные операции (прием, отпуск, списание, инвентаризация).',
+        price: '267500',
+        img: '/images/scale/40.jpg',
+        position: ['table', 'trade'],
+        weight: 32,
+        interface: ['usb', 'serial', 'lan'],
+        integration: [],
+        series: 'mk',
+        code: '5012',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_tbs_rl.php',
+        title: 'Весы торговые с печатью этикеток TB-S_RL1',
+        desc: 'Весы состоят из модуля взвешивающего и терминала, которые соединены между собой кабелем. Грузоприемная платформа может быть размещена на полу или на столе. В комплект поставки входят два кронштейна, с помощью которых терминал можно прикрепить либо непосредственно к модулю ТВ-S, либо закрепить его на стене.',
+        price: '252000',
+        img: '/images/scale/50.jpg',
+        position: ['floor', 'trade'],
+        weight: 200,
+        interface: ['usb', 'serial'],
+        integration: [],
+        series: 'tb',
+        code: '5013',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_tb_m.php',
+        title: 'Весы ТВ-M_RP с принтером этикеток',
+        desc: 'Напольные товарные весы с вертикальной стойкой. Жидкокристаллический индикатор с подсветкой. Встроенный аккумулятор обеспечивает автономную работу весов до 15 часов. Счетный режим.',
+        price: '264000',
+        img: '/images/scale/92.jpg',
+        position: ['floor'],
+        weight: 500,
+        interface: ['usb', 'serial', 'lan'],
+        integration: [],
+        series: 'tb',
+        code: '5018',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_RLS1100.php',
+        title: 'Весы Rongta RLS1100 с принтером этикеток',
+        desc: 'Весы Rongta RLS1100 успешно могут использоваться в магазинах, в супермаркетах и на фасовке, они не только могут взвешивать товар, но и производить полную калькуляцию покупки. Вакуумно-флуоресцентный дисплей покупателя установлен на высокой и устойчивой стойке, и хорошо виден над витринами.',
+        price: '151050',
+        img: '/images/rongta_rls/1rongta.jpg',
+        position: ['trade'],
+        weight: 32,
+        interface: ['serial', 'lan'],
+        integration: [],
+        series: '4d',
+        code: '4488',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_RLS1100C.php',
+        title: 'Весы Rongta RLS1100 C с принтером этикеток',
+        desc: 'Весы Rongta RLS1100 C успешно могут использоваться в магазинах, в супермаркетах и на фасовке, они не только могут взвешивать товар, но и производить полную калькуляцию покупки.',
+        price: '151050',
+        img: '/images/rongta_rlsc/rongta_2mfruits_wm.png',
+        position: ['trade'],
+        weight: 32,
+        interface: ['serial', 'lan'],
+        integration: [],
+        series: '4d',
+        code: '5089',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_mk_sl.php',
+        title: 'Весы с печатью этикеток MK_SL(12)',
+        desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания, а также при фасовке товаров',
+        price: '292500',
+        img: '/images/scale/mk-sl-1.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['usb', 'serial'],
+        integration: [],
+        series: 'mk',
+        code: '5023',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_mk_s2l.php',
+        title: 'Весы с печатью этикеток MK_S2L(12)',
+        desc: 'Весы предназначены для маркировки весовых товаров в магазинах. Весы могут использоваться как продавцами, так и покупателями в режиме самообслуживания. Имеет два дисплея.',
+        price: '306000',
+        img: '/images/scale/mk-s2l-1.jpg',
+        position: ['table'],
+        weight: 32,
+        interface: ['usb', 'serial'],
+        integration: [],
+        series: 'mk',
+        code: '5024',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_aurora_d2.php',
+        title: 'Умные весы с сенсорным экраном Aurora D2-AI (Android, Windows)',
+        desc: '15,6-дюймовый сенсорный экран: дисплей высокой четкости, мультитач, можно работать мокрыми руками или в перчатках. Водонепроницаемая панель управления. Распознавание AI: быстро идентифицировать товары и значительно повысить эффективность расчетов.',
+        price: '399000',
+        img: '/images/scale/d2ai-1.jpg',
+        position: ['trade', 'table'],
+        weight: 30,
+        interface: ['usb', 'serial', 'lan'],
+        integration: [],
+        series: 'aurora',
+        code: '5025',
+        category: 'scale_with',
+    },
+    {
+        link: 'scale_aurora_y3l.php',
+        title: 'Умные весы с сенсорным экраном AURORA Y3L-AI',
+        desc: 'новые весы самообслуживания с передовыми технологиями, cенсорный экран, высокой точностью определяет продукты, экономия времени и затрат на персонал',
+        price: '421800',
+        img: '/images/scale/y3l-1.jpg',
+        position: ['trade', 'table'],
+        weight: 30,
+        interface: ['usb', 'serial', 'lan'],
+        integration: [],
+        series: 'aurora',
+        code: '5026',
+        category: 'scale_with',
+    },
+    {
+        link: 'scanpal_eda_50.php',
+        title: 'ТСД терминал Honeywell ScanPal EDA50',
+        price: '231650',
+        img: '/images/terminal/1.png',
+        code: '7001',
+    },
+    {
+        link: 'dors_1015.php',
+        title: 'Счетчики банкнот DORS CT1015',
+        price: '30988',
+        img: '/images/schetchiki/11.jpg',
+        code: '8001',
+    },
+    {
+        link: 'dors_1040.php',
+        title: 'Счетчики банкнот жидкокристаллические DORS CT1040',
+        price: '53582',
+        img: '/images/schetchiki/2.png',
+        code: '8002',
+    },
+    {
+        link: 'dors_600.php',
+        title: 'Счетчики банкнот светодиодные DORS 600 М2',
+        price: '106907',
+        img: '/images/schetchiki/3.png',
+        code: '8003',
+    },
+    {
+        link: 'magner_35.php',
+        title: 'Счетчики банкнот светодиодные Magner 35S',
+        price: '246239',
+        img: '/images/schetchiki/6.jpg',
+        code: '8006',
+    },
+    {
+        link: 'magner_2003.php',
+        title: 'Счетчики банкнот жидкокристаллические Magner 35-2003',
+        price: '209536',
+        img: '/images/schetchiki/7.jpg',
+        code: '8007',
+    },
+    {
+        link: 'magner_75.php',
+        title: 'Счетчики банкнот жидкокристаллические Magner 75 D',
+        price: '301716',
+        img: '/images/schetchiki/8.png',
+        code: '8008',
+    },
+    {
+        link: 'dors_750.php',
+        title: 'Счетчики монохромные жидкокристаллические DORS 750',
+        price: '351107',
+        img: '/images/schetchiki/4.jpg',
+        code: '8004',
+    },
+    {
+        link: 'dors_800.php',
+        title: 'Счетчики банкнот цветные сенсорные DORS 800',
+        price: '432632',
+        img: '/images/schetchiki/5.jpg',
+        code: '8005',
+    },
+    {
+        link: 'magner_100.php',
+        title: 'Счетчики банкнот графические Magner 100',
+        price: '708158',
+        img: '/images/schetchiki/9.png',
+        code: '8009',
+    },
+    {
+        link: 'magner_150.php',
+        title: 'Счетчики банкнот графические Magner 150',
+        price: '767000',
+        img: '/images/schetchiki/10.jpg',
+        code: '8010',
+    },
+    {
+        link: 'magner_175.php',
+        title: 'Счетчики банкнот жидкокристаллические Magner 175',
+        price: '1235000',
+        img: '/images/schetchiki/20.png',
+        code: '8011',
+    },
+    {
+        link: 'dors_50.php',
+        title: 'Ультрафиолетовые детекторы банкнот DORS 50',
+        price: '5345',
+        img: '/images/detector/1.jpg',
+        code: '9001',
+    },
+    {
+        link: 'dors_60.php',
+        title: 'Ультрафиолетовые детекторы банкнот DORS 60',
+        price: '8315',
+        img: '/images/detector/2.jpg',
+        code: '9002',
+    },
+    {
+        link: 'dors_125.php',
+        title: 'Ультрафиолетовые детекторы банкнот DORS',
+        price: '8639',
+        img: '/images/detector/3.jpg',
+        code: '9003',
+    },
+    {
+        link: 'dors_1000.php',
+        title: 'Инфракрасные детекторы банкнот DORS 1000 M3',
+        price: '33854',
+        img: '/images/detector/4.jpg',
+        code: '9004',
+    },
+    {
+        link: 'dors_1100.php',
+        title: 'Инфракрасные детекторы банкнот DORS 1100',
+        price: '53454',
+        img: '/images/detector/5.jpg',
+        code: '9005',
+    },
+    {
+        link: 'dors_1170.php',
+        title: 'Инфракрасные детекторы банкнот DORS 1170D',
+        price: '86380',
+        img: '/images/detector/6.jpg',
+        code: '9006',
+    },
+    {
+        link: 'dors_1250.php',
+        title: 'Инфракрасные детекторы банкнот DORS 1250',
+        price: '100968',
+        img: '/images/detector/8.jpg',
+        code: '9008',
+    },
+    {
+        link: 'dors_230.php',
+        title: 'Автоматические детекторы банкнот DORS 230',
+        price: '117229',
+        img: '/images/detector/10.jpg',
+        code: '9010',
+    },
+    {
+        link: 'dors_1300.php',
+        title: 'Инфракрасные детекторы банкнот DORS 1300',
+        price: '148482',
+        img: '/images/detector/9.jpg',
+        code: '9009',
+    },
+    {
+        link: 'radio_frequency.php',
+        title: 'Радиочастотные антикражные ворота',
+        price: '82934',
+        img: '/images/eas/4.jpg',
+        code: '9030',
+    },
+    {
+        link: 'mini_square.php',
+        title: 'Радиочастотная бирка Mini square',
+        price: '31',
+        img: '/images/eas/7.jpg',
+        code: '9031',
+    },
+    {
+        link: 'radio_golf.php',
+        title: 'Радиочастотная бирка Golf',
+        price: '84',
+        img: '/images/eas/8.png',
+        code: '9032',
+    },
+    {
+        link: 'radio_bottle.php',
+        title: 'Радиочастотная бирка Bottle tag',
+        price: '185',
+        img: '/images/eas/14.jpg',
+        code: '9033',
+    },
+    {
+        link: 'puller_universal.php',
+        title: 'Съемник универсальный',
+        price: '10462',
+        img: '/images/eas/6.jpg',
+        code: '9035',
+    },
+    {
+        link: 'radio_label.php',
+        title: 'Самоклеющиеся радиочастотные защитные этикетки',
+        price: '6380',
+        img: '/images/eas/10.jpg',
+        code: '9036',
+    },
+    {
+        link: 'radio_deactivator.php',
+        title: 'Радиочастотный деактиватор',
+        price: '38277',
+        img: '/images/eas/10.jpg',
+        code: '9037',
+    },
+    {
+        link: 'acoustomagnetic.php',
+        title: 'Акустомагнитная противокражная система',
+        price: '165867',
+        img: '/images/eas/1.jpg',
+        code: '9038',
+    },
+    {
+        link: 'acoustomagnetic_tag.php',
+        title: 'Акустомагнитная бирка Карандаш',
+        price: '57',
+        img: '/images/eas/2.jpg',
+        code: '9039',
+    },
+    {
+        link: 'loop.php',
+        title: 'Антикражный тросик',
+        price: '5742',
+        img: '/images/eas/9.jpg',
+        code: '9034',
+    },
+    {
+        link: 'acoustomagnetic_bottle.php',
+        title: 'Акустомагнитная бирка Bottle tag',
+        price: '204',
+        img: '/images/eas/13.png',
+        code: '9040',
+    },
+    {
+        link: 'acoustomagnetic_label.php',
+        title: 'Акустомагнитная этикетка лист',
+        price: '1403',
+        img: '/images/eas/3.jpg',
+        code: '9041',
+    },
+    {
+        link: 'acoustomagnetic_deactivator.php',
+        title: 'Акустомагнитный деактиватор',
+        price: '63795',
+        img: '/images/eas/5.png',
+        code: '9042',
+    },
 ];
 
 if (document.querySelector('.product-items') != null) {
@@ -4047,10 +3975,10 @@ if (document.querySelector('.product-items') != null) {
   for (let index = 0; index < mainLength.length; index++) {
     for (let j = 0; j < data5.length; j++) {
       let mainLengthLink = mainLength[index].children[0].href
-        .split('/')
-        .pop()
-        .split('#')[0]
-        .split('?')[0];
+          .split('/')
+          .pop()
+          .split('#')[0]
+          .split('?')[0];
 
       if (mainLengthLink == data5[j].link) {
         var formatter = function (priceSum) {
@@ -4085,52 +4013,6 @@ if (document.querySelector('.product-items') != null) {
   }
 }
 
-function dynamicallyLoadScript() {
-  var script = document.createElement('script');
-  script.innerHTML = `
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(83745763, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true,
-        ecommerce:"dataLayer"
-   });
-    `;
-  var noScript = document.createElement('noscript');
-
-  var diV = document.createElement('div');
-  diV.innerHTML = `
-		<img src="https://mc.yandex.ru/watch/83745763" style="position:absolute; left:-9999px;" alt="" />
-    `;
-  noScript.appendChild(diV);
-
-  document.querySelector('body').appendChild(script);
-
-  document.querySelector('body').appendChild(noScript);
-
-  var scriptSecond = document.createElement('script');
-  scriptSecond.async = true;
-  scriptSecond.src = 'https://www.googletagmanager.com/gtag/js?id=G-20ECD7YT35';
-
-  var scriptThird = document.createElement('script');
-  scriptThird.innerHTML = ` 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'G-20ECD7YT35');
-    `;
-
-  document.querySelector('body').appendChild(scriptSecond);
-  document.querySelector('body').appendChild(scriptThird);
-}
-
-dynamicallyLoadScript();
-
 /* Закомител, вопросы @ackapga
 if (document.querySelectorAll('.col-md-8, .single-right-left, .simpleCart_shelfItem') != null) {
   const path = document.querySelectorAll('.col-md-8, .single-right-left, .simpleCart_shelfItem');
@@ -4157,6 +4039,68 @@ if (document.querySelectorAll('.col-md-8, .single-right-left, .simpleCart_shelfI
 }
 */
 
+/* ======================================================================== */
+/* SMART-SEARCH */
+
+const searchScript = document.createElement('script');
+searchScript.type = 'module';
+searchScript.src = '/js/smart-search.js';
+document.querySelector('body').appendChild(searchScript);
+
+/* ======================================================================== */
+/* FOUR SCRIPTS ADD */
+
+function dynamicallyLoadScript() {
+    let script = document.createElement('script');
+    script.innerHTML = `
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(83745763, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            ecommerce:"dataLayer"
+       });
+        `;
+
+    let noScript = document.createElement('noscript');
+    let noScriptDiv = document.createElement('div');
+    noScriptDiv.innerHTML = `
+            <img src="https://mc.yandex.ru/watch/83745763" style="position:absolute; left:-9999px;" alt="" />
+        `;
+    noScript.appendChild(noScriptDiv);
+
+    document.querySelector('body').appendChild(script);
+    document.querySelector('body').appendChild(noScript);
+
+    let scriptSecond = document.createElement('script');
+    scriptSecond.async = true;
+    /*
+    scriptSecond.src = 'https://www.googletagmanager.com/gtag/js?id=G-E0MLEWZE9L';
+    */
+    scriptSecond.src = 'https://www.googletagmanager.com/gtag/js?id=G-20ECD7YT35';
+
+
+    let scriptThird = document.createElement('script');
+    scriptThird.innerHTML = ` 
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+        
+            gtag('config', 'G-20ECD7YT35');
+        `;
+
+    document.querySelector('body').appendChild(scriptSecond);
+    document.querySelector('body').appendChild(scriptThird);
+}
+
+dynamicallyLoadScript();
+
+/* ======================================================================== */
+
 $(function () {
   function rescaleCaptcha() {
     var width = $('.g-recaptcha').parent().width();
@@ -4179,8 +4123,11 @@ $(function () {
   });
 });
 
-/* _____________________________Copyright year change___________________________________ */
+/* ======================================================================== */
+/* COPYRIGHT YEAR CHANGE FOOTER */
 
 let copyrightText = document.querySelector('.copy-right');
 let currentYear = new Date().getFullYear();
 copyrightText.innerHTML = `© 2010-${currentYear} SoftGroup`;
+
+/* ======================================================================== */
