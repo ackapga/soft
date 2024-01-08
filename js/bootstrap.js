@@ -2434,7 +2434,6 @@ window.mobileCheck = function () {
   return check;
 };
 
-/* Закомител, вопросы @ackapga
 if (mobileCheck()) {
   document.querySelector('.top_nav_right').style.height = `${
     document.querySelector('.navbar-header').offsetHeight
@@ -2444,7 +2443,6 @@ if (mobileCheck()) {
     document.querySelector('.container-fluid').offsetHeight
   }px`;
 }
-*/
 
 /* Закомител, вопросы @ackapga
  document.querySelector('.w3-address').children[2].children[1].innerHTML = `<p style="margin:0">Адрес</p><p>

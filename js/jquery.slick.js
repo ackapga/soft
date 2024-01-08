@@ -3001,6 +3001,8 @@
 
 }));
 
+/*------------------------------------------------------------*/
+
 /* Use script => about.html => .Blag | @ackapga - по вопросам */
 let blagItems = ".blag_items";
 let $blagItems = $(blagItems);
@@ -3028,21 +3030,6 @@ if ($blagItems.length > 0) {
                 }
             },
         ],
-    });
-}
-/* Use script => about.html => .Blag | END */
-
-/* Use script => about.html => .Region | @ackapga - по вопросам */
-let regionSlider = ".region_slider";
-let $regionSlider = $(regionSlider);
-if ($regionSlider.length > 0) {
-    $('.region_slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 2000,
-        slidesToShow: 1,
-        autoplay: true,
-        adaptiveHeight: true,
     });
 }
 /* Use script => about.html => .Blag | END */

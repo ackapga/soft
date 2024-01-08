@@ -1,6 +1,4 @@
-/* VelocityJS.org (1.0.0) Julian Shapiro | VelocityJS.org (1.0.1) jQuery Shim */
-/* MIT @license: en.wikipedia.org/wiki/MIT_License */
-
+/* VelocityJS.org (1.0.0) Julian Shapiro */
 !function (e) {
     function t(e) {
         var t = e.length, r = $.type(e);
@@ -957,10 +955,7 @@
     }(window.jQuery || window.Zepto || window, window, document)
 });
 
-/**********************Velocity UI Pack**********************/
 /* VelocityJS.org (5.0.0) Julian Shapiro */
-/* MIT @license: en.wikipedia.org/wiki/MIT_License */
-
 ;(function (factory) {
     /* CommonJS module. */
     if (typeof require === "function" && typeof exports === "object") {
@@ -1817,30 +1812,17 @@
     }((window.jQuery || window.Zepto || window), window, document);
 }));
 
+/*------------------------------------------------------------------*/
+
 /* USE script => about.html => .Advantages | @ackapga - по вопросам */
 $(document).ready(function () {
-    /* Advantages */
+    /* Advantages - чтобы по дефолту был активен нужный блок */
     $('.four').addClass('advantages_active');
     $('.advantages_title').velocity({color: '#ff9601'}, {queue: false});
     $('.data-color').velocity({color: '#ff9601'}, {queue: false});
 
-    function hex_initial_animation() {
-        $(".hex-wrap").velocity("callout.pulse", {stagger: 150});
-    }
-
-    setInterval(() => {
-        hex_initial_animation();
-    }, 5000);
-
-    let interval = null;
-
-    function myStopFunction() {
-        $(".hover-notify").velocity('stop', true).velocity("fadeOut");
-        clearInterval(interval);
-    }
-
+    /* Advantages - при наведении увеличиваться объект */
     $(".hex-init").mouseenter(function () {
-        myStopFunction();
 
         let title_color = $(this).parent().attr("data-color");
         let desc_name = $(this).parent().attr("data-content");
@@ -1866,5 +1848,47 @@ $(document).ready(function () {
     }).mouseleave(function () {
         $('.hexactive').velocity('stop', true).velocity('reverse').removeClass('hexactive');
     });
+
+    /* -------------------------------------------------------------------------- */
+    /* Автоматическая анимация нужного блока */
+    function staggerAnimation (className) {
+        $('.' + className).velocity("callout.pulse", {stagger: 150});
+    }
+
+    let $window = $(window);
+
+    /* Слушатель срабатывает при отображении нужного блока на экране */
+    function isElementOnDisplay($elem) {
+        let docViewTop = $window.scrollTop();
+        let docViewBottom = docViewTop + $window.height();
+        let elemTop = $elem.offset().top;
+        let elemBottom = elemTop + $elem.height();
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    /* Анимация срабатывает  один раз когда элемент отображаться */
+    function onElementInView() {
+        setTimeout(function () {
+            staggerAnimation('hex-wrap');
+        }, 500);
+        $window.off('scroll', scrollHandler);
+    }
+
+    /* Компонируем в одну функцию */
+    function scrollHandler() {
+        $('.advantages_left').each(function() {
+            if (isElementOnDisplay($(this))) {
+                onElementInView();
+            }
+        });
+    }
+
+    $window.on('scroll', scrollHandler);
+
+    setInterval(() => {
+        staggerAnimation('hex-wrap');
+    }, 5000);
+    /* -------------------------------------------------------------------------- */
+
 });
 /* USE script => about.html => .Advantages | END */

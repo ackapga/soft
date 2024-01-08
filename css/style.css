@@ -15624,6 +15624,8 @@ margin-left: 20px; */
     display: block;
     margin: 0;
     width: 100%;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
 }
 
 .advantages_title {
@@ -15715,10 +15717,42 @@ margin-left: 20px; */
     align-items: center;
 }
 
-.section img {
+.section .service_images {
+    display: none;
+}
+
+.section .service_images_first img {
     width: 40rem;
     filter: drop-shadow(0 0 15px rgba(70, 70, 70, 0.70));
 }
+.section .service_images_first img:nth-child(1) {
+    position: absolute;
+    z-index: 3;
+
+}
+.section .service_images_first img:nth-child(2) {
+    position: absolute;
+    z-index: 2;
+
+}
+.section .service_images_first img:nth-child(3) {
+    position: absolute;
+    z-index: 1;
+}
+
+.section .service_images_second img {
+    width: 35rem;
+    filter: drop-shadow(0 0 15px rgba(70, 70, 70, 0.70));
+}
+.section .service_images_second img:nth-child(1) {
+    position: absolute;
+    z-index: 2;
+}
+.section .service_images_second img:nth-child(2) {
+    position: absolute;
+    z-index: 1;
+}
+
 
 .section_info {
     text-shadow: #000000c2 0 0 30px;
@@ -16127,49 +16161,77 @@ figure.collage_animate:hover p {
 }
 
 .region_right {
-    width: 35rem;
-    transition: all 0.5s ease;
+    display: flex;
+    align-items: end;
+    width: 40rem;
 }
 
-.region_right:hover {
-    transform: scale(1.05);
-}
-
-.region_slider {
-    cursor: grab;
+.region_images {
     filter: drop-shadow(0 0 10px #fbc6a5);
 }
 
-.region_slider:active {
-    cursor: grabbing;
+.region_general_map:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0.3
+    !important;
 }
 
-.region_item {
+.region_general_map:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.region_city_circle {
+    position: absolute;
+    width: 20%;
+    filter: drop-shadow(0 0 5px #ff7a28);
+    z-index: 3;
+    transition: all 0.5s ease;
+}
+
+.region_city_circle:hover {
+    z-index: 5;
+    transform: scale(1.5);
+}
+
+.region_city_block {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
-.region_slider .slick-prev:before {
-    display: none;
+.city_name {
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
 }
 
-.region_slider .slick-next:before {
-    display: none;
+.region_city_circle:hover .city_name {
+    transform: scale(1.3);
+    text-shadow: 1px 1px #e6852b;
+    color: #f3ae7c;
 }
 
-.region_slider .slick-next::before, .slick-next::after {
-    position: relative;
+.region_city_circle:nth-child(4) {
+    right: 8%;
+    bottom: 9%;
 }
 
-.region_slider .slick-dots li button:before {
-    color: #ffa95a;
-    font-size: 30px;
-    opacity: 1;
+.region_city_circle:nth-child(5) {
+    top: 10%;
+    right: 32%;
 }
 
-.region_slider .slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: #ff7a00;
+.region_city_circle:nth-child(6) {
+    top: 70%;
+    right: 35%;
 }
 
 /* Clients */
@@ -16180,8 +16242,10 @@ figure.collage_animate:hover p {
 }
 
 .clients_title {
-    color: #d0d0d0;
-    display: none;
+    color: #8c8892;
+    padding: 3rem 0 2rem 1rem;
+    text-transform: uppercase;
+    text-align: start;
 }
 
 .clients_items {
@@ -16309,7 +16373,6 @@ figure.collage_animate:hover p {
 
     /*Region*/
     .region_content {
-        overflow: hidden;
         align-items: center;
     }
 
@@ -16328,17 +16391,17 @@ figure.collage_animate:hover p {
         width: 27rem;
     }
 
-    .region_slider {
-        right: 3rem;
+    /*Clients*/
+    .clients_title {
+        padding: 3rem 0 2rem 4rem;
     }
 
-    /*Clients*/
     .clients_items img {
         width: 10rem !important;
     }
 }
 
-@media (min-width: 576px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 992px) {
     /*Main Info*/
     .main_information {
         height: 100%;
@@ -16453,6 +16516,19 @@ figure.collage_animate:hover p {
 
     .bottom-section {
         text-align: end;
+    }
+
+    .section .service_images {
+        display: block;
+        filter: drop-shadow(0 0 15px rgba(70, 70, 70, 0.70));
+    }
+
+    .section .service_images_first {
+        display: none;
+    }
+
+    .section .service_images_second {
+        display: none;
     }
 
     /*Collage*/
@@ -16583,6 +16659,7 @@ figure.collage_animate:hover p {
 
     /*Region*/
     .region {
+        padding: 2rem 0;
         overflow: hidden;
     }
 
@@ -16591,6 +16668,8 @@ figure.collage_animate:hover p {
     }
 
     .region_left {
+        position: relative;
+        z-index: 2;
         margin-top: 1rem;
     }
 
@@ -16628,14 +16707,13 @@ figure.collage_animate:hover p {
         position: absolute;
         z-index: 1;
         opacity: 0.3;
-        top: 3rem;
-        right: -42rem;
-        width: 17rem;
+        width: 25rem;
+        left: 50vh;
+        bottom: 1vh;
     }
 
-    .region_slider {
-        overflow: hidden;
-        margin: 0 !important;
+    .region_city_circle {
+        display: none;
     }
 
     .region_href {
@@ -16784,8 +16862,21 @@ figure.collage_animate:hover p {
     }
 
     .section img {
-        width: 100%;
+        width: 90%;
         opacity: 0.3 !important;
+    }
+
+    .section .service_images {
+        display: block;
+        filter: drop-shadow(0 0 15px rgba(70, 70, 70, 0.70));
+    }
+
+    .section .service_images_first {
+        display: none;
+    }
+
+    .section .service_images_second {
+        display: none;
     }
 
     /*Collage*/
@@ -16908,6 +16999,7 @@ figure.collage_animate:hover p {
 
     /*Region*/
     .region {
+        padding-bottom: 1rem;
         overflow: hidden;
     }
 
@@ -16950,12 +17042,12 @@ figure.collage_animate:hover p {
     }
 
     .region_right {
-        width: 100%;
+        margin: 0 auto;
+        width: 80%;
     }
 
-    .region_slider {
-        overflow: hidden;
-        margin: 0 !important;
+    .city_name {
+        font-size: 0.5rem;
     }
 
     .region_href {
@@ -16969,7 +17061,7 @@ figure.collage_animate:hover p {
 
     .clients_title {
         display: block;
-        padding: 1rem;
+        padding: 3rem 0 2rem;
         text-transform: uppercase;
         text-align: center;
     }
