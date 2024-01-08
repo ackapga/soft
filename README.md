@@ -248,3 +248,18 @@
     </div>
 </div>
 <!-- End Modal -->
+
+
+require_once(__DIR__ . '/admin/config.php');
+
+var_dump(require_once(__DIR__ . '/admin/config.php'));
+
+$sql1 = "SELECT * FROM `softgroup_users`";
+
+// Выполнение запроса
+$result = $conn->query($sql1);
+
+var_dump($result->fetch_assoc());
+
+// Закрытие соединения с базой данных
+$conn->close();
